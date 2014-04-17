@@ -70,7 +70,6 @@ figure {
 
 hr {
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -107,8 +106,6 @@ input {
   line-height: normal; }
 
 input[type="checkbox"], input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0; }
 
@@ -151,7 +148,6 @@ td, th {
 /****************** Breakpoints Definition ***********/
 .fade {
   opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear; }
   .fade.in {
     opacity: 1; }
@@ -171,7 +167,6 @@ tbody.collapse.in {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.35s ease;
   transition: height 0.35s ease; }
 
 /*!
@@ -202,7 +197,16 @@ tbody.collapse.in {
 
 .ion-spin, .ion-loading-a, .ion-loading-b, .ion-loading-c, .ion-loading-d, .ion-looping, .ion-refreshing, .ion-ios7-reloading {
   -webkit-animation: spin 1s infinite linear;
+  -moz-animation: spin 1s infinite linear;
+  -o-animation: spin 1s infinite linear;
   animation: spin 1s infinite linear; }
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg); }
+
+  100% {
+    -moz-transform: rotate(359deg); } }
 
 @-webkit-keyframes spin {
   0% {
@@ -210,6 +214,13 @@ tbody.collapse.in {
 
   100% {
     -webkit-transform: rotate(359deg); } }
+
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg); }
+
+  100% {
+    -o-transform: rotate(359deg); } }
 
 @-ms-keyframes spin {
   0% {
@@ -220,17 +231,14 @@ tbody.collapse.in {
 
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
     transform: rotate(0deg); }
 
   100% {
-    -webkit-transform: rotate(359deg);
-    -ms-transform: rotate(359deg);
     transform: rotate(359deg); } }
 
 .ion-loading-a {
   -webkit-animation-timing-function: steps(8, start);
+  -moz-animation-timing-function: steps(8, start);
   animation-timing-function: steps(8, start); }
 
 .ion-alert:before {
@@ -1867,4 +1875,4 @@ h5, .h5 {
 h6 {
   font-size: 1rem; }
 
-/*# sourceMappingURL=main.min.css.map */
+/*# sourceMappingURL=main.css.map */

@@ -2,7 +2,7 @@
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-Perfect You is Unique WordPress theme based on [Roots](http://roots.io/) that made for [Perfect You - Palstic Surgery](http://perfectyou.hu) by [HYDROGENEDESIGN](http://hydrogene.hu/)
+Perfect You is Unique WordPress theme based on [Roots](http://roots.io/) that made for [Perfect You - Plastic Surgery](http://perfectyou.hu) by [HYDROGENEDESIGN](http://hydrogene.hu/)
 
 * Source: [https://github.com/ceto/perfectyou](https://github.com/ceto/perfectyou)
 * Live Site: [http://perfectyou.hu/](http://perfectyou.hu/)
