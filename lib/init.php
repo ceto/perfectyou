@@ -13,7 +13,7 @@ function roots_setup() {
 
   // Add post thumbnails (http://codex.wordpress.org/Post_Thumbnails)
   add_theme_support('post-thumbnails');
-  add_theme_support('html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption'  ));
+  //add_theme_support('html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption'  ));
   add_theme_support('post-formats', array('aside', 'gallery', 'video'));
 
   // set_post_thumbnail_size(150, 150, false);
