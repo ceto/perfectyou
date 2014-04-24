@@ -151,3 +151,38 @@ function cmb_initialize_cmb_meta_boxes() {
     require_once 'cmb/init.php';
 
 }
+
+
+// add tag & category support to pages
+function py_tagcat_support_all() {
+  register_taxonomy_for_object_type('post_tag', 'page');
+  register_taxonomy_for_object_type('post_tag', 'kezeles');
+  register_taxonomy_for_object_type('category', 'page');
+  register_taxonomy_for_object_type('category', 'kezeles');
+}
+
+// ensure all tags are included in queries
+function py_tagcat_support_query($wp_query) {
+  if ($wp_query->get('tag') || $wp_query->get('category') ){
+    $wp_query->set('post_type', 'any');
+  } 
+}
+
+// tag hooks
+add_action('init', 'py_tagcat_support_all');
+add_action('pre_get_posts', 'py_tagcat_support_query');
+
+
+// // add tag support to pages
+// function somno_tags_support_all() {
+//   register_taxonomy_for_object_type('post_tag', 'page');
+// }
+
+// // ensure all tags are included in queries
+// function somno_tags_support_query($wp_query) {
+//   if ($wp_query->get('tag')) $wp_query->set('post_type', 'any');
+// }
+
+// // tag hooks
+// add_action('init', 'somno_tags_support_all');
+// add_action('pre_get_posts', 'somno_tags_support_query');
