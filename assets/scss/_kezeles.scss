@@ -1,0 +1,12 @@
+.treat-slogan{
+  background-color: blue;
+  color:white;
+  font-size: 2em;
+  font-weight: 800;
+  padding:2em;
+}
+.treat-content {
+  @include clearfix();
+  padding:2em;
+  
+}

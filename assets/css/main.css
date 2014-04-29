@@ -1841,7 +1841,6 @@ a {
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px 0;
   padding: 0;
-  font-family: 'Roboto Slab', serif;
   font-weight: 600;
   font-style: normal;
   line-height: 1.1; }
@@ -1874,5 +1873,67 @@ h5, .h5 {
 
 h6 {
   font-size: 1rem; }
+
+figure {
+  margin: 0; }
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto; }
+
+.contentnav {
+  background-color: white; }
+  .contentnav:before, .contentnav:after {
+    content: " ";
+    display: table; }
+  .contentnav:after {
+    clear: both; }
+  .contentnav ul {
+    text-transform: uppercase;
+    counter-reset: navcount; }
+  .contentnav li {
+    list-style-type: none;
+    display: inline-block;
+    counter-increment: navcount; }
+    .contentnav li a {
+      display: inline-block;
+      padding: 0.25em 1em;
+      text-decoration: none; }
+      .contentnav li a:before {
+        content: counter(navcount) '.';
+        margin-right: 0.25em;
+        font-size: 1.25em;
+        line-height: 0.875em;
+        font-weight: 900;
+        font-variant: normal;
+        color: gray; }
+
+.subsec {
+  padding: 2em;
+  color: white;
+  background-color: black; }
+  .subsec:before, .subsec:after {
+    content: " ";
+    display: table; }
+  .subsec:after {
+    clear: both; }
+  .subsec:nth-child(odd) {
+    background-color: gray; }
+
+.treat-slogan {
+  background-color: blue;
+  color: white;
+  font-size: 2em;
+  font-weight: 800;
+  padding: 2em; }
+
+.treat-content {
+  padding: 2em; }
+  .treat-content:before, .treat-content:after {
+    content: " ";
+    display: table; }
+  .treat-content:after {
+    clear: both; }
 
 /*# sourceMappingURL=main.css.map */

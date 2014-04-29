@@ -71,8 +71,13 @@ function cmb_treatment( array $meta_boxes ) {
     'fields'     => array(
       
       array(
-        'name' => 'Szlogenszerű alcím',
-        'id'   => $prefix . 'subtitle',
+        'name' => 'Lead',
+        'id'   => $prefix . 'lead',
+        'type' => 'textarea',
+      ),
+      array(
+        'name' => 'Szlogen, idézet',
+        'id'   => $prefix . 'slogan',
         'type' => 'text',
       ),
 
@@ -106,6 +111,14 @@ function cmb_treatment( array $meta_boxes ) {
               'id'      => 'content',
               'type'    => 'wysiwyg',
               'options' => array( 'textarea_rows' => 15, 'wpautop' => true ),
+            ),
+            array(
+              'name' => 'Háttér/oldal kép a fejezethez',
+              'desc' => 'Upload an image or enter a URL. (min: 1920×1280px)',
+              'id'   => 'ill',
+              'type' => 'file',
+              'save_id' => true, // save ID using true
+              'allow' => array( 'url', 'attachment' ) // limit to just attachments with array( 'attachment' )
             ),
         ),
       ),
