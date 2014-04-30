@@ -1,9 +1,8 @@
 .subsec{
   @include clearfix();
   padding:2em;
-  color:white;
-  background-color: black;
+  background-color:$brown-superlight;
   &:nth-child(odd){
-    background-color:gray;
+    background-color:#fff;
   }
 }

@@ -1,14 +1,26 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
-    <figure class="treat-figure">
-      <?php the_post_thumbnail(); ?>
-    </figure>
-    <header>
+      <?php 
+        $imoci = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'banner' ); 
+      ?>
+    <style>
+      body{
+        background-image:url('<?php echo $imoci[0]; ?>');
+      }
+    </style>
+    <header class="treat-header">
       <h1 class="treat-title"><?php the_title(); ?></h1>
-      <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
-        <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
+    
+      <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
+        <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
       <?php endif ?>
+      
+          <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
+      <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
+    <?php endif ?>
     </header>
+
+
 
     <nav class="contentnav">
       <ul>
@@ -20,14 +32,13 @@
         <?php  } ?>
       </ul>
     </nav>
+    
 
     <div class="treat-content">
       <?php the_content(); ?>
     </div>
 
-    <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
-      <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
-    <?php endif ?>
+
 
     <div class="subsections">
       <?php reset ($streats); $trno=1;
@@ -43,7 +54,7 @@
           </figure>
           <h2 class="subsec-title"><?php echo esc_html( $entry['title'] );  ?></h2>
           <div class="subsec-cont">
-            <?php echo wpautop( $entry['content']);  ?>
+            <?php echo apply_filters('the_content', $entry['content'] );?>
           </div>
         </section>
       <?php  } ?>

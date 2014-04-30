@@ -73,7 +73,8 @@ function cmb_treatment( array $meta_boxes ) {
       array(
         'name' => 'Lead',
         'id'   => $prefix . 'lead',
-        'type' => 'textarea',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 15, 'wpautop' => true ),
       ),
       array(
         'name' => 'Szlogen, idézet',
@@ -133,26 +134,26 @@ function cmb_treatment( array $meta_boxes ) {
 
 /************* Custom Category for Treatment Management *********/
 
-add_action( 'init', 'create_treatment_category', 0 );
+// add_action( 'init', 'create_treatment_category', 0 );
 
-function create_treatment_category() {
-  $labels = array(
-    'name'              => 'Kezelés csoportok',
-    'singular_name'     => 'Kezelés csoport',
-    'menu_name'         => 'Kezelés csoportok',
-  );
+// function create_treatment_category() {
+//   $labels = array(
+//     'name'              => 'Kezelés csoportok',
+//     'singular_name'     => 'Kezelés csoport',
+//     'menu_name'         => 'Kezelés csoportok',
+//   );
 
-  $args = array(
-    'hierarchical'      => true,
-    'labels'            => $labels,
-    'show_ui'           => true,
-    'show_admin_column' => true,
-    'query_var'         => true,
-    'rewrite'           => array( 'slug' => 'kezeles-csoport' ),
-  );
+//   $args = array(
+//     'hierarchical'      => true,
+//     'labels'            => $labels,
+//     'show_ui'           => true,
+//     'show_admin_column' => true,
+//     'query_var'         => true,
+//     'rewrite'           => array( 'slug' => 'kezeles-csoport' ),
+//   );
 
-  register_taxonomy( 'kezeles-csoport', array( 'kezeles' ), $args );
-}
+//   register_taxonomy( 'kezeles-csoport', array( 'kezeles' ), $args );
+// }
 
 add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
 /**
@@ -164,6 +165,8 @@ function cmb_initialize_cmb_meta_boxes() {
     require_once 'cmb/init.php';
 
 }
+
+
 
 
 // add tag & category support to pages
@@ -185,17 +188,34 @@ function py_tagcat_support_query($wp_query) {
 add_action('init', 'py_tagcat_support_all');
 add_action('pre_get_posts', 'py_tagcat_support_query');
 
-
-// // add tag support to pages
-// function somno_tags_support_all() {
-//   register_taxonomy_for_object_type('post_tag', 'page');
+// add_filter('the_content', 'py_fix_shortcodes');
+// // Intelligently remove extra P and BR tags around shortcodes that WordPress likes to add
+// function py_fix_shortcodes($content){   
+//     $array = array (
+//         '<p>[' => '[', 
+//         ']</p>' => ']', 
+//         ']<br />' => ']'
+//     );
+//     $content = strtr($content, $array);
+//     return $content;
 // }
 
-// // ensure all tags are included in queries
-// function somno_tags_support_query($wp_query) {
-//   if ($wp_query->get('tag')) $wp_query->set('post_type', 'any');
+// # Deregister style file
+// function py_remove_wpss_styles() {
+//   if(!is_admin()){ 
+//     wp_deregister_style( 'wpss-style' );
+//     wp_deregister_style( 'wpss-custom-db-style' );
+//   }
 // }
+// add_action( 'wp_print_styles', 'py_remove_wpss_styles', 100 );
 
-// // tag hooks
-// add_action('init', 'somno_tags_support_all');
-// add_action('pre_get_posts', 'somno_tags_support_query');
+// # Deregister scripts file
+function py_remove_scripts () {
+  if(!is_admin()){ 
+    wp_deregister_script('bootstrap-shortcodes-tooltip');
+    wp_deregister_script('bootstrap-shortcodes-popover');
+  }
+}
+add_action('wp_print_scripts', 'py_remove_scripts', 11);
+
+

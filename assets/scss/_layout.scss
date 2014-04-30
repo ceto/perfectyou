@@ -1,6 +1,9 @@
-
 body {
-  background-color: $bg;
-  color:$text;
+  background-color: $brown-superlight;
+  color:$gray-text;
   overflow-x: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
