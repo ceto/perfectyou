@@ -1,8 +1,74 @@
+.subsections {
+  background-color: rgba($brown,0.75);
+  @include bp($s1){
+    padding-left: 40px;
+  }
+  @include bp($s2){
+    padding-left: 200px;
+  }
+  @include bp($s3){
+    padding-left: 250px;
+  }
+  @include bp($s4){
+    padding-left: 300px;
+  }
+}
 .subsec{
   @include clearfix();
-  padding:2em;
-  background-color:$brown-superlight;
-  &:nth-child(odd){
-    background-color:#fff;
+  //padding:2em;
+
+  
+  .subsec-inner {
+    background-color:$brown-superlight;
   }
+  &:nth-child(odd){
+
+    .subsec-inner {
+      background-color:#fff;
+
+    }
+  }
+}
+
+.subsec-inner{
+  //max-width: 700px;
+  padding:0 0.5em;
+  
+  
+  @include bp($s0){
+    padding:0 1em;
+    //max-width: 42em;
+  }
+  @include bp($s1){
+    padding:2em 1.5em 4em;
+    //max-width: 42em;
+  }
+  @include bp($s2){
+    padding:2em 2em 6em;
+    //max-width:42em;
+  }
+  @include bp($s3){
+    //width:800px;
+  }
+}
+
+.subsec-header{
+  background-color: rgba($purple,0.75);
+  color:$yellow;
+  padding:2em;
+  
+  .subsec-title {
+    font-size: 2.5em;
+    margin:0 0;
+    @include bp($s2){
+       font-size: 3.5em;
+    }
+
+  }
+}
+
+.subsec-cont {
+
+    margin:0 auto;
+    max-width: 42em;
 }

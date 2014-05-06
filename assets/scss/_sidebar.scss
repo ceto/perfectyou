@@ -1,0 +1,5 @@
+.sidebar{
+  @include clearfix();
+  padding:2em 0.5em;
+  background-color: $brown-superlight;
+}

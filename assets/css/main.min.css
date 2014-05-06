@@ -1889,12 +1889,18 @@ blockquote {
   background-color: #dce7e9;
   color: #3a285d;
   padding: 0 1em;
-  font-size: 1.25em; }
+  font-size: 1.5em;
+  font-weight: 100;
+  margin: 0.75em 0;
+  text-align: center; }
   blockquote:before, blockquote:after {
     content: " ";
     display: table; }
   blockquote:after {
     clear: both; }
+
+.main li {
+  margin: 0.666em 0; }
 
 .banner {
   background-color: #1b1109;
@@ -1920,7 +1926,8 @@ blockquote {
 .nav-main {
   float: right; }
   .nav-main ul {
-    margin: 0; }
+    margin: 0;
+    padding: 0; }
   .nav-main li {
     list-style-type: none;
     display: inline-block; }
@@ -1932,31 +1939,37 @@ blockquote {
       height: 62px;
       font-size: 0.875em;
       line-height: 62px;
-      font-weight: 400;
+      font-weight: 300;
       padding: 0 1em; }
+      .nav-main li a:hover, .nav-main li a:focus {
+        color: #ffcf7b; }
 
 .contentnav {
-  background-color: #000; }
+  position: relative;
+  background-color: #000;
+  padding-right: 12em; }
   .contentnav:before, .contentnav:after {
     content: " ";
     display: table; }
   .contentnav:after {
     clear: both; }
-  @media only screen and (min-width: 768px) { }
   .contentnav ul {
     text-transform: uppercase;
     counter-reset: navcount;
-    display: inline-block; }
+    display: inline-block;
+    margin: 1em 0;
+    padding: 0; }
   .contentnav li {
     list-style-type: none;
     display: inline-block;
-    counter-increment: navcount; }
+    counter-increment: navcount;
+    margin: 0; }
     .contentnav li a {
       display: inline-block;
       padding: 0.25em 1em;
       text-decoration: none;
       color: #ffcf7b;
-      font-size: 1.125em;
+      font-size: 1em;
       font-weight: 300; }
       .contentnav li a:before {
         content: counter(navcount) '.';
@@ -1966,17 +1979,90 @@ blockquote {
         font-weight: 900;
         font-variant: normal;
         color: gray; }
+      .contentnav li a:hover, .contentnav li a:focus {
+        color: #fff; }
+  .contentnav .bigbtn {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 12em;
+    background-color: #7d7d7d;
+    text-align: center;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffcf7b;
+    text-decoration: none;
+    padding-top: 1em; }
+    .contentnav .bigbtn span {
+      font-size: 0.75em; }
+    .contentnav .bigbtn:hover, .contentnav .bigbtn:focus {
+      color: #1b1109;
+      background-color: #ffcf7b; }
 
-.subsec {
-  padding: 2em;
-  background-color: #fff7ed; }
-  .subsec:before, .subsec:after {
+.content-info {
+  background-color: #1b1109;
+  color: #fff; }
+  .content-info:before, .content-info:after {
     content: " ";
     display: table; }
-  .subsec:after {
+  .content-info:after {
     clear: both; }
-  .subsec:nth-child(odd) {
-    background-color: #fff; }
+
+.subsections {
+  background-color: rgba(27, 17, 9, 0.75); }
+  @media only screen and (min-width: 480px) {
+    .subsections {
+      padding-left: 40px; } }
+  @media only screen and (min-width: 768px) {
+    .subsections {
+      padding-left: 200px; } }
+  @media only screen and (min-width: 1024px) {
+    .subsections {
+      padding-left: 250px; } }
+  @media only screen and (min-width: 1280px) {
+    .subsections {
+      padding-left: 300px; } }
+
+.subsec:before, .subsec:after {
+  content: " ";
+  display: table; }
+.subsec:after {
+  clear: both; }
+.subsec .subsec-inner {
+  background-color: #fff7ed; }
+.subsec:nth-child(odd) .subsec-inner {
+  background-color: #fff; }
+
+.subsec-inner {
+  padding: 0 0.5em; }
+  @media only screen and (min-width: 320px) {
+    .subsec-inner {
+      padding: 0 1em; } }
+  @media only screen and (min-width: 480px) {
+    .subsec-inner {
+      padding: 2em 1.5em 4em; } }
+  @media only screen and (min-width: 768px) {
+    .subsec-inner {
+      padding: 2em 2em 6em; } }
+  @media only screen and (min-width: 1024px) { }
+
+.subsec-header {
+  background-color: rgba(88, 77, 134, 0.75);
+  color: #ffcf7b;
+  padding: 2em; }
+  .subsec-header .subsec-title {
+    font-size: 2.5em;
+    margin: 0 0; }
+    @media only screen and (min-width: 768px) {
+      .subsec-header .subsec-title {
+        font-size: 3.5em; } }
+
+.subsec-cont {
+  margin: 0 auto;
+  max-width: 42em; }
 
 .treat-header {
   background-position: center center;
@@ -1984,24 +2070,35 @@ blockquote {
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  background-color: rgba(27, 17, 9, 0.5);
+  background-color: rgba(0, 0, 0, 0.33);
   color: #fff; }
+  @media only screen and (min-width: 480px) { }
+  @media only screen and (min-width: 1024px) { }
+  @media only screen and (min-width: 1280px) { }
 
 .treat-title {
-  padding: 3em 2em 0 0.75em;
-  text-shadow: 0px 0px 5px #000; }
+  color: #ffcf7b;
+  text-shadow: 0px 0px 5px #584d86;
+  font-size: 2.5em;
+  font-weight: 100;
+  margin: 0 0 0 0;
+  padding: 2em 0 0 0.5em; }
+  @media only screen and (min-width: 768px) {
+    .treat-title {
+      font-size: 4em;
+      margin-right: 33%; } }
 
 .treat-slogan {
-  padding: 0 2em 2em 1.5em;
-  font-size: 1.5em;
-  font-weight: 300;
-  text-shadow: 0px 0px 5px #000; }
+  padding: 0 2em 0 1.5em;
+  font-size: 1.75em;
+  font-weight: 100;
+  text-shadow: 0px 0px 5px #584d86;
+  font-style: italic; }
   @media only screen and (min-width: 768px) {
     .treat-slogan {
       margin-right: 33%; } }
 
 .treat-lead {
-  background-color: #584d86;
   padding: 2em;
   color: #fff;
   font-size: 1.25em;
@@ -2021,14 +2118,31 @@ blockquote {
     margin: 0; }
 
 .treat-content {
-  padding: 2em; }
+  padding: 2.5em 0.5em;
+  background-color: #dce7e9;
+  font-size: 1.25em; }
   .treat-content:before, .treat-content:after {
     content: " ";
     display: table; }
   .treat-content:after {
     clear: both; }
+  @media only screen and (min-width: 320px) {
+    .treat-content {
+      padding: 3em 1em; } }
+  @media only screen and (min-width: 480px) {
+    .treat-content {
+      padding: 3em 1.5em; } }
   @media only screen and (min-width: 768px) {
     .treat-content {
-      background-color: #dce7e9; } }
+      padding: 3em 1.5em 3em 250px; } }
+
+.sidebar {
+  padding: 2em 0.5em;
+  background-color: #fff7ed; }
+  .sidebar:before, .sidebar:after {
+    content: " ";
+    display: table; }
+  .sidebar:after {
+    clear: both; }
 
 /*# sourceMappingURL=main.min.css.map */

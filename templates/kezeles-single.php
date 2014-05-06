@@ -9,15 +9,16 @@
       }
     </style>
     <header class="treat-header">
-      <h1 class="treat-title"><?php the_title(); ?></h1>
-    
-      <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
+      
+            <h1 class="treat-title"><?php the_title(); ?></h1>
+        <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
         <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
       <?php endif ?>
+
       
-          <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
-      <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
-    <?php endif ?>
+      <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
+        <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
+      <?php endif ?>
     </header>
 
 
@@ -31,10 +32,13 @@
         <li><a href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
         <?php  } ?>
       </ul>
+        <a href="#" class="bigbtn">Bejelentkezés<br/><span>0036707705653</span></a>
     </nav>
     
 
+
     <div class="treat-content">
+
       <?php the_content(); ?>
     </div>
 
@@ -45,16 +49,21 @@
         foreach ( (array) $streats as $key => $entry ) {
       ?>
         <section id="subsec-<?php echo $trno++;  ?>" class="subsec">
-          <?php
-            $ima = $entry['ill_id'];
-            $imci = wp_get_attachment_image_src( $ima, 'thumbnail');
-          ?>
-          <figure class="subsec-figure">
-            <img src="<?php echo $imci[0]; ?>" width="<?php echo $imci[1]; ?>" height="<?php echo $imci[2]; ?>" alt="<?php echo esc_html( $entry['title'] );  ?>">
-          </figure>
-          <h2 class="subsec-title"><?php echo esc_html( $entry['title'] );  ?></h2>
-          <div class="subsec-cont">
-            <?php echo apply_filters('the_content', $entry['content'] );?>
+          <header class="subsec-header">
+            <h2 class="subsec-title"><?php echo esc_html( $entry['title'] );  ?></h2>
+          </header>
+          <div class="subsec-inner">
+            <?php
+              $ima = $entry['ill_id'];
+              $imci = wp_get_attachment_image_src( $ima, 'thumbnail');
+            ?>
+            <!--figure class="subsec-figure">
+              <img src="<?php echo $imci[0]; ?>" width="<?php echo $imci[1]; ?>" height="<?php echo $imci[2]; ?>" alt="<?php echo esc_html( $entry['title'] );  ?>">
+            </figure-->
+            
+            <div class="subsec-cont">
+              <?php echo apply_filters('the_content', $entry['content'] );?>
+            </div>
           </div>
         </section>
       <?php  } ?>
