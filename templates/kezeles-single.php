@@ -45,6 +45,32 @@
 
 
     <div class="subsections">
+      <aside class="subsec-sidebar">
+      <a class="brand" href="<?php echo home_url('/') ?>"><?php bloginfo('name'); ?></a>
+      <nav class="subsec-nav">
+        <ul>
+          <?php 
+            reset ($streats); $trno=1;
+            foreach ( (array) $streats as $key => $entry ) {
+          ?>
+              <li><a href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
+          <?php  } ?>
+        </ul>
+        
+      </nav>
+      <section class="side-related">
+        <h3>Kapcsolódó tartalmak</h3>
+        <ul>
+          <li><a href="#">Hogyan válasszunk szilikont a mellünkbe</a></li>
+          <li><a href="#">Mi a különbség a melfelvarrás és nagyobbítsá között</a></li>
+          <li><a href="#">Mikor nem ajánlott a mellnagyobbító műtét</a></li>
+          <li><a href="#">A gyógyulás menete melnagyobbítás után</a></li>
+          <li><a href="#">Felkészülés a mellnagyobbító műtétre</a></li>
+          
+        </ul>
+      </section>
+      <a href="#" class="nyomjad">Bejelentkezés<br/><span>0036707705653</span></a>
+    </aside>
       <?php reset ($streats); $trno=1;
         foreach ( (array) $streats as $key => $entry ) {
       ?>
@@ -67,7 +93,10 @@
           </div>
         </section>
       <?php  } ?>
+
+    
     </div>
+
     <footer>
       <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
     </footer>

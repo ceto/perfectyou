@@ -1,22 +1,11 @@
 .subsections {
+  @include clearfix();
+  position: relative;
   background-color: rgba($brown,0.75);
-  @include bp($s1){
-    padding-left: 40px;
-  }
-  @include bp($s2){
-    padding-left: 200px;
-  }
-  @include bp($s3){
-    padding-left: 250px;
-  }
-  @include bp($s4){
-    padding-left: 300px;
-  }
+
 }
 .subsec{
   @include clearfix();
-  //padding:2em;
-
   
   .subsec-inner {
     background-color:$brown-superlight;
@@ -28,12 +17,26 @@
 
     }
   }
+
+  @include bp($s1){
+    float:right;
+    width: calc(100% - 40px);
+  }
+  @include bp($s2){
+    width: calc(100% - 250px);
+  }
+  @include bp($s3){
+    width: calc(100% - 300px);
+  }
+  @include bp($s4){
+    width: calc(100% - 350px);
+  }
 }
 
 .subsec-inner{
   //max-width: 700px;
   padding:0 0.5em;
-  
+
   
   @include bp($s0){
     padding:0 1em;
