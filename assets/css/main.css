@@ -1816,7 +1816,11 @@ tbody.collapse.in {
 .ion-xbox:before {
   content: "\f30c"; }
 
+html {
+  background-color: white; }
+
 body {
+  position: relative;
   background-color: #fff7ed;
   color: #4f4f4f;
   overflow-x: hidden;
@@ -1910,13 +1914,24 @@ blockquote {
   margin: 0.666em 0; }
 
 .banner {
-  background-color: #1b1109;
-  padding: 1em; }
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  background-color: transparent;
+  padding: 0 20px;
+  height: 100px;
+  transition: all 0.25s ease;
+  border-top: 3px solid #ffcf7b; }
   .banner:before, .banner:after {
     content: " ";
     display: table; }
   .banner:after {
     clear: both; }
+  .banner.fixedhead {
+    position: fixed;
+    background-color: #fff;
+    height: 66px; }
 
 .brand {
   text-indent: 100%;
@@ -1924,11 +1939,19 @@ blockquote {
   overflow: hidden;
   display: inline-block;
   float: left;
-  height: 62px;
-  width: 210px;
-  background-image: url('../img/logo.png');
-  background-position: center center;
-  background-repeat: no-repeat; }
+  margin-top: 15px;
+  height: 70px;
+  width: 280px;
+  background-image: url('../img/logo_szurke.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all 0.25s ease; }
+  .fixedhead .brand {
+    height: 50px;
+    width: 280px;
+    margin-top: 8px;
+    background-image: url('../img/logo_szurke_kicsi.png'); }
 
 .nav-main {
   float: right; }
@@ -1937,23 +1960,29 @@ blockquote {
     padding: 0; }
   .nav-main li {
     list-style-type: none;
-    display: inline-block; }
+    display: inline-block;
+    margin-left: 1em; }
     .nav-main li a {
       display: inline-block;
-      color: #fff7ed;
+      color: #1b1109;
       text-transform: uppercase;
       text-decoration: none;
-      height: 62px;
+      height: 97px;
       font-size: 0.875em;
-      line-height: 62px;
+      line-height: 97px;
       font-weight: 300;
-      padding: 0 1em; }
+      padding: 0 1em;
+      transition: all 0.25s ease; }
       .nav-main li a:hover, .nav-main li a:focus {
-        color: #ffcf7b; }
+        color: #fff;
+        background-color: rgba(88, 77, 134, 0.75); }
+      .fixedhead .nav-main li a {
+        height: 66px;
+        line-height: 66px; }
 
 .contentnav {
   position: relative;
-  background-color: #000;
+  background-color: #4f4f4f;
   padding-right: 12em; }
   .contentnav:before, .contentnav:after {
     content: " ";
@@ -1975,7 +2004,7 @@ blockquote {
       display: inline-block;
       padding: 0.25em 1em;
       text-decoration: none;
-      color: #ffcf7b;
+      color: #9a91ba;
       font-size: 1em;
       font-weight: 300; }
       .contentnav li a:before {
@@ -2018,7 +2047,8 @@ blockquote {
   counter-reset: navcount;
   display: inline-block;
   margin: 1em 0;
-  padding: 0; }
+  padding: 0;
+  text-align: left; }
 .subsec-nav li {
   list-style-type: none;
   display: block;
@@ -2026,18 +2056,19 @@ blockquote {
   margin: 0; }
   .subsec-nav li a {
     display: block;
-    padding: 0.333em 0.5em;
+    padding: 0.333em 0.5em 0.333em 1.5em;
+    text-indent: -1.15em;
     text-decoration: none;
-    color: #fff;
-    font-size: 0.75em;
-    line-height: 1.25;
-    font-weight: 500;
+    color: #9a91ba;
+    font-size: 1.25em;
+    line-height: 1.125;
+    font-weight: 300;
     text-transform: uppercase; }
     .subsec-nav li a:before {
       content: counter(navcount) '.';
       margin-right: 0.25em;
-      font-size: 1.25em;
-      line-height: 0.875em;
+      font-size: 1em;
+      line-height: 1em;
       font-weight: 900;
       font-variant: normal;
       color: #ffcf7b; }
@@ -2055,35 +2086,35 @@ blockquote {
 
 .subsections {
   position: relative;
-  background-color: rgba(27, 17, 9, 0.75); }
+  background-color: #4e4e4e; }
   .subsections:before, .subsections:after {
     content: " ";
     display: table; }
   .subsections:after {
     clear: both; }
 
-.subsec:before, .subsec:after {
-  content: " ";
-  display: table; }
-.subsec:after {
-  clear: both; }
-.subsec .subsec-inner {
-  background-color: #fff7ed; }
-.subsec:nth-child(odd) .subsec-inner {
-  background-color: #fff; }
-@media only screen and (min-width: 480px) {
-  .subsec {
-    float: right;
-    width: calc(100% - 40px); } }
-@media only screen and (min-width: 768px) {
-  .subsec {
-    width: calc(100% - 250px); } }
-@media only screen and (min-width: 1024px) {
-  .subsec {
-    width: calc(100% - 300px); } }
-@media only screen and (min-width: 1280px) {
-  .subsec {
-    width: calc(100% - 350px); } }
+.subsec {
+  position: relative; }
+  .subsec:before, .subsec:after {
+    content: " ";
+    display: table; }
+  .subsec:after {
+    clear: both; }
+  .subsec .subsec-inner {
+    background-color: #fff7ed; }
+  @media only screen and (min-width: 480px) {
+    .subsec {
+      float: right;
+      width: calc(100% - 40px); } }
+  @media only screen and (min-width: 768px) {
+    .subsec {
+      width: calc(100% - 250px); } }
+  @media only screen and (min-width: 1024px) {
+    .subsec {
+      width: calc(100% - 300px); } }
+  @media only screen and (min-width: 1280px) {
+    .subsec {
+      width: calc(100% - 350px); } }
 
 .subsec-inner {
   padding: 0 0.5em; }
@@ -2099,7 +2130,7 @@ blockquote {
   @media only screen and (min-width: 1024px) { }
 
 .subsec-header {
-  background-color: rgba(88, 77, 134, 0.75);
+  background-color: #584d86;
   color: #ffcf7b;
   padding: 2em; }
   .subsec-header .subsec-title {
@@ -2118,37 +2149,48 @@ blockquote {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-color: rgba(0, 0, 0, 0.33);
-  color: #fff; }
+  color: #1b1109; }
   @media only screen and (min-width: 480px) { }
+  @media only screen and (min-width: 768px) {
+    .treat-header {
+      min-height: 500px;
+      height: 700px; } }
   @media only screen and (min-width: 1024px) { }
   @media only screen and (min-width: 1280px) { }
 
+.trh-inner {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+  .trh-inner:before, .trh-inner:after {
+    content: " ";
+    display: table; }
+  .trh-inner:after {
+    clear: both; }
+
 .treat-title {
-  color: #ffcf7b;
-  text-shadow: 0px 0px 5px #584d86;
+  color: #584d86;
   font-size: 2.5em;
   font-weight: 100;
   margin: 0 0 0 0;
-  padding: 2em 0 0 0.5em; }
+  padding: 0 0 0 0.5em; }
   @media only screen and (min-width: 768px) {
     .treat-title {
-      font-size: 4em;
-      margin-right: 33%; } }
+      font-size: 5em;
+      margin-right: 25%; } }
 
 .treat-slogan {
   padding: 0 2em 0 1.5em;
   font-size: 1.75em;
   font-weight: 100;
-  text-shadow: 0px 0px 5px #584d86;
   font-style: italic; }
   @media only screen and (min-width: 768px) {
     .treat-slogan {
       margin-right: 33%; } }
 
 .treat-lead {
-  padding: 2em;
-  color: #fff;
+  padding: 0 2em;
+  color: #1b1109;
   font-size: 1.25em;
   font-weight: 100; }
   .treat-lead:before, .treat-lead:after {
@@ -2158,12 +2200,14 @@ blockquote {
     clear: both; }
   @media only screen and (min-width: 768px) {
     .treat-lead {
-      margin-right: 33%; } }
+      margin-right: 25%; } }
   .treat-lead strong, .treat-lead b {
     font-weight: 100;
-    color: #ffcf7b; }
+    color: #584d86; }
   .treat-lead h3 {
     margin: 0; }
+  .treat-lead li {
+    margin: 0.5em 0; }
 
 .treat-content {
   padding: 2.5em 0.5em;
@@ -2195,7 +2239,10 @@ blockquote {
 
 .subsec-sidebar {
   position: relative;
-  padding: 2em 0 0; }
+  padding: 4em 0 4em;
+  opacity: 0;
+  text-align: center;
+  transition: all 0.5s ease-in; }
   @media only screen and (min-width: 480px) { }
   @media only screen and (min-width: 768px) {
     .subsec-sidebar {
@@ -2207,6 +2254,16 @@ blockquote {
   @media only screen and (min-width: 1280px) {
     .subsec-sidebar {
       width: 350px; } }
+  .subsec-sidebar.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: 0; }
+    @media only screen and (min-width: 768px) {
+      .subsec-sidebar.fixed {
+        float: none; } }
 
 .side-related {
   color: #fff; }
@@ -2229,16 +2286,30 @@ blockquote {
       text-decoration: none; }
 
 .nyomjad {
-  display: block;
+  display: inline-block;
   text-align: center;
-  margin-top: 4em;
-  padding: 2em 1em;
-  background-color: #ffcf7b;
-  color: #1b1109;
+  margin: 4em 2em;
+  padding: 1em 2em;
+  border: 1px solid #ffcf7b;
+  border-radius: 4px;
+  color: #ffcf7b;
   text-transform: uppercase;
   font-size: 1em;
   line-height: 1em;
-  font-weight: 900;
+  font-weight: 300;
   text-decoration: none; }
+
+.brandi {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  height: 202px;
+  width: 219px;
+  background-image: url('../img/logo_fuggo_signos.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all 0.25s ease; }
 
 /*# sourceMappingURL=main.css.map */

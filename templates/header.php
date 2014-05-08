@@ -1,4 +1,4 @@
-<header class="banner" role="banner">
+<header class="banner" role="banner" id="pagetop">
   <a class="brand" href="<?php echo home_url('/') ?>"><?php bloginfo('name'); ?></a>
   <nav class="nav-main" role="navigation">
     <?php

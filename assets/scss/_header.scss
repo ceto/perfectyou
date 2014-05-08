@@ -1,13 +1,22 @@
 .banner {
   @include clearfix();
-  background-color: $brown;
-  padding:1em;
-  //border-top:25px solid $gray;
-  // @include bp($s2){
-  //   position: fixed;
-  //   left:0;right:0;
-  //   top:0;
-  // }
+  
+  top:0;
+  left:0;
+
+  right:0;
+  z-index: 4;
+  background-color: transparent;
+  padding:0 20px;
+  height:100px;
+  transition:all .25s ease;
+  border-top:3px solid $yellow;
+  &.fixedhead {
+    position:fixed;
+    background-color: #fff;
+    height:66px;
+
+  }
 }
 .brand {
   text-indent: 100%;
@@ -15,9 +24,21 @@
   overflow: hidden;
   display: inline-block;
   float:left;
-  height:62px;
-  width: 210px;
-  background-image: url('../img/logo.png');
-  background-position: center center;
+  margin-top: 15px;
+  height:70px;
+  width: 280px;
+  background-image: url('../img/logo_szurke.png');
+  background-position: left center;
   background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all .25s ease;
+  .fixedhead & {
+    height:50px;
+    width:280px;
+    margin-top: 8px;
+    background-image: url('../img/logo_szurke_kicsi.png');
+
+    
+  }
 }
+

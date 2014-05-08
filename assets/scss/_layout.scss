@@ -1,4 +1,9 @@
+html {
+  background-color: white;
+  //padding:20px;
+}
 body {
+  position: relative;
   background-color: $brown-superlight;
   color:$gray-text;
   overflow-x: hidden;

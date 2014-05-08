@@ -9,16 +9,17 @@
       }
     </style>
     <header class="treat-header">
-      
-            <h1 class="treat-title"><?php the_title(); ?></h1>
-        <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
-        <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
-      <?php endif ?>
-
-      
-      <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
-        <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
-      <?php endif ?>
+        <div class="trh-inner">
+          <h1 class="treat-title"><?php the_title(); ?></h1>
+          <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
+            <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
+          <?php endif ?>
+    
+          <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
+            <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
+          <?php endif ?>
+        </div>
+    
     </header>
 
 
@@ -40,13 +41,14 @@
     <div class="treat-content">
 
       <?php the_content(); ?>
+
     </div>
 
 
 
     <div class="subsections">
       <aside class="subsec-sidebar">
-      <a class="brand" href="<?php echo home_url('/') ?>"><?php bloginfo('name'); ?></a>
+      
       <nav class="subsec-nav">
         <ul>
           <?php 
@@ -58,18 +60,9 @@
         </ul>
         
       </nav>
-      <section class="side-related">
-        <h3>Kapcsolódó tartalmak</h3>
-        <ul>
-          <li><a href="#">Hogyan válasszunk szilikont a mellünkbe</a></li>
-          <li><a href="#">Mi a különbség a melfelvarrás és nagyobbítsá között</a></li>
-          <li><a href="#">Mikor nem ajánlott a mellnagyobbító műtét</a></li>
-          <li><a href="#">A gyógyulás menete melnagyobbítás után</a></li>
-          <li><a href="#">Felkészülés a mellnagyobbító műtétre</a></li>
-          
-        </ul>
-      </section>
+
       <a href="#" class="nyomjad">Bejelentkezés<br/><span>0036707705653</span></a>
+      <a class="brandi" href="#pagetop"><?php bloginfo('name'); ?></a>
     </aside>
       <?php reset ($streats); $trno=1;
         foreach ( (array) $streats as $key => $entry ) {
@@ -96,6 +89,17 @@
 
     
     </div>
+                <section class="side-related">
+        <h3>Kapcsolódó tartalmak</h3>
+        <ul>
+          <li><a href="#">Hogyan válasszunk szilikont a mellünkbe</a></li>
+          <li><a href="#">Mi a különbség a melfelvarrás és nagyobbítsá között</a></li>
+          <li><a href="#">Mikor nem ajánlott a mellnagyobbító műtét</a></li>
+          <li><a href="#">A gyógyulás menete melnagyobbítás után</a></li>
+          <li><a href="#">Felkészülés a mellnagyobbító műtétre</a></li>
+          
+        </ul>
+      </section>
 
     <footer>
       <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>

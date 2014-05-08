@@ -6,7 +6,13 @@
 
 .subsec-sidebar{
   position: relative;
-  padding:2em 0 0;
+  padding:4em 0 4em;
+  opacity: 0;
+  text-align:center;
+  //left:-350px;
+  transition: all .5s ease-in;
+  //background-color: $gray-dark;
+
   @include bp($s1){
     //padding-left: 40px;
   }
@@ -23,6 +29,17 @@
   }
   @include bp($s4){
     width: 350px;
+  }
+
+  &.fixed {
+    position:fixed;
+    left:0; top:0;
+    bottom:0;
+    opacity:1;
+    z-index:0;
+    @include bp($s2){
+      float:none;
+    }
   }
 }
 .side-related{
@@ -54,15 +71,31 @@
 }
 
 .nyomjad {
-  display: block;
+  display: inline-block;
   text-align: center;
-  margin-top:4em;
-  padding:2em 1em;
-  background-color: $yellow;
-  color:$brown;
+  margin:4em 2em;
+  padding:1em 2em;
+  //background-color: $yellow;
+  border:1px solid $yellow;
+  border-radius:4px;
+  color:$yellow;
   text-transform: uppercase;
   font-size:1em;
   line-height: 1em;
-  font-weight: 900;
+  font-weight: 300;
   text-decoration: none;
+}
+.brandi {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  height:202px;
+  width: 219px;
+  background-image: url('../img/logo_fuggo_signos.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all .25s ease;
+  
 }

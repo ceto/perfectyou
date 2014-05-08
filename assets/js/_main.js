@@ -63,3 +63,51 @@ $(document).ready(UTIL.loadEvents);
 })(jQuery); // Fully reference jQuery after this point.
 
 
+//*********** Smooth scroll *************
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+
+jQuery(document).ready(function($){
+  
+  /************* Subsec sidebar Fixing ***********/
+  if ( $('.subsec-sidebar').length > 0 ){
+    var top = $('.subsec-sidebar').offset().top - parseFloat($('.subsec-sidebar').css('marginTop').replace(/auto/, 0));
+    $(window).scroll(function (event) {
+      var y = $(this).scrollTop();
+      if (y >= top) {
+        $('.subsec-sidebar').addClass('fixed');
+      } else {
+        $('.subsec-sidebar').removeClass('fixed');
+      }
+    });
+  }
+  /************* End of fixing ***********/
+
+  /************* Main header Fixing ***********/
+  var htop = $('.banner').offset().top - parseFloat($('.banner').css('marginTop').replace(/auto/, 0));
+  $(window).scroll(function (event) {
+    var y = $(this).scrollTop();
+    if (y-60 >= htop) {
+      $('.banner').addClass('fixedhead');
+    } else {
+      $('.banner').removeClass('fixedhead');
+    }
+  });
+  /************* End of fixing ***********/
+ 
+ 
+
+});
