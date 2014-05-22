@@ -62,21 +62,39 @@ $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
 
-
 //*********** Smooth scroll *************
 $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
+  $('a[href*=#]:not([href=#]):not([data-toggle=collapse])').click(function() {
+    
+       if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top - $('.banner').height()
+          }, 1000);
+          //return false;
+          return true;
       }
-    }
+      }
+
+  
   });
+});
+
+
+var resizeHero = function() {
+  if ( $(window).height() > 700 ) {
+    $('.fullscreen').height( $(window).height() - ( $('.banner').height() + $('.contentnav').height()  ) );
+    $('.subsec-sidebar').height( $(window).height()  );
+  } else {
+    
+  }
+};
+
+
+jQuery(window).resize(function(){
+  resizeHero();
 });
 
 
@@ -107,7 +125,8 @@ jQuery(document).ready(function($){
     }
   });
   /************* End of fixing ***********/
- 
+  
+  resizeHero();
  
 
 });

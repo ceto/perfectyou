@@ -1,0 +1,88 @@
+//
+// Panels
+// --------------------------------------------------
+
+
+// Base class
+.panel {
+  background-color: $blue-light;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+// Panel contents
+.panel-body {
+  @include clearfix();
+  padding: 1em;
+
+}
+
+// Optional heading
+.panel-heading {
+  padding: 0.5em;
+  border-bottom: 1px solid transparent;
+  border-top-radius:3px;
+
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+}
+
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  
+  > a {
+    &:before {
+      content:'—';
+      margin-right: 0.25em;
+    }
+    &.collapsed{
+      &:before {
+        content:'+';
+      }
+    }
+  }
+}
+
+// Optional footer (stays gray in every modifier class)
+.panel-footer {
+  padding: 0.25em;
+  background-color: $purple-light;
+  border-top: 1px solid $purple;
+  border-bottom-radius:3px;
+}
+
+
+
+// Collapsable panels (aka, accordion)
+//
+// Wrap a series of panels in `.panel-group` to turn them into an accordion with
+// the help of our collapse JavaScript plugin.
+
+.panel-group {
+  margin-bottom: 1em;
+
+  // Tighten up margin so it's only between panels
+  .panel {
+    margin-bottom: 0;
+    border-radius: 4px;
+    + .panel {
+      margin-top: 0.5em;
+    }
+  }
+
+  .panel-heading {
+    border-bottom: 0;
+    + .panel-collapse .panel-body {
+      border-top: 1px solid $purple;
+    }
+  }
+  .panel-footer {
+    border-top: 0;
+    + .panel-collapse .panel-body {
+      border-bottom: 1px solid $purple;
+    }
+  }
+}

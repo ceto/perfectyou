@@ -8,7 +8,7 @@
         background-image:url('<?php echo $imoci[0]; ?>');
       }
     </style>
-    <header class="treat-header">
+    <header class="treat-header fullscreen">
         <div class="trh-inner">
           <h1 class="treat-title"><?php the_title(); ?></h1>
           <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
@@ -19,7 +19,6 @@
             <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
           <?php endif ?>
         </div>
-    
     </header>
 
 
@@ -30,7 +29,7 @@
         $streats = get_post_meta( $post->ID, '_meta_sections', true ); $trno=1;
         foreach ( (array) $streats as $key => $entry ) {
         ?>
-        <li><a href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
+          <li><a href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
         <?php  } ?>
       </ul>
         <a href="#" class="bigbtn">Bejelentkezés<br/><span>0036707705653</span></a>
@@ -50,6 +49,7 @@
       <aside class="subsec-sidebar">
       
       <nav class="subsec-nav">
+        <h3><?php the_title(); ?></h3>
         <ul>
           <?php 
             reset ($streats); $trno=1;
@@ -57,6 +57,7 @@
           ?>
               <li><a href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
           <?php  } ?>
+              <li><a href="#subsec-<?php echo $trno++;  ?>"><?php _e('Kapcsolódó írások','root') ?></a></li>
         </ul>
         
       </nav>
@@ -86,20 +87,24 @@
           </div>
         </section>
       <?php  } ?>
-
+      
+      <section id="subsec-<?php echo $trno++;  ?>" class="side-related subsec">
+        <header class="subsec-header">
+            <h2 class="subsec-title"><?php _e('Kapcsolódó tartalmak','root') ?></h2>
+        </header>
+        <div class="subsec-inner">
+          <ul>
+            <li><a href="#">Hogyan válasszunk szilikont a mellünkbe</a></li>
+            <li><a href="#">Mi a különbség a melfelvarrás és nagyobbítsá között</a></li>
+            <li><a href="#">Mikor nem ajánlott a mellnagyobbító műtét</a></li>
+            <li><a href="#">A gyógyulás menete melnagyobbítás után</a></li>
+            <li><a href="#">Felkészülés a mellnagyobbító műtétre</a></li>
+          </ul>
+        </div>
+      </section>
     
     </div>
-                <section class="side-related">
-        <h3>Kapcsolódó tartalmak</h3>
-        <ul>
-          <li><a href="#">Hogyan válasszunk szilikont a mellünkbe</a></li>
-          <li><a href="#">Mi a különbség a melfelvarrás és nagyobbítsá között</a></li>
-          <li><a href="#">Mikor nem ajánlott a mellnagyobbító műtét</a></li>
-          <li><a href="#">A gyógyulás menete melnagyobbítás után</a></li>
-          <li><a href="#">Felkészülés a mellnagyobbító műtétre</a></li>
-          
-        </ul>
-      </section>
+
 
     <footer>
       <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
