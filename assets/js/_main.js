@@ -82,7 +82,6 @@ $(function() {
   });
 });
 
-
 var resizeHero = function() {
   if ( $(window).height() > 700 ) {
     $('.fullscreen').height( $(window).height() - ( $('.banner').height() + $('.contentnav').height()  ) );

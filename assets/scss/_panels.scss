@@ -22,6 +22,7 @@
   padding: 0.5em;
   border-bottom: 1px solid transparent;
   border-top-radius:3px;
+  //background-color: $purple-light;
 
   > .dropdown .dropdown-toggle {
     color: inherit;
@@ -36,7 +37,8 @@
   > a {
     &:before {
       content:'—';
-      margin-right: 0.25em;
+      width:1em;
+      display: inline-block;
     }
     &.collapsed{
       &:before {

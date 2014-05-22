@@ -2366,7 +2366,8 @@ blockquote {
   margin-bottom: 0; }
   .panel-title > a:before {
     content: '—';
-    margin-right: 0.25em; }
+    width: 1em;
+    display: inline-block; }
   .panel-title > a.collapsed:before {
     content: '+'; }
 
