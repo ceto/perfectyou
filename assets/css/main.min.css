@@ -1861,7 +1861,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
-    color: #d37188;
+    color: #4e4e4e;
     border: 0; }
     h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus, h6 a:hover, h6 a:focus {
       color: #f37077; }
@@ -1973,7 +1973,7 @@ blockquote {
     margin-left: 1em; }
     .nav-main li a {
       display: inline-block;
-      color: #1b1109;
+      color: #312017;
       text-transform: uppercase;
       text-decoration: none;
       height: 97px;
@@ -2045,7 +2045,7 @@ blockquote {
     .contentnav .bigbtn span {
       font-size: 0.75em; }
     .contentnav .bigbtn:hover, .contentnav .bigbtn:focus {
-      color: #1b1109;
+      color: #312017;
       background-color: #ffcf7b; }
 
 .subsec-nav:before, .subsec-nav:after {
@@ -2090,7 +2090,7 @@ blockquote {
       color: #ffcf7b; }
 
 .content-info {
-  background-color: #1b1109;
+  background-color: #312017;
   color: #fff; }
   .content-info:before, .content-info:after {
     content: " ";
@@ -2148,10 +2148,21 @@ blockquote {
   @media only screen and (min-width: 1024px) { }
 
 .subsec-header {
+  position: relative;
   background-color: #584d86;
   color: #ffcf7b;
   padding: 2em; }
+  .subsec-header:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2em;
+    height: 0.5em;
+    background-color: #ffcf7b; }
   .subsec-header .subsec-title {
+    position: relative;
     font-size: 2.5em;
     margin: 0 0; }
     @media only screen and (min-width: 768px) {
@@ -2168,7 +2179,7 @@ blockquote {
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  color: #1b1109; }
+  color: #312017; }
   @media only screen and (min-width: 480px) { }
   @media only screen and (min-width: 768px) {
     .treat-header {
@@ -2211,7 +2222,7 @@ blockquote {
 
 .treat-lead {
   padding: 0 2em;
-  color: #1b1109;
+  color: #312017;
   font-size: 1.25em;
   font-weight: 100; }
   .treat-lead:before, .treat-lead:after {
@@ -2313,9 +2324,9 @@ blockquote {
   text-align: center;
   margin: 4em 2em;
   padding: 1em 2em;
-  border: 1px solid #ffcf7b;
+  border: 1px solid #9a91ba;
   border-radius: 4px;
-  color: #ffcf7b;
+  color: #9a91ba;
   text-transform: uppercase;
   font-size: 1em;
   line-height: 1em;
@@ -2342,7 +2353,7 @@ blockquote {
   display: none; }
 
 .panel {
-  background-color: #dce7e9;
+  background-color: #fadabd;
   border: 1px solid transparent;
   border-radius: 4px; }
 
