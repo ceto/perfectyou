@@ -71,10 +71,11 @@ $(function() {
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           $('html,body').animate({
-            scrollTop: target.offset().top - $('.banner').height()
+            scrollTop: target.offset().top - ($('body').attr('data-offset') - 1 )
           }, 1000);
           //return false;
           return true;
+
       }
       }
 
@@ -122,6 +123,7 @@ jQuery(document).ready(function($){
     } else {
       $('.banner').removeClass('fixedhead');
     }
+    //$('body').attr('data-offset' ,  $('.banner').height() );
   });
   /************* End of fixing ***********/
   

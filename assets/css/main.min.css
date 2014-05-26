@@ -2088,6 +2088,8 @@ blockquote {
       color: #cecece; }
     .subsec-nav li a:hover, .subsec-nav li a:focus {
       color: #ffcf7b; }
+  .subsec-nav li.active a {
+    background-color: #9a91ba; }
 
 .content-info {
   background-color: #312017;
@@ -2279,8 +2281,8 @@ blockquote {
   background-image: url('../img/logo_fuggo_signos.png');
   background-position: center 80%;
   background-repeat: no-repeat;
-  -webkit-background-size: 66.666% auto;
-  background-size: 66.666% auto; }
+  -webkit-background-size: 50% auto;
+  background-size: 50% auto; }
   @media only screen and (min-width: 480px) { }
   @media only screen and (min-width: 768px) {
     .subsec-sidebar {
