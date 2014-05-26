@@ -1,6 +1,6 @@
 .banner {
   @include clearfix();
-  
+  position: relative;
   top:0;
   left:0;
 
@@ -24,21 +24,49 @@
   overflow: hidden;
   display: inline-block;
   float:left;
-  margin-top: 15px;
-  height:70px;
-  width: 280px;
-  background-image: url('../img/logo_szurke.png');
+  margin-top: 25px;
+  height:25px;
+  width: 140px;
+  background-image: url('../img/logo_szurke_kicsi.png');
   background-position: left center;
   background-repeat: no-repeat;
   background-size: auto 100%;
   transition: all .25s ease;
-  .fixedhead & {
-    height:50px;
-    width:280px;
-    margin-top: 8px;
-    background-image: url('../img/logo_szurke_kicsi.png');
+  
+  @include bp($s2){
+    margin-top: 33px;
+    height:30px;
+    width:160px;
 
-    
+  }
+  @include bp($s3){
+    margin-top: 15px;
+    height:70px;
+    width: 280px;
+    background-image: url('../img/logo_szurke.png');
+  }
+
+  .fixedhead & {
+    margin-top: 21px;
+    //height:40px !important;
+    //width:160px !important;
+    //margin-top: 15px;
+    //background-image: url('../img/logo_szurke_kicsi.png') !important;
+
+    @include bp($s2){
+      margin-top: 18px;
+      // height:30px;
+      // width:160px;
+    }
+
+    @include bp($s3){
+      margin-top: 15px;
+      height:34px;
+      width: 182px;
+      background-image: url('../img/logo_szurke_kicsi.png');
+    }
+
+
   }
 }
 

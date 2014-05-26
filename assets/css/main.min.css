@@ -1920,6 +1920,7 @@ blockquote {
   margin: 0.666em 0; }
 
 .banner {
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -1946,27 +1947,107 @@ blockquote {
   overflow: hidden;
   display: inline-block;
   float: left;
-  margin-top: 15px;
-  height: 70px;
-  width: 280px;
-  background-image: url('../img/logo_szurke.png');
+  margin-top: 25px;
+  height: 25px;
+  width: 140px;
+  background-image: url('../img/logo_szurke_kicsi.png');
   background-position: left center;
   background-repeat: no-repeat;
   -webkit-background-size: auto 100%;
   background-size: auto 100%;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease; }
+  @media only screen and (min-width: 768px) {
+    .brand {
+      margin-top: 33px;
+      height: 30px;
+      width: 160px; } }
+  @media only screen and (min-width: 1024px) {
+    .brand {
+      margin-top: 15px;
+      height: 70px;
+      width: 280px;
+      background-image: url('../img/logo_szurke.png'); } }
   .fixedhead .brand {
-    height: 50px;
-    width: 280px;
-    margin-top: 8px;
-    background-image: url('../img/logo_szurke_kicsi.png'); }
+    margin-top: 21px; }
+    @media only screen and (min-width: 768px) {
+      .fixedhead .brand {
+        margin-top: 18px; } }
+    @media only screen and (min-width: 1024px) {
+      .fixedhead .brand {
+        margin-top: 15px;
+        height: 34px;
+        width: 182px;
+        background-image: url('../img/logo_szurke_kicsi.png'); } }
 
 .nav-main {
   float: right; }
+  .nav-main .btn-main {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: rgba(88, 77, 134, 0.75);
+    border: 1px solid #584d86;
+    border-radius: 4px;
+    font-size: 0.75em;
+    line-height: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff; }
+    .nav-main .btn-main small {
+      font-size: 75%;
+      letter-spacing: 1px;
+      font-weight: 700;
+      display: block; }
+    .nav-main .btn-main:hover, .nav-main .btn-main:focus {
+      background-color: #584d86;
+      border-color: #fff; }
   .nav-main ul {
+    display: inline-block;
     margin: 0;
     padding: 0; }
+  .nav-main .dropdown > .dropdown-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 2em 1em;
+    display: none;
+    background-color: rgba(88, 77, 134, 0.95); }
+    .nav-main .dropdown > .dropdown-menu li {
+      display: block;
+      margin-left: 0; }
+      @media only screen and (min-width: 480px) {
+        .nav-main .dropdown > .dropdown-menu li {
+          float: left;
+          width: 50%; } }
+      @media only screen and (min-width: 768px) {
+        .nav-main .dropdown > .dropdown-menu li {
+          width: 25%; } }
+      .nav-main .dropdown > .dropdown-menu li a {
+        color: #fff;
+        line-height: 1.25em;
+        padding: 0.5em 1em;
+        height: auto; }
+        .nav-main .dropdown > .dropdown-menu li a:hover, .nav-main .dropdown > .dropdown-menu li a:focus {
+          color: #ffcf7b;
+          background-color: transparent; }
+    .nav-main .dropdown > .dropdown-menu .dropdown-menu {
+      position: static;
+      display: block;
+      background-color: transparent;
+      padding: 1em 0; }
+      .nav-main .dropdown > .dropdown-menu .dropdown-menu li {
+        display: block;
+        width: auto;
+        float: none; }
+        .nav-main .dropdown > .dropdown-menu .dropdown-menu li a {
+          text-transform: none; }
+  .nav-main .dropdown.open > .dropdown-toggle {
+    background-color: rgba(88, 77, 134, 0.95); }
+  .nav-main .dropdown.open > .dropdown-menu {
+    display: block; }
   .nav-main li {
     list-style-type: none;
     display: inline-block;

@@ -1,13 +1,108 @@
 .nav-main {
   float:right;
+  .btn-main{
+    display: inline-block;
+    //margin:0.75em 0 0;
+    padding:0.5em 1em;
+    background-color: rgba($purple,0.75);
+    border:1px solid $purple;
+    border-radius: 4px;
+    font-size: 0.75em;
+    line-height: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color:#fff;
+    small{
+      font-size: 75%;
+      letter-spacing: 1px;
+      font-weight: 700;
+      display: block;
+      //text-transform: none;
+    }
+    &:hover, &:focus{
+      background-color: rgba($purple,1);
+      border-color: #fff;
+    }
+
+  }
   ul{
+    display: inline-block;
     margin:0;
     padding:0;
   }
+
+
+  .dropdown{
+      > .dropdown-menu {
+        position: absolute;
+
+        left:0;right:0;
+        width:100%;
+        padding:2em 1em;
+        display: none;
+        background-color: rgba($purple,0.95);
+        
+        li{
+          display: block;
+          margin-left:0;
+          @include bp($s1) {
+            float:left;
+            width:50%;
+          }
+          @include bp($s2) {
+            width:25%;
+          }
+
+          a{
+            color:#fff;
+            line-height: 1.25em;
+            padding:0.5em 1em;
+            height:auto;
+            &:hover, &:focus{
+              color:$yellow;
+              background-color: transparent;
+            }
+          }
+        }
+
+        .dropdown-menu {
+          position: static;
+          display: block;
+          background-color: transparent;
+          padding:1em 0;
+          li {
+            display: block;
+            width:auto;
+            float:none;
+            a{
+              text-transform: none;
+            }
+          }
+        }
+        
+
+      }
+      &.open{
+        > .dropdown-toggle {
+          background-color: rgba($purple,0.95);
+        }
+        > .dropdown-menu{
+          display: block;
+          
+          
+        }
+      }
+    }
+
+  
+
   li{
     list-style-type: none;
     display: inline-block;
     margin-left: 1em;
+
 
     a{
       display: inline-block;
@@ -33,6 +128,7 @@
 
     }
   }
+
 }
 
 

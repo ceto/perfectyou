@@ -6,5 +6,6 @@
         wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav nav-pills'));
       endif;
     ?>
+      <a href="#" class="btn btn-main"><?php _e('<small>Bejelentkezés</small>06.70.770.5653','root') ?></a>
   </nav>
 </header>
