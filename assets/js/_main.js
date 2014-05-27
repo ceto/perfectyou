@@ -62,6 +62,34 @@ $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
 
+
+//********** Scroll Direction Check *************//
+var felcsoki=0;
+var lecsoki=0;
+var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel"; //FF doesn't recognize mousewheel as of FF3.x
+$(document).bind(mousewheelevt, function(e) {
+        var evt = window.event || e; //equalize event object     
+        evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
+        var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta; //check for detail first, because it is used by Opera and FF
+        if(delta > 0)
+            {
+            //console.log('Felfele');
+            if (felcsoki++ > 2 ) {
+              lecsoki=0;
+              $('.fixedhead').addClass('show');
+            }
+            }
+        else
+            {
+            //console.log('Lefele');
+            if (lecsoki++ > 2 ) {
+              felcsoki=0;
+              $('.fixedhead').removeClass('show');
+            }
+            }
+    }
+);
+
 //*********** Smooth scroll *************
 $(function() {
   $('a[href*=#]:not([href=#]):not([data-toggle=collapse])').click(function() {
@@ -87,6 +115,7 @@ var resizeHero = function() {
   if ( $(window).height() > 700 ) {
     $('.fullscreen').height( $(window).height() - ( $('.banner').height() + $('.contentnav').height()  ) );
     $('.subsec-sidebar').height( $(window).height()  );
+    $('.contact-body').height( $(window).height() -  129  );
   } else {
     
   }
@@ -118,7 +147,7 @@ jQuery(document).ready(function($){
   var htop = $('.banner').offset().top - parseFloat($('.banner').css('marginTop').replace(/auto/, 0));
   $(window).scroll(function (event) {
     var y = $(this).scrollTop();
-    if (y-60 >= htop) {
+    if (y-69 >= htop) {
       $('.banner').addClass('fixedhead');
     } else {
       $('.banner').removeClass('fixedhead');

@@ -1,7 +1,7 @@
 .subsections {
   @include clearfix();
   position: relative;
-  background-color: $gray-dark;
+  //background-color: $gray-dark;
 
 }
 .subsec{
@@ -10,6 +10,7 @@
   
   .subsec-inner {
     background-color:$brown-superlight;
+    //background-color:#fff;
   }
   &:nth-child(odd){
 
@@ -58,24 +59,32 @@
 
 .subsec-header{
   position: relative;
-  background-color: rgba($purple,1);
   //background-color: $purple;
+  //background-color: rgba($brown-superlight,0.85);
+  background-color: rgba($purple-pot,0.75);
+  
+  //background-color: #fff;
   color:$yellow;
-  padding:2em;
+  //color:$brown-superlight;
+  padding:2em 5em;
+  text-align: right;
   &:before{
       display: block;
       content:'';
       position: absolute;
       top:0;
-      left:0;
-      width:2em;
-      height:0.5em;
+      right:100%;
+      bottom:0;
+      width:7px;
+
+      //height:0.5em;
       background-color: $yellow;
   }
-  
+    
   .subsec-title {
     position: relative;
     font-size: 2.5em;
+    font-weight: 100;
     margin:0 0;
     @include bp($s2){
        font-size: 3.5em;

@@ -49,7 +49,12 @@
       <aside class="subsec-sidebar">
       
       <nav class="subsec-nav">
-        <h3><?php the_title(); ?></h3>
+        <header class="subsec-navhead">
+          <!-- <a class="subsec-navlogo" href="<?php echo home_url('/') ?>"><?php bloginfo('name'); ?></a> -->
+          <div class="subsec-navbread"><a href="#">Mell</a></div>
+          <h3><?php the_title(); ?></h3>
+        </header>
+        
         <ul class="nav">
           <?php 
             reset ($streats); $trno=1;
@@ -62,7 +67,6 @@
         
       </nav>
 
-      <a href="#" class="nyomjad">Bejelentkezés<br/><span>0036707705653</span></a>
       <a class="brandi" href="#pagetop"><?php bloginfo('name'); ?></a>
     </aside>
       <?php reset ($streats); $trno=1;

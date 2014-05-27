@@ -149,6 +149,11 @@ td, th {
 /*============= Color Definition =================*/
 /*============= Fonts Definition =================*/
 /****************** Breakpoints Definition ***********/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
@@ -1814,7 +1819,7 @@ html {
 body {
   position: relative;
   background-color: #fff7ed;
-  color: #4f4f4f;
+  color: #3a285d;
   overflow-x: hidden;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1844,19 +1849,26 @@ a {
 strong, b {
   font-weight: 500; }
 
-p:first-child:first-letter {
-  float: left;
-  color: #d37188;
-  font-size: 3em;
-  line-height: 1em;
-  padding-right: 0.125em;
-  font-weight: 100;
-  text-transform: uppercase; }
+p:first-child {
+  font-size: 1.25em;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-top: 3em; }
+  p:first-child strong, p:first-child b {
+    font-weight: 300; }
+  p:first-child:first-letter {
+    float: left;
+    color: #584d86;
+    font-size: 3em;
+    line-height: 1em;
+    padding-right: 0.125em;
+    font-weight: 300;
+    text-transform: uppercase; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px 0;
   padding: 0;
-  font-weight: 100;
+  font-weight: 300;
   font-style: normal;
   line-height: 1.1; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1878,14 +1890,15 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 1.5rem;
-  margin-top: 50px;
-  font-weight: 500;
-  font-variant: small-caps; }
+  margin-top: 2rem;
+  font-weight: 400; }
 
 h4, .h4 {
   font-size: 1.125rem;
   margin: 0 0 0.8rem 0;
   font-weight: 500; }
+  .main h4, .main .h4 {
+    color: #584d86; }
 
 h5, .h5 {
   font-size: 1.1rem;
@@ -1896,7 +1909,18 @@ h6 {
   font-size: 1rem; }
 
 figure {
-  margin: 0; }
+  margin: 1em 0;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  padding: 0.75em;
+  background-color: #fadabd; }
+
+.caption {
+  font-size: 0.75em;
+  font-style: italic;
+  color: #4f4f4f;
+  margin-top: 0.875em; }
 
 img {
   vertical-align: middle;
@@ -1927,7 +1951,6 @@ blockquote {
   z-index: 4;
   background-color: transparent;
   padding: 0 20px;
-  height: 100px;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   border-top: 3px solid #ffcf7b; }
@@ -1938,8 +1961,12 @@ blockquote {
     clear: both; }
   .banner.fixedhead {
     position: fixed;
+    top: -69px;
     background-color: #fff;
-    height: 66px; }
+    -webkit-transition: top 0.6s ease;
+    transition: top 0.6s ease; }
+    .banner.fixedhead.show {
+      top: 0; }
 
 .brand {
   text-indent: 100%;
@@ -2134,13 +2161,47 @@ blockquote {
   display: table; }
 .subsec-nav:after {
   clear: both; }
-.subsec-nav h3 {
-  color: #ffcf7b;
+.subsec-nav .subsec-navhead {
   text-align: left;
-  margin: 1em 1.25em 0; }
+  padding: 1em 0.5em 2em 0.5em; }
+  .subsec-nav .subsec-navhead:before, .subsec-nav .subsec-navhead:after {
+    content: " ";
+    display: table; }
+  .subsec-nav .subsec-navhead:after {
+    clear: both; }
+  @media only screen and (min-width: 1024px) {
+    .subsec-nav .subsec-navhead {
+      padding: 1em 1em 3em 1em; } }
+  .subsec-nav .subsec-navhead .subsec-navlogo {
+    text-indent: 9999px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-image: url('../img/logo_szurke_kicsi.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+    margin-bottom: 3em; }
+    @media only screen and (min-width: 768px) { }
+  .subsec-nav .subsec-navhead h3 {
+    color: #fadabd;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-size: 1.666em;
+    font-weight: 300; }
+  .subsec-nav .subsec-navhead .subsec-navbread a {
+    color: #ffcf7b;
+    text-decoration: none;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    font-weight: 700; }
 .subsec-nav ul {
   counter-reset: navcount;
-  display: inline-block;
   margin: 1em 0;
   padding: 0;
   text-align: left; }
@@ -2151,26 +2212,21 @@ blockquote {
   margin: 0; }
   .subsec-nav li a {
     display: block;
-    padding: 0.333em 0.5em 0.333em 1.5em;
-    text-indent: -1.15em;
+    padding: 0.75em 0.5em 0.75em 0.5em;
     text-decoration: none;
     color: #cecece;
-    font-size: 1.125em;
+    font-size: 0.875em;
     line-height: 1.125;
     font-weight: 300;
-    font-variant: small-caps; }
-    .subsec-nav li a:before {
-      content: counter(navcount) '.';
-      margin-right: 0.25em;
-      font-size: 0.875em;
-      line-height: 1em;
-      font-weight: 900;
-      font-variant: normal;
-      color: #cecece; }
+    text-transform: uppercase;
+    color: #fff7ed; }
     .subsec-nav li a:hover, .subsec-nav li a:focus {
       color: #ffcf7b; }
+    @media only screen and (min-width: 1024px) {
+      .subsec-nav li a {
+        padding: 0.75em 1em 0.75em 1em; } }
   .subsec-nav li.active a {
-    background-color: #9a91ba; }
+    color: #ffcf7b; }
 
 .content-info {
   background-color: #312017;
@@ -2182,8 +2238,7 @@ blockquote {
     clear: both; }
 
 .subsections {
-  position: relative;
-  background-color: #4e4e4e; }
+  position: relative; }
   .subsections:before, .subsections:after {
     content: " ";
     display: table; }
@@ -2232,21 +2287,23 @@ blockquote {
 
 .subsec-header {
   position: relative;
-  background-color: #584d86;
+  background-color: rgba(58, 40, 93, 0.75);
   color: #ffcf7b;
-  padding: 2em; }
+  padding: 2em 5em;
+  text-align: right; }
   .subsec-header:before {
     display: block;
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 2em;
-    height: 0.5em;
+    right: 100%;
+    bottom: 0;
+    width: 7px;
     background-color: #ffcf7b; }
   .subsec-header .subsec-title {
     position: relative;
     font-size: 2.5em;
+    font-weight: 100;
     margin: 0 0; }
     @media only screen and (min-width: 768px) {
       .subsec-header .subsec-title {
@@ -2359,6 +2416,7 @@ blockquote {
   text-align: center;
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
+  background-color: #4e4e4e;
   background-image: url('../img/logo_fuggo_signos.png');
   background-position: center 80%;
   background-repeat: no-repeat;
@@ -2486,5 +2544,28 @@ blockquote {
     border-top: 0; }
     .panel-group .panel-footer + .panel-collapse .panel-body {
       border-bottom: 1px solid #584d86; }
+
+.contact .contact-body {
+  text-align: center;
+  padding: 2em 0; }
+
+.gallery {
+  background-color: #fadabd;
+  padding: 0.75em; }
+
+.gallery-row {
+  margin: 0 -0.5em; }
+  .gallery-row:before, .gallery-row:after {
+    content: " ";
+    display: table; }
+  .gallery-row:after {
+    clear: both; }
+
+.col-sm-3, .col-lg-3 {
+  padding: 0 0.5em; }
+  @media only screen and (min-width: 768px) {
+    .col-sm-3, .col-lg-3 {
+      width: 33.333%;
+      float: left; } }
 
 /*# sourceMappingURL=main.min.css.map */

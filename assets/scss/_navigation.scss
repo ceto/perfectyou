@@ -220,14 +220,61 @@
   //   left:0;right:0;
   //   bottom:0;
   // }
-  h3{
-    color:$yellow;
+
+  .subsec-navhead{
+    @include clearfix();
+    //background-color:$purple;
     text-align: left;
-    margin:1em 1.25em 0;
+    padding:1em 0.5em 2em 0.5em;
+    @include bp($s3){
+       padding:1em 1em 3em 1em; 
+    }
+
+    .subsec-navlogo{
+        text-indent: 9999px;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        height:40px;
+        width: 100%;
+        background-image: url('../img/logo_szurke_kicsi.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        margin-bottom: 3em;
+        
+        @include bp($s2){
+          //height:40px;
+          //width:160px;
+
+        }
+    }
+
+    h3{
+    
+    color:$brown-light;
+    text-transform:uppercase;
+    text-align: left;
+    margin:0;
+    padding:0;
+    font-size: 1.666em;
+    font-weight: 300;
+    }
+    .subsec-navbread {
+      a {
+        color:$yellow;
+        text-decoration: none;
+        font-size:1.25em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    
+  
   }
   ul {
     counter-reset: navcount;
-    display: inline-block;
+    //display: inline-block;
     margin:1em 0;
     padding:0;
     text-align: left;
@@ -241,33 +288,38 @@
 
     a{
       display: block;
-      padding:0.333em 0.5em 0.333em 1.5em;
-      text-indent: -1.15em;
+      padding:0.75em 0.5em 0.75em 0.5em;
+      //text-indent: -1.15em;
       text-decoration: none;
       color:$white;
-      font-size: 1.125em;
+      font-size: 0.875em;
       line-height: 1.125;
       font-weight: 300;
-      font-variant: small-caps;
-      //text-transform: uppercase;
-      &:before{
-        content: counter(navcount)'.';
-        margin-right: 0.25em;
-        font-size: 0.875em;
-        line-height: 1em;
-        font-weight: 900;
-        font-variant: normal;
-        //font-style: italic;
-        color:$white;
-      }
+      //font-variant: small-caps;
+      text-transform: uppercase;
+      color:$brown-superlight;
+      // &:before{
+      //   content: counter(navcount)'.';
+      //   margin-right: 0.25em;
+      //   font-size: 0.875em;
+      //   line-height: 1em;
+      //   font-weight: 900;
+      //   font-variant: normal;
+      //   //font-style: italic;
+      //   color:$white;
+      // }
       &:hover, &:focus{
         color:$yellow;
+      }
+      @include bp($s3){
+       padding:0.75em 1em 0.75em 1em; 
       }
       
     }
     
     &.active a{
-      background-color: $purple-light;
+      //background-color: $purple;
+      color:$yellow;
     }
 
   }

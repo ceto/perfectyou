@@ -17,7 +17,9 @@
   }
 }
 
-
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
 //
 // Component animations
