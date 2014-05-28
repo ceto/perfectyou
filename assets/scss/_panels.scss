@@ -5,7 +5,7 @@
 
 // Base class
 .panel {
-  background-color: $brown-light;
+  //background-color: $brown-light;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -13,12 +13,12 @@
 // Panel contents
 .panel-body {
   @include clearfix();
-  padding: 1em;
+  //padding: 1em;
 }
 
 // Optional heading
 .panel-heading {
-  padding: 0.5em;
+  padding: 0.5em 0;
   border-bottom: 1px solid transparent;
   border-top-radius:3px;
   //background-color: $purple-light;
@@ -32,11 +32,16 @@
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
+  //font-size: 1.5rem;
+  //font-weight: 400;
+  padding-left: 1em;
   
   > a {
     &:before {
       content:'—';
+      text-align: center;
       width:1em;
+      margin-left:-1em;
       display: inline-block;
     }
     &.collapsed{
@@ -63,7 +68,7 @@
 // the help of our collapse JavaScript plugin.
 
 .panel-group {
-  margin-bottom: 1em;
+  margin:2em 0;
 
   // Tighten up margin so it's only between panels
   .panel {
@@ -75,9 +80,9 @@
   }
 
   .panel-heading {
-    border-bottom: 0;
+    border-bottom: 1px solid $purple-light;
     + .panel-collapse .panel-body {
-      border-top: 1px solid $purple;
+      //border-top: 1px solid $purple;
     }
   }
   .panel-footer {

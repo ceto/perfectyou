@@ -23,20 +23,6 @@
 
 
 
-    <nav class="contentnav">
-      <ul class="nav">
-      <?php 
-        $streats = get_post_meta( $post->ID, '_meta_sections', true ); $trno=1;
-        foreach ( (array) $streats as $key => $entry ) {
-        ?>
-          <li><a href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
-        <?php  } ?>
-      </ul>
-        <a href="#" class="bigbtn">Bejelentkezés<br/><span>0036707705653</span></a>
-    </nav>
-    
-
-
     <div class="treat-content">
 
       <?php the_content(); ?>
@@ -56,8 +42,9 @@
         </header>
         
         <ul class="nav">
-          <?php 
-            reset ($streats); $trno=1;
+          <?php
+            $streats = get_post_meta( $post->ID, '_meta_sections', true ); $trno=1; 
+            $trno=1;
             foreach ( (array) $streats as $key => $entry ) {
           ?>
               <li><a href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>

@@ -113,9 +113,9 @@ $(function() {
 
 var resizeHero = function() {
   if ( $(window).height() > 700 ) {
-    $('.fullscreen').height( $(window).height() - ( $('.banner').height() + $('.contentnav').height()  ) );
+    $('.fullscreen').height( $(window).height() - ( $('.banner').height()  ) );
     $('.subsec-sidebar').height( $(window).height()  );
-    $('.contact-body').height( $(window).height() -  129  );
+    $('.contact-body').height( $(window).height() - 139  );
   } else {
     
   }

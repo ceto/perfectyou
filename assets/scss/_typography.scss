@@ -27,7 +27,7 @@ strong, b{
 
 
 p{
-  &:first-child {
+  .subsec-cont > &:first-child {
     font-size:1.25em;
     line-height: 1.5;
     font-weight: 300;
@@ -59,10 +59,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   a {
     text-decoration: none;
-    color: $gray-dark;
+    color: $purple-pot;
     border: 0;
     &:hover, &:focus {
-      color: $link;
+      color: $purple;
     }
   }
 }
@@ -89,11 +89,13 @@ h3, .h3 { // In blog post sub sections
 
 }
 h4, .h4 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   margin: 0 0 0.8rem 0;
-  font-weight: 500;
+  font-weight: 400;
+  //text-transform: uppercase;
+  //font-variant: small-caps;
   .main &{
-    color:$purple;
+    //color:$purple;
   }
 }
 h5, .h5 {
@@ -116,9 +118,11 @@ figure {
 
 .caption{
   font-size:0.75em;
+  font-weight: 300;
   font-style: italic;
-  color:$gray-text;
-  margin-top: 0.875em;
+  color:$gray-dark;
+  margin-top: 0.5em;
+
 }
 
 
