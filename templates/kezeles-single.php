@@ -18,12 +18,15 @@
           <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
             <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
           <?php endif ?>
+          <div class="treat-headaction">
+            <a data-toggle="collapse" href="#contact" class="btn btn-filled">Jelentkezés</a> <a href="#lenyeg" class="btn">Részletek</a>
+          </div>
         </div>
     </header>
 
 
-
-    <div class="treat-content">
+    
+    <div id="lenyeg" class="treat-content">
 
       <?php the_content(); ?>
 
@@ -49,7 +52,7 @@
           ?>
               <li><a href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
           <?php  } ?>
-              <li><a href="#subsec-<?php echo $trno++;  ?>"><?php _e('Kapcsolódó írások','root') ?></a></li>
+              <li><a href="#subsec-<?php echo $trno++;  ?>"><?php _e('Tippek és tanácsok a döntéshez','root') ?></a></li>
         </ul>
         
       </nav>
@@ -74,14 +77,19 @@
             
             <div class="subsec-cont">
               <?php echo apply_filters('the_content', $entry['content'] );?>
+              <div class="subsec-action">
+                <a data-toggle="collapse" href="#contact" class="btn">Jelentkezés<small>06.30.707.3056</small></a>
+              </div>
+            
             </div>
+
           </div>
         </section>
       <?php  } ?>
       
       <section id="subsec-<?php echo $trno++;  ?>" class="side-related subsec">
         <header class="subsec-header">
-            <h2 class="subsec-title"><?php _e('Kapcsolódó tartalmak','root') ?></h2>
+            <h2 class="subsec-title"><?php _e('Tippek, tanácsok a döntéshez','root') ?></h2>
         </header>
         <div class="subsec-inner">
           <ul>

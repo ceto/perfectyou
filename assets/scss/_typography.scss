@@ -107,7 +107,7 @@ h6 { // Not really used
   font-size: 1.0rem;
 }
 
-figure {
+figure.thumbnail {
   margin: 1em 0;
   vertical-align: middle;
   max-width: 100%; // Part 1: Set a maximum relative to the parent
@@ -158,4 +158,37 @@ blockquote {
     margin:0.666em 0;
   }
 
+}
+
+.btn {
+  border:2px solid $purple;
+  border-radius:4px;
+  display: inline-block;
+  padding:0.666em 1.5em;
+  text-align: center;
+  font-size: 1.25em;
+  line-height: 1.1;
+  text-decoration: none;
+  font-weight: 400;
+  color:$purple;
+  &:hover, &:focus {
+    border-color: $purple-pot;
+    color:$purple-pot;
+  }
+  small{
+    display: block;
+  } 
+}
+
+.btn-filled{
+  background-color: $purple;
+  border-color:$purple;
+  color:#fff;
+
+
+  &:hover, &:focus {
+    background-color: $purple-pot;
+    border-color:$purple-pot;
+    color:$yellow;
+  } 
 }
