@@ -1935,8 +1935,8 @@ img {
   height: auto; }
 
 blockquote {
-  background-color: #dce7e9;
-  color: #3a285d;
+  background-color: #50496b;
+  color: #fff7ed;
   padding: 0 1em;
   font-size: 1.5em;
   font-weight: 100;
@@ -1954,13 +1954,15 @@ blockquote {
   border: 2px solid #584d86;
   border-radius: 4px;
   display: inline-block;
-  padding: 0.666em 1.5em;
+  padding: 0.75em 1.75em;
+  min-width: 8em;
   text-align: center;
   font-size: 1.25em;
   line-height: 1.1;
   text-decoration: none;
   font-weight: 400;
-  color: #584d86; }
+  color: #584d86;
+  background-color: transparent; }
   .btn:hover, .btn:focus {
     border-color: #3a285d;
     color: #3a285d; }
@@ -2003,8 +2005,7 @@ blockquote {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  display: inline-block;
-  float: left;
+  display: block;
   margin-top: 25px;
   height: 25px;
   width: 140px;
@@ -2013,6 +2014,10 @@ blockquote {
   background-repeat: no-repeat;
   background-size: auto 100%;
   transition: all 0.25s ease; }
+  @media only screen and (min-width: 480px) {
+    .brand {
+      display: inline-block;
+      float: left; } }
   @media only screen and (min-width: 768px) {
     .brand {
       margin-top: 33px;
@@ -2037,8 +2042,10 @@ blockquote {
         background-image: url('../img/logo_szurke_kicsi.png'); } }
 
 .nav-main {
-  float: right;
-  padding-right: 130px; }
+  padding-right: 110px; }
+  @media only screen and (min-width: 480px) {
+    .nav-main {
+      float: right; } }
   .nav-main .btn-main {
     position: absolute;
     top: 0;
@@ -2067,17 +2074,21 @@ blockquote {
     .fixedhead .nav-main .btn-main {
       padding-top: 1.333em; }
   .nav-main ul {
-    display: inline-block;
     margin: 0;
     padding: 0; }
+    @media only screen and (min-width: 480px) {
+      .nav-main ul {
+        display: inline-block; } }
   .nav-main .dropdown > .dropdown-menu {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 2em 1em;
     display: none;
-    background-color: rgba(88, 77, 134, 0.95); }
+    background-color: #3d394e;
+    border-bottom: 1px solid #fff7ed; }
+    @media only screen and (min-width: 480px) {
+      .nav-main .dropdown > .dropdown-menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%; } }
     .nav-main .dropdown > .dropdown-menu li {
       display: block;
       margin-left: 0; }
@@ -2089,34 +2100,62 @@ blockquote {
         .nav-main .dropdown > .dropdown-menu li {
           width: 25%; } }
       .nav-main .dropdown > .dropdown-menu li a {
-        color: #fff;
+        position: relative;
+        color: #fff7ed;
+        font-size: 1.25em;
         line-height: 1.25em;
-        padding: 0.5em 1em;
-        height: auto; }
+        padding: 1.666em 0.666em 0.666em;
+        height: auto;
+        background-color: #50496b;
+        display: block; }
         .nav-main .dropdown > .dropdown-menu li a:hover, .nav-main .dropdown > .dropdown-menu li a:focus {
-          color: #ffcf7b;
-          background-color: transparent; }
+          color: #ffcf7b; }
+        .nav-main .dropdown > .dropdown-menu li a:before {
+          position: absolute;
+          top: 1.333em;
+          content: '';
+          width: 1em;
+          height: 0.25em;
+          background-color: #ffcf7b; }
+    .nav-main .dropdown > .dropdown-menu li.active a {
+      color: #fff; }
     .nav-main .dropdown > .dropdown-menu .dropdown-menu {
       position: static;
       display: block;
       background-color: transparent;
-      padding: 1em 0; }
+      border-bottom: none;
+      padding: 1em 0 4em; }
       .nav-main .dropdown > .dropdown-menu .dropdown-menu li {
         display: block;
         width: auto;
         float: none; }
         .nav-main .dropdown > .dropdown-menu .dropdown-menu li a {
+          padding: 0.5em 1em;
+          font-size: 0.875em;
+          font-weight: 500;
+          color: #9a91ba;
+          background-color: transparent;
           text-transform: none; }
+          .nav-main .dropdown > .dropdown-menu .dropdown-menu li a:hover, .nav-main .dropdown > .dropdown-menu .dropdown-menu li a:focus {
+            color: #ffcf7b;
+            background-color: transparent; }
+          .nav-main .dropdown > .dropdown-menu .dropdown-menu li a:before {
+            display: none; }
+      .nav-main .dropdown > .dropdown-menu .dropdown-menu li.active a {
+        color: #fff; }
   .nav-main .dropdown.open > .dropdown-toggle {
-    background-color: rgba(88, 77, 134, 0.95); }
+    background-color: #50496b; }
   .nav-main .dropdown.open > .dropdown-menu {
     display: block; }
   .nav-main li {
     list-style-type: none;
-    display: inline-block;
+    display: block;
     margin-left: 0.5em; }
+    @media only screen and (min-width: 480px) {
+      .nav-main li {
+        display: inline-block; } }
     .nav-main li a {
-      display: inline-block;
+      display: block;
       color: #312017;
       text-transform: uppercase;
       text-decoration: none;
@@ -2126,6 +2165,9 @@ blockquote {
       font-weight: 300;
       padding: 0 1em;
       transition: all 0.25s ease; }
+      @media only screen and (min-width: 480px) {
+        .nav-main li a {
+          display: inline-block; } }
       .nav-main li a:hover, .nav-main li a:focus {
         color: #fff;
         background-color: rgba(88, 77, 134, 0.75); }
@@ -2363,7 +2405,8 @@ blockquote {
 
 .treat-content {
   padding: 2.5em 0.5em;
-  background-color: #dce7e9;
+  background-color: #50496b;
+  color: #fff7ed;
   font-size: 1.25em; }
   .treat-content:before, .treat-content:after {
     content: " ";
@@ -2521,10 +2564,65 @@ blockquote {
 
 .contact {
   margin: 0 -20px;
-  background-color: #fff; }
+  padding-right: 110px;
+  background-color: #fff7ed; }
+  .contact:before, .contact:after {
+    content: " ";
+    display: table; }
+  .contact:after {
+    clear: both; }
   .contact .contact-body {
-    text-align: center;
-    padding: 2em 0; }
+    padding: 2em 0.5em;
+    max-width: 768px;
+    margin: 0 auto; }
+    .contact .contact-body:before, .contact .contact-body:after {
+      content: " ";
+      display: table; }
+    .contact .contact-body:after {
+      clear: both; }
+    .contact .contact-body h2 {
+      text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .contact .cbal {
+      width: 49%;
+      float: left; } }
+  @media only screen and (min-width: 768px) {
+    .contact .cjobb {
+      width: 49%;
+      float: right; } }
+
+.formitem {
+  text-align: left;
+  margin: 1em 0;
+  font-size: 1em;
+  line-height: 1.25em; }
+
+.formactions {
+  text-align: center;
+  clear: both;
+  margin-top: 2em; }
+  .formactions .btn {
+    text-transform: uppercase; }
+
+label {
+  color: #584d86;
+  text-transform: uppercase;
+  display: block;
+  padding: 0.333em 0;
+  font-size: 1em;
+  line-height: 1.25em; }
+
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+  background-color: #fff;
+  border: 2px solid #9a91ba;
+  border-radius: 4px;
+  color: #4f4f4f;
+  padding: 0.75em;
+  width: 100%; }
+
+select {
+  height: 3em;
+  border-radius: 0px; }
 
 .gallery {
   background-color: #fadabd;

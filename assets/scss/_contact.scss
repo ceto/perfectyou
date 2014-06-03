@@ -1,9 +1,70 @@
 .contact{
+  @include clearfix();
   margin:0 -20px;
-  background-color: #fff;
+  padding-right: 110px;
+  background-color: $brown-superlight;
   .contact-body{
-    text-align: center;
-    padding:2em 0;
+    @include clearfix();
+    padding:2em 0.5em;
+    max-width: $s2;
+    margin:0 auto;
+    h2{
+      text-align: center;
+    }
 
   }
+
+  .cbal{
+    @include bp($s2){
+      width:49%;
+      float:left;
+    }
+
+  }
+  .cjobb {
+    @include bp($s2){
+      width:49%;
+      float:right;
+    }
+  }
+}
+
+.formitem{
+  text-align: left;
+  margin:1em 0;
+  font-size: 1em;
+  line-height: 1.25em;
+}
+.formactions{
+  text-align: center;
+  clear:both;
+  margin-top: 2em;
+  .btn {
+      text-transform: uppercase;
+  }
+}
+label{
+  color:$purple;
+  text-transform: uppercase;
+  display: block;
+  padding:0.333em 0; 
+  font-size: 1em;
+  line-height: 1.25em;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select{
+  background-color: #fff;
+  border:2px solid $purple-light;
+  border-radius: 4px;
+  color:$gray-text;
+  padding:0.75em;
+  width:100%;
+}
+
+select {
+  height:3em;
+  border-radius: 0px;
 }

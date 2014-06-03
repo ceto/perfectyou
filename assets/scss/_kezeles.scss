@@ -90,6 +90,9 @@
   @include clearfix();
   padding:2.5em 0.5em;
   background-color: $blue-light;
+  color:$brown-superlight;
+  //background-color: $blue-dark;
+  //color:$purple-light;
   font-size: 1.25em;
   @include bp($s0){
     padding:3em 1em;

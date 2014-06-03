@@ -1,6 +1,10 @@
 .nav-main {
-  float:right;
-  padding-right: 130px;
+
+  padding-right: 110px;
+  @include bp($s1) {
+    float:right;
+  }
+
   .btn-main{
     position: absolute;
     top:0;
@@ -38,25 +42,35 @@
     }
   }
   ul{
-    display: inline-block;
+    
     margin:0;
     padding:0;
+    @include bp($s1) {
+      display: inline-block;
+    }
   }
 
 
   .dropdown{
       > .dropdown-menu {
-        position: absolute;
 
-        left:0;right:0;
-        width:100%;
-        padding:2em 1em;
+        //padding:0 1em;
         display: none;
-        background-color: rgba($purple,0.95);
+        background-color: $blue-dark;
+        border-bottom: 1px solid $brown-superlight;
+        @include bp($s1) {
+          position: absolute;
+          left:0;right:0;
+          width:100%;
+        }
+
+
         
         li{
           display: block;
           margin-left:0;
+
+
           @include bp($s1) {
             float:left;
             width:50%;
@@ -66,14 +80,34 @@
           }
 
           a{
-            color:#fff;
+            position: relative;
+            color:$brown-superlight;
+            font-size: 1.25em;
             line-height: 1.25em;
-            padding:0.5em 1em;
+
+            padding:1.666em 0.666em 0.666em;
             height:auto;
+            background-color: $blue-light;
+            display: block;
             &:hover, &:focus{
               color:$yellow;
-              background-color: transparent;
+              //background-color: transparent;
             }
+            &:before{
+              position: absolute;
+              top: 1.333em;
+              content: '';
+              width:1em;
+              height:0.25em;
+              background-color: $yellow;
+
+            }
+          }
+        }
+
+        li.active {
+          a {
+            color:#fff;
           }
         }
 
@@ -81,13 +115,35 @@
           position: static;
           display: block;
           background-color: transparent;
-          padding:1em 0;
+          border-bottom: none;
+          
+          padding:1em 0 4em;
+
           li {
             display: block;
             width:auto;
             float:none;
             a{
+              padding:0.5em 1em;
+              font-size: 0.875em;
+              font-weight: 500;
+              color:$purple-light;
+              background-color: transparent;
               text-transform: none;
+              //border-bottom: none;
+
+              &:hover, &:focus{
+                color:$yellow;
+                background-color: transparent;
+              }
+              &:before{
+                display: none;
+              }
+            }
+          }
+          li.active {
+            a {
+              color:#fff;
             }
           }
         }
@@ -96,7 +152,7 @@
       }
       &.open{
         > .dropdown-toggle {
-          background-color: rgba($purple,0.95);
+          background-color: $blue-light;
         }
         > .dropdown-menu{
           display: block;
@@ -110,12 +166,15 @@
 
   li{
     list-style-type: none;
-    display: inline-block;
+    display: block;
     margin-left: 0.5em;
+    @include bp($s1) {
+      display: inline-block;
+    }
 
 
     a{
-      display: inline-block;
+      display: block;
       color:$brown;
       text-transform: uppercase;
       text-decoration: none;
@@ -126,6 +185,9 @@
       font-weight: 300;
       padding:0 1em;
       transition: all .25s ease;
+      @include bp($s1) {
+        display: inline-block;
+      }
       &:hover, &:focus{
         color:#fff;
         background-color: rgba($purple,0.75);
