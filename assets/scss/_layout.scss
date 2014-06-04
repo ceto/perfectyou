@@ -3,9 +3,10 @@ html {
   //padding:20px;
 }
 body {
+  @include clearfix();
   position: relative;
   background-color: $brown-superlight;
-  color:$purple-pot;
+  color:$blue-light;
   overflow-x: hidden;
   background-position: center center;
   background-repeat: no-repeat;
@@ -15,4 +16,11 @@ body {
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+.jobbcsi {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }

@@ -59,10 +59,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   a {
     text-decoration: none;
-    color: $purple-pot;
+    color: $blue-light;
     border: 0;
     &:hover, &:focus {
-      color: $purple;
+      color: $blue-dark;
     }
   }
 }

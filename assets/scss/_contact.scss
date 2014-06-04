@@ -1,13 +1,21 @@
 .contact{
   @include clearfix();
-  margin:0 -20px;
-  padding-right: 110px;
-  background-color: $brown-superlight;
+  position:fixed;
+  left:0; top:0;
+  right:0; bottom:0;
+  z-index: 4;
+  border-top:3px solid $yellow;
+  background-color: $blue-dark;
+  color:$brown-superlight;
+  @include bp($s1){
+  }
+
   .contact-body{
     @include clearfix();
-    padding:2em 0.5em;
-    max-width: $s2;
-    margin:0 auto;
+    position: relative;
+    padding:1em 0.5em;
+    max-width: $s3;
+    margin:100px auto 0 auto;
     h2{
       text-align: center;
     }
@@ -27,8 +35,21 @@
       float:right;
     }
   }
-}
 
+
+}
+.btn-contactclose{
+  position: absolute;
+  top:0;
+  right:0;
+  display: inline-block;
+  font-size: 4em;
+  line-height: 1em;
+  text-decoration: none;
+  font-weight:900;
+  color:$yellow;
+  
+}
 .formitem{
   text-align: left;
   margin:1em 0;
@@ -36,15 +57,19 @@
   line-height: 1.25em;
 }
 .formactions{
+  @include clearfix();
   text-align: center;
   clear:both;
-  margin-top: 2em;
+
   .btn {
-      text-transform: uppercase;
+    margin-top: 2em;
+    text-transform: uppercase;
+    background-color: $blue-light;
+    border-color: $purple-light;
   }
 }
 label{
-  color:$purple;
+  //color:$purple;
   text-transform: uppercase;
   display: block;
   padding:0.333em 0; 
@@ -54,11 +79,13 @@ label{
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="search"],
 textarea,
 select{
-  background-color: #fff;
+  background-color: $brown-superlight;
   border:2px solid $purple-light;
   border-radius: 4px;
+
   color:$gray-text;
   padding:0.75em;
   width:100%;

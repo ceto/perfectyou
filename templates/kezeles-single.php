@@ -4,7 +4,7 @@
         $imoci = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'banner' ); 
       ?>
     <style>
-      body{
+      .jobbcsi{
         background-image:url('<?php echo $imoci[0]; ?>');
       }
     </style>

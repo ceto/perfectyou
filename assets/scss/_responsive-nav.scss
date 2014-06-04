@@ -1,0 +1,31 @@
+.balcsi,
+.jobbcsi{
+  position: relative;
+  transition: .2s all ease;     
+  width: 100%;
+}
+
+
+
+.js .balcsi { 
+  margin-left: -100%;
+  float: left;
+}
+.js .jobbcsi {
+  margin-left: 0;
+  float: left;
+}
+
+.active-nav .balcsi { 
+  margin-left: 0; 
+  width: 80%;
+}
+.active-nav .jobbcsi{
+  margin-right: -100%;
+}
+
+.active-nav{
+  background-color: $blue-dark;
+}
+
+

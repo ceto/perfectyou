@@ -112,10 +112,14 @@ $(function() {
 });
 
 var resizeHero = function() {
-  if ( $(window).height() > 700 ) {
+  if ( ($(window).height() > 700) && ($(window).width() >= 768) ) {
     $('.fullscreen').height( $(window).height() - ( $('.banner').height()  ) );
-    $('.subsec-sidebar').height( $(window).height()  );
-    $('.contact-body').height( $(window).height() - 139  );
+    $('.contact-body').height( $(window).height() - 100  );
+    if ($(window).width() >= 1024) {
+      $('.subsec-sidebar').height( $(window).height()  );
+    } else {
+      $('.subsec-sidebar').height( 'auto' );
+    }
   } else {
     
   }
@@ -177,7 +181,7 @@ jQuery(document).ready(function($){
   });
 
   /************* Subsec sidebar Fixing ***********/
-  if ( $('.subsec-sidebar').length > 0 ){
+  if ( ($('.subsec-sidebar').length > 0)  && ($(window).width() >= 1024) ){
     var top = $('.subsec-sidebar').offset().top - parseFloat($('.subsec-sidebar').css('marginTop').replace(/auto/, 0));
     $(window).scroll(function (event) {
       var y = $(this).scrollTop();

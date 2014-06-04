@@ -7,21 +7,29 @@
     </div>
   <![endif]-->
   <?php do_action('get_header'); ?>
-
-  <?php get_template_part('templates/header'); ?>
-
-  <div class="document" role="document">
-      <main class="main <?php echo roots_main_class(); ?>" role="main">
-        <?php include roots_template_path(); ?>
-      </main><!-- /.main -->
-      <?php if (roots_display_sidebar()) : ?>
-        <aside class="sidebar" role="complementary">
-          <?php include roots_sidebar_path(); ?>
-        </aside><!-- /.sidebar -->
-      <?php endif; ?>
-  </div><!-- /.wrap -->
-
-  <?php get_template_part('templates/footer'); ?>
+  <div class="balcsi">    
+    <nav class="nav-main nav-mobile" role="navigation">
+      <?php
+        if (has_nav_menu('primary_navigation')) :
+          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav nav-pills'));
+        endif;
+      ?>
+    </nav>
+  </div>
+  <div class="jobbcsi">
+    <?php get_template_part('templates/header'); ?>
+    <div class="document" role="document">
+        <main class="main <?php echo roots_main_class(); ?>" role="main">
+          <?php include roots_template_path(); ?>
+        </main><!-- /.main -->
+        <?php if (roots_display_sidebar()) : ?>
+          <aside class="sidebar" role="complementary">
+            <?php include roots_sidebar_path(); ?>
+          </aside><!-- /.sidebar -->
+        <?php endif; ?>
+    </div><!-- /.wrap -->
+    <?php get_template_part('templates/footer'); ?>
+  </div>
 
 </body>
 </html>

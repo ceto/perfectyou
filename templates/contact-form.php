@@ -1,6 +1,7 @@
 <section id="contact" class="contact collapse" >
   <div class="contact-body">
-    <h2>Online jelentkezés konzultációra</h2>
+    <a data-toggle="collapse" href="#contact" class="btn-contactclose">×</a>
+    <h2>Jelentkezés konzultációra</h2>
     <p>*Adja meg a szükséges adatokat és kolléganőnk visszahívja Önt konzultációs időpont egyeztetésére.</p>
     <form action="#">
       <div class="cbal">
@@ -28,7 +29,7 @@
         </div>
       </div>
       <div class="formactions">
-        <input type="submit" class="btn" value="Elküld">
+        <input type="submit" class="btn btn-filled" value="Jelentkezés elküldése">
       </div>
     </form>
   </div>

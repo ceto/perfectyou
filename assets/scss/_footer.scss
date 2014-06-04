@@ -1,5 +1,8 @@
 .content-info{
   @include clearfix();
-  background-color: $brown;
+  position: relative;
+  padding:0.5em 0.5em;
+  background-color: $blue-dark;
   color:#fff;
+  border-top:7px solid $yellow;
 }
