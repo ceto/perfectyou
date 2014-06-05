@@ -134,21 +134,24 @@ img {
 
 blockquote {
   @include clearfix();
-  background-color: $blue-light;
-  color:$brown-superlight;
+  //background-color: $brown-light;
+  //color:$brown-superlight;
   padding:0 1em;
   font-size: 1.5em;
   font-weight: 100;
-  margin:0.75em 0;
+  margin:1em 0;
   //text-align: center;
-  //font-style: italic;
+  font-style: italic;
+  p {
+    margin:0;
+  }
 
 
 }
 
 
 
-.main {
+
   ul, ol{
     //padding-left: 0;
 
@@ -156,8 +159,30 @@ blockquote {
 
   li{
     margin:0.666em 0;
+    
+  }
+  
+  ul li{
+    list-style-type: square;
+  }
+  ol li{
   }
 
+
+
+.related-entries {
+  //@include clearfix();
+  //padding-left:1.5em;
+  li{
+    margin:2em 0;
+    h4{
+      margin-bottom: 0;
+    }
+    p{
+      margin-top: 0;
+    }
+
+  }
 }
 
 .btn {

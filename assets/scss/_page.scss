@@ -1,12 +1,14 @@
 .subsections {
   @include clearfix();
   position: relative;
-  background-color: $blue-dark;
+  //background-color: $blue-dark;
 
 }
 .subsec{
   @include clearfix();
   position: relative;
+  margin-bottom: 69px;
+
   
   .subsec-inner {
     @include clearfix();
@@ -20,16 +22,22 @@
 
     }
   }
+  &:last-child{
+    margin-bottom: 0;    
+  }
 
   @include bp($s1){
-    float:right;
-    width: calc(100% - 7px);
+    //float:right;
+    //width: calc(100% - 7px);
+    border-left:7px solid $blue-dark;
   }
   @include bp($s2){
-    width: calc(100% - 35px);
+    //width: calc(100% - 35px);
   }
   @include bp($s3){
+    float:right;
     width: calc(100% - 300px);
+    border-left: none;
   }
   @include bp($s4){
     width: calc(100% - 350px);
@@ -60,19 +68,24 @@
 
 .subsec-header{
   position: relative;
-  background-color: rgba($blue-dark,1);
-  color:$yellow;
-  padding:2em 1em;
+  background-color: rgba($brown-superlight,1);
+  //color:$yellow;
+  padding:2em 0.5em;
+
+  @include bp($s0){
+    padding:2em 1em;
+    //max-width: 42em;
+  }
 
   @include bp($s1){
-    text-align: right
+    padding:2em 1em;
   }
   @include bp($s2){
-    padding:2em 5em;
+    padding:2em 2em;
 
   }
   @include bp($s3){
-    padding:2em 5em;
+    padding:2em 2em;
 
   }
   &:before{
@@ -92,12 +105,17 @@
     position: relative;
     font-size: 2.25em;
     font-weight: 100;
-    margin:0 0;
+    margin:0 auto;
+    
+
     @include bp($s1){
       font-size: 2.5em;
+      max-width: 17em;
+
     }
     @include bp($s2){
       font-size: 3.5em;
+      max-width: 12em;
     }
     @include bp($s3){
        font-size: 3.5em;

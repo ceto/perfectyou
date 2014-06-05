@@ -1,6 +1,7 @@
 .gallery {
  background-color: $brown-light;
  padding:0.75em;
+ color:#fff;
 }
 .gallery-row {
   @include clearfix();

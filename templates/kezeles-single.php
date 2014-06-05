@@ -11,15 +11,12 @@
     <header class="treat-header fullscreen">
         <div class="trh-inner">
           <h1 class="treat-title"><?php the_title(); ?></h1>
-          <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
-            <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
-          <?php endif ?>
-    
           <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
             <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
           <?php endif ?>
           <div class="treat-headaction">
-            <a data-toggle="collapse" href="#contact" class="btn btn-filled">Jelentkezés</a> <a href="#lenyeg" class="btn">Részletek</a>
+            <!-- <a data-toggle="collapse" href="#contact" class="btn btn-filled">Jelentkezés</a>  -->
+            <a href="#lenyeg" class="btn">Részletek</a>
           </div>
         </div>
     </header>
@@ -27,6 +24,9 @@
 
     
     <div id="lenyeg" class="treat-content">
+      <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
+       <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
+      <?php endif ?>
 
       <?php the_content(); ?>
 
@@ -92,13 +92,45 @@
             <h2 class="subsec-title"><?php _e('Tippek, tanácsok a döntéshez','root') ?></h2>
         </header>
         <div class="subsec-inner">
-          <ul>
-            <li><a href="#">Hogyan válasszunk szilikont a mellünkbe</a></li>
-            <li><a href="#">Mi a különbség a melfelvarrás és nagyobbítsá között</a></li>
-            <li><a href="#">Mikor nem ajánlott a mellnagyobbító műtét</a></li>
-            <li><a href="#">A gyógyulás menete melnagyobbítás után</a></li>
-            <li><a href="#">Felkészülés a mellnagyobbító műtétre</a></li>
-          </ul>
+          <div class="subsec-cont">
+            <p>Tudástárunk kapcsolódó írásai segítségedre lesznek, a téma köröljárásában. Ha döntés előtt állsz feltétlenül tájékozódj.</p>
+              <?php
+                $reference_ID=get_the_id();
+                yarpp_related(
+                  array(
+                    // Pool options: these determine the "pool" of entities which are considered
+                    'post_type' => array('kezeles' ),
+                    'show_pass_post' => false, // show password-protected posts
+                    'past_only' => false, // show only posts which were published before the reference post
+                    'exclude' => array(), // a list of term_taxonomy_ids. entities with any of these terms will be excluded from consideration.
+                    'recent' => false, // to limit to entries published recently, set to something like '15 day', '20 week', or '12 month'.
+                    // Relatedness options: these determine how "relatedness" is computed
+                    // Weights are used to construct the "match score" between candidates and the reference post
+                    'weight' => array(
+                        'body' => 2,
+                        'title' => 1, // larger weights mean this criteria will be weighted more heavily
+                        'tax' => array(
+                            'category' => 3,
+                            'post_tag' => 3 // put any taxonomies you want to consider here with their weights
+                        )
+                    ),
+                    // Specify taxonomies and a number here to require that a certain number be shared:
+                    // 'require_tax' => array(
+                    //     'tag' => 1 // for example, this requires all results to have at least one 'post_tag' in common.
+                    // ),  
+                    // The threshold which must be met by the "match score"
+                    'threshold' => 2,
+
+                    // Display options:
+                    'template' => 'yarpp-template-py.php', // either the name of a file in your active theme or the boolean false to use the builtin template
+                    'limit' => 4, // maximum number of results
+                    'order' => 'score DESC'
+                  ),
+                  $reference_ID, // second argument: (optional) the post ID. If not included, it will use the current post.
+                  true
+                ); // third argument: (optional) true to echo the HTML block; false to return it
+              ?>
+          </div>
         </div>
       </section>
     

@@ -210,6 +210,15 @@ add_action('pre_get_posts', 'py_tagcat_support_query');
 // add_action( 'wp_print_styles', 'py_remove_wpss_styles', 100 );
 
 // # Deregister scripts file
+
+# Deregister style files
+function py_DequeueYarppStyle()
+{
+  wp_dequeue_style('yarppRelatedCss');
+  wp_deregister_style('yarppRelatedCss');
+}
+add_action('wp_footer', py_DequeueYarppStyle);
+
 function py_remove_scripts () {
   if(!is_admin()){ 
     wp_deregister_script('bootstrap-shortcodes-tooltip');

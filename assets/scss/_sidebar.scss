@@ -2,8 +2,19 @@
   @include clearfix();
   position:relative;
   padding:2em 0;
-  background-color: $blue-light;
+  background-color: $gray-superdark;
   color:$brown-superlight;
+  border-top:300px solid #fff;
+  a {
+    color: $yellow;
+    text-decoration: none;
+    &:hover, &:focus {
+      color: #fff;
+    }
+    &:active {
+      color: $brown-superlight;
+    }
+  }
   .widget {
     padding:0.5em;
     @include bp($s1){
@@ -19,8 +30,15 @@
         clear:none;
        }
     }
-  }
 
+    h3{
+      text-transform: uppercase;
+      //font-variant: small-caps;
+      font-size: 1.25em;
+      font-weight: 300;
+      color: $brown-light;
+    }
+  }
 }
 
 .subsec-sidebar{
@@ -59,30 +77,7 @@
     }
   }
 }
-.side-related{
-  .subsec-inner {
-    //background-color: $purple-light;
-  }
-  
-  ul{
-    margin:0;
-    padding:0;
-  }
-  li{
-    list-style-type:none;
-    a {
-      display: block;
-      padding:0 1em 0 0.666em;
-      font-size: 1.25em;
-      font-weight: 300;
-      //font-style: italic;
-      line-height: 1.25;
-      //color:#fff;
-      text-decoration: none;
 
-    }
-  }
-}
 
 .nyomjad {
   display: inline-block;
