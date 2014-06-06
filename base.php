@@ -23,6 +23,15 @@
           <?php include roots_template_path(); ?>
         </main><!-- /.main -->
         <?php if (roots_display_sidebar()) : ?>
+          <nav class="nav-greaticon" role="navigation">
+            <p>Kezelések ikonjai jönnek ide ...</p>
+            <ul>
+              <li><a href="#">Arc</a></li>
+              <li><a href="#">Mell</a></li>
+              <li><a href="#">Alak</a></li>
+              <li><a href="#">Kombinált</a></li>
+            </ul>
+          </nav><!-- /.nav-greaticon -->
           <aside class="sidebar" role="complementary">
             <?php include roots_sidebar_path(); ?>
           </aside><!-- /.sidebar -->

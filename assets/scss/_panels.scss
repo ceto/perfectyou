@@ -55,8 +55,8 @@
 // Optional footer (stays gray in every modifier class)
 .panel-footer {
   padding: 0.25em;
-  background-color: $purple-light;
-  border-top: 1px solid $purple;
+  background-color: $blue-light;
+  border-top: 1px solid $blue-dark;
   border-bottom-radius:3px;
 }
 
@@ -80,7 +80,7 @@
   }
 
   .panel-heading {
-    border-bottom: 1px solid $purple-light;
+    border-bottom: 1px solid $blue-light;
     + .panel-collapse .panel-body {
       //border-top: 1px solid $purple;
     }
@@ -88,7 +88,7 @@
   .panel-footer {
     border-top: 0;
     + .panel-collapse .panel-body {
-      border-bottom: 1px solid $purple;
+      border-bottom: 1px solid $blue-dark;
     }
   }
 }

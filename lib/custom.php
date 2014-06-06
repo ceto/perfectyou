@@ -179,7 +179,7 @@ function py_tagcat_support_all() {
 
 // ensure all tags are included in queries
 function py_tagcat_support_query($wp_query) {
-  if ($wp_query->get('tag') || $wp_query->get('category') ){
+  if (/*$wp_query->get('tag') || $wp_query->get('category') || */ $wp_query->is_main_query() ){
     $wp_query->set('post_type', 'any');
   } 
 }
@@ -187,6 +187,33 @@ function py_tagcat_support_query($wp_query) {
 // tag hooks
 add_action('init', 'py_tagcat_support_all');
 add_action('pre_get_posts', 'py_tagcat_support_query');
+
+
+// add_action('pre_get_posts','alter_query');
+ 
+// function alter_query($query) {
+//     //gets the global query var object
+//     global $wp_query;
+ 
+//     //gets the front page id set in options
+//     $front_page_id = get_option('page_on_front');
+ 
+//     if ( 'page' != get_option('show_on_front') || $front_page_id != $wp_query->query_vars['page_id'] )
+//         return;
+ 
+//     if ( !$query->is_main_query() )
+//         return;
+ 
+//     $query-> set('post_type' ,'page');
+//     $query-> set('post__in' ,array( $front_page_id , [YOUR SECOND PAGE ID]  ));
+//     $query-> set('orderby' ,'post__in');
+//     $query-> set('p' , null);
+//     $query-> set( 'page_id' ,null);
+ 
+//     //we remove the actions hooked on the '__after_loop' (post navigation)
+//     remove_all_actions ( '__after_loop');
+// }
+
 
 // add_filter('the_content', 'py_fix_shortcodes');
 // // Intelligently remove extra P and BR tags around shortcodes that WordPress likes to add

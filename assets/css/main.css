@@ -1937,7 +1937,6 @@ figure.thumbnail {
   font-size: 0.75em;
   font-weight: 300;
   font-style: italic;
-  color: #4e4e4e;
   margin-top: 0.5em; }
 
 img {
@@ -2311,6 +2310,26 @@ ul li {
   .subsec-nav li.active a {
     color: #ffcf7b; }
 
+.nav-greaticon {
+  background-color: #fff;
+  min-height: 300px; }
+  .nav-greaticon:before, .nav-greaticon:after {
+    content: " ";
+    display: table; }
+  .nav-greaticon:after {
+    clear: both; }
+  .nav-greaticon ul {
+    max-width: 1280px;
+    margin: 0 auto; }
+  .nav-greaticon li {
+    float: left;
+    width: 25%;
+    height: 300px;
+    background-image: url('../img/ikon_mell.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 75% auto; }
+
 .content-info {
   position: relative;
   padding: 0.5em 0.5em;
@@ -2442,7 +2461,7 @@ ul li {
   @media only screen and (min-width: 1280px) { }
 
 .trh-inner {
-  padding: 0 0.5em;
+  padding: 0.5em 0.5em;
   max-width: 1280px;
   margin: 0 auto; }
   .trh-inner:before, .trh-inner:after {
@@ -2451,13 +2470,13 @@ ul li {
   .trh-inner:after {
     clear: both; }
   @media only screen and (min-width: 768px) {
-    .trh-inner {
+    .fullscreen .trh-inner {
       position: relative;
       top: 50%;
       transform: translateY(-50%); } }
   @media only screen and (min-width: 768px) {
     .trh-inner {
-      padding: 0 20px 0 20px; } }
+      padding: 20px 20px 20px 20px; } }
 
 .treat-title {
   color: #50496b;
@@ -2539,8 +2558,7 @@ ul li {
   position: relative;
   padding: 2em 0;
   background-color: #222222;
-  color: #fff7ed;
-  border-top: 300px solid #fff; }
+  color: #fff7ed; }
   .sidebar:before, .sidebar:after {
     content: " ";
     display: table; }
@@ -2665,8 +2683,8 @@ ul li {
 
 .panel-footer {
   padding: 0.25em;
-  background-color: #9a91ba;
-  border-top: 1px solid #584d86;
+  background-color: #50496b;
+  border-top: 1px solid #3d394e;
   border-bottom-radius: 3px; }
 
 .panel-group {
@@ -2677,11 +2695,11 @@ ul li {
     .panel-group .panel + .panel {
       margin-top: 0.5em; }
   .panel-group .panel-heading {
-    border-bottom: 1px solid #9a91ba; }
+    border-bottom: 1px solid #50496b; }
   .panel-group .panel-footer {
     border-top: 0; }
     .panel-group .panel-footer + .panel-collapse .panel-body {
-      border-bottom: 1px solid #584d86; }
+      border-bottom: 1px solid #3d394e; }
 
 .contact {
   position: fixed;
@@ -2773,7 +2791,7 @@ select {
 .gallery {
   background-color: #fadabd;
   padding: 0.75em;
-  color: #fff; }
+  color: #50496b; }
 
 .gallery-row {
   margin: 0 -0.375em; }

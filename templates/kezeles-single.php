@@ -8,7 +8,7 @@
         background-image:url('<?php echo $imoci[0]; ?>');
       }
     </style>
-    <header class="treat-header fullscreen">
+    <header class="treat-header">
         <div class="trh-inner">
           <h1 class="treat-title"><?php the_title(); ?></h1>
           <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
@@ -40,7 +40,9 @@
       <nav class="subsec-nav">
         <header class="subsec-navhead">
           <!-- <a class="subsec-navlogo" href="<?php echo home_url('/') ?>"><?php bloginfo('name'); ?></a> -->
-          <div class="subsec-navbread"><a href="#">Mell</a></div>
+          <div class="subsec-navbread">
+            <?php the_category( '/', 'multiple'); ?> 
+          </div>
           <h3><?php the_title(); ?></h3>
         </header>
         
