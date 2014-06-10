@@ -179,7 +179,7 @@ function py_tagcat_support_all() {
 
 // ensure all tags are included in queries
 function py_tagcat_support_query($wp_query) {
-  if (/*$wp_query->get('tag') || $wp_query->get('category') || */ $wp_query->is_main_query() ){
+  if ( ( $wp_query->get('tag') || $wp_query->get('cat') ) &&  $wp_query->is_main_query() ){
     $wp_query->set('post_type', 'any');
   } 
 }

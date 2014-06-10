@@ -396,6 +396,7 @@
 
 .nav-greaticon{
   @include clearfix();
+  position:relative;
   background-color:#fff;
   min-height:300px;
   ul{
@@ -409,6 +410,6 @@
     background-image:url('../img/ikon_mell.png');
     background-repeat:no-repeat;
     background-position:center center;
-    background-size:75% auto;
+    background-size:50% auto;
   }
 }

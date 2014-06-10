@@ -1846,6 +1846,12 @@ body {
   background-size: cover;
   background-attachment: fixed; }
 
+.main:before, .main:after {
+  content: " ";
+  display: table; }
+.main:after {
+  clear: both; }
+
 html {
   font-size: 14px;
   line-height: 1.5;
@@ -1924,6 +1930,9 @@ h5, .h5 {
 
 h6 {
   font-size: 1rem; }
+
+figure {
+  margin: 0 0; }
 
 figure.thumbnail {
   margin: 1em 0;
@@ -2311,6 +2320,7 @@ ul li {
     color: #ffcf7b; }
 
 .nav-greaticon {
+  position: relative;
   background-color: #fff;
   min-height: 300px; }
   .nav-greaticon:before, .nav-greaticon:after {
@@ -2328,7 +2338,7 @@ ul li {
     background-image: url('../img/ikon_mell.png');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 75% auto; }
+    background-size: 50% auto; }
 
 .content-info {
   position: relative;
@@ -2446,6 +2456,63 @@ ul li {
     .subsec-cont .subsec-action .btn {
       min-width: 50%; }
 
+.archive .main {
+  max-width: 1024px;
+  margin: 0 auto; }
+
+@media only screen and (min-width: 768px) {
+  .archive .post, .archive .page {
+    width: 31%;
+    margin: 1em calc(7% / 6);
+    float: left; }
+    .archive .post:nth-child(3n+2), .archive .page:nth-child(3n+2) {
+      clear: left; } }
+@media only screen and (min-width: 1024px) { }
+
+.archive .kezeles {
+  background-color: #3d394e;
+  color: #fff7ed;
+  padding: 3px; }
+  .archive .kezeles:before, .archive .kezeles:after {
+    content: " ";
+    display: table; }
+  .archive .kezeles:after {
+    clear: both; }
+  @media only screen and (min-width: 768px) {
+    .archive .kezeles {
+      width: 31%;
+      margin: 1em calc(7% / 6);
+      float: left; }
+      .archive .kezeles:nth-child(3n+2) {
+        clear: left; } }
+  @media only screen and (min-width: 1024px) { }
+  .archive .kezeles a {
+    color: #fff7ed;
+    text-decoration: none; }
+    .archive .kezeles a:hover, .archive .kezeles a:focus {
+      color: #ffcf7b; }
+  .archive .kezeles .entry-title {
+    font-size: 1.25em;
+    background-color: #50496b;
+    padding: 0.75em 7px;
+    margin: 0 0; }
+  .archive .kezeles .entry-subtitle {
+    font-size: 1em;
+    font-weight: 300;
+    padding: 0.5em 7px;
+    margin: 0 0; }
+  .archive .kezeles .entry-summary {
+    padding: 0.5em 7px;
+    font-weight: 500;
+    font-size: 0.875em; }
+    .archive .kezeles .entry-summary ul {
+      margin: 0 0; }
+    .archive .kezeles .entry-summary a {
+      color: #9a91ba; }
+      .archive .kezeles .entry-summary a:hover, .archive .kezeles .entry-summary a:focus {
+        color: #ffcf7b; }
+
+/************ Single Kezeles Style *******/
 .treat-header {
   background-position: center center;
   background-repeat: no-repeat;

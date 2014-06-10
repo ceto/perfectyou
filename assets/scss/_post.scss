@@ -1,0 +1,20 @@
+.archive {
+	.main{
+		max-width: $s3;
+		margin:0 auto;
+	}
+}
+.archive .post, .archive .page{
+	@include bp($s2){
+    width:31%;
+    margin:1em calc(7% / 6);
+    float:left;
+    &:nth-child(3n+2) {
+      clear:left;
+    }
+  }
+
+  @include bp($s3){
+    
+  }
+}

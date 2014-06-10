@@ -1,3 +1,62 @@
+
+.archive .kezeles {
+  @include clearfix();
+  background-color:$blue-dark;
+  color:$brown-superlight;
+  padding:3px;
+
+  @include bp($s2){
+    width:31%;
+    margin:1em calc(7% / 6);
+    float:left;
+    &:nth-child(3n+2) {
+      clear:left;
+    }
+  }
+
+  @include bp($s3){
+    
+  }
+  a{
+    color:$brown-superlight;
+    text-decoration: none;
+    &:hover, &:focus{
+      color:$yellow;
+    }
+  }
+  
+  .entry-title{
+    font-size:1.25em;
+    background-color:$blue-light;
+    padding:0.75em 7px;
+    margin:0 0;
+  }
+  .entry-subtitle{
+    font-size:1em;
+    font-weight: 300;
+    padding:0.5em 7px;
+    margin:0 0; 
+  }
+  .entry-summary{
+    padding:0.5em 7px;
+    font-weight: 500;
+    font-size: 0.875em;
+    ul{
+      margin:0 0;
+    }
+    a{
+      color:$purple-light;
+      &:hover, &:focus{
+        color:$yellow;
+      }
+    }
+  }
+
+}
+
+
+/************ Single Kezeles Style *******/
+
 .treat-header {
   background-position: center center;
   background-repeat: no-repeat;
@@ -146,3 +205,4 @@
 .treat-related{
   
 }
+
