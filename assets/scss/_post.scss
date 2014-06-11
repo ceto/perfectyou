@@ -1,20 +1,95 @@
 .archive {
 	.main{
-		max-width: $s3;
-		margin:0 auto;
+		
 	}
 }
-.archive .post, .archive .page{
-	@include bp($s2){
-    width:31%;
-    margin:1em calc(7% / 6);
-    float:left;
-    &:nth-child(3n+2) {
-      clear:left;
+
+.itemlist{
+  @include clearfix();
+  //background-color:#000;
+
+  padding:4em 0.5em;
+
+
+  .post, .page{
+    @include clearfix();
+    max-width: $s2;
+    margin:1em auto;
+
+    @include bp($s4){
+      width:48%;
+      margin:1em 1%;
+      float:left;
+      &:nth-child(2n+1) {
+        clear:left;
+      }
+    }
+    @include bp($s5){
+      width:31%;
+      margin:1em calc(7% / 6);
+      &:nth-child(2n+1) {
+        clear:none;
+      }
+      &:nth-child(3n+1) {
+        clear:left;
+      }
+    }
+
+    // @include bp($s5){
+    //   width:23%;
+    //   margin:1em 1%;
+    //   &:nth-child(3n+2) {
+    //     clear:none;
+    //   }
+    //   &:nth-child(4n+2) {
+    //     clear:left;
+    //   }
+    // }
+    .entry-title{
+      font-size: 2em;
+    }
+    .entry-summary{
+    }
+
+  }
+}
+
+.itemlist-inner{
+  > h1 {
+    max-width: $s3;
+    margin:1em auto;
+    text-align: center;
+  }
+  > h2 {
+    max-width: $s2;
+    margin:1em auto;
+    @include bp($s4){
+      max-width: $s3;
     }
   }
-
+  @include clearfix();
+  max-width: $s3;
+  margin:0 auto;
   @include bp($s3){
-    
+    max-width: $s3;
+  }
+  @include bp($s5){
+    max-width: $s4;
+  }
+}
+
+.posztok{
+  background-color: $blue-superlight;
+  //color:#fff;
+  //font-size: 0.875em;
+  //background-image: linear-gradient(to bottom, $blue-superlight, #fff)
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(../img/mell_bg.jpg);
+  //background-image: none;
+  a{
+    //color:#fff;
   }
 }
