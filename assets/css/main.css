@@ -2533,14 +2533,19 @@ ul li {
     clear: both; }
 
 .kezeleslist-inner {
-  max-width: 1024px;
-  margin: 0 auto;
-  text-align: center; }
+  max-width: 480px;
+  margin: 0 auto; }
   .kezeleslist-inner:before, .kezeleslist-inner:after {
     content: " ";
     display: table; }
   .kezeleslist-inner:after {
     clear: both; }
+  @media only screen and (min-width: 480px) {
+    .kezeleslist-inner {
+      max-width: 480px; } }
+  @media only screen and (min-width: 768px) {
+    .kezeleslist-inner {
+      max-width: 768px; } }
   @media only screen and (min-width: 1024px) {
     .kezeleslist-inner {
       max-width: 1024px; } }
@@ -2561,34 +2566,39 @@ ul li {
 .kezeleslist .kezeles {
   text-align: left;
   margin: 1em 0;
-  max-width: 240px; }
-  .kezeleslist .kezeles:before, .kezeleslist .kezeles:after {
-    content: " ";
-    display: table; }
-  .kezeleslist .kezeles:after {
-    clear: both; }
+  display: block; }
+  .kezeleslist .kezeles:hover .entry-subtitle, .kezeleslist .kezeles:focus .entry-subtitle {
+    top: 0; }
   @media only screen and (min-width: 480px) {
     .kezeleslist .kezeles {
-      display: inline-block;
+      float: left;
       width: 48%;
       margin: 1em 1%; }
-      .kezeleslist .kezeles:nth-child(2n+2) {
+      .kezeleslist .kezeles:nth-type-of(2n+1) {
         clear: left; } }
   @media only screen and (min-width: 768px) {
     .kezeleslist .kezeles {
       width: 31%;
-      margin: 1em calc(7% / 6); }
-      .kezeleslist .kezeles:nth-child(2n+2) {
+      margin: 1em calc 1.16667%; }
+      .kezeleslist .kezeles:nth-type-of(2n+1) {
         clear: none; }
-      .kezeleslist .kezeles:nth-child(3n+2) {
+      .kezeleslist .kezeles:nth-type-of(3n+1) {
         clear: left; } }
   @media only screen and (min-width: 1024px) {
     .kezeleslist .kezeles {
       width: 23%;
       margin: 1em 1%; }
-      .kezeleslist .kezeles:nth-child(3n+2) {
+      .kezeleslist .kezeles:nth-type-of(3n+1) {
         clear: none; }
-      .kezeleslist .kezeles:nth-child(4n+2) {
+      .kezeleslist .kezeles:nth-type-of(4n+1) {
+        clear: left; } }
+  @media only screen and (min-width: 1600px) {
+    .kezeleslist .kezeles {
+      width: 18%;
+      margin: 1em 1%; }
+      .kezeleslist .kezeles:nth-type-of(4n+1) {
+        clear: none; }
+      .kezeleslist .kezeles:nth-type-of(5n+1) {
         clear: left; } }
   .kezeleslist .kezeles a {
     color: #fff7ed;
@@ -2596,22 +2606,33 @@ ul li {
     .kezeleslist .kezeles a:hover, .kezeleslist .kezeles a:focus {
       color: #ffcf7b; }
   .kezeleslist .kezeles header {
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
   .kezeleslist .kezeles .entry-title {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    font-size: 1.25em;
+    z-index: 0;
+    font-size: 1.125em;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(61, 57, 78, 0.25) 50%, rgba(61, 57, 78, 0.01) 100%);
     padding: 0.75em 7px;
     margin: 0 0; }
   .kezeleslist .kezeles .entry-subtitle {
-    border-top: 3px solid #ffcf7b;
+    transition: top 0.25s ease-in;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #3d394e;
     font-size: 14px;
     font-weight: 300;
     padding: 0.75em 7px;
-    margin: 0 0; }
+    margin: 0 0;
+    color: #fff;
+    font-weight: 300; }
   .kezeleslist .kezeles .entry-summary {
     padding: 0.5em 7px;
     font-weight: 500;
