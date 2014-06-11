@@ -2321,24 +2321,36 @@ ul li {
 
 .nav-greaticon {
   position: relative;
-  background-color: #fff;
-  min-height: 300px; }
+  background-color: #fff; }
   .nav-greaticon:before, .nav-greaticon:after {
     content: " ";
     display: table; }
   .nav-greaticon:after {
     clear: both; }
   .nav-greaticon ul {
-    max-width: 1280px;
-    margin: 0 auto; }
+    max-width: 1024px;
+    margin: 1em auto;
+    padding: 0; }
+    .nav-greaticon ul:before, .nav-greaticon ul:after {
+      content: " ";
+      display: table; }
+    .nav-greaticon ul:after {
+      clear: both; }
   .nav-greaticon li {
     float: left;
-    width: 25%;
-    height: 300px;
-    background-image: url('../img/ikon_mell.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50% auto; }
+    width: 15%;
+    margin: 1em 5%;
+    list-style-type: none;
+    text-align: center; }
+    .nav-greaticon li a {
+      display: block;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #3d394e; }
+      .nav-greaticon li a img {
+        display: block;
+        margin: 0 auto 1em auto; }
 
 .content-info {
   position: relative;

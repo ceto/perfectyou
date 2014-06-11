@@ -1,10 +1,3 @@
-<?php if (!have_posts()) : ?>
-  <div class="alert alert-warning">
-    <?php _e('Sorry, no results were found.', 'roots'); ?>
-  </div>
-  <?php get_search_form(); ?>
-<?php endif; ?>
-
 <style>
   .jobbcsi{
     background-image: url('<?php echo get_stylesheet_directory_uri().'/assets/img/mell_bg.jpg'; ?>');
@@ -16,10 +9,24 @@
 
 <nav class="nav-greaticon nav-greaticontop" role="navigation">
   <ul>
-    <li><a href="#">Arc</a></li>
-    <li><a href="#">Mell</a></li>
-    <li><a href="#">Alak</a></li>
-    <li><a href="#">Kombinált</a></li>
+    <li class="arc">
+      <a href="<?php echo get_category_link(5); ?>">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_arc.png" alt="Arc">
+      Arc
+      </a></li>
+    <li class="mell">
+      <a href="<?php echo get_category_link(3); ?>">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_mell.png" alt="Mell">
+        Mell
+      </a></li>
+    <li class="alak">
+      <a href="<?php echo get_category_link(4); ?>">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_alak.png" alt="Alak">
+        Alak</a></li>
+    <li class="kombinalt">
+      <a href="<?php echo get_category_link(6); ?>">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_arc.png" alt="Arc">
+        Kombinált</a></li>
   </ul>
 </nav><!-- /.nav-greaticon -->
 
@@ -36,6 +43,12 @@
 
 <section class="itemlist posztok" >
   <div class="itemlist-inner">
+    <?php if (!have_posts()) : ?>
+      <div class="alert alert-warning">
+        <?php _e('Sorry, no results were found.', 'roots'); ?>
+      </div>
+      <?php get_search_form(); ?>
+    <?php endif; ?>
   <!-- <h2><?php _e('Hasznos tartalmak, írások','roots') ?></h2> -->
     <?php rewind_posts(); ?>
     <?php while (have_posts()) : the_post(); ?>
