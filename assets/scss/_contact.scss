@@ -80,6 +80,7 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="search"],
+input[type="url"],
 textarea,
 select{
   background-color: $brown-superlight;
@@ -89,6 +90,7 @@ select{
   color:$gray-text;
   padding:0.75em;
   width:100%;
+  outline-color: $blue-superlight;
 }
 
 select {

@@ -64,7 +64,10 @@
   @include bp($s4){
     width: 350px;
   }
-
+  @include bp($s5){
+    width: 550px;
+    font-size: 1.25em;
+  }
   &.fixed {
     position:fixed;
     left:0; top:0;

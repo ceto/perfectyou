@@ -42,6 +42,9 @@
   @include bp($s4){
     width: calc(100% - 350px);
   }
+  @include bp($s5){
+    width: calc(100% - 550px);
+  }
 }
 
 .subsec-inner{
@@ -120,9 +123,15 @@
     @include bp($s3){
        font-size: 3.5em;
     }
-
-    
   }
+  .subsec-meta {
+    margin:0 auto;
+    max-width: $s3;
+  }
+
+
+
+
 }
 
 .subsec-cont {
