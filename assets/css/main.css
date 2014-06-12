@@ -2826,15 +2826,16 @@ ul li {
       color: #fadabd; }
 
 .subsec-sidebar {
+  color: #fff7ed;
   position: relative;
   padding: 4em 0 4em;
   text-align: center;
   transition: all 0.5s ease-in;
   background-color: #3d394e;
-  background-image: url('../img/logo_fuggo_signos.png');
-  background-position: center 80%;
+  background-image: url('../img/istvan_szilikonnal.jpg');
+  background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: 180px auto; }
+  background-size: cover; }
   @media only screen and (min-width: 480px) { }
   @media only screen and (min-width: 768px) { }
   @media only screen and (min-width: 1024px) {
@@ -2858,6 +2859,14 @@ ul li {
     @media only screen and (min-width: 768px) {
       .subsec-sidebar.fixed {
         float: none; } }
+
+.sss-inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(61, 57, 78, 0.85); }
 
 .nyomjad {
   display: inline-block;

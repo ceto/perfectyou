@@ -1,5 +1,6 @@
 <div class="subsections">
   <aside class="subsec-sidebar">
+    <div class="sss-inner">
     <h3>Ez az oldalsav</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, reiciendis distinctio neque amet numquam beatae.
@@ -7,9 +8,18 @@
     <p>
       Expedita, illum vel saepe quia dolorem! Velit, quasi quaerat placeat quia molestias id quos nostrum!
     </p>
+  </div>
   </aside>
   <section id="subsec-article" class="subsec">
     <?php while (have_posts()) : the_post(); ?>
+        <?php 
+          $bg = wp_get_attachment_image_src( get_post_thumbnail_id(),'large' );
+        ?>
+        <style>
+          .subsec-sidebar{
+            background-image: url('<?php echo $bg[0]; ?>');
+          }
+        </style>
       
         <article <?php post_class(); ?>>
           <header class="subsec-header">

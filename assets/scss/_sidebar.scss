@@ -41,6 +41,7 @@
 }
 
 .subsec-sidebar{
+  color:$brown-superlight;
   position: relative;
   padding:4em 0 4em;
   //opacity: 0;
@@ -48,10 +49,11 @@
   //left:-350px;
   transition: all .5s ease-in;
   background-color: $blue-dark;
-  background-image: url('../img/logo_fuggo_signos.png');
-  background-position: center 80%;
+  //background-image: url('../img/logo_fuggo_signos.png');
+  background-image: url('../img/istvan_szilikonnal.jpg');
+  background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: 180px auto;
+  background-size: cover;
 
   @include bp($s1){
   }
@@ -63,10 +65,12 @@
   }
   @include bp($s4){
     width: 350px;
+
   }
   @include bp($s5){
     width: 550px;
     font-size: 1.25em;
+
   }
   &.fixed {
     position:fixed;
@@ -80,6 +84,13 @@
   }
 }
 
+.sss-inner{
+  position: absolute;
+  left:0; right:0;
+  top:0;bottom:0;
+  background-color: rgba($blue-dark,0.85);
+  //filter:blur(2px);
+}
 
 .nyomjad {
   display: inline-block;

@@ -36,7 +36,7 @@
 
     <div class="subsections">
       <aside class="subsec-sidebar">
-      
+      <div class="sss-inner">
       <nav class="subsec-nav">
         <header class="subsec-navhead">
           <!-- <a class="subsec-navlogo" href="<?php echo home_url('/') ?>"><?php bloginfo('name'); ?></a> -->
@@ -60,6 +60,7 @@
       </nav>
 
       <a class="brandi" href="#pagetop"><?php bloginfo('name'); ?></a>
+      </div>
     </aside>
       <?php reset ($streats); $trno=1;
         foreach ( (array) $streats as $key => $entry ) {
