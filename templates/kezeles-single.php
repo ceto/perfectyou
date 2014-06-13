@@ -24,11 +24,15 @@
 
     
     <div id="lenyeg" class="treat-content">
-      <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
-       <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
-      <?php endif ?>
+      
+      <div class="trc-inner">
+        <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
+         <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
+        <?php endif ?>
 
-      <?php the_content(); ?>
+        <?php the_content(); ?>
+      </div>
+
 
     </div>
 

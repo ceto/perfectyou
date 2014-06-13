@@ -272,44 +272,48 @@
   }
 }
 .treat-content {
-  border-top: 200px solid #fff;
-  border-bottom: 200px solid #fff;
+  //border-top: 200px solid #fff;
+  //border-bottom: 200px solid #fff;
+  text-shadow:1px 1px $blue-dark;
   @include clearfix();
   padding:2.5em 0.5em;
   color:$brown-superlight;
+  //color:$yellow;
   background-color: $blue-dark;
-  background-image: url('../img/doktor_ablaknal.jpg');
-  background-position: left center;
+  background-image: url('../img/doktor_ablaknal_jobb.jpg');
+  background-position: right center;
   background-size: auto 100%;
   background-repeat: no-repeat;
 
   font-size: 1.25em;
+  
+}
+.trc-inner{
+  max-width: $s3;
   @include bp($s0){
-    padding:3em 1em;
+    padding:3em 0;
     //max-width: 42em;
   }
   @include bp($s1){
-    padding:3em 1.5em;
-    //max-width: 42em;
   }
   @include bp($s2){
-    padding:5em 1.5em 5em 250px;
-    //max-width: 42em;
+    padding:3em 1em;
 
   }
   @include bp($s3){
-    padding:5em 1.5em 5em 350px;
-    //max-width: 42em;
+  
   }
+
 }
 .treat-slogan{
 
   padding:0 0 0 0;
-  font-size: 1.75em;
-  //font-style: italic;
+  font-size: 1.875em;
+  color:$yellow;
   font-weight: 100;
   //text-shadow:0px 0px 5px $purple;
-  font-style: italic;
+  //font-style: italic;
+  text-transform: uppercase;
   @include bp($s2){
     //margin-right: 33%;
     //float:left;

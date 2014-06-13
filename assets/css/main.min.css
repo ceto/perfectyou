@@ -1836,7 +1836,7 @@ body {
     clear: both; }
 
 .jobbcsi {
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -2795,13 +2795,12 @@ ul li {
     margin: 0.5em 0; }
 
 .treat-content {
-  border-top: 200px solid #fff;
-  border-bottom: 200px solid #fff;
+  text-shadow: 1px 1px #3d394e;
   padding: 2.5em 0.5em;
   color: #fff7ed;
   background-color: #3d394e;
-  background-image: url('../img/doktor_ablaknal.jpg');
-  background-position: left center;
+  background-image: url('../img/doktor_ablaknal_jobb.jpg');
+  background-position: right center;
   -webkit-background-size: auto 100%;
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -2811,24 +2810,24 @@ ul li {
     display: table; }
   .treat-content:after {
     clear: both; }
+
+.trc-inner {
+  max-width: 1024px; }
   @media only screen and (min-width: 320px) {
-    .treat-content {
-      padding: 3em 1em; } }
-  @media only screen and (min-width: 480px) {
-    .treat-content {
-      padding: 3em 1.5em; } }
+    .trc-inner {
+      padding: 3em 0; } }
+  @media only screen and (min-width: 480px) { }
   @media only screen and (min-width: 768px) {
-    .treat-content {
-      padding: 5em 1.5em 5em 250px; } }
-  @media only screen and (min-width: 1024px) {
-    .treat-content {
-      padding: 5em 1.5em 5em 350px; } }
+    .trc-inner {
+      padding: 3em 1em; } }
+  @media only screen and (min-width: 1024px) { }
 
 .treat-slogan {
   padding: 0 0 0 0;
-  font-size: 1.75em;
+  font-size: 1.875em;
+  color: #ffcf7b;
   font-weight: 100;
-  font-style: italic; }
+  text-transform: uppercase; }
   @media only screen and (min-width: 768px) { }
 
 
