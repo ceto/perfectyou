@@ -272,12 +272,17 @@
   }
 }
 .treat-content {
+  border-top: 200px solid #fff;
+  border-bottom: 200px solid #fff;
   @include clearfix();
   padding:2.5em 0.5em;
-  background-color: $blue-light;
   color:$brown-superlight;
-  //background-color: $blue-dark;
-  //color:$purple-light;
+  background-color: $blue-dark;
+  background-image: url('../img/doktor_ablaknal.jpg');
+  background-position: left center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
   font-size: 1.25em;
   @include bp($s0){
     padding:3em 1em;
@@ -290,6 +295,7 @@
   @include bp($s2){
     padding:5em 1.5em 5em 250px;
     //max-width: 42em;
+
   }
   @include bp($s3){
     padding:5em 1.5em 5em 350px;

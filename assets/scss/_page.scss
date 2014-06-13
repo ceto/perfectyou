@@ -9,11 +9,18 @@
   position: relative;
   //margin-bottom: 69px;
 
+
+
   
   .subsec-inner {
     @include clearfix();
     background-color:$brown-superlight;
     //background-color:#fff;
+
+    // background-image: url('../img/doki_korbevagva.png');
+    // background-position: 2em bottom;
+    // background-size: auto 400px;
+    // background-repeat: no-repeat;
   }
   &:nth-child(odd){
 
@@ -141,9 +148,9 @@
   .subsec-action{
     text-align: center;
     margin:2em 0 2em 0;
-    font-size: 1.5em;
+    font-size: 1.25em;
     .btn{
-      min-width: 50%;
+      //min-width: 50%;
     }
     //text-align: center;
   }
