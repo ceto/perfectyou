@@ -24,12 +24,25 @@
         </main><!-- /.main -->
         <?php if (roots_display_sidebar()) : ?>
           <nav class="nav-greaticon" role="navigation">
-            <p>Kezelések ikonjai jönnek ide ...</p>
             <ul>
-              <li><a href="#">Arc</a></li>
-              <li><a href="#">Mell</a></li>
-              <li><a href="#">Alak</a></li>
-              <li><a href="#">Kombinált</a></li>
+              <li class="arc">
+                <a href="<?php echo get_category_link(5); ?>">
+                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_arc.png" alt="Arc">
+                Arc
+                </a></li>
+              <li class="mell">
+                <a href="<?php echo get_category_link(3); ?>">
+                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_mell.png" alt="Mell">
+                  Mell
+                </a></li>
+              <li class="alak">
+                <a href="<?php echo get_category_link(4); ?>">
+                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_alak.png" alt="Alak">
+                  Alak</a></li>
+              <li class="kombinalt">
+                <a href="<?php echo get_category_link(6); ?>">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_arc.png" alt="Arc">
+                  Kombinált</a></li>
             </ul>
           </nav><!-- /.nav-greaticon -->
           <aside class="sidebar" role="complementary">

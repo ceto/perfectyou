@@ -81,7 +81,7 @@
 
     @include bp($s4){
       width:48%;
-      margin:1em 1%;
+      margin:3em 1%;
       float:left;
       &:nth-of-type(2n+1) {
         clear:left;
@@ -89,7 +89,7 @@
     }
     @include bp($s5){
       width:31%;
-      margin:1em calc(7% / 6);
+      margin:3em calc(7% / 6);
       &:nth-of-type(2n+1) {
         clear:none;
       }
@@ -112,6 +112,11 @@
       //font-size: 2em;
     }
     .entry-summary{
+      > p {
+        a {
+          display:none;
+        }
+      }
       > p:first-letter { 
           float: left;
           color: $blue-light;
@@ -121,6 +126,9 @@
           font-weight: 300;
           text-transform:uppercase;
           //font-family: Georgia;
+      }
+      .btn{
+        font-size: 0.875em;
       }
     }
 

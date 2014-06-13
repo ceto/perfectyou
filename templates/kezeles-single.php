@@ -41,7 +41,7 @@
         <header class="subsec-navhead">
           <!-- <a class="subsec-navlogo" href="<?php echo home_url('/') ?>"><?php bloginfo('name'); ?></a> -->
           <div class="subsec-navbread">
-            <?php the_category( '/', 'multiple'); ?> 
+            <?php the_category( ' / ', 'multiple'); ?> 
           </div>
           <h3><?php the_title(); ?></h3>
         </header>
@@ -102,7 +102,7 @@
                 yarpp_related(
                   array(
                     // Pool options: these determine the "pool" of entities which are considered
-                    'post_type' => array('kezeles' ),
+                    'post_type' => array('post', 'page' ),
                     'show_pass_post' => false, // show password-protected posts
                     'past_only' => false, // show only posts which were published before the reference post
                     'exclude' => array(), // a list of term_taxonomy_ids. entities with any of these terms will be excluded from consideration.
@@ -125,7 +125,7 @@
                     'threshold' => 2,
 
                     // Display options:
-                    'template' => 'yarpp-template-py.php', // either the name of a file in your active theme or the boolean false to use the builtin template
+                    'template' => 'yarpp-template-rp.php', // either the name of a file in your active theme or the boolean false to use the builtin template
                     'limit' => 4, // maximum number of results
                     'order' => 'score DESC'
                   ),

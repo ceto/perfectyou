@@ -1940,8 +1940,8 @@ figure.thumbnail {
   vertical-align: middle;
   max-width: 100%;
   height: auto;
-  padding: 0.75em;
-  background-color: #fadabd; }
+  padding: 0.5em;
+  border: 1px solid #9a91ba; }
 
 .caption {
   font-size: 0.75em;
@@ -1997,19 +1997,20 @@ ul li {
   color: #584d86;
   background-color: transparent; }
   .btn:hover, .btn:focus {
-    border-color: #3a285d;
-    color: #3a285d; }
+    border-color: #584d86;
+    color: #fff7ed;
+    background-color: #584d86; }
   .btn small {
     display: block; }
 
 .btn-filled {
   background-color: #584d86;
   border-color: #584d86;
-  color: #fff; }
+  color: #fff7ed; }
   .btn-filled:hover, .btn-filled:focus {
     background-color: #3a285d;
     border-color: #3a285d;
-    color: #ffcf7b; }
+    color: #fff7ed; }
 
 .banner {
   position: relative;
@@ -2264,7 +2265,7 @@ ul li {
     clear: both; }
   @media only screen and (min-width: 1024px) {
     .subsec-nav .subsec-navhead {
-      padding: 1em 1em 3em 1em; } }
+      padding: 80px 1em 3em 1em; } }
   .subsec-nav .subsec-navhead .subsec-navlogo {
     text-indent: 9999px;
     white-space: nowrap;
@@ -2286,12 +2287,16 @@ ul li {
     padding: 0;
     font-size: 1.666em;
     font-weight: 300; }
-  .subsec-nav .subsec-navhead .subsec-navbread a {
-    color: #ffcf7b;
-    text-decoration: none;
+  .subsec-nav .subsec-navhead .subsec-navbread {
+    font-weight: 700;
     font-size: 1.25em;
-    text-transform: uppercase;
-    font-weight: 700; }
+    color: #ffcf7b; }
+    .subsec-nav .subsec-navhead .subsec-navbread a {
+      color: #ffcf7b;
+      text-decoration: none;
+      text-transform: uppercase; }
+      .subsec-nav .subsec-navhead .subsec-navbread a:hover, .subsec-nav .subsec-navhead .subsec-navbread a:focus {
+        color: #fadabd; }
 .subsec-nav ul {
   counter-reset: navcount;
   margin: 1em 0;
@@ -2373,8 +2378,7 @@ ul li {
     clear: both; }
 
 .subsec {
-  position: relative;
-  margin-bottom: 69px; }
+  position: relative; }
   .subsec:before, .subsec:after {
     content: " ";
     display: table; }
@@ -2387,8 +2391,6 @@ ul li {
       display: table; }
     .subsec .subsec-inner:after {
       clear: both; }
-  .subsec:last-child {
-    margin-bottom: 0; }
   @media only screen and (min-width: 480px) {
     .subsec {
       border-left: 7px solid #3d394e; } }
@@ -2538,18 +2540,20 @@ ul li {
   @media only screen and (min-width: 1280px) {
     .archive .post, .archive .page, .blog .post, .blog .page {
       width: 48%;
-      margin: 1em 1%;
+      margin: 3em 1%;
       float: left; }
       .archive .post:nth-of-type(2n+1), .archive .page:nth-of-type(2n+1), .blog .post:nth-of-type(2n+1), .blog .page:nth-of-type(2n+1) {
         clear: left; } }
   @media only screen and (min-width: 1600px) {
     .archive .post, .archive .page, .blog .post, .blog .page {
       width: 31%;
-      margin: 1em calc(7% / 6); }
+      margin: 3em calc(7% / 6); }
       .archive .post:nth-of-type(2n+1), .archive .page:nth-of-type(2n+1), .blog .post:nth-of-type(2n+1), .blog .page:nth-of-type(2n+1) {
         clear: none; }
       .archive .post:nth-of-type(3n+1), .archive .page:nth-of-type(3n+1), .blog .post:nth-of-type(3n+1), .blog .page:nth-of-type(3n+1) {
         clear: left; } }
+  .archive .post .entry-summary > p a, .archive .page .entry-summary > p a, .blog .post .entry-summary > p a, .blog .page .entry-summary > p a {
+    display: none; }
   .archive .post .entry-summary > p:first-letter, .archive .page .entry-summary > p:first-letter, .blog .post .entry-summary > p:first-letter, .blog .page .entry-summary > p:first-letter {
     float: left;
     color: #50496b;
@@ -2558,6 +2562,26 @@ ul li {
     padding-right: 0.125em;
     font-weight: 300;
     text-transform: uppercase; }
+  .archive .post .entry-summary .btn, .archive .page .entry-summary .btn, .blog .post .entry-summary .btn, .blog .page .entry-summary .btn {
+    font-size: 0.875em; }
+
+/**** Kezelésekhez kapcsolódó cikkek ******/
+.related-entries .post, .related-entries .page {
+  margin: 3em 0; }
+  .related-entries .post .entry-meta, .related-entries .page .entry-meta {
+    display: none; }
+  .related-entries .post .entry-summary > p a, .related-entries .page .entry-summary > p a {
+    display: none; }
+  .related-entries .post .entry-summary > p:first-letter, .related-entries .page .entry-summary > p:first-letter {
+    float: left;
+    color: #50496b;
+    font-size: 3em;
+    line-height: 1em;
+    padding-right: 0.125em;
+    font-weight: 300;
+    text-transform: uppercase; }
+  .related-entries .post .entry-summary .btn, .related-entries .page .entry-summary .btn {
+    font-size: 0.875em; }
 
 .kezeleslist {
   background-color: #fff7ed;
@@ -3038,12 +3062,11 @@ select {
   border-radius: 0px; }
 
 .gallery {
-  background-color: #fadabd;
-  padding: 0.75em;
-  color: #50496b; }
+  padding: 0.5em;
+  border: 1px solid #9a91ba; }
 
 .gallery-row {
-  margin: 0 -0.375em; }
+  margin: 0 -0.25em; }
   .gallery-row:before, .gallery-row:after {
     content: " ";
     display: table; }
@@ -3051,7 +3074,7 @@ select {
     clear: both; }
 
 .col-sm-3, .col-lg-3 {
-  padding: 0 0.375em; }
+  padding: 0 0.25em; }
   @media only screen and (min-width: 768px) {
     .col-sm-3, .col-lg-3 {
       width: 33.333%;

@@ -119,8 +119,12 @@ figure.thumbnail {
   vertical-align: middle;
   max-width: 100%; // Part 1: Set a maximum relative to the parent
   height: auto;
-  padding:0.75em;
-  background-color: $brown-light;
+  padding:0.5em;
+  //background-color: $brown-light;
+  border:1px solid $purple-light;
+  img {
+
+  }
 }
 
 .caption{
@@ -204,8 +208,9 @@ blockquote {
   color:$purple;
   background-color: transparent;
   &:hover, &:focus {
-    border-color: $purple-pot;
-    color:$purple-pot;
+    border-color: $purple;
+    color:$brown-superlight;
+    background-color: $purple;
   }
   small{
     display: block;
@@ -215,12 +220,12 @@ blockquote {
 .btn-filled{
   background-color: $purple;
   border-color:$purple;
-  color:#fff;
+  color:$brown-superlight;
 
 
   &:hover, &:focus {
     background-color: $purple-pot;
     border-color:$purple-pot;
-    color:$yellow;
+    color:$brown-superlight;
   } 
 }

@@ -294,7 +294,7 @@
     text-align: left;
     padding:1em 0.5em 2em 0.5em;
     @include bp($s3){
-       padding:1em 1em 3em 1em; 
+       padding:80px 1em 3em 1em; 
     }
 
     .subsec-navlogo{
@@ -328,12 +328,17 @@
     font-weight: 300;
     }
     .subsec-navbread {
+      font-weight: 700;
+      font-size:1.25em;
+      color:$yellow;
+      
       a {
         color:$yellow;
         text-decoration: none;
-        font-size:1.25em;
         text-transform: uppercase;
-        font-weight: 700;
+        &:hover, &:focus{
+          color:$brown-light;
+        }
       }
     }
     

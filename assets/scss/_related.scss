@@ -1,0 +1,35 @@
+/**** Kezelésekhez kapcsolódó cikkek ******/
+.related-entries{
+
+  .post, .page {
+    margin:3em 0;
+    .entry-title{
+
+    }
+    .entry-meta {
+      display:none;
+    }
+    .entry-summary{
+      > p {
+        a {
+          display:none;
+        }
+      }
+      > p:first-letter { 
+          float: left;
+          color: $blue-light;
+          font-size: 3em;
+          line-height: 1em;
+          padding-right:0.125em;
+          font-weight: 300;
+          text-transform:uppercase;
+          //font-family: Georgia;
+      }
+      .btn{
+        font-size: 0.875em;
+      }
+    }
+
+  }
+
+}

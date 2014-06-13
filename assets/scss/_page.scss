@@ -7,7 +7,7 @@
 .subsec{
   @include clearfix();
   position: relative;
-  margin-bottom: 69px;
+  //margin-bottom: 69px;
 
   
   .subsec-inner {
@@ -23,7 +23,7 @@
     }
   }
   &:last-child{
-    margin-bottom: 0;    
+    //margin-bottom: 0;    
   }
 
   @include bp($s1){
