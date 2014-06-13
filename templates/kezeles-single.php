@@ -25,7 +25,7 @@
     
     <div id="lenyeg" class="treat-content">
       
-      <div class="trc-inner">
+      <div class="trc-inner shape">
         <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
          <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
         <?php endif ?>
