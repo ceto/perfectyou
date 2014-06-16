@@ -1,5 +1,16 @@
 <div class="page-header">
-  <h1>
-    <?php echo roots_title(); ?>
-  </h1>
+	<div class="ph-inner">
+		<h1><?php echo roots_title(); ?></h1>
+		<ul class="ph-cat">
+			<?php
+				wp_list_categories( array(
+					"title_li"	=>	"",
+					"hierarchical"	=>	0,
+					//"child_of"	=> 0,
+
+					)
+				);
+				?>
+		</ul>
+	</div>
 </div>

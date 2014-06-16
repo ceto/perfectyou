@@ -39,13 +39,39 @@
     }
   }
 }
+.subsec-featured {
+  @include clearfix();
+  position: absolute;
+  bottom:0;
+  padding:2em 1em 1.5em;
+  border-top: 1px solid $blue-light;
+  background-color: $blue-dark;
+  //color:$yellow;
+  font-size: 14px;
+  //text-align: left;
+  h3 {
+    margin:0;
+    font-variant: small-caps;
+    font-size: 1.25em;
+  }
+  p{
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .btn {
+    font-size: 1em;
+    color:$brown-superlight;
+    border-color: $brown-superlight;
+  }
+}
 
 .subsec-sidebar{
   color:$brown-superlight;
   position: relative;
-  padding:4em 0 4em;
+  padding:0 0;
   //opacity: 0;
-  text-align:center;
+  //text-align:center;
   //left:-350px;
   transition: all .5s ease-in;
   background-color: $blue-dark;
@@ -60,6 +86,7 @@
   @include bp($s2){
   }
   @include bp($s3){
+    clear:left;
     float:left;
     width: 300px;
   }

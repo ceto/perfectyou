@@ -74,7 +74,7 @@ $(document).bind(mousewheelevt, function(e) {
         if(delta > 0)
             {
             //console.log('Felfele');
-            if (felcsoki++ >= 0 ) {
+            if (felcsoki++ >= 2 ) {
               lecsoki=0;
               $('.fixedhead').addClass('show');
             }
@@ -124,7 +124,7 @@ var resizeHero = function() {
   }
   if ( ($(window).height() > 700) && ($(window).width() >= 768) ) {
     $('.treat-header').addClass('fullscreen');
-    $('.fullscreen').height( $(window).height() - ( $('.banner').height()  ) );
+    $('.fullscreen').height( $(window).height() );
     $('.contact-body').height( $(window).height() - 100  );
   } else {
     $('.treat-header').removeClass('fullscreen');

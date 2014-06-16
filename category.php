@@ -1,19 +1,22 @@
+<?php get_template_part('templates/page', 'header'); ?>
 <style>
-  .jobbcsi{
+  .posztok{
     background-image: url('<?php echo get_stylesheet_directory_uri().'/assets/img/mell_bg.jpg'; ?>');
   }
 </style>
 
 <section class="kezeleslist">
   <div class="kezeleslist-inner">
-    <h1><?php _e('Műtétek kezelések','roots') ?>: <?php echo roots_title(); ?></h1>
+    <h2><?php _e('Műtétek és beavatkozások','roots') ?></h2>
     <?php while (have_posts()) : the_post(); ?>
       <?php if (get_post_type()=='kezeles'): ?>
           <?php get_template_part('templates/item', get_post_type()); ?>
       <?php endif ?>
     <?php endwhile; ?>
   </div>
+
 </section>
+
 
 <section class="itemlist posztok" >
   <div class="itemlist-inner">
@@ -31,7 +34,8 @@
     <?php endif ?>
     <?php endwhile; ?>
   </div>
-</section> 
+</section>
+
 
 <?php if ($wp_query->max_num_pages > 1) : ?>
   <nav class="post-nav">

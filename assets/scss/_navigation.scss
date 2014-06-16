@@ -149,6 +149,7 @@
         
 
       }
+
       &.open{
         > .dropdown-toggle {
           background-color: $blue-light;
@@ -172,8 +173,14 @@
       display: inline-block;
       margin-left: 0.5em;
     }
-
-
+    
+    &.active.dropdown {
+      > a{
+        background-color: $blue-light;
+        color:#fff;
+      }
+    }
+    
     a{
       display: block;
       color:$brown;
@@ -204,76 +211,6 @@
 
 }
 
-
-// .contentnav {
-//   @include clearfix();
-//   position: relative;
-//   background-color: rgba($gray-text,1);
-//   padding-right: 12em;
-//   ul {
-
-//     text-transform: uppercase;
-//     counter-reset: navcount;
-//     display: inline-block;
-//     margin:1em 0;
-//     padding:0;
-//   }
-//   li {
-//     list-style-type: none;
-//     display: inline-block;
-//     counter-increment: navcount;
-//     margin:0;
-
-
-//     a{
-//       display: inline-block;
-//       padding:0.25em 1em;
-//       text-decoration: none;
-//       color:$purple-light;
-//       font-size: 1em;
-//       font-weight: 300;
-//       &:before{
-//         content: counter(navcount)'.';
-//         margin-right: 0.25em;
-//         font-size: 1.25em;
-//         line-height: 0.875em;
-//         font-weight: 900;
-//         font-variant: normal;
-//         //font-style: italic;
-//         color:gray;
-//       }
-//       &:hover, &:focus{
-//         color:#fff;
-//       }
-      
-//     }
-//   }
-//   .bigbtn{
-//     position: absolute;
-//     display: block;
-//     right:0;
-//     top:0;
-//     bottom:0;
-//     width:12em;
-//     background-color: $gray;
-//     text-align: center;
-//     line-height: 1;
-//     font-weight: 900;
-//     text-transform: uppercase;
-//     //padding:1.5em 0;
-//     color:$yellow;
-//     text-decoration: none;
-//     padding-top: 1em;
-//     span{
-//       font-size: 0.75em;
-//     }
-//     &:hover, &:focus {
-//       color: $brown;
-//       background-color: $yellow;
-//     }
-
-//   }
-// }
 
 
 

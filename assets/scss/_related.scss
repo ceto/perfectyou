@@ -6,7 +6,10 @@
     .entry-title{
 
     }
-    .entry-meta {
+    .entry-cat{
+      display:none;
+    }
+    .entry-time {
       display:none;
     }
     .entry-summary{
@@ -19,7 +22,7 @@
           float: left;
           color: $blue-light;
           font-size: 3em;
-          line-height: 1em;
+          line-height: 0.333em;
           padding-right:0.125em;
           font-weight: 300;
           text-transform:uppercase;

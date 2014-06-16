@@ -1,10 +1,10 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
       <?php 
-        $imoci = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'banner' ); 
+        $imoci = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full43' ); 
       ?>
     <style>
-      .jobbcsi{
+      .treat-header{
         background-image:url('<?php echo $imoci[0]; ?>');
       }
     </style>
@@ -43,9 +43,8 @@
       <div class="sss-inner">
       <nav class="subsec-nav">
         <header class="subsec-navhead">
-          <!-- <a class="subsec-navlogo" href="<?php echo home_url('/') ?>"><?php bloginfo('name'); ?></a> -->
           <div class="subsec-navbread">
-            <?php the_category( ' / ', 'multiple'); ?> 
+            <?php the_category( ' · ', 'multiple'); ?> 
           </div>
           <h3><?php the_title(); ?></h3>
         </header>
@@ -63,7 +62,10 @@
         
       </nav>
 
-      <a class="brandi" href="#pagetop"><?php bloginfo('name'); ?></a>
+      <section class="subsec-featured">
+        <?php dynamic_sidebar('sidebar-featured'); ?>
+      </section>
+
       </div>
     </aside>
       <?php reset ($streats); $trno=1;
@@ -71,7 +73,9 @@
       ?>
         <section id="subsec-<?php echo $trno++;  ?>" class="subsec">
           <header class="subsec-header">
-            <h2 class="subsec-title"><?php echo esc_html( $entry['title'] );  ?></h2>
+            <div class="ss-hinner">
+              <h2 class="subsec-title"><?php echo esc_html( $entry['title'] );  ?></h2>
+            </div>
           </header>
           <div class="subsec-inner">
             <?php
@@ -96,7 +100,9 @@
       
       <section id="subsec-<?php echo $trno++;  ?>" class="side-related subsec">
         <header class="subsec-header">
+          <div class="ss-hinner">
             <h2 class="subsec-title"><?php _e('Tippek, tanácsok a döntéshez','root') ?></h2>
+          </div>
         </header>
         <div class="subsec-inner">
           <div class="subsec-cont">

@@ -1,14 +1,16 @@
 <div class="subsections">
+
   <aside class="subsec-sidebar">
+
     <div class="sss-inner">
-    <nav class="subsec-nav">
-      <header class="subsec-navhead">
-        <div class="subsec-navbread">
-          <?php the_category( ' / ', 'multiple'); ?> 
-        </div>
-        <h3>Jelentkezzen bevatkozásra</h3>
-      </header>
-      <?php
+      <nav class="subsec-nav">
+        <header class="subsec-navhead">
+          <div class="subsec-navbread">
+            <?php the_category( ' · ', 'multiple'); ?> 
+          </div>
+          <h3>Jelentkezzen bevatkozásra</h3>
+        </header>
+        <?php
           $reference_ID=get_the_id();
           yarpp_related(
             array(
@@ -44,8 +46,11 @@
             true
           ); // third argument: (optional) true to echo the HTML block; false to return it
         ?>
-    </nav>
-  </div>
+      </nav>
+      <section class="subsec-featured">
+        <?php dynamic_sidebar('sidebar-featured'); ?>
+      </section>
+    </div>
   </aside>
   <section id="subsec-article" class="subsec">
     <?php while (have_posts()) : the_post(); ?>
@@ -60,8 +65,10 @@
       
         <article <?php post_class(); ?>>
           <header class="subsec-header">
-            <h1 class="subsec-title"><?php the_title(); ?></h1>
-            <div class="subsec-meta"><?php get_template_part('templates/entry-meta'); ?></div>
+            <div class="ss-hinner">
+              <h1 class="subsec-title"><?php the_title(); ?></h1>
+              <div class="subsec-meta"><?php get_template_part('templates/entry-meta'); ?></div>
+            </div>
           </header>
           <div class="subsec-inner">
             <div class="subsec-cont">

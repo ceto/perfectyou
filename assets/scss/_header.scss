@@ -5,13 +5,23 @@
 
 
   background-color: transparent;
-  
-  height:100px;
+  padding:0 20px;
+  height:69px;
   transition:all .25s ease;
   border-top:3px solid $yellow;
+  .archive &, .blog &, .single-post &, .page & {
+    background-color: #fff;
+  }
+  
+  @include bp($s0){
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+  }
+  @include bp($s2){
+    height:100px;
 
-  @include bp(0px){
-    padding:0 20px;
     &.fixedhead {
       position:fixed;
       top:0;
@@ -96,7 +106,7 @@
   //margin:0.75em 0 0;
   padding:1.875em 1em 0;
 
-  background-color: rgba($yellow,1);
+  background-color: $yellow;
   //border:1px solid $purple;
   //border-radius: 4px;
   font-size: 0.75em;
@@ -114,7 +124,7 @@
     //text-transform: none;
   }
   &:hover, &:focus{
-    background-color: rgba($blue-light,1);
+    background-color: $blue-light;
     border-color: #fff;
     color:$brown-superlight;
   }
@@ -134,3 +144,46 @@
   }
 }
 
+.page-header{
+  background-color: $blue-light;
+  color:$brown-superlight;
+  //background-color: #fff;
+  .archive &{
+    //background-color: transparent;
+    //color:$blue-light;
+  }
+  .ph-inner{
+    @include clearfix();
+    padding:2em 0.5em;
+    max-width: $s3;
+    margin:0 auto;
+    text-align: center;
+  }
+}
+
+.ph-cat{
+  font-size: 0.75em;
+  color:$brown-superlight;
+  text-transform: uppercase;
+  //font-variant: small-caps;
+  font-weight: 900;
+  margin: 0 0 0 0;
+  padding:0;
+  li {
+    display: inline-block;
+    list-style-type: none;
+  }
+  a{
+    display: inline-block;
+    margin:0 0.125em;
+    padding:0.25em 0.5em;
+    text-decoration: none;
+    color:$brown-superlight;
+    background-color: $blue-dark;
+    
+    &:hover, &:focus{
+      color:$blue-dark;
+      background-color: $yellow;
+    }
+  }
+}

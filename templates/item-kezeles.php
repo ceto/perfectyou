@@ -3,15 +3,15 @@
     <figure class="entry-thumb">
     <a href="<?php the_permalink(); ?>">
       <?php if (has_post_thumbnail()): ?>
-        <?php the_post_thumbnail(); ?>
+        <?php the_post_thumbnail('thumb169'); ?>
       <?php else : ?>
-      <img src="http://placehold.it/480x360" alt="<?php the_title(); ?>">
+      <img src="http://placehold.it/240x135" alt="<?php the_title(); ?>">
       <?php endif; ?>
     </a>
+    <h3 class="entry-subtitle"><a href="<?php the_permalink(); ?>"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></a></h3>
     </figure>
     <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <h3 class="entry-subtitle"><a href="<?php the_permalink(); ?>"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></a></h3>
-  </header>
+    </header>
   <div class="entry-summary">
     <ul class="nav">
       <?php

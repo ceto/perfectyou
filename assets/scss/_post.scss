@@ -108,8 +108,34 @@
     //     clear:left;
     //   }
     // }
+    .entry-cat{
+      display: inline-block;
+      background-color: $blue-dark;
+      color:$brown-superlight;
+      padding:0.25em 0.5em;
+      text-transform: uppercase;
+      //font-variant: small-caps;
+      font-weight: 900;
+      font-size: 0.75em;
+      margin-bottom: 0.25em;
+      a{
+
+        text-decoration: none;
+        color:$brown-superlight;
+        &:hover, &:focus{
+          color:$yellow;
+        }
+      }
+    }
+    time{
+      font-size: 0.875em;
+      font-weight: 300;
+      font-variant: small-caps;
+      color:$blue-light;
+    }
     .entry-title{
       //font-size: 2em;
+      margin:0;
     }
     .entry-summary{
       > p {
@@ -128,7 +154,7 @@
           //font-family: Georgia;
       }
       .btn{
-        font-size: 0.875em;
+        font-size: 0.75em;
       }
     }
 
