@@ -1,5 +1,5 @@
 <?php get_template_part('templates/head'); ?>
-<body <?php body_class(); ?>  data-spy="scroll" data-target=".subsec-nav" data-offset="69" >
+<body <?php body_class(); ?>  data-spy="scroll" data-target=".subsec-nav" data-offset="0" >
 
   <!--[if lt IE 9]>
     <div class="alert alert-warning">

@@ -195,12 +195,21 @@
   @include bp($s4){
     //margin-right: 50%;
   }
+  // max-height:0;
+  // overflow: hidden;
+  // transition: all .8s ease-in;
+  &.fullscreen{
+    // max-height:1200px;
+  } 
 }
 .trh-inner {
   @include clearfix();
   padding:0.5em 0.5em;
   max-width: $s4;
   margin:0 auto;
+  margin: 140px auto;
+  transition: all .4s ease-in;
+  //margin-top: 1000px;
 
 
   @include bp($s2){
@@ -208,10 +217,13 @@
       //position: relative;
       //top: 50%;
       //transform: translateY(-50%);
+      //margin-top: 1000px;
+      //margin: 120px auto;
+
     }
   }
   @include bp($s2){
-    padding:100px 20px 100px 20px;
+    //padding:100px 20px 100px 20px;
   }
 
 

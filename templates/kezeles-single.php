@@ -8,8 +8,8 @@
         background-image:url('<?php echo $imoci[0]; ?>');
       }
     </style>
-    <header id="trh" class="treat-header">
-        <div class="trh-inner">
+    <header id="trh" class="treat-header fullscreen">
+        <div class="trh-inner" style="margin-top:1000px;">
           <h1 class="treat-title"><?php the_title(); ?></h1>
           <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
             <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
