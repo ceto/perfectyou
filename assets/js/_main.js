@@ -124,8 +124,12 @@ var resizeHero = function() {
   }
   if ( ($(window).height() > 700) && ($(window).width() >= 768) ) {
     $('.treat-header').addClass('fullscreen');
-    $('.fullscreen').height( $(window).height() );
-    $('.contact-body').height( $(window).height() - 100  );
+    //$('.fullscreen').height( $(window).height() );
+    $('.fullscreen .trh-inner').css('margin-top', ($(window).height() - $('.trh-inner').height())/2  );
+    //$('.fullscreen .trh-inner').css('margin-bottom', ($(window).height() - $('.trh-inner').height())/2  );
+
+    
+    $('.contact-body').height( $(window).height());
   } else {
     $('.treat-header').removeClass('fullscreen');
   }
@@ -187,16 +191,29 @@ jQuery(document).ready(function($){
 
   /************* Subsec sidebar Fixing ***********/
   if ( ($('.subsec-sidebar').length > 0)  && ($(window).width() >= 1024) ){
-    var top = $('.subsec-sidebar').offset().top - parseFloat($('.subsec-sidebar').css('marginTop').replace(/auto/, 0));
+    var topi = $('.subsections').offset().top;
+    var bottomi =  $('.subsections').offset().top + $('.subsections').height() - $(window).height();
     $(window).scroll(function (event) {
-      var y = $(this).scrollTop();
-      if (y >= top) {
+      var trick = ($('.trh-inner').length > 0)?parseFloat( $('.trh-inner').css('marginTop').replace(/auto/, 0) ):0;
+      var ypsz = $(this).scrollTop();
+      if (ypsz >= topi + trick ) {
         $('.subsec-sidebar').addClass('fixed');
         //$('.subsec-sidebar').height( $(window).height()  );
       } else {
         $('.subsec-sidebar').removeClass('fixed');
         //$('.subsec-sidebar').height( $(window).height()  );
       }
+      //alert(bottom);
+      if (ypsz >= bottomi + trick) {
+        $('.subsec-sidebar').addClass('bottom');
+        //$('.subsec-sidebar').height( $(window).height()  );
+      } else {
+        $('.subsec-sidebar').removeClass('bottom');
+        //$('.subsec-sidebar').height( $(window).height()  );
+      }
+      
+
+
     });
   }
   /************* End of fixing ***********/

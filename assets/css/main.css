@@ -2000,7 +2000,8 @@ ul li {
   text-decoration: none;
   font-weight: 400;
   color: #584d86;
-  background-color: transparent; }
+  background-color: transparent;
+  white-space: nowrap; }
   .btn:hover, .btn:focus {
     border-color: #584d86;
     color: #fff7ed;
@@ -2500,9 +2501,18 @@ ul li {
         padding: 2em 1em; } }
     @media only screen and (min-width: 480px) {
       .subsec-header .ss-hinner {
+        padding: 2em 0.5em; } }
+    @media only screen and (min-width: 768px) {
+      .subsec-header .ss-hinner {
         padding: 2em 0; } }
-    @media only screen and (min-width: 768px) { }
-    @media only screen and (min-width: 1024px) { }
+    @media only screen and (min-width: 1024px) {
+      .subsec-header .ss-hinner {
+        padding: 2em 2em;
+        max-width: 46em; } }
+    @media only screen and (min-width: 1280px) {
+      .subsec-header .ss-hinner {
+        padding: 2em 0;
+        max-width: 42em; } }
   .subsec-header .subsec-title {
     position: relative;
     font-size: 2.25em;
@@ -2649,7 +2659,7 @@ ul li {
     float: left;
     color: #50496b;
     font-size: 3em;
-    line-height: 0.333em;
+    line-height: 1;
     padding-right: 0.125em;
     font-weight: 300;
     text-transform: uppercase; }
@@ -2781,15 +2791,15 @@ ul li {
   background-attachment: fixed;
   background-color: #fff;
   color: #312017; }
-  @media only screen and (min-width: 320px) {
-    .treat-header {
-      padding-top: 100px; } }
+  .treat-header:before, .treat-header:after {
+    content: " ";
+    display: table; }
+  .treat-header:after {
+    clear: both; }
+  @media only screen and (min-width: 320px) { }
   @media only screen and (min-width: 480px) { }
   @media only screen and (min-width: 768px) { }
-  @media only screen and (min-width: 1024px) {
-    .treat-header {
-      min-height: 500px;
-      height: 700px; } }
+  @media only screen and (min-width: 1024px) { }
   @media only screen and (min-width: 1280px) { }
 
 .trh-inner {
@@ -2801,14 +2811,10 @@ ul li {
     display: table; }
   .trh-inner:after {
     clear: both; }
-  @media only screen and (min-width: 768px) {
-    .fullscreen .trh-inner {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%); } }
+  @media only screen and (min-width: 768px) { }
   @media only screen and (min-width: 768px) {
     .trh-inner {
-      padding: 40px 20px 40px 20px; } }
+      padding: 100px 20px 100px 20px; } }
 
 .treat-title {
   color: #50496b;
@@ -2863,7 +2869,7 @@ ul li {
 
 .treat-content {
   text-shadow: 1px 1px #3d394e;
-  padding: 2.5em 0.5em;
+  padding: 0 0.5em;
   color: #fff7ed;
   background-color: #3d394e;
   background-image: url('../img/doktor_ablaknal_jobb.jpg');
@@ -2876,16 +2882,26 @@ ul li {
     display: table; }
   .treat-content:after {
     clear: both; }
+  .treat-content:before, .treat-content:after {
+    content: " ";
+    display: table; }
+  .treat-content:after {
+    clear: both; }
 
 .trc-inner {
   max-width: 1024px; }
+  .trc-inner:before, .trc-inner:after {
+    content: " ";
+    display: table; }
+  .trc-inner:after {
+    clear: both; }
   @media only screen and (min-width: 320px) {
     .trc-inner {
       padding: 3em 0; } }
   @media only screen and (min-width: 480px) { }
   @media only screen and (min-width: 768px) {
     .trc-inner {
-      padding: 3em 1em; } }
+      padding: 5em 1em; } }
   @media only screen and (min-width: 1024px) { }
 
 .treat-slogan {
@@ -2936,6 +2952,8 @@ ul li {
 .subsec-featured {
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   padding: 2em 1em 1.5em;
   border-top: 1px solid #50496b;
   background-color: #3d394e;
@@ -2960,12 +2978,18 @@ ul li {
   color: #fff7ed;
   position: relative;
   padding: 0 0;
+  margin: 0 0;
   transition: all 0.5s ease-in;
   background-color: #3d394e;
   background-image: url('../img/istvan_szilikonnal.jpg');
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover; }
+  .subsec-sidebar:before, .subsec-sidebar:after {
+    content: " ";
+    display: table; }
+  .subsec-sidebar:after {
+    clear: both; }
   @media only screen and (min-width: 480px) { }
   @media only screen and (min-width: 768px) { }
   @media only screen and (min-width: 1024px) {
@@ -2985,11 +3009,15 @@ ul li {
     left: 0;
     top: 0;
     bottom: 0;
-    opacity: 1;
     z-index: 0; }
     @media only screen and (min-width: 768px) {
       .subsec-sidebar.fixed {
         float: none; } }
+    .subsec-sidebar.fixed.bottom {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      top: auto; }
 
 .sss-inner {
   position: absolute;

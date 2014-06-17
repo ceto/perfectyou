@@ -172,6 +172,7 @@
 /************ Single Kezeles Style *******/
 
 .treat-header {
+  @include clearfix();
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -179,7 +180,6 @@
   background-color: #fff;
   color:$brown;
   @include bp($s0){
-   padding-top: 100px;
   }
   @include bp($s1){
     //margin-right: 25%;
@@ -189,8 +189,8 @@
   }
   @include bp($s3){
 
-    min-height: 500px;
-    height: 700px;
+    //min-height: 500px;
+    //height: 700px;
   }
   @include bp($s4){
     //margin-right: 50%;
@@ -205,13 +205,13 @@
 
   @include bp($s2){
     .fullscreen & {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
+      //position: relative;
+      //top: 50%;
+      //transform: translateY(-50%);
     }
   }
   @include bp($s2){
-    padding:40px 20px 40px 20px;
+    padding:100px 20px 100px 20px;
   }
 
 
@@ -294,11 +294,12 @@
   //text-align: center;
 }
 .treat-content {
+  @include clearfix();
   //border-top: 200px solid #fff;
   //border-bottom: 200px solid #fff;
   text-shadow:1px 1px $blue-dark;
   @include clearfix();
-  padding:2.5em 0.5em;
+  padding:0 0.5em;
   color:$brown-superlight;
   //color:$yellow;
   background-color: $blue-dark;
@@ -311,6 +312,7 @@
   
 }
 .trc-inner{
+  @include clearfix();
   max-width: $s3;
   @include bp($s0){
     padding:3em 0;
@@ -319,7 +321,7 @@
   @include bp($s1){
   }
   @include bp($s2){
-    padding:3em 1em;
+    padding:5em 1em;
 
   }
   @include bp($s3){

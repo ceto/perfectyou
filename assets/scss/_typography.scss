@@ -207,6 +207,7 @@ blockquote {
   font-weight: 400;
   color:$purple;
   background-color: transparent;
+  white-space:nowrap;
   &:hover, &:focus {
     border-color: $purple;
     color:$brown-superlight;

@@ -8,7 +8,7 @@
         background-image:url('<?php echo $imoci[0]; ?>');
       }
     </style>
-    <header class="treat-header">
+    <header id="trh" class="treat-header">
         <div class="trh-inner">
           <h1 class="treat-title"><?php the_title(); ?></h1>
           <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
@@ -101,7 +101,7 @@
       <section id="subsec-<?php echo $trno++;  ?>" class="side-related subsec">
         <header class="subsec-header">
           <div class="ss-hinner">
-            <h2 class="subsec-title"><?php _e('Tippek, tanácsok a döntéshez','root') ?></h2>
+            <h2 class="subsec-title"><?php _e('Tippek, tanácsok a döntéshez','roots') ?></h2>
           </div>
         </header>
         <div class="subsec-inner">

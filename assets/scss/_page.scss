@@ -108,16 +108,22 @@
       //max-width: 42em;
     }
     @include bp($s1){
-      padding:2em 0;
+      padding:2em 0.5em;
       //max-width: 42em;
     }
     @include bp($s2){
-      //padding:2em 0;
+      padding:2em 0;
       //max-width:42em;
     }
     @include bp($s3){
-      //padding:2em 2em;
+      padding:2em 2em;
+       max-width: 46em;
     }
+    @include bp($s4){
+      padding:2em 0;
+       max-width: 42em;
+    }
+    
 
   }
     
