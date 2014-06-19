@@ -6,8 +6,7 @@
 				wp_list_categories( array(
 					"title_li"	=>	"",
 					"hierarchical"	=>	0,
-					//"child_of"	=> 0,
-
+					"child_of"	=> 33,
 					)
 				);
 				?>

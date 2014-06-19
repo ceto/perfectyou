@@ -6,7 +6,7 @@
       <nav class="subsec-nav">
         <header class="subsec-navhead">
           <div class="subsec-navbread">
-            <?php the_category( ' · ', 'multiple'); ?> 
+            <?php the_category( ' · '); ?> 
           </div>
           <h3>Jelentkezzen bevatkozásra</h3>
         </header>

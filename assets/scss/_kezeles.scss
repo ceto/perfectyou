@@ -228,6 +228,24 @@
 
 
 }
+.treat-headcats{
+  display: inline-block;
+  background-color: $gray;
+  color:$brown-superlight;
+  padding:0.25em 0.5em;
+  text-transform: uppercase;
+  //font-variant: small-caps;
+  font-weight: 900;
+  font-size: 0.875em;
+  margin-bottom: 0.25em;
+  a{
+    text-decoration: none;
+    color:$brown-superlight;
+    &:hover, &:focus{
+      color:$blue-light;
+    }
+  }
+}
 .treat-title {
   //padding:3em 2em 0 0.75em;
   color:$blue-light;

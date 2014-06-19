@@ -1,7 +1,24 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
-      <?php 
-        $imoci = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full43' ); 
+      <?php
+        $categories = get_the_category();
+        $cat_img_id = 0;
+        $main_cat_id = 0;
+        $main_cat_name = '';
+        foreach($categories as $category) {
+          if ($category->parent == 33){ 
+            $saved_data = get_tax_meta($category->term_id,'ba_image_field_id');
+            $cat_img_id=$saved_data['id'];
+            $main_cat_id=$category->term_id;
+            $main_cat_name=$category->name;
+          }
+        }
+
+        if (has_post_thumbnail()) {
+          $imoci = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full43' ); 
+        } else {
+          $imoci=wp_get_attachment_image_src( $cat_img_id, 'full43');
+        }
       ?>
     <style>
       .treat-header{
@@ -10,6 +27,15 @@
     </style>
     <header id="trh" class="treat-header fullscreen">
         <div class="trh-inner" style="margin-top:1000px;">
+
+          <div class="treat-headcats">
+            <?php $bcat=get_category(33); $base_cat_name=$bcat->name; ?>
+            <a href="<?php echo esc_url( get_category_link(33) ); ?>" title="<?php echo $base_cat_name; ?>"><?php echo $base_cat_name; ?></a>
+            /
+            <a href="<?php echo esc_url( get_category_link( $main_cat_id ) ); ?>" title="<?php echo $main_cat_name; ?>">
+              <?php echo $main_cat_name; ?>
+            </a> 
+          </div>
           <h1 class="treat-title"><?php the_title(); ?></h1>
           <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
             <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
@@ -26,6 +52,7 @@
     <div id="lenyeg" class="treat-content">
       
       <div class="trc-inner shape">
+
         <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
          <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
         <?php endif ?>
@@ -44,7 +71,7 @@
       <nav class="subsec-nav">
         <header class="subsec-navhead">
           <div class="subsec-navbread">
-            <?php the_category( ' · ', 'multiple'); ?> 
+            <?php the_category( ' · '); ?> 
           </div>
           <h3><?php the_title(); ?></h3>
         </header>

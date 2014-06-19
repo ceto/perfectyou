@@ -132,29 +132,6 @@ function cmb_treatment( array $meta_boxes ) {
 
 /********* End of Custom MetaBoxes for Treatment Management ****************/
 
-/************* Custom Category for Treatment Management *********/
-
-// add_action( 'init', 'create_treatment_category', 0 );
-
-// function create_treatment_category() {
-//   $labels = array(
-//     'name'              => 'Kezelés csoportok',
-//     'singular_name'     => 'Kezelés csoport',
-//     'menu_name'         => 'Kezelés csoportok',
-//   );
-
-//   $args = array(
-//     'hierarchical'      => true,
-//     'labels'            => $labels,
-//     'show_ui'           => true,
-//     'show_admin_column' => true,
-//     'query_var'         => true,
-//     'rewrite'           => array( 'slug' => 'kezeles-csoport' ),
-//   );
-
-//   register_taxonomy( 'kezeles-csoport', array( 'kezeles' ), $args );
-// }
-
 add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
 /**
  * Initialize the metabox class.
@@ -197,7 +174,7 @@ if (is_admin()){
    */
   
   //Image field
-  $cat_meta->addImage($prefix.'image_field_id',array('name'=> __('Fullscreen image(min:1600×1024px)','roots')));
+  $cat_meta->addImage($prefix.'image_field_id',array('name'=> __('Fullscreen image(min:1600×1200px)','roots')));
 
   //file upload field
   //$repeater_fields[] = $my_meta->addImage($prefix.'image_field_id',array('name'=> __('My Image ','tax-meta')),true);
