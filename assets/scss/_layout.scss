@@ -27,10 +27,17 @@ body {
 
 .main {
   @include clearfix();
-  .archive &, .blog &, .single-post &, .page &{
+  .blog &, .single-post &, .page &{
     background-color: $brown-superlight;
     @include bp($s0){
       padding-top:100px;
     }
   }
+  .archive & {
+    @include bp($s0){
+      padding-top:100px;
+
+    }
+  }
+
 }

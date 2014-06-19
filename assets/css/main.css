@@ -1851,11 +1851,14 @@ body {
   display: table; }
 .main:after {
   clear: both; }
-.archive .main, .blog .main, .single-post .main, .page .main {
+.blog .main, .single-post .main, .page .main {
   background-color: #fff7ed; }
   @media only screen and (min-width: 320px) {
-    .archive .main, .blog .main, .single-post .main, .page .main {
+    .blog .main, .single-post .main, .page .main {
       padding-top: 100px; } }
+@media only screen and (min-width: 320px) {
+  .archive .main {
+    padding-top: 100px; } }
 
 html {
   font-size: 14px;
@@ -2010,12 +2013,12 @@ ul li {
     display: block; }
 
 .btn-filled {
-  background-color: #584d86;
-  border-color: #584d86;
+  background-color: #3a285d;
+  border-color: #3a285d;
   color: #fff7ed; }
   .btn-filled:hover, .btn-filled:focus {
-    background-color: #3a285d;
-    border-color: #3a285d;
+    background-color: #50496b;
+    border-color: #50496b;
     color: #fff7ed; }
 
 .banner {
@@ -2031,7 +2034,7 @@ ul li {
     display: table; }
   .banner:after {
     clear: both; }
-  .archive .banner, .blog .banner, .single-post .banner, .page .banner {
+  .blog .banner, .single-post .banner, .page .banner {
     background-color: #fff; }
   @media only screen and (min-width: 320px) {
     .banner {
@@ -2133,6 +2136,9 @@ ul li {
 .page-header {
   background-color: #50496b;
   color: #fff7ed; }
+  .archive .page-header {
+    background-color: transparent;
+    color: #50496b; }
   .page-header .ph-inner {
     padding: 2em 0.5em;
     max-width: 1024px;
@@ -2572,12 +2578,11 @@ ul li {
       max-width: 1280px; } }
 
 .posztok {
-  background-color: #dce7e9;
+  background-color: #fff7ed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  background-image: url(../img/mell_bg.jpg); }
+  background-attachment: fixed; }
 
 /******** Single Post Style *******/
 .single .post .entry-figure {
@@ -2854,10 +2859,11 @@ ul li {
       font-size: 6em; } }
 
 .treat-headaction {
-  margin: 1em 0 0;
-  font-size: 1.5em; }
+  margin: 1em 0.5em;
+  font-size: 0.875em; }
   .treat-headaction .btn {
     margin-bottom: 0.5em;
+    margin-right: 0.333em;
     min-width: 0; }
 
 .treat-lead {

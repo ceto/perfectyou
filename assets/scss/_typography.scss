@@ -219,14 +219,14 @@ blockquote {
 }
 
 .btn-filled{
-  background-color: $purple;
-  border-color:$purple;
+  background-color: $purple-pot;
+  border-color:$purple-pot;
   color:$brown-superlight;
 
 
   &:hover, &:focus {
-    background-color: $purple-pot;
-    border-color:$purple-pot;
+    background-color: $blue-light;
+    border-color:$blue-light;
     color:$brown-superlight;
   } 
 }

@@ -41,8 +41,14 @@
             <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
           <?php endif ?>
           <div class="treat-headaction">
-            <!-- <a data-toggle="collapse" href="#contact" class="btn btn-filled">Jelentkezés</a>  -->
-            <a href="#lenyeg" class="btn">Részletek</a>
+            <?php
+            $streats = get_post_meta( $post->ID, '_meta_sections', true );  
+            $trno=1;
+            foreach ( (array) $streats as $key => $entry ) {
+            ?>
+              <a class="btn btn-filled" href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a>
+            <?php  } ?>
+            <a class="btn" href="#subsec-<?php echo $trno++;  ?>"><?php _e('Tippek és tanácsok a döntéshez','root') ?></a>
           </div>
         </div>
     </header>
@@ -78,7 +84,7 @@
         
         <ul class="nav">
           <?php
-            $streats = get_post_meta( $post->ID, '_meta_sections', true ); $trno=1; 
+            reset($streats);
             $trno=1;
             foreach ( (array) $streats as $key => $entry ) {
           ?>

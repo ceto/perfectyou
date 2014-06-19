@@ -9,7 +9,7 @@
   height:69px;
   transition:all .25s ease;
   border-top:3px solid $yellow;
-  .archive &, .blog &, .single-post &, .page & {
+  .blog &, .single-post &, .page & {
     background-color: #fff;
   }
   
@@ -149,8 +149,8 @@
   color:$brown-superlight;
   //background-color: #fff;
   .archive &{
-    //background-color: transparent;
-    //color:$blue-light;
+    background-color: transparent;
+    color:$blue-light;
   }
   .ph-inner{
     @include clearfix();
