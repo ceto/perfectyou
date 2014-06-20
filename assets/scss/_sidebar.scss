@@ -1,9 +1,14 @@
 .sidebar{
-  @include clearfix();
-  position:relative;
-  padding:2em 0;
   background-color: $gray-superdark;
   color:$brown-superlight;
+
+  .sidebar-inner {
+    @include clearfix();
+    position:relative;
+    padding:2em 0;
+    max-width: $s4;
+    margin:0 auto;
+  }
   a {
     color: $yellow;
     text-decoration: none;

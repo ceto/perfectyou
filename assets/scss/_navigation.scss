@@ -335,14 +335,18 @@
 }
 
 
+.illnavrow{
+  @include clearfix();
+  background-color:#fff;
+}
 
 .nav-greaticon{
   @include clearfix();
   position:relative;
-  background-color:#fff;
+  max-width:$s4;
+  margin:0 auto;
   ul{
     @include clearfix();
-    max-width: $s3;
     margin:1em auto;
     padding:0;
   }

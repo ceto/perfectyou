@@ -5,7 +5,7 @@
       <?php if (has_post_thumbnail()): ?>
         <?php the_post_thumbnail('thumb169'); ?>
       <?php else : ?>
-      <img src="http://placehold.it/240x135" alt="<?php the_title(); ?>">
+      <img src="http://placehold.it/240x135/fff7ed/50496b" alt="<?php the_title(); ?>">
       <?php endif; ?>
     </a>
     <h3 class="entry-subtitle"><a href="<?php the_permalink(); ?>"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></a></h3>

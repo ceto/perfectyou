@@ -22,7 +22,6 @@
 
 </section>
 
-
 <section class="itemlist posztok" >
   <div class="itemlist-inner">
     <?php if (!have_posts()) : ?>
