@@ -2687,9 +2687,9 @@ ul li {
     font-size: 0.875em; }
 
 .kezeleslist {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#ffffff));
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0, #ffffff 75%);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #ffffff 75%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, rgba(255, 255, 255, 0.75)), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.75) 75%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.75) 75%, #ffffff 100%);
   padding: 0 0.5em; }
   .kezeleslist:before, .kezeleslist:after {
     content: " ";
@@ -2814,6 +2814,7 @@ ul li {
 
 /************ Single Kezeles Style *******/
 .treat-header {
+  position: relative;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
