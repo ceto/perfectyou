@@ -1846,19 +1846,24 @@ body {
   background-size: cover;
   background-attachment: fixed; }
 
-.main:before, .main:after {
-  content: " ";
-  display: table; }
-.main:after {
-  clear: both; }
-.blog .main, .single-post .main, .page .main {
-  background-color: #fff7ed; }
+.main {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  .main:before, .main:after {
+    content: " ";
+    display: table; }
+  .main:after {
+    clear: both; }
+  .blog .main, .single-post .main {
+    background-color: #fff7ed; }
+    @media only screen and (min-width: 320px) {
+      .blog .main, .single-post .main {
+        padding-top: 100px; } }
   @media only screen and (min-width: 320px) {
-    .blog .main, .single-post .main, .page .main {
+    .archive .main {
       padding-top: 100px; } }
-@media only screen and (min-width: 320px) {
-  .archive .main {
-    padding-top: 100px; } }
 
 html {
   font-size: 14px;
@@ -2034,7 +2039,7 @@ ul li {
     display: table; }
   .banner:after {
     clear: both; }
-  .blog .banner, .single-post .banner, .page .banner {
+  .blog .banner, .single-post .banner {
     background-color: #fff; }
   @media only screen and (min-width: 320px) {
     .banner {
@@ -2385,7 +2390,7 @@ ul li {
     color: #ffcf7b; }
 
 .illnavrow {
-  background-color: #fff; }
+  background-color: #3d394e; }
   .illnavrow:before, .illnavrow:after {
     content: " ";
     display: table; }
@@ -2411,8 +2416,8 @@ ul li {
       clear: both; }
   .nav-greaticon li {
     float: left;
-    width: 15%;
-    margin: 1em 5%;
+    width: 10%;
+    margin: 1em 7.5%;
     list-style-type: none;
     text-align: center; }
     .nav-greaticon li a {
@@ -2420,7 +2425,7 @@ ul li {
       font-weight: 900;
       text-transform: uppercase;
       text-decoration: none;
-      color: #3d394e; }
+      color: #ffcf7b; }
       .nav-greaticon li a img {
         display: block;
         margin: 0 auto 1em auto; }
@@ -2586,7 +2591,7 @@ ul li {
       max-width: 1280px; } }
 
 .posztok {
-  background-color: #fff7ed;
+  background-color: #fff;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2658,6 +2663,96 @@ ul li {
     text-transform: uppercase; }
   .archive .post .entry-summary .btn, .archive .page .entry-summary .btn, .blog .post .entry-summary .btn, .blog .page .entry-summary .btn {
     font-size: 0.75em; }
+
+.home-header {
+  position: relative;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll, fixed;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0.5) 90%, #ffffff 100%), url('../img/jono.jpg');
+  color: #312017; }
+  .home-header:before, .home-header:after {
+    content: " ";
+    display: table; }
+  .home-header:after {
+    clear: both; }
+  @media only screen and (min-width: 320px) { }
+  @media only screen and (min-width: 480px) { }
+  @media only screen and (min-width: 768px) { }
+  @media only screen and (min-width: 1024px) { }
+  @media only screen and (min-width: 1280px) { }
+
+.homeh-inner {
+  padding: 0.5em 0.5em;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin: 140px auto;
+  transition: all 0.4s ease-in; }
+  .homeh-inner:before, .homeh-inner:after {
+    content: " ";
+    display: table; }
+  .homeh-inner:after {
+    clear: both; }
+  @media only screen and (min-width: 768px) { }
+  @media only screen and (min-width: 768px) { }
+
+.home-title {
+  color: #50496b;
+  font-size: 2.5em;
+  font-weight: 100;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0; }
+  @media only screen and (min-width: 320px) {
+    .home-title {
+      font-size: 2.5em; } }
+  @media only screen and (min-width: 480px) {
+    .home-title {
+      font-size: 3em; } }
+  @media only screen and (min-width: 768px) {
+    .home-title {
+      font-size: 4em; } }
+  @media only screen and (min-width: 1024px) {
+    .home-title {
+      font-size: 5em; } }
+  @media only screen and (min-width: 1280px) {
+    .home-title {
+      font-size: 6em; } }
+
+.home-lead {
+  max-width: 1024px;
+  color: #50496b;
+  font-size: 1.5em;
+  font-weight: 300; }
+  .home-lead:before, .home-lead:after {
+    content: " ";
+    display: table; }
+  .home-lead:after {
+    clear: both; }
+  @media only screen and (min-width: 768px) { }
+  .home-lead strong, .home-lead b {
+    font-weight: 400;
+    color: #50496b; }
+  .home-lead h3 {
+    margin: 0; }
+  .home-lead li {
+    margin: 0.5em 0; }
+
+.home-headaction {
+  margin: 1em 0.5em;
+  font-size: 0.875em; }
+  .home-headaction .btn {
+    margin-bottom: 0.5em;
+    margin-right: 0.333em;
+    min-width: 0; }
+
+.home-istvan {
+  min-height: 1024px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll, fixed;
+  background-image: linear-gradient(to right, rgba(61, 57, 78, 0) 25%, rgba(61, 57, 78, 0.75) 75%, #3d394e 100%), url('../img/doktor_ablaknal_kek.jpg'); }
 
 /**** Kezelésekhez kapcsolódó cikkek ******/
 .related-entries .post, .related-entries .page {

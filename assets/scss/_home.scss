@@ -1,0 +1,106 @@
+.home-header {
+  @include clearfix();
+  position: relative;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll, fixed;
+  background-image: linear-gradient(to bottom, rgba(#fff,0) 75% ,  rgba(#fff,0.50) 90%, rgba(#fff,1)  100%), url('../img/jono.jpg');
+  color:$brown;
+
+
+  @include bp($s0){
+  }
+  @include bp($s1){
+  }
+  @include bp($s2){
+    
+  }
+  @include bp($s3){
+  }
+  @include bp($s4){
+  }
+  &.fullscreen{
+  }
+}
+.homeh-inner {
+  @include clearfix();
+  padding:0.5em 0.5em;
+  max-width: $s4;
+  margin:0 auto;
+  margin: 140px auto;
+  transition: all .4s ease-in;
+  //margin-top: 1000px;
+
+
+  @include bp($s2){
+    .fullscreen & {
+    }
+  }
+  @include bp($s2){
+  }
+}
+.home-title {
+  color:$blue-light;
+  font-size: 2.5em;
+  font-weight: 100;
+  margin:0 0 0 0;
+  padding:0 0 0 0;
+  @include bp($s0){
+    font-size: 2.5em;
+  }
+  @include bp($s1){
+    font-size: 3em;
+  }
+  @include bp($s2){
+    font-size: 4em;
+
+  }
+  @include bp($s3){
+    font-size: 5em;
+
+  }
+  @include bp($s4){
+    font-size: 6em;
+  }
+}
+.home-lead{
+  @include clearfix();
+  max-width: $s3;
+  color:$blue-light;
+  font-size: 1.5em;
+  font-weight: 300;
+  @include bp($s2){
+  }
+  strong, b {
+    font-weight: 400;
+    color:$blue-light;
+  }
+  h3{
+    margin:0;
+  }
+  li{
+    margin:0.5em 0;
+  }
+}
+.home-headaction {
+  margin: 1em 0.5em;
+  font-size: 0.875em;
+  .btn {
+    margin-bottom: 0.5em;
+    margin-right: 0.333em;
+    min-width: 0;
+  }
+}
+
+
+.home-istvan{
+  min-height: 1024px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll, fixed;
+  background-image: 
+  linear-gradient(to right, rgba($blue-dark,0) 25% ,  rgba($blue-dark,0.75) 75%, rgba($blue-dark,1)  100%),
+  url('../img/doktor_ablaknal_kek.jpg');
+}

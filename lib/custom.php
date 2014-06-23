@@ -64,7 +64,7 @@ function cmb_treatment( array $meta_boxes ) {
   $meta_boxes[] = array(
     'id'         => 'kmeta',
     'title'      => 'További tartalmak',
-    'pages'      => array( 'kezeles', ),
+    'pages'      => array( 'kezeles','page' ),
     'context'    => 'normal',
     'priority'   => 'high',
     'show_names' => true, // Show field names on the left

@@ -129,10 +129,14 @@ var resizeHero = function() {
     //$('.fullscreen').height( $(window).height() );
     $('.fullscreen .trh-inner').css('margin-top', ( $(window).height() - $('.trh-inner').height())/2  );
     $('.fullscreen .trh-inner').css('margin-bottom', ($(window).height() - $('.trh-inner').height())/2  );
+
+    $('.fullscreen .homeh-inner').css('margin-top', ( $(window).height() - $('.homeh-inner').height())/2  );
+    $('.fullscreen .homeh-inner').css('margin-bottom', ($(window).height() - $('.homeh-inner').height())/2  );
     
     $('.contact-body').height( $(window).height());
   } else {
     $('.trh-inner').css('margin-top','140px');
+    $('.homeh-inner').css('margin-top','140px');
   }
 };
 

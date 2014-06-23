@@ -5,7 +5,7 @@
   $imoci=wp_get_attachment_image_src( $cat_img_id, 'full43');
 ?>
 <style>
-  .jobbcsi{
+  .main{
     background-image:url('<?php echo $imoci[0]; ?>');
   }
 </style>
