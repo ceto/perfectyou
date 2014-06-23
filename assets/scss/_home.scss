@@ -95,12 +95,35 @@
 
 
 .home-istvan{
+  @include clearfix();
   min-height: 1024px;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll, fixed;
+  background-color: $blue-dark;
   background-image: 
   linear-gradient(to right, rgba($blue-dark,0) 25% ,  rgba($blue-dark,0.75) 75%, rgba($blue-dark,1)  100%),
   url('../img/doktor_ablaknal_kek.jpg');
+}
+
+.why-us{
+  @include clearfix();
+  min-height: 1024px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll, fixed;
+  background-color: $brown-superlight;
+  //background-image: 
+  //linear-gradient(to right, rgba($blue-dark,0.25) 0% ,  rgba($blue-dark,0.5) 25%, rgba($blue-dark,0.5) 75%, rgba($blue-dark,0.25)  100%),
+  //url('../img/paciens.jpg');
+
+}
+
+.whu-inner{
+  @include clearfix();
+  margin:0 auto;
+  max-width: $s3;
+
 }

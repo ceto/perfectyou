@@ -2765,9 +2765,38 @@ ul li {
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: scroll, fixed;
+  background-color: #3d394e;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(61, 57, 78, 0)), color-stop(75%, rgba(61, 57, 78, 0.75)), to(#3d394e)), url('../img/doktor_ablaknal_kek.jpg');
   background-image: -webkit-linear-gradient(left, rgba(61, 57, 78, 0) 25%, rgba(61, 57, 78, 0.75) 75%, #3d394e 100%), url('../img/doktor_ablaknal_kek.jpg');
   background-image: linear-gradient(to right, rgba(61, 57, 78, 0) 25%, rgba(61, 57, 78, 0.75) 75%, #3d394e 100%), url('../img/doktor_ablaknal_kek.jpg'); }
+  .home-istvan:before, .home-istvan:after {
+    content: " ";
+    display: table; }
+  .home-istvan:after {
+    clear: both; }
+
+.why-us {
+  min-height: 1024px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll, fixed;
+  background-color: #fff7ed; }
+  .why-us:before, .why-us:after {
+    content: " ";
+    display: table; }
+  .why-us:after {
+    clear: both; }
+
+.whu-inner {
+  margin: 0 auto;
+  max-width: 1024px; }
+  .whu-inner:before, .whu-inner:after {
+    content: " ";
+    display: table; }
+  .whu-inner:after {
+    clear: both; }
 
 /**** Kezelésekhez kapcsolódó cikkek ******/
 .related-entries .post, .related-entries .page {
