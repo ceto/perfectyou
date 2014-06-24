@@ -5,8 +5,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll, fixed;
-  background-image: linear-gradient(to bottom, rgba(#fff,0) 75% ,  rgba(#fff,0.50) 90%, rgba(#fff,1)  100%), url('../img/jono.jpg');
-  color:$brown;
+  background-image:
+  linear-gradient(to bottom
+    ,rgba(#fff,1)  0%, rgba(#fff,0.25)  100px, rgba(#fff,0)  150px
+    //, rgba(#fff,0) 75% ,  rgba(#fff,0.50) 90%, rgba(#fff,1)  100%
+    )
+    , url('../img/paciens.jpg');
+  color:$brown-superlight;
 
 
   @include bp($s0){
@@ -41,7 +46,6 @@
   }
 }
 .home-title {
-  color:$blue-light;
   font-size: 2.5em;
   font-weight: 100;
   margin:0 0 0 0;
@@ -67,7 +71,6 @@
 .home-lead{
   @include clearfix();
   max-width: $s3;
-  color:$blue-light;
   font-size: 1.5em;
   font-weight: 300;
   @include bp($s2){
@@ -96,34 +99,80 @@
 
 .home-istvan{
   @include clearfix();
-  min-height: 1024px;
+  //min-height: 1024px;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll, fixed;
+  background-attachment: scroll, local;
   background-color: $blue-dark;
   background-image: 
   linear-gradient(to right, rgba($blue-dark,0) 25% ,  rgba($blue-dark,0.75) 75%, rgba($blue-dark,1)  100%),
   url('../img/doktor_ablaknal_kek.jpg');
+  color:$brown-superlight;
+
+  .hist-inner {
+    @include bp($s1){
+      padding-left: 25%;
+      padding-top:4em;
+      padding-bottom: 4em;
+    }
+    @include bp($s1){
+      padding-left: 33.333%
+    }
+  }
+
+  .cv-title{
+    color:$yellow;
+    font-size: 1.75em;
+    em {
+      display: block;
+      text-transform: lowercase;
+      color:$brown-superlight;
+      font-size: 0.75em;
+    }
+  }
+  blockquote{
+    padding: 0 0;
+    font-size: 1.25em;
+  }
+
+}
+
+
+.callme{
+  @include clearfix();
+  min-height: 200px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll, local;
+  background-color: #fff;
+  background-image: 
+  linear-gradient(to right, rgba($blue-dark,1) 33% ,  rgba($blue-dark,0.5) 75%, rgba($blue-dark,0) 100%)
+  ,url('../img/arc_mos.jpg')
+  ;
+  color:$brown-superlight;
+
 }
 
 .why-us{
   @include clearfix();
   min-height: 1024px;
-  background-position: center center;
+  background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: scroll, fixed;
-  background-color: $brown-superlight;
-  //background-image: 
+  background-size: 90% auto;
+  background-attachment: /*scroll,*/ local;
+  background-color: #fff;
+  background-image: 
   //linear-gradient(to right, rgba($blue-dark,0.25) 0% ,  rgba($blue-dark,0.5) 25%, rgba($blue-dark,0.5) 75%, rgba($blue-dark,0.25)  100%),
-  //url('../img/paciens.jpg');
+  url('../img/fekvo_lany.jpg');
 
 }
 
-.whu-inner{
+
+.whu-inner,.callme-inner,.hist-inner{
   @include clearfix();
   margin:0 auto;
   max-width: $s3;
-
+  padding:0 0.5em;
 }

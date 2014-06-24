@@ -4,7 +4,7 @@ Template Name: Homepage Template
 */
 ?>
 <header id="homeh" class="home-header fullscreen">
-    <div class="homeh-inner" style="margin-top:1000px;">
+    <div class="homeh-inner shape" style="margin-top:1000px;">
       <h1 class="home-title"><?php the_title(); ?></h1>
       <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
         <div class="home-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
@@ -40,10 +40,24 @@ Template Name: Homepage Template
 </section>
 <section class="home-istvan fullscreen">
   <div class="hist-inner">
-    
-  </div>
+    <h3 class="cv-title">Dr. Bulyovszki István <em>Plasztikai sebész</em></h3>
+    <p>A PERFECT YOU plasztikai sebésze dr. Bulyovszky István az esztétikai szakmában is az elméleti és gyakorlati tudás összhangját, együttes magas színvonalra emelését tartja vezérelvnek.</p>
+    <blockquote>
+      <p>A manualitás, az elmélet "kézzel fogható" gyakorlati alkalmazása motivál, mint a szobrászt, amikor a valósághoz ad hozzá valami művészit, amitől az nem más, hanem több lesz</p>
+    </blockquote>
+  
+    <p>A folyamatos szakmai képzés elengedhetetlen ahhoz, hogy a nívós szaktudásnak köszönhetően a lehető legjobb ellátást nyújtsuk, ezért vagyunk elkötelezettek amellett, hogy pácienseinknek mindezt kizárólag up-to-date technikákkal, kiváló eszközökkel, technológiákkal és a legjobb minőségű alapanyagokkal biztosítsuk.</p>
+    <a href="#" class="btn btn-filled">Bővebben</a>
+   </div>
 </section>
 
+<section class="callme">
+  <div class="callme-inner">
+    <h3>Jelentkezzen konzultációra</h3>
+    <p>Weblapon történő jelentkezés esetén az első konzultáció ingyenes</p>
+    <a href="#contact" data-toggle="collapse" class="btn">Jelentkezem</a>
+  </div>
+</section>
 <section class="why-us fullscreen">
   <div class="whu-inner">
     <ul id="myTab" class="nav nav-tabs">

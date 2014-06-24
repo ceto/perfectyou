@@ -2402,7 +2402,7 @@ ul li {
 
 .nav-greaticon {
   position: relative;
-  max-width: 1280px;
+  max-width: 1024px;
   margin: 0 auto; }
   .nav-greaticon:before, .nav-greaticon:after {
     content: " ";
@@ -2679,10 +2679,10 @@ ul li {
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: scroll, fixed;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(90%, rgba(255, 255, 255, 0.5)), to(#ffffff)), url('../img/jono.jpg');
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0.5) 90%, #ffffff 100%), url('../img/jono.jpg');
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0.5) 90%, #ffffff 100%), url('../img/jono.jpg');
-  color: #312017; }
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(100px, rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0))), url('../img/paciens.jpg');
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0.25) 100px, rgba(255, 255, 255, 0) 150px), url('../img/paciens.jpg');
+  background-image: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.25) 100px, rgba(255, 255, 255, 0) 150px), url('../img/paciens.jpg');
+  color: #fff7ed; }
   .home-header:before, .home-header:after {
     content: " ";
     display: table; }
@@ -2710,7 +2710,6 @@ ul li {
   @media only screen and (min-width: 768px) { }
 
 .home-title {
-  color: #50496b;
   font-size: 2.5em;
   font-weight: 100;
   margin: 0 0 0 0;
@@ -2733,7 +2732,6 @@ ul li {
 
 .home-lead {
   max-width: 1024px;
-  color: #50496b;
   font-size: 1.5em;
   font-weight: 300; }
   .home-lead:before, .home-lead:after {
@@ -2759,43 +2757,82 @@ ul li {
     min-width: 0; }
 
 .home-istvan {
-  min-height: 1024px;
   background-position: center top;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  background-attachment: scroll, fixed;
+  background-attachment: scroll, local;
   background-color: #3d394e;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(61, 57, 78, 0)), color-stop(75%, rgba(61, 57, 78, 0.75)), to(#3d394e)), url('../img/doktor_ablaknal_kek.jpg');
   background-image: -webkit-linear-gradient(left, rgba(61, 57, 78, 0) 25%, rgba(61, 57, 78, 0.75) 75%, #3d394e 100%), url('../img/doktor_ablaknal_kek.jpg');
-  background-image: linear-gradient(to right, rgba(61, 57, 78, 0) 25%, rgba(61, 57, 78, 0.75) 75%, #3d394e 100%), url('../img/doktor_ablaknal_kek.jpg'); }
+  background-image: linear-gradient(to right, rgba(61, 57, 78, 0) 25%, rgba(61, 57, 78, 0.75) 75%, #3d394e 100%), url('../img/doktor_ablaknal_kek.jpg');
+  color: #fff7ed; }
   .home-istvan:before, .home-istvan:after {
     content: " ";
     display: table; }
   .home-istvan:after {
     clear: both; }
+  @media only screen and (min-width: 480px) {
+    .home-istvan .hist-inner {
+      padding-left: 25%;
+      padding-top: 4em;
+      padding-bottom: 4em; } }
+  @media only screen and (min-width: 480px) {
+    .home-istvan .hist-inner {
+      padding-left: 33.333%; } }
+  .home-istvan .cv-title {
+    color: #ffcf7b;
+    font-size: 1.75em; }
+    .home-istvan .cv-title em {
+      display: block;
+      text-transform: lowercase;
+      color: #fff7ed;
+      font-size: 0.75em; }
+  .home-istvan blockquote {
+    padding: 0 0;
+    font-size: 1.25em; }
 
-.why-us {
-  min-height: 1024px;
+.callme {
+  min-height: 200px;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  background-attachment: scroll, fixed;
-  background-color: #fff7ed; }
+  background-attachment: scroll, local;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#3d394e), color-stop(75%, rgba(61, 57, 78, 0.5)), to(rgba(61, 57, 78, 0))), url('../img/arc_mos.jpg');
+  background-image: -webkit-linear-gradient(left, #3d394e 33%, rgba(61, 57, 78, 0.5) 75%, rgba(61, 57, 78, 0) 100%), url('../img/arc_mos.jpg');
+  background-image: linear-gradient(to right, #3d394e 33%, rgba(61, 57, 78, 0.5) 75%, rgba(61, 57, 78, 0) 100%), url('../img/arc_mos.jpg');
+  color: #fff7ed; }
+  .callme:before, .callme:after {
+    content: " ";
+    display: table; }
+  .callme:after {
+    clear: both; }
+
+.why-us {
+  min-height: 1024px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  -webkit-background-size: 90% auto;
+  background-size: 90% auto;
+  background-attachment: local;
+  background-color: #fff;
+  background-image: url('../img/fekvo_lany.jpg'); }
   .why-us:before, .why-us:after {
     content: " ";
     display: table; }
   .why-us:after {
     clear: both; }
 
-.whu-inner {
+.whu-inner, .callme-inner, .hist-inner {
   margin: 0 auto;
-  max-width: 1024px; }
-  .whu-inner:before, .whu-inner:after {
+  max-width: 1024px;
+  padding: 0 0.5em; }
+  .whu-inner:before, .whu-inner:after, .callme-inner:before, .callme-inner:after, .hist-inner:before, .hist-inner:after {
     content: " ";
     display: table; }
-  .whu-inner:after {
+  .whu-inner:after, .callme-inner:after, .hist-inner:after {
     clear: both; }
 
 /**** Kezelésekhez kapcsolódó cikkek ******/
