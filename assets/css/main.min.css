@@ -2433,6 +2433,21 @@ ul li {
         display: block;
         margin: 0 auto 1em auto; }
 
+.post-nav {
+  clear: both;
+  text-align: center; }
+  .post-nav:before, .post-nav:after {
+    content: " ";
+    display: table; }
+  .post-nav:after {
+    clear: both; }
+  .post-nav ul {
+    margin: 0;
+    padding: 0; }
+  .post-nav li {
+    list-style-type: none;
+    display: inline; }
+
 .content-info {
   position: relative;
   padding: 0.5em 0.5em;
@@ -2811,19 +2826,22 @@ ul li {
     clear: both; }
 
 .why-us {
-  min-height: 1024px;
   background-position: center bottom;
   background-repeat: no-repeat;
   -webkit-background-size: 90% auto;
   background-size: 90% auto;
   background-attachment: local;
   background-color: #fff;
-  background-image: url('../img/fekvo_lany.jpg'); }
+  background-image: url('../img/fekvo_lany.jpg');
+  padding: 4em 0 6em; }
   .why-us:before, .why-us:after {
     content: " ";
     display: table; }
   .why-us:after {
     clear: both; }
+  @media only screen and (min-width: 768px) {
+    .why-us {
+      min-height: 700px; } }
 
 .whu-inner, .callme-inner, .hist-inner {
   margin: 0 auto;
@@ -3840,5 +3858,39 @@ img.mfp-img {
 
 .active-nav {
   background-color: #fff; }
+
+.nav-tabs {
+  padding: 0; }
+  .nav-tabs:before, .nav-tabs:after {
+    content: " ";
+    display: table; }
+  .nav-tabs:after {
+    clear: both; }
+  .nav-tabs > li {
+    list-style-type: none;
+    display: inline; }
+    .nav-tabs > li > a {
+      display: inline-block;
+      margin-right: 7px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background-color: #fff7ed;
+      padding: 0.25em 0.5em;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.875em;
+      line-height: 1; }
+      .nav-tabs > li > a:hover {
+        border-color: #fadabd; }
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+      color: #50496b;
+      background-color: #fadabd;
+      border: 1px solid #fadabd;
+      cursor: default; }
+
+.tab-content > .tab-pane {
+  display: none; }
+.tab-content > .active {
+  display: block; }
 
 /*# sourceMappingURL=main.min.css.map */

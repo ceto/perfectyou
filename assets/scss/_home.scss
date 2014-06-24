@@ -157,7 +157,7 @@
 
 .why-us{
   @include clearfix();
-  min-height: 1024px;
+
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 90% auto;
@@ -166,6 +166,10 @@
   background-image: 
   //linear-gradient(to right, rgba($blue-dark,0.25) 0% ,  rgba($blue-dark,0.5) 25%, rgba($blue-dark,0.5) 75%, rgba($blue-dark,0.25)  100%),
   url('../img/fekvo_lany.jpg');
+  padding:4em 0 6em;
+  @include bp($s2){
+    min-height: 700px;
+  }
 
 }
 

@@ -94,7 +94,7 @@ $(document).bind(mousewheelevt, function(e) {
 
 //*********** Smooth scroll *************
 $(function() {
-  $('a[href*=#]:not([href=#]):not([data-toggle=collapse])').click(function() {
+  $('a[href*=#]:not([href=#]):not([data-toggle=collapse]):not([data-toggle=tab])').click(function() {
     
        if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
         var target = $(this.hash);

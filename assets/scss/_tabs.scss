@@ -1,0 +1,59 @@
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+  @include clearfix();
+  //text-align: center;
+  padding:0;
+  > li {
+    list-style-type: none;
+    display: inline;
+    
+    // Actual tabs (as links)
+    > a {
+      display: inline-block;
+      margin-right: 7px;
+      
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background-color: $brown-superlight;
+      padding:0.25em 0.5em;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.875em;
+      line-height: 1;
+
+      &:hover {
+        border-color: $brown-light;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $blue-light;
+        background-color: $brown-light;
+        border: 1px solid $brown-light;
+        cursor: default;
+      }
+    }
+  }
+  
+}
+
+
+// Tabbable tabs
+// -------------------------
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}

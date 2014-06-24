@@ -1,4 +1,4 @@
-<?php if ( !is_single() && !is_archive() ): ?>
+<?php if ( !is_single() && !is_archive()  && !is_front_page() ): ?>
   <section class="illnavrow">
     <nav class="nav-greaticon" role="navigation">
       <ul>
