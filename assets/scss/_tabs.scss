@@ -13,8 +13,7 @@
     // Actual tabs (as links)
     > a {
       display: inline-block;
-      margin-right: 7px;
-      
+      margin-right: 7px;      
       border: 1px solid transparent;
       border-radius: 4px;
       background-color: $brown-superlight;
@@ -23,6 +22,8 @@
       font-weight: 500;
       font-size: 0.875em;
       line-height: 1;
+      //text-transform: uppercase;
+      color: $purple-light;
 
       &:hover {
         border-color: $brown-light;
@@ -34,7 +35,7 @@
       &,
       &:hover,
       &:focus {
-        color: $blue-light;
+        color: $purple-pot;
         background-color: $brown-light;
         border: 1px solid $brown-light;
         cursor: default;

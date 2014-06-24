@@ -46,26 +46,28 @@
   }
 }
 .home-title {
-  font-size: 2.5em;
-  font-weight: 100;
+  font-size: 1.5em;
+  font-weight: 300;
   margin:0 0 0 0;
   padding:0 0 0 0;
+  text-transform: none;
+  max-width: $s3;
   @include bp($s0){
     font-size: 2.5em;
   }
   @include bp($s1){
-    font-size: 3em;
+    font-size: 2em;
   }
   @include bp($s2){
-    font-size: 4em;
+    font-size: 2em;
 
   }
   @include bp($s3){
-    font-size: 5em;
+    font-size: 3em;
 
   }
   @include bp($s4){
-    font-size: 6em;
+    font-size: 4em;
   }
 }
 .home-lead{
@@ -88,7 +90,7 @@
 }
 .home-headaction {
   margin: 1em 0.5em;
-  font-size: 0.875em;
+  font-size: 1.5em;
   .btn {
     margin-bottom: 0.5em;
     margin-right: 0.333em;
@@ -113,8 +115,8 @@
   .hist-inner {
     @include bp($s1){
       padding-left: 25%;
-      padding-top:4em;
-      padding-bottom: 4em;
+      padding-top:6em;
+      padding-bottom: 6em;
     }
     @include bp($s1){
       padding-left: 33.333%
@@ -124,16 +126,31 @@
   .cv-title{
     color:$yellow;
     font-size: 1.75em;
+    margin-top:0;
+    
     em {
       display: block;
       text-transform: lowercase;
       color:$brown-superlight;
       font-size: 0.75em;
+      font-weight: 300;
+      font-variant: small-caps;
     }
   }
   blockquote{
     padding: 0 0;
     font-size: 1.25em;
+    //color: $blue-superlight;
+  }
+  .btn {
+    color:$yellow;
+    border-color: $yellow;
+    font-size: 1em;
+    &:hover, &:focus {
+      border-color: $blue-superlight;
+      color:$blue-superlight;
+      background-color: transparent;
+    }
   }
 
 }
@@ -152,6 +169,16 @@
   ,url('../img/arc_mos.jpg')
   ;
   color:$brown-superlight;
+  .btn {
+    color:$yellow;
+    border-color: $yellow;
+    font-size: 1em;
+    &:hover, &:focus {
+      border-color: $blue-superlight;
+      color:$blue-superlight;
+      background-color: transparent;
+    }
+  }
 
 }
 
@@ -169,6 +196,9 @@
   padding:4em 0 6em;
   @include bp($s2){
     min-height: 700px;
+  }
+  .btn {
+    font-size: 0.875em;
   }
 
 }

@@ -335,16 +335,15 @@
     rgba($blue-dark,0.5) 2px 2px,
     rgba($blue-dark,0.5) 3px 3px,
     rgba($blue-dark,0.25) 4px 4px;
-
-
-
-   //background-color: rgb(22, 160, 133);
-  //height: 150px;
-  //width: 150px;
-  //font-size: 75px;
-  //line-height: 150px;
-  //text-align: center;
 }
+.shape2 {
+  text-shadow:
+    rgba($brown,1) 1px 1px,
+    rgba($brown,0.5) 2px 2px,
+    rgba($brown,0.5) 3px 3px,
+    rgba($brown,0.25) 4px 4px;
+}
+
 .treat-content {
   @include clearfix();
   //border-top: 200px solid #fff;

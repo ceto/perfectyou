@@ -2422,7 +2422,8 @@ ul li {
     text-align: center; }
     .nav-greaticon li a {
       display: block;
-      font-weight: 900;
+      font-size: 0.875em;
+      font-weight: 300;
       text-transform: uppercase;
       text-decoration: none;
       color: #ffcf7b; }
@@ -2713,25 +2714,27 @@ ul li {
   @media only screen and (min-width: 768px) { }
 
 .home-title {
-  font-size: 2.5em;
-  font-weight: 100;
+  font-size: 1.5em;
+  font-weight: 300;
   margin: 0 0 0 0;
-  padding: 0 0 0 0; }
+  padding: 0 0 0 0;
+  text-transform: none;
+  max-width: 1024px; }
   @media only screen and (min-width: 320px) {
     .home-title {
       font-size: 2.5em; } }
   @media only screen and (min-width: 480px) {
     .home-title {
-      font-size: 3em; } }
+      font-size: 2em; } }
   @media only screen and (min-width: 768px) {
     .home-title {
-      font-size: 4em; } }
+      font-size: 2em; } }
   @media only screen and (min-width: 1024px) {
     .home-title {
-      font-size: 5em; } }
+      font-size: 3em; } }
   @media only screen and (min-width: 1280px) {
     .home-title {
-      font-size: 6em; } }
+      font-size: 4em; } }
 
 .home-lead {
   max-width: 1024px;
@@ -2753,7 +2756,7 @@ ul li {
 
 .home-headaction {
   margin: 1em 0.5em;
-  font-size: 0.875em; }
+  font-size: 1.5em; }
   .home-headaction .btn {
     margin-bottom: 0.5em;
     margin-right: 0.333em;
@@ -2775,22 +2778,33 @@ ul li {
   @media only screen and (min-width: 480px) {
     .home-istvan .hist-inner {
       padding-left: 25%;
-      padding-top: 4em;
-      padding-bottom: 4em; } }
+      padding-top: 6em;
+      padding-bottom: 6em; } }
   @media only screen and (min-width: 480px) {
     .home-istvan .hist-inner {
       padding-left: 33.333%; } }
   .home-istvan .cv-title {
     color: #ffcf7b;
-    font-size: 1.75em; }
+    font-size: 1.75em;
+    margin-top: 0; }
     .home-istvan .cv-title em {
       display: block;
       text-transform: lowercase;
       color: #fff7ed;
-      font-size: 0.75em; }
+      font-size: 0.75em;
+      font-weight: 300;
+      font-variant: small-caps; }
   .home-istvan blockquote {
     padding: 0 0;
     font-size: 1.25em; }
+  .home-istvan .btn {
+    color: #ffcf7b;
+    border-color: #ffcf7b;
+    font-size: 1em; }
+    .home-istvan .btn:hover, .home-istvan .btn:focus {
+      border-color: #dce7e9;
+      color: #dce7e9;
+      background-color: transparent; }
 
 .callme {
   min-height: 200px;
@@ -2806,6 +2820,14 @@ ul li {
     display: table; }
   .callme:after {
     clear: both; }
+  .callme .btn {
+    color: #ffcf7b;
+    border-color: #ffcf7b;
+    font-size: 1em; }
+    .callme .btn:hover, .callme .btn:focus {
+      border-color: #dce7e9;
+      color: #dce7e9;
+      background-color: transparent; }
 
 .why-us {
   background-position: center bottom;
@@ -2823,6 +2845,8 @@ ul li {
   @media only screen and (min-width: 768px) {
     .why-us {
       min-height: 700px; } }
+  .why-us .btn {
+    font-size: 0.875em; }
 
 .whu-inner, .callme-inner, .hist-inner {
   margin: 0 auto;
@@ -3076,6 +3100,9 @@ ul li {
 
 .shape {
   text-shadow: #3d394e 1px 1px, rgba(61, 57, 78, 0.5) 2px 2px, rgba(61, 57, 78, 0.5) 3px 3px, rgba(61, 57, 78, 0.25) 4px 4px; }
+
+.shape2 {
+  text-shadow: #312017 1px 1px, rgba(49, 32, 23, 0.5) 2px 2px, rgba(49, 32, 23, 0.5) 3px 3px, rgba(49, 32, 23, 0.25) 4px 4px; }
 
 .treat-content {
   text-shadow: 1px 1px #3d394e;
@@ -3844,11 +3871,12 @@ img.mfp-img {
       text-decoration: none;
       font-weight: 500;
       font-size: 0.875em;
-      line-height: 1; }
+      line-height: 1;
+      color: #9a91ba; }
       .nav-tabs > li > a:hover {
         border-color: #fadabd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-      color: #50496b;
+      color: #3a285d;
       background-color: #fadabd;
       border: 1px solid #fadabd;
       cursor: default; }
