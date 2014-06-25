@@ -4,7 +4,7 @@
 // Give the tabs something to sit on
 .nav-tabs {
   @include clearfix();
-  //text-align: center;
+  text-align: center;
   padding:0;
   > li {
     list-style-type: none;
@@ -20,7 +20,7 @@
       padding:0.25em 0.5em;
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.875em;
+      font-size: 1.25em;
       line-height: 1;
       //text-transform: uppercase;
       color: $purple-light;

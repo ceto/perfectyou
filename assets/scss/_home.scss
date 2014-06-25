@@ -182,29 +182,43 @@
 
 }
 
-.why-us{
+.feat-treats{
   @include clearfix();
-
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 90% auto;
-  background-attachment: /*scroll,*/ local;
+  position: relative;
   background-color: #fff;
-  background-image: 
-  //linear-gradient(to right, rgba($blue-dark,0.25) 0% ,  rgba($blue-dark,0.5) 25%, rgba($blue-dark,0.5) 75%, rgba($blue-dark,0.25)  100%),
-  url('../img/fekvo_lany.jpg');
-  padding:4em 0 6em;
-  @include bp($s2){
-    min-height: 700px;
+  .nav-tabs {
+    position: absolute;
+    @include clearfix();
+    width: 100%;
+    padding:0 0.5em;
+    margin:4em 0 0 0;
   }
+  
   .btn {
+    clear:both;
     font-size: 0.875em;
+  }
+
+  .tab-pane{
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
+    padding-top: 8em;
+  }
+
+  .kezeleslist {
+    background-color: transparent;
+    //padding-bottom: 10em;
+    @include bp($s2){
+      min-height: 500px;
+    }
   }
 
 }
 
 
-.whu-inner,.callme-inner,.hist-inner{
+.callme-inner,.hist-inner{
   @include clearfix();
   margin:0 auto;
   max-width: $s3;

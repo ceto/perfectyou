@@ -2829,33 +2829,47 @@ ul li {
       color: #dce7e9;
       background-color: transparent; }
 
-.why-us {
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 90% auto;
-  background-attachment: local;
-  background-color: #fff;
-  background-image: url('../img/fekvo_lany.jpg');
-  padding: 4em 0 6em; }
-  .why-us:before, .why-us:after {
+.feat-treats {
+  position: relative;
+  background-color: #fff; }
+  .feat-treats:before, .feat-treats:after {
     content: " ";
     display: table; }
-  .why-us:after {
+  .feat-treats:after {
     clear: both; }
-  @media only screen and (min-width: 768px) {
-    .why-us {
-      min-height: 700px; } }
-  .why-us .btn {
+  .feat-treats .nav-tabs {
+    position: absolute;
+    width: 100%;
+    padding: 0 0.5em;
+    margin: 4em 0 0 0; }
+    .feat-treats .nav-tabs:before, .feat-treats .nav-tabs:after {
+      content: " ";
+      display: table; }
+    .feat-treats .nav-tabs:after {
+      clear: both; }
+  .feat-treats .btn {
+    clear: both;
     font-size: 0.875em; }
+  .feat-treats .tab-pane {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
+    padding-top: 8em; }
+  .feat-treats .kezeleslist {
+    background-color: transparent; }
+    @media only screen and (min-width: 768px) {
+      .feat-treats .kezeleslist {
+        min-height: 500px; } }
 
-.whu-inner, .callme-inner, .hist-inner {
+.callme-inner, .hist-inner {
   margin: 0 auto;
   max-width: 1024px;
   padding: 0 0.5em; }
-  .whu-inner:before, .whu-inner:after, .callme-inner:before, .callme-inner:after, .hist-inner:before, .hist-inner:after {
+  .callme-inner:before, .callme-inner:after, .hist-inner:before, .hist-inner:after {
     content: " ";
     display: table; }
-  .whu-inner:after, .callme-inner:after, .hist-inner:after {
+  .callme-inner:after, .hist-inner:after {
     clear: both; }
 
 /**** Kezelésekhez kapcsolódó cikkek ******/
@@ -3852,6 +3866,7 @@ img.mfp-img {
   background-color: #fff; }
 
 .nav-tabs {
+  text-align: center;
   padding: 0; }
   .nav-tabs:before, .nav-tabs:after {
     content: " ";
@@ -3870,7 +3885,7 @@ img.mfp-img {
       padding: 0.25em 0.5em;
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.875em;
+      font-size: 1.25em;
       line-height: 1;
       color: #9a91ba; }
       .nav-tabs > li > a:hover {
