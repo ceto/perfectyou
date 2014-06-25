@@ -2407,7 +2407,7 @@ ul li {
   .nav-greaticon:after {
     clear: both; }
   .nav-greaticon ul {
-    margin: 1em auto;
+    margin: 0 auto;
     padding: 0; }
     .nav-greaticon ul:before, .nav-greaticon ul:after {
       content: " ";
@@ -2416,20 +2416,21 @@ ul li {
       clear: both; }
   .nav-greaticon li {
     float: left;
-    width: 10%;
-    margin: 1em 7.5%;
+    width: 25%;
+    margin: 1em 0;
     list-style-type: none;
-    text-align: center; }
+    text-align: left; }
     .nav-greaticon li a {
       display: block;
-      font-size: 0.875em;
+      font-size: 1.25em;
       font-weight: 300;
       text-transform: uppercase;
       text-decoration: none;
       color: #ffcf7b; }
       .nav-greaticon li a img {
-        display: block;
-        margin: 0 auto 1em auto; }
+        display: inline-block;
+        width: 70px;
+        margin-right: 0.5em; }
 
 .post-nav {
   clear: both;
@@ -2837,30 +2838,40 @@ ul li {
     display: table; }
   .feat-treats:after {
     clear: both; }
-  .feat-treats .nav-tabs {
+  .feat-treats .ftreat-head {
     position: absolute;
     width: 100%;
     padding: 0 0.5em;
-    margin: 4em 0 0 0; }
-    .feat-treats .nav-tabs:before, .feat-treats .nav-tabs:after {
+    margin: 4em 0 0 0;
+    text-align: center; }
+    .feat-treats .ftreat-head:before, .feat-treats .ftreat-head:after {
       content: " ";
       display: table; }
-    .feat-treats .nav-tabs:after {
+    .feat-treats .ftreat-head:after {
       clear: both; }
-  .feat-treats .btn {
+    .feat-treats .ftreat-head h4 {
+      text-transform: uppercase;
+      font-weight: 100;
+      font-size: 2.5em; }
+  .feat-treats hr {
     clear: both;
-    font-size: 0.875em; }
+    border-width: 0; }
+  .feat-treats .btn {
+    margin: 1em 0;
+    font-size: 0.75em;
+    float: right; }
   .feat-treats .tab-pane {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: local;
-    padding-top: 8em; }
+    padding-top: 12em; }
   .feat-treats .kezeleslist {
-    background-color: transparent; }
+    background-color: transparent;
+    padding-bottom: 4em; }
     @media only screen and (min-width: 768px) {
       .feat-treats .kezeleslist {
-        min-height: 500px; } }
+        min-height: 600px; } }
 
 .callme-inner, .hist-inner {
   margin: 0 auto;
@@ -3885,7 +3896,7 @@ img.mfp-img {
       padding: 0.25em 0.5em;
       text-decoration: none;
       font-weight: 500;
-      font-size: 1.25em;
+      font-size: 1em;
       line-height: 1;
       color: #9a91ba; }
       .nav-tabs > li > a:hover {

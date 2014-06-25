@@ -186,17 +186,33 @@
   @include clearfix();
   position: relative;
   background-color: #fff;
-  .nav-tabs {
-    position: absolute;
+  .ftreat-head{
     @include clearfix();
+    position: absolute;
     width: 100%;
     padding:0 0.5em;
     margin:4em 0 0 0;
+    text-align: center;
+    h4{
+      text-transform: uppercase;
+      font-weight: 100;
+      font-size: 2.5em;
+    }
+    .nav-tabs {
+
+    }
+
   }
   
+  hr{
+    clear: both;
+    border-width: 0;
+    
+  }  
   .btn {
-    clear:both;
-    font-size: 0.875em;
+    margin:1em 0;
+    font-size: 0.75em;
+    float:right;
   }
 
   .tab-pane{
@@ -204,14 +220,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: local;
-    padding-top: 8em;
+    padding-top: 12em;
   }
 
   .kezeleslist {
     background-color: transparent;
-    //padding-bottom: 10em;
+    padding-bottom: 4em;
     @include bp($s2){
-      min-height: 500px;
+      min-height: 600px;
+      
     }
   }
 

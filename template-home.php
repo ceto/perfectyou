@@ -16,30 +16,11 @@ Template Name: Homepage Template
       </div>
     </div>
 </header>
-<section class="illnavrow">
-  <nav class="nav-greaticon" role="navigation">
-    <ul>
-      <li class="arc">
-        <a href="<?php echo get_category_link(5); ?>">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_arc.png" alt="Arc">
-        Arc
-        </a></li>
-      <li class="mell">
-        <a href="<?php echo get_category_link(3); ?>">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_mell.png" alt="Mell">
-          Mell
-        </a></li>
-      <li class="alak">
-        <a href="<?php echo get_category_link(4); ?>">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_alak.png" alt="Alak">
-          Alak</a></li>
-      <li class="kombinalt">
-        <a href="<?php echo get_category_link(6); ?>">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_arc.png" alt="Arc">
-          Kombinált</a></li>
-    </ul>
-  </nav><!-- /.nav-greaticon -->
-</section>
+
+<?php get_template_part('templates/ill','nav' ); ?>
+
+
+
 <section class="home-istvan fullscreen">
   <div class="hist-inner">
     <h3 class="cv-title">Dr. Bulyovszki István <em>Plasztikai sebész</em></h3>
@@ -60,14 +41,22 @@ Template Name: Homepage Template
     <a href="#contact" data-toggle="collapse" class="btn">Jelentkezem</a>
   </div>
 </section>
+
+
+
+
+
+
 <section id="feat-treats" class="feat-treats fullscreen">
   <div class="ftreats-inner">
-    
-    <ul id="myTab" class="nav nav-tabs">
-      <li class="active"><a href="#fiatal" data-toggle="tab">Fiatalodni szeretne?</a></li>
-      <li class=""><a href="#szep" data-toggle="tab">Szépülni szeretne?</a></li>
-      <li class=""><a href="#fan" data-toggle="tab">Páciensek kedvencei</a></li>
-    </ul>
+    <div class="ftreat-head">
+      <h4><?php _e('Válasszon beavatkozásaink közül','roots'); ?></h4> 
+      <ul id="myTab" class="nav nav-tabs">
+        <li class="active"><a href="#fiatal" data-toggle="tab">Fiatalodni szeretnék</a></li>
+        <li class=""><a href="#szep" data-toggle="tab">Szépülni szeretnék</a></li>
+        <li class=""><a href="#fan" data-toggle="tab">Páciensek kedvencei</a></li>
+      </ul>
+    </div>
     
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane fade active in tab-fiatal" id="fiatal">
@@ -98,6 +87,7 @@ Template Name: Homepage Template
                   <?php get_template_part('templates/item', get_post_type()); ?>
               <?php endif ?>
             <?php endwhile; ?>
+            <hr>
             <a href="?cat=35" class="btn">További beavatkozások</a>
           </div>
         </section>
@@ -132,6 +122,7 @@ Template Name: Homepage Template
                   <?php get_template_part('templates/item', get_post_type()); ?>
               <?php endif ?>
             <?php endwhile; ?>
+            <hr>
             <a href="?cat=36" class="btn">Még több szépítő beavatkozások</a>
           </div>
         </section>
@@ -166,6 +157,7 @@ Template Name: Homepage Template
                   <?php get_template_part('templates/item', get_post_type()); ?>
               <?php endif ?>
             <?php endwhile; ?>
+            <hr>
             <a href="?cat=33" class="btn">Mutasd mindet</a>
           </div>
         </section>
@@ -176,4 +168,14 @@ Template Name: Homepage Template
 
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
 

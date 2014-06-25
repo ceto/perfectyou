@@ -347,25 +347,27 @@
   margin:0 auto;
   ul{
     @include clearfix();
-    margin:1em auto;
+    margin:0 auto;
     padding:0;
   }
   li {
     float:left;
-    width:10%;
-    margin:1em 7.5%;
+    width:25%;
+    margin:1em 0;
     list-style-type: none;
-    text-align: center;
+    text-align: left;
     a {
       display: block;
-      font-size: 0.875em;      
+      font-size: 1.25em;      
       font-weight:300;
       text-transform: uppercase;
       text-decoration: none;
       color:$yellow;
       img {
-        display: block;
-        margin:0 auto 1em auto;
+        display: inline-block;
+        width: 70px;
+        margin-right: 0.5em;
+        //margin:0 auto 1em auto;
       }
     }
   }
