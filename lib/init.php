@@ -19,7 +19,10 @@ function roots_setup() {
   // add_image_size('category-thumb', 300, 9999); // 300px wide (and unlimited height)
   add_image_size('thumb169', 240, 135, true);
   add_image_size('thumb43', 240, 180, true); 
+  add_image_size('medium916', 480, 853, true); 
+  
   add_image_size('full43', 1600, 1200, true); 
+  add_image_size('full916', 900, 1600, true); 
   
   // Add post formats (http://codex.wordpress.org/Post_Formats)
   // add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));

@@ -114,8 +114,8 @@ function cmb_treatment( array $meta_boxes ) {
               'options' => array( 'textarea_rows' => 15, 'wpautop' => true ),
             ),
             array(
-              'name' => 'Háttér/oldal kép a fejezethez',
-              'desc' => 'Upload an image or enter a URL. (min: 1920×1280px)',
+              'name' => 'Kiemelt kép a fejezethez',
+              'desc' => 'Álló tájolású (min: 480px szeles)',
               'id'   => 'ill',
               'type' => 'file',
               'save_id' => true, // save ID using true

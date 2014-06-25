@@ -146,15 +146,29 @@
   }
   .subsec-meta {
   }
-
-
-
-
 }
 
 .subsec-cont {
   margin:0 auto;
   max-width: 42em;
+
+
+  .subsec-figure{
+    padding: 0.5em;
+    border: 1px solid $purple-light;
+    @include bp($s1) {
+      max-width: 33.333%;
+      float:right;
+      margin-left:1em;
+    }
+     
+    img{
+      
+    }
+    .caption{
+      display: none;
+    }
+  }
   
   .subsec-action{
     text-align: center;

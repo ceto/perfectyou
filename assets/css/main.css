@@ -2434,6 +2434,8 @@ ul li {
       .nav-greaticon li a img {
         display: inline-block;
         width: 70px;
+        height: 70px;
+        border-radius: 50%;
         margin-right: 0.25em; }
 
 .post-nav {
@@ -2572,6 +2574,16 @@ ul li {
 .subsec-cont {
   margin: 0 auto;
   max-width: 42em; }
+  .subsec-cont .subsec-figure {
+    padding: 0.5em;
+    border: 1px solid #9a91ba; }
+    @media only screen and (min-width: 480px) {
+      .subsec-cont .subsec-figure {
+        max-width: 33.333%;
+        float: right;
+        margin-left: 1em; } }
+    .subsec-cont .subsec-figure .caption {
+      display: none; }
   .subsec-cont .subsec-action {
     text-align: center;
     margin: 2em 0 2em 0;
