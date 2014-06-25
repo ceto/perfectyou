@@ -362,11 +362,18 @@
       font-weight:300;
       text-transform: uppercase;
       text-decoration: none;
-      color:$yellow;
+      color:$blue-superlight;
+      //text-shadow: 1px 1px rgba(0, 0, 0, 0.75), -1px -1px rgba(0, 0, 0, 0.75);
+      &:hover, &:focus{
+        color:$yellow;
+        img {
+          filter:sepia(0.5);
+        }
+      }
       img {
         display: inline-block;
         width: 70px;
-        margin-right: 0.5em;
+        margin-right: 0.25em;
         //margin:0 auto 1em auto;
       }
     }

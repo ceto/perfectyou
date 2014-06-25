@@ -2426,11 +2426,15 @@ ul li {
       font-weight: 300;
       text-transform: uppercase;
       text-decoration: none;
-      color: #ffcf7b; }
+      color: #dce7e9; }
+      .nav-greaticon li a:hover, .nav-greaticon li a:focus {
+        color: #ffcf7b; }
+        .nav-greaticon li a:hover img, .nav-greaticon li a:focus img {
+          filter: sepia(0.5); }
       .nav-greaticon li a img {
         display: inline-block;
         width: 70px;
-        margin-right: 0.5em; }
+        margin-right: 0.25em; }
 
 .post-nav {
   clear: both;
