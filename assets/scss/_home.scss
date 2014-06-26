@@ -111,8 +111,9 @@
   linear-gradient(to right, rgba($blue-dark,0) 25% ,  rgba($blue-dark,0.75) 75%, rgba($blue-dark,1)  100%),
   url('../img/doktor_ablaknal_kek.jpg');
   color:$brown-superlight;
-
+  
   .hist-inner {
+    padding:3em 0.5em;
     @include bp($s1){
       padding-left: 25%;
       padding-top:6em;
@@ -221,8 +222,10 @@
   }
   .btn {
     font-size: 0.75em;
+    //font-weight: 300;
     background-color: $blue-light;
     border-color: $blue-light;
+    
     //color:$yellow;
     //border-color: $yellow;
     //font-size: 1em;
