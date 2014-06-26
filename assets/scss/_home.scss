@@ -158,25 +158,79 @@
 
 .callme{
   @include clearfix();
-  min-height: 200px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll, local;
-  background-color: #fff;
+  background-color: $blue-dark;
   background-image: 
   linear-gradient(to right, rgba($blue-dark,1) 33% ,  rgba($blue-dark,0.5) 75%, rgba($blue-dark,0) 100%)
   ,url('../img/arc_mos.jpg')
   ;
-  color:$brown-superlight;
+  color:$blue-superlight;
+  .callme-inner{
+    padding:1.25em 0.5em;
+  }
+  h3{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 300;
+    line-height: 1;
+    margin:0.25em 0 0 0;
+    vertical-align:bottom;
+    //max-width: 320px;
+    @include bp($s2){
+      float:left;
+      margin-right: 1.5em;
+    }
+  }
+  .vege {
+    display: inline-block;
+    font-size: 1.25em;
+    line-height: 1;
+    vertical-align:middle;
+    margin:0 0;
+    float:right;
+    // @include bp($s2){
+    //   float:left;
+    // }
+  }
+  
+  .telicon{
+    font-size: 1.25em;
+    color:$purple-light;
+  }
+  .or{
+    display: inline-block;
+    margin:0 0.75em;
+    font-size: 0.75em;
+    white-space: nowrap;
+  }
+  .phone {
+    display:inline-block;
+    font-size: 0.875em;
+    //line-height: 0.5;
+    margin-left: 0.25em;
+    vertical-align: middle;
+    text-decoration: none;
+    &:hover, &:focus {
+      color:$yellow;
+    }
+
+  }
   .btn {
-    color:$yellow;
-    border-color: $yellow;
-    font-size: 1em;
+    font-size: 0.75em;
+    background-color: $blue-light;
+    border-color: $blue-light;
+    //color:$yellow;
+    //border-color: $yellow;
+    //font-size: 1em;
     &:hover, &:focus {
       border-color: $blue-superlight;
-      color:$blue-superlight;
-      background-color: transparent;
+      background-color: $blue-superlight;
+      color:$purple-pot;
+      //background-color: transparent;
     }
   }
 

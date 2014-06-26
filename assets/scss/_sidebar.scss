@@ -21,18 +21,19 @@
   }
   .widget {
     padding:0.5em;
-    @include bp($s1){
-       width:50%;
-       float:left;
-       &:nth-child(2n+1){
-        clear:left;
-       }
-    }
-    @include bp($s3){
-       width:25%;
-       &:nth-child(2n+1){
-        clear:none;
-       }
+    // @include bp($s1){
+    //    width:50%;
+    //    float:left;
+    //    &:nth-child(2n+1){
+    //     clear:left;
+    //    }
+    // }
+    @include bp($s2){
+      float:left;
+       width:33.333%;
+       // &:nth-child(2n+1){
+       //  clear:none;
+       // }
     }
 
     h3{
@@ -42,6 +43,35 @@
       font-weight: 300;
       color: $brown-light;
     }
+
+    h4{
+      font-size: 0.875em;
+      font-weight: 700;
+      margin:2.5em 0 0.5em 0;
+      text-transform: uppercase;
+      color: $brown-light;
+      + p {
+        margin-top: 0;
+      }
+    }
+    .linkes{
+      // font-size: 0.75em;
+      // line-height: 1;
+      // font-weight: 900;
+      // color:$brown-light;
+      p{
+        // margin-bottom: 1.5em;
+      }
+      a{
+        //font-size: 1.25em;
+        //font-weight: 900;
+        //color: $link;
+      }
+    }
+    p{
+
+    }
+
   }
 }
 .subsec-featured {
