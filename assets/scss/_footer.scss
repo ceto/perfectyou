@@ -1,8 +1,12 @@
 .content-info{
   @include clearfix();
   position: relative;
+  font-size: 0.75em;
   padding:0.5em 0.5em;
   background-color: $gray-superdark;
-  color:#fff;
+  color:$brown-superlight;
   //border-top:7px solid $yellow;
+  p {
+    margin:0;
+  }
 }

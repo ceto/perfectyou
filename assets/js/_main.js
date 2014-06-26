@@ -130,8 +130,8 @@ var resizeHero = function() {
     $('.fullscreen .trh-inner').css('margin-top', ( $(window).height() - $('.trh-inner').height())/2  );
     $('.fullscreen .trh-inner').css('margin-bottom', ($(window).height() - $('.trh-inner').height())/2  );
 
-    $('.fullscreen .homeh-inner').css('margin-top', ( $(window).height() - $('.homeh-inner').height())/2  );
-    $('.fullscreen .homeh-inner').css('margin-bottom', ($(window).height() - $('.homeh-inner').height())/2  );
+    $('.fullscreen .homeh-inner').css('margin-top', ( $(window).height() - $('.homeh-inner').height())/2 );
+    $('.fullscreen .homeh-inner').css('margin-bottom', ($(window).height() - $('.homeh-inner').height())/2 - $('.illnavrow').height() - 18 );
     
     $('.contact-body').height( $(window).height());
   } else {

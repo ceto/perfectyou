@@ -1,4 +1,5 @@
 <?php get_template_part('templates/page', 'header'); ?>
+<?php //get_template_part('templates/ill','nav' ); ?>
 <?php 
   $saved_data = get_tax_meta(get_query_var('cat'),'ba_image_field_id');
   $cat_img_id=$saved_data['id'];
@@ -33,6 +34,8 @@
 </section>
 <?php endif; ?>
 
+
+
 <section class="itemlist posztok" >
   <div class="itemlist-inner">
     <?php if (!have_posts()) : ?>
@@ -60,4 +63,5 @@
 </section>
 
 
+<?php //get_template_part('templates/call','me' ); ?>
 

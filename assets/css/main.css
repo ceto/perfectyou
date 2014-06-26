@@ -4715,14 +4715,17 @@ ul li {
 
 .content-info {
   position: relative;
+  font-size: 0.75em;
   padding: 0.5em 0.5em;
   background-color: #222222;
-  color: #fff; }
+  color: #fff7ed; }
   .content-info:before, .content-info:after {
     content: " ";
     display: table; }
   .content-info:after {
     clear: both; }
+  .content-info p {
+    margin: 0; }
 
 .subsections {
   position: relative; }
@@ -4991,45 +4994,33 @@ ul li {
   @media only screen and (min-width: 768px) { }
 
 .home-title {
-  font-size: 1.5em;
-  font-weight: 300;
+  font-size: 1.25em;
+  font-weight: 400;
   margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  padding: 0.25em 0.25em;
   text-transform: none;
-  max-width: 1024px; }
-  @media only screen and (min-width: 320px) {
-    .home-title {
-      font-size: 2.5em; } }
-  @media only screen and (min-width: 480px) {
-    .home-title {
-      font-size: 2em; } }
-  @media only screen and (min-width: 768px) {
-    .home-title {
-      font-size: 2em; } }
-  @media only screen and (min-width: 1024px) {
-    .home-title {
-      font-size: 3em; } }
-  @media only screen and (min-width: 1280px) {
-    .home-title {
-      font-size: 4em; } }
+  max-width: 768px;
+  display: inline-block;
+  background-color: rgba(255, 247, 237, 0.5);
+  color: #3d394e; }
 
 .home-lead {
-  max-width: 1024px;
-  font-size: 1.5em;
+  max-width: 768px;
+  font-size: 1.75em;
+  line-height: 1.25;
+  margin-top: 0;
   font-weight: 300; }
   .home-lead:before, .home-lead:after {
     content: " ";
     display: table; }
   .home-lead:after {
     clear: both; }
-  @media only screen and (min-width: 768px) { }
+  @media only screen and (min-width: 768px) {
+    .home-lead {
+      font-size: 2.5em; } }
   .home-lead strong, .home-lead b {
     font-weight: 400;
     color: #50496b; }
-  .home-lead h3 {
-    margin: 0; }
-  .home-lead li {
-    margin: 0.5em 0; }
 
 .home-headaction {
   margin: 1em 0.5em;
@@ -5490,8 +5481,13 @@ ul li {
 
 
 .sidebar {
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll, local;
   background-color: #222222;
-  color: #fff7ed; }
+  background-image: linear-gradient(to right, rgba(34, 34, 34, 0.95) 33%, rgba(34, 34, 34, 0.75) 90%), url('../img/paciens.jpg');
+  color: #dce7e9; }
   .sidebar .sidebar-inner {
     position: relative;
     padding: 2em 0;

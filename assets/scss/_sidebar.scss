@@ -1,6 +1,14 @@
 .sidebar{
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll, local;
   background-color: $gray-superdark;
-  color:$brown-superlight;
+  background-image: 
+  linear-gradient(to right, rgba($gray-superdark,0.95) 33% ,  rgba($gray-superdark,0.75) 90% )
+  ,url('../img/paciens.jpg')
+  ;
+  color:$blue-superlight;
 
   .sidebar-inner {
     @include clearfix();

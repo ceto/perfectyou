@@ -4,13 +4,15 @@ Template Name: Homepage Template
 */
 ?>
 <header id="homeh" class="home-header fullscreen">
-    <div class="homeh-inner shape2" style="margin-top:1000px;">
-      <h1 class="home-title">Plasztikai sebészeti kezelések, esztétikai- és szépészeti beavatkozások</h1>
-      <?php //if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
-        <div class="home-lead">
-          <?php // echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?>
-        </div>
-      <?php //endif ?>
+    <div class="homeh-inner" style="margin-top:1000px;">
+      <h1 class="home-title">
+        Plasztikai műtétek, esztétikai- és szépészeti beavatkozások Budapesten
+      </h1>
+      <p class="home-lead shape">
+        <?php // echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?>
+        Dr. Bulyovszky a valósághoz ad hozzá valami művészit, amitől az nem más, hanem több lesz
+      </p>
+
       <div class="home-headaction">
         <a class="btn btn-filled" href="#feat-treats"><?php _e('Ugrok a kezelésekre','root') ?></a>
       </div>
@@ -34,17 +36,9 @@ Template Name: Homepage Template
    </div>
 </section>
 
-<section class="callme">
-  <div class="callme-inner">
-    <h3>Felkészült a konzultációra?</h3>
-    <p class="vege"><i class="ss-glyphish-filled ss-phone telicon"></i> Hívjon
-      <a href="tel:+36707705653" class="phone">+36.70.570.5653</a><span class="or">– vagy –</span>
-      <a href="#contact" data-toggle="collapse" class="btn btn-filled online">
-        <i class="ss-glyphish-filled ss-write"></i> Jelentkezzen online
-      </a>
-    </p>
-  </div>
-</section>
+
+<?php get_template_part('templates/call','me' ); ?>
+
 
 
 
