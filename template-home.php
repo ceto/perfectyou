@@ -3,6 +3,25 @@
 Template Name: Homepage Template
 */
 ?>
+<section class="anim-head">
+  <div class="ah-inner">
+    <div class="oreg pancsi">
+      <div class="tartar">
+        <h3>Fiatalodni szeretne?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat in pariatur est maiores non magnam molestias autem iusto, quas odio molestiae nulla, quam obcaecati labore quisquam recusandae facere consectetur omnis.</p>
+        <a href="#" class="btn" id="oreg-ctrl">Fiatalító kezelések</a>
+      </div>
+    </div>
+    <div class="fiatal pancsi">
+      <div class="tartar">
+        <h3>Szépülni szeretne?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat in pariatur est maiores non magnam molestias autem iusto, quas odio molestiae nulla, quam obcaecati labore quisquam recusandae facere consectetur omnis.</p>
+        <a href="#" class="btn" id="fiatal-ctrl">Szépítő beavatkozások</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <header id="homeh" class="home-header fullscreen">
     <div class="homeh-inner" style="margin-top:1000px;">
       <h1 class="home-title">

@@ -1,3 +1,85 @@
+.anim-head{
+  @include clearfix();
+  background-color: $blue-extra;
+  .ah-inner {
+    @include clearfix();
+    position: relative;
+    max-width: $s4;
+    margin:100px auto 0 auto;
+    min-height: $s2;
+
+  }
+  .pancsi{
+    @include clearfix();
+    position: absolute;
+    top:0;bottom:0;
+    left:0;right:0;
+    padding:1em 1em;
+    z-index: 2;
+    //min-height:$s2;
+    //width:100%;
+    overflow: hidden;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition:clip .4s linear;
+    &.show  {
+      clip: rect(0px, 1280px, $s2, 0px);
+    }
+    &.hidden  {
+      //z-index:1;
+      .tartar{
+        //opacity:0;
+      }
+    }
+  }
+
+  .tartar{
+    width:33.333%;
+    //padding:1em;
+    opacity: 1;
+    transition:opacity .4s linear; 
+    h3{
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    p{
+      font-size: 0.875em;
+    }
+    .btn{
+      font-size: 0.875em;
+    }
+  }
+
+  .oreg{
+    //display: none;
+    background-image: url('../img/anim_oreg.jpg');
+    //background-position: center top;
+    clip: rect(0px, 640px, $s2, 0px);
+    .tartar{
+      float:left;
+    }
+    &.hidden  {
+      clip: rect(0px, 0px, $s2, 0px);
+    }
+
+  }
+  .fiatal{
+    //display: none;
+    //right:0;
+    background-image: url('../img/anim_fiatal.jpg');
+    //background-position: center top;
+    clip: rect(0px, 1280px, $s2, 640px);
+    //clip: rect(100px, 100px, 500px, 800px);
+    .tartar{
+      float:right;
+    }
+    &.hidden  {
+      clip: rect(0px, 1280px, $s2, 1280px);
+    }
+  }
+}
+
 .home-header {
   @include clearfix();
   position: relative;

@@ -234,6 +234,24 @@ jQuery(document).ready(function($){
     //$('body').attr('data-offset' ,  $('.banner').height() );
   });
   /************* End of fixing ***********/
+
+
+
+
+  /********* Oreg/Fiatal Animation **********/
+  $('#fiatal-ctrl').on('click', function() {
+    $('.oreg').removeClass('show');
+
+    $('.oreg').toggleClass('hidden');
+    $('.fiatal').toggleClass('show');
+  });
+
+  $('#oreg-ctrl').on('click', function() {
+    $('.fiatal').removeClass('show');
+
+    $('.fiatal').toggleClass('hidden');
+    $('.oreg').toggleClass('show');
+  });
   
   resizeHero();
 

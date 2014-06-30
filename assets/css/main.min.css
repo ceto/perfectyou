@@ -4971,6 +4971,72 @@ ul li {
   .archive .post .entry-summary .btn, .archive .page .entry-summary .btn, .blog .post .entry-summary .btn, .blog .page .entry-summary .btn {
     font-size: 0.75em; }
 
+.anim-head {
+  background-color: #b8b8d6; }
+  .anim-head:before, .anim-head:after {
+    content: " ";
+    display: table; }
+  .anim-head:after {
+    clear: both; }
+  .anim-head .ah-inner {
+    position: relative;
+    max-width: 1280px;
+    margin: 100px auto 0 auto;
+    min-height: 768px; }
+    .anim-head .ah-inner:before, .anim-head .ah-inner:after {
+      content: " ";
+      display: table; }
+    .anim-head .ah-inner:after {
+      clear: both; }
+  .anim-head .pancsi {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1em 1em;
+    z-index: 2;
+    overflow: hidden;
+    background-position: center top;
+    background-repeat: no-repeat;
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+    -webkit-transition: clip 0.4s linear;
+    transition: clip 0.4s linear; }
+    .anim-head .pancsi:before, .anim-head .pancsi:after {
+      content: " ";
+      display: table; }
+    .anim-head .pancsi:after {
+      clear: both; }
+    .anim-head .pancsi.show {
+      clip: rect(0px, 1280px, 768px, 0px); }
+  .anim-head .tartar {
+    width: 33.333%;
+    opacity: 1;
+    -webkit-transition: opacity 0.4s linear;
+    transition: opacity 0.4s linear; }
+    .anim-head .tartar h3 {
+      font-weight: 300;
+      text-transform: uppercase; }
+    .anim-head .tartar p {
+      font-size: 0.875em; }
+    .anim-head .tartar .btn {
+      font-size: 0.875em; }
+  .anim-head .oreg {
+    background-image: url('../img/anim_oreg.jpg');
+    clip: rect(0px, 640px, 768px, 0px); }
+    .anim-head .oreg .tartar {
+      float: left; }
+    .anim-head .oreg.hidden {
+      clip: rect(0px, 0px, 768px, 0px); }
+  .anim-head .fiatal {
+    background-image: url('../img/anim_fiatal.jpg');
+    clip: rect(0px, 1280px, 768px, 640px); }
+    .anim-head .fiatal .tartar {
+      float: right; }
+    .anim-head .fiatal.hidden {
+      clip: rect(0px, 1280px, 768px, 1280px); }
+
 .home-header {
   position: relative;
   background-position: center top;
