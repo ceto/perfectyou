@@ -19,7 +19,7 @@
   $imoci=wp_get_attachment_image_src( $cat_img_id, 'full43');
 ?>
 <style>
-  .main{
+  .page-header{
     background-image:url('<?php echo $imoci[0]; ?>');
   }
 </style>

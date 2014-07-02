@@ -1,22 +1,25 @@
-
-<?php get_template_part('templates/call','me' ); ?>
 <div class="page-header">
   <div class="ph-inner">
     <h1><?php echo roots_title(); ?><small><?php _e('Műtétek és beavatkozások','roots') ?></small></h1>
   </div>
 </div>
 
+
 <?php 
-  $saved_data = get_tax_meta(get_query_var('kezeles-csoport'),'tc_image_field_id');
+
+  $current_term = get_term_by( 'slug', get_query_var( 'term' ), 'kezeles-csoport' );
+  $term_id = $current_term->term_id;
+
+  $saved_data = get_tax_meta($term_id,'tc_image_field_id');
   $cat_img_id=$saved_data['id'];
   $imoci=wp_get_attachment_image_src( $cat_img_id, 'full43');
 ?>
 <style>
-  .main{
+  .page-header{
     background-image:url('<?php echo $imoci[0]; ?>');
   }
 </style>
-
+<?php get_template_part('templates/call','me' ); ?>
 
 <section class="kezeleslist">
   <div class="kezeleslist-inner">
@@ -34,7 +37,8 @@
 
   </div>
 </section>
-
 <?php get_template_part('templates/ill','nav' ); ?>
-<?php //get_template_part('templates/call','me' ); ?>
+<?php // get_template_part('templates/call','me' ); ?>
+
+
 
