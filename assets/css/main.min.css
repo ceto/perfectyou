@@ -4417,6 +4417,11 @@ ul li {
       display: table; }
     .page-header .ph-inner:after {
       clear: both; }
+  .page-header h1 small {
+    display: block;
+    text-transform: none;
+    font-size: 50%;
+    font-weight: 400; }
 
 .ph-cat {
   font-size: 0.75em;

@@ -160,6 +160,15 @@
     margin:0 auto;
     text-align: center;
   }
+  
+  h1{
+    small{
+      display:block;
+      text-transform:none;
+      font-size: 50%;
+      font-weight: 400;
+    }
+  }
 }
 
 .ph-cat{

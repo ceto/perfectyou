@@ -1,5 +1,4 @@
 <?php get_template_part('templates/page', 'header'); ?>
-<?php //get_template_part('templates/ill','nav' ); ?>
 <?php 
   $saved_data = get_tax_meta(get_query_var('cat'),'ba_image_field_id');
   $cat_img_id=$saved_data['id'];
@@ -12,6 +11,7 @@
 </style>
 
 <?php
+/*
   $the_kezeles = new WP_Query(array(
     'post_type' => array('kezeles'),
     'cat'  => get_query_var('cat'),
@@ -32,7 +32,10 @@
     <?php endwhile; ?>
   </div>
 </section>
-<?php endif; ?>
+<?php
+endif;
+*/
+?>
 
 
 
