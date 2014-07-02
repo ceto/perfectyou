@@ -145,13 +145,13 @@
 }
 
 .page-header{
-  background-color: $blue-light;
-  color:$brown-superlight;
+  //background-color: $blue-light;
+  //color:$brown-superlight;
   //background-color: #fff;
   .blog &, .archive &{
     //background-color: transparent;
-    background-color: rgba(#fff,0);
-    color:$blue-light;
+    //background-color: rgba(#fff,0);
+    //color:$blue-light;
   }
   .ph-inner{
     @include clearfix();
@@ -159,6 +159,13 @@
     max-width: $s3;
     margin:0 auto;
     text-align: center;
+    
+    .blog &, .archive &{
+      @include bp($s0){
+        padding-top:130px;
+      }
+    }
+    
   }
   
   h1{

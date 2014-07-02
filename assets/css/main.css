@@ -4121,9 +4121,7 @@ body {
     @media only screen and (min-width: 320px) {
       .single-post .main {
         padding-top: 100px; } }
-  @media only screen and (min-width: 320px) {
-    .blog .main, .archive .main {
-      padding-top: 100px; } }
+  @media only screen and (min-width: 320px) { }
 
 html {
   font-size: 14px;
@@ -4398,27 +4396,24 @@ ul li {
         padding-top: 1.333em;
         height: 66px; } }
 
-.page-header {
-  background-color: #50496b;
-  color: #fff7ed; }
-  .blog .page-header, .archive .page-header {
-    background-color: rgba(255, 255, 255, 0);
-    color: #50496b; }
-  .page-header .ph-inner {
-    padding: 2em 0.5em;
-    max-width: 1024px;
-    margin: 0 auto;
-    text-align: center; }
-    .page-header .ph-inner:before, .page-header .ph-inner:after {
-      content: " ";
-      display: table; }
-    .page-header .ph-inner:after {
-      clear: both; }
-  .page-header h1 small {
-    display: block;
-    text-transform: none;
-    font-size: 50%;
-    font-weight: 400; }
+.page-header .ph-inner {
+  padding: 2em 0.5em;
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center; }
+  .page-header .ph-inner:before, .page-header .ph-inner:after {
+    content: " ";
+    display: table; }
+  .page-header .ph-inner:after {
+    clear: both; }
+  @media only screen and (min-width: 320px) {
+    .blog .page-header .ph-inner, .archive .page-header .ph-inner {
+      padding-top: 130px; } }
+.page-header h1 small {
+  display: block;
+  text-transform: none;
+  font-size: 50%;
+  font-weight: 400; }
 
 .ph-cat {
   font-size: 0.75em;
