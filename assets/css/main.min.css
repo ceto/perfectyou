@@ -5000,9 +5000,7 @@ ul li {
     background-position: center top;
     background-repeat: no-repeat;
     -webkit-background-size: auto 100%;
-    background-size: auto 100%;
-    -webkit-transition: clip 0.4s linear;
-    transition: clip 0.4s linear; }
+    background-size: auto 100%; }
     .anim-head .pancsi:before, .anim-head .pancsi:after {
       content: " ";
       display: table; }

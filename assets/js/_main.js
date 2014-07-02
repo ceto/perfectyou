@@ -242,17 +242,62 @@ jQuery(document).ready(function($){
   $('#fiatal-ctrl').on('click', function() {
     $('.oreg').removeClass('show');
 
-    $('.oreg').toggleClass('hidden');
-    $('.fiatal').toggleClass('show');
+    $('.oreg').addClass('hidden');
+    $('.fiatal').addClass('show');
   });
 
   $('#oreg-ctrl').on('click', function() {
     $('.fiatal').removeClass('show');
 
-    $('.fiatal').toggleClass('hidden');
-    $('.oreg').toggleClass('show');
+    $('.fiatal').addClass('hidden');
+    $('.oreg').addClass('show');
   });
-  
+  /*********** Oreg/Fiatal Mousemove **********/
+
+  $( '.ah-inner' ).mousemove(function( event ) {
+    var posX = event.pageX;
+    var posY = event.pageY;
+    var contWidth=$('.ah-inner').width();
+    var contHeight=$('.ah-inner').height();
+    
+    var percentX = posX/contWidth;
+    //percentX = percentX.toFixed(1);
+
+    //msg = posX + ", " + posY + ", " + percentX;
+    //console.log(msg);
+    if (percentX > 0.5) {
+      if (percentX <= 0.666) {
+        $('.fiatal, .oreg').css('transition', 'clip .2s none');
+        $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, '+ (1-percentX) * contWidth + 'px)');
+        $('.oreg').css('clip', 'rect(0px, ' + (1-percentX) * contWidth + 'px , ' + contHeight + 'px, 0px)');
+        
+      } else {
+        $('.fiatal, .oreg').css('transition', 'clip .2s ease-in');
+        $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, 0px)');
+        $('.oreg').css('clip', 'rect(0px, 0px , ' + contHeight + 'px, 0px)');
+
+        $('.fiatal').addClass('show');
+        $('.oreg').addClass('hidden');
+        
+      }
+    } else {
+      if (percentX >= 0.333) {
+        $('.fiatal, .oreg').css('transition', 'clip .2s none');
+        $('.oreg').css('clip', 'rect(0px, ' + (1-percentX) * contWidth + 'px , ' + contHeight + 'px, 0px)');
+        $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, '+ (1-percentX) * contWidth + 'px)');
+      } else {
+        $('.fiatal, .oreg').css('transition', 'clip .2s ease-in');
+        $('.oreg').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, 0px)');
+        $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, ' + contWidth +  'px)');
+        
+        $('.oreg').addClass('show');
+        $('.fiatal').addClass('hidden');
+      }
+      
+    }
+  });
+
+  /******** End of Mousmove ********/
   resizeHero();
 
 });
