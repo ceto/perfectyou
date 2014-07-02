@@ -1,6 +1,6 @@
 <div class="page-header">
   <div class="ph-inner">
-    <h1><?php echo roots_title(); ?><small>A plasztikai sebész tudástárából</small></h1>
+    <h1><?php echo roots_title(); ?><small>A plasztikai sebész blogja</small></h1>
       <ul class="ph-cat">
         <?php
           wp_list_categories( array(
@@ -14,7 +14,7 @@
   </div>
 </div>
 <?php 
-  $saved_data = get_tax_meta(get_query_var('cat'),'ba_image_field_id');
+  $saved_data = get_tax_meta(1,'ba_image_field_id');
   $cat_img_id=$saved_data['id'];
   $imoci=wp_get_attachment_image_src( $cat_img_id, 'full43');
 ?>

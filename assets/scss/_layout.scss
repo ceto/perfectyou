@@ -32,13 +32,13 @@ body {
   background-size: cover;
   background-attachment: fixed;
 
-  .blog &, .single-post & {
+  .single-post & {
     background-color: $brown-superlight;
     @include bp($s0){
       padding-top:100px;
     }
   }
-  .archive & {
+  .blog &, .archive & {
     //background-color: $blue-dark;
     //background-size: 50% auto;
     @include bp($s0){

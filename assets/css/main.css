@@ -4116,13 +4116,13 @@ body {
     display: table; }
   .main:after {
     clear: both; }
-  .blog .main, .single-post .main {
+  .single-post .main {
     background-color: #fff7ed; }
     @media only screen and (min-width: 320px) {
-      .blog .main, .single-post .main {
+      .single-post .main {
         padding-top: 100px; } }
   @media only screen and (min-width: 320px) {
-    .archive .main {
+    .blog .main, .archive .main {
       padding-top: 100px; } }
 
 html {
@@ -4299,7 +4299,7 @@ ul li {
     display: table; }
   .banner:after {
     clear: both; }
-  .blog .banner, .single-post .banner {
+  .single-post .banner {
     background-color: #fff; }
   @media only screen and (min-width: 320px) {
     .banner {
@@ -4401,7 +4401,7 @@ ul li {
 .page-header {
   background-color: #50496b;
   color: #fff7ed; }
-  .archive .page-header {
+  .blog .page-header, .archive .page-header {
     background-color: rgba(255, 255, 255, 0);
     color: #50496b; }
   .page-header .ph-inner {

@@ -9,7 +9,7 @@
   height:69px;
   transition:all .25s ease;
   border-top:3px solid $yellow;
-  .blog &, .single-post & {
+  .single-post & {
     background-color: #fff;
   }
   
@@ -148,7 +148,7 @@
   background-color: $blue-light;
   color:$brown-superlight;
   //background-color: #fff;
-  .archive &{
+  .blog &, .archive &{
     //background-color: transparent;
     background-color: rgba(#fff,0);
     color:$blue-light;

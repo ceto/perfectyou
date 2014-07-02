@@ -18,10 +18,6 @@
 </style>
 
 
-<?php 
- //$query->set('posts_per_page', 100);
-?>
-
 <section class="kezeleslist">
   <div class="kezeleslist-inner">
     <?php if (!have_posts()) : ?>
