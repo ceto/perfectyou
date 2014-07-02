@@ -4970,7 +4970,7 @@ ul li {
   .anim-head .ah-inner {
     position: relative;
     max-width: 1280px;
-    margin: 100px auto 0 auto;
+    margin: 0 auto 0 auto;
     min-height: 768px; }
     .anim-head .ah-inner:before, .anim-head .ah-inner:after {
       content: " ";
@@ -4983,7 +4983,6 @@ ul li {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 1em 1em;
     z-index: 2;
     overflow: hidden;
     background-position: center top;
@@ -4997,9 +4996,23 @@ ul li {
     .anim-head .pancsi.show {
       clip: rect(0px, 1280px, 768px, 0px); }
   .anim-head .tartar {
-    width: 33.333%;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
     opacity: 1;
+    padding: 1em 0.5em 2em;
+    background-color: rgba(184, 184, 214, 0.75);
     transition: opacity 0.4s linear; }
+    .anim-head .tartar:before, .anim-head .tartar:after {
+      content: " ";
+      display: table; }
+    .anim-head .tartar:after {
+      clear: both; }
+    @media only screen and (min-width: 768px) {
+      .anim-head .tartar {
+        background-color: transparent;
+        width: 33.333%;
+        padding: 1em 0.5em 8em; } }
     .anim-head .tartar h3 {
       font-weight: 300;
       text-transform: uppercase; }
@@ -5011,14 +5024,14 @@ ul li {
     background-image: url('../img/anim_oreg.jpg');
     clip: rect(0px, 640px, 768px, 0px); }
     .anim-head .oreg .tartar {
-      float: left; }
+      left: 0; }
     .anim-head .oreg.hidden {
       clip: rect(0px, 0px, 768px, 0px); }
   .anim-head .fiatal {
     background-image: url('../img/anim_fiatal.jpg');
     clip: rect(0px, 1280px, 768px, 640px); }
     .anim-head .fiatal .tartar {
-      float: right; }
+      right: 0; }
     .anim-head .fiatal.hidden {
       clip: rect(0px, 1280px, 768px, 1280px); }
 

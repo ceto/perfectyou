@@ -132,6 +132,31 @@ function cmb_treatment( array $meta_boxes ) {
 
 /********* End of Custom MetaBoxes for Treatment Management ****************/
 
+
+/************* Custom Category for Activity Management *********/
+
+add_action( 'init', 'create_treat_cat', 0 );
+
+function create_treat_cat() {
+  $labels = array(
+    'name'              => __('Kezelés csoportok', 'roots'),
+    'singular_name'     => __('Kezelés csoport', 'roots'),
+    'menu_name'         => __('Kezelés csoportok', 'roots'),
+  );
+
+  $args = array(
+    'hierarchical'      => true,
+    'labels'            => $labels,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
+    'rewrite'           => array( 'slug' => 'kezelesek' ),
+  );
+
+  register_taxonomy( 'kezeles-csoport', array( 'kezeles' ), $args );
+}
+
+
 add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
 /**
  * Initialize the metabox class.
@@ -191,6 +216,29 @@ if (is_admin()){
   //Finish Meta Box Decleration
   $cat_meta->Finish();
 }
+
+
+/******** Treat Category Taxonomy Meta Boxes Definition *********/
+if (is_admin()){
+  $prefix = 'tc_';
+
+  $config = array(
+    'id' => 'treat_cat_meta',          // meta box id, unique per meta box
+    'title' => 'Kezelés csoport Meta Box',          // meta box title
+    'pages' => array('kezeles-csoport'),        // taxonomy name, accept categories, post_tag and custom taxonomies
+    'context' => 'normal',            // where the meta box appear: normal (default), advanced, side; optional
+    'fields' => array(),            // list of meta fields (can be added by field arrays)
+    'local_images' => false,          // Use local or hosted images (meta box images for add/remove)
+    'use_with_theme' => true          //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+  );
+   
+  $treatcat_meta =  new Tax_Meta_Class($config);
+  
+  $treatcat_meta->addImage($prefix.'image_field_id',array('name'=> __('Fullscreen image(min:1600×1200px)','roots')));
+  
+  $treatcat_meta->Finish();
+}
+
 
 
 

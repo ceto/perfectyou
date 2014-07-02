@@ -5,7 +5,7 @@
     @include clearfix();
     position: relative;
     max-width: $s4;
-    margin:100px auto 0 auto;
+    margin:0 auto 0 auto;
     min-height: $s2;
 
   }
@@ -14,7 +14,6 @@
     position: absolute;
     top:0;bottom:0;
     left:0;right:0;
-    padding:1em 1em;
     z-index: 2;
     //min-height:$s2;
     //width:100%;
@@ -29,6 +28,7 @@
     }
     &.hidden  {
       //z-index:1;
+      //transition:clip .2s ease-in;
       .tartar{
         //opacity:0;
       }
@@ -36,10 +36,21 @@
   }
 
   .tartar{
-    width:33.333%;
+    @include clearfix();
+    position: absolute;
+    bottom:0;
+    width:50%;
     //padding:1em;
     opacity: 1;
+    
+    padding:1em 0.5em 2em;
+    background-color: rgba($blue-extra, 0.75);
     transition:opacity .4s linear; 
+    @include bp($s2){
+      background-color: transparent;
+      width:33.333%;
+      padding:1em 0.5em 8em;
+    }
     h3{
       font-weight: 300;
       text-transform: uppercase;
@@ -57,8 +68,9 @@
     background-image: url('../img/anim_oreg.jpg');
     //background-position: center top;
     clip: rect(0px, 640px, $s2, 0px);
+
     .tartar{
-      float:left;
+      left:0
     }
     &.hidden  {
       clip: rect(0px, 0px, $s2, 0px);
@@ -73,7 +85,7 @@
     clip: rect(0px, 1280px, $s2, 640px);
     //clip: rect(100px, 100px, 500px, 800px);
     .tartar{
-      float:right;
+      right:0;
     }
     &.hidden  {
       clip: rect(0px, 1280px, $s2, 1280px);
