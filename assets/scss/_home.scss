@@ -1,6 +1,6 @@
 .anim-head{
   @include clearfix();
-  background-color: $blue-extra;
+  background-color: $pinky;
   .ah-inner {
     @include clearfix();
     position: relative;
@@ -18,10 +18,14 @@
     //min-height:$s2;
     //width:100%;
     overflow: hidden;
-    background-position: center top;
+    background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: auto 100%;
-    //transition:clip .2s ease-in;
+    background-size: auto 95%;
+    //filter: Grayscale(1);
+    //transition:filter 1000ms linear;
+    &:hover {
+      //filter: Grayscale(0);
+    }
     &.show  {
       clip: rect(0px, 1280px, $s2, 0px);
       //transition:clip .2s ease-in;
@@ -44,7 +48,7 @@
     opacity: 1;
     
     padding:1em 0.5em 2em;
-    background-color: rgba($blue-extra, 0.75);
+    background-color: rgba($pinky, 0.75);
     transition:opacity .4s linear; 
     @include bp($s2){
       background-color: transparent;
@@ -65,7 +69,7 @@
 
   .oreg{
     //display: none;
-    background-image: url('../img/anim_oreg.jpg');
+    background-image: url('../img/anim_oreg_pink.jpg');
     //background-position: center top;
     clip: rect(0px, 640px, $s2, 0px);
 
@@ -80,7 +84,7 @@
   .fiatal{
     //display: none;
     //right:0;
-    background-image: url('../img/anim_fiatal.jpg');
+    background-image: url('../img/anim_fiatal_pink.jpg');
     //background-position: center top;
     clip: rect(0px, 1280px, $s2, 640px);
     //clip: rect(100px, 100px, 500px, 800px);
@@ -91,6 +95,49 @@
       clip: rect(0px, 1280px, $s2, 1280px);
     }
   }
+  
+  .hero{
+    @include clearfix();
+    position: absolute;
+    bottom:0;
+    left:0; right:0;
+    z-index:2;
+    text-align: center;
+  }
+
+  .hero-inner{
+    max-width: $s3;
+    margin:0 auto;
+    padding:3em 0.5em;
+  }
+
+  h1 {
+    position:relative;
+    padding:0.25em 0 0.25em;
+    margin-top: 0.25em;
+    color:$purple-pot; 
+    text-shadow:0px 0px 3px rgba($pinky,0.75);
+    small {
+      font-size: 120%;
+      font-weight: 400;
+      display: block;
+    }
+    &:before{
+      position:absolute;
+      top:0;
+      left:33.333%;
+      display: block;
+      content:'';
+      height:1px;
+      width:33.333%;
+      background-color: $blue-light;
+
+    }
+  }
+  .btn{
+    margin-bottom: 0.5em;
+  }
+
 }
 
 .home-header {

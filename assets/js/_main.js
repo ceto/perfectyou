@@ -133,6 +133,8 @@ var resizeHero = function() {
     $('.fullscreen .homeh-inner').css('margin-top', ( $(window).height() - $('.homeh-inner').height())/2 );
     $('.fullscreen .homeh-inner').css('margin-bottom', ($(window).height() - $('.homeh-inner').height())/2 - $('.illnavrow').height() - 18 );
     
+    $('.ah-inner').height($(window).height() - $('.callme').height());
+
     $('.contact-body').height( $(window).height());
   } else {
     $('.trh-inner').css('margin-top','140px');
@@ -277,10 +279,10 @@ jQuery(document).ready(function($){
     //msg = posX + ", " + posY + ", " + percentX;
     //console.log(msg);
     if (percentX > 0.5) {
-      if (percentX <= 0.666) {
-        $('.fiatal, .oreg').css('transition', 'clip .4s none');
-        $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, '+ (1-percentX) * contWidth + 'px)');
-        $('.oreg').css('clip', 'rect(0px, ' + (1-percentX) * contWidth + 'px , ' + contHeight + 'px, 0px)');
+      if (percentX <= 1) {
+        //$('.fiatal, .oreg').css('transition', 'clip .4s none');
+        $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, '+ (0+percentX) * contWidth + 'px)');
+        $('.oreg').css('clip', 'rect(0px, ' + (0+percentX) * contWidth + 'px , ' + contHeight + 'px, 0px)');
         
       } else {
         $('.fiatal, .oreg').css('transition', 'clip .4s ease-in');
@@ -292,10 +294,10 @@ jQuery(document).ready(function($){
         
       }
     } else {
-      if (percentX >= 0.333) {
-        $('.fiatal, .oreg').css('transition', 'clip .4s none');
-        $('.oreg').css('clip', 'rect(0px, ' + (1-percentX) * contWidth + 'px , ' + contHeight + 'px, 0px)');
-        $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, '+ (1-percentX) * contWidth + 'px)');
+      if (percentX >= 0) {
+        //$('.fiatal, .oreg').css('transition', 'clip .4s none');
+        $('.oreg').css('clip', 'rect(0px, ' + (0+percentX) * contWidth + 'px , ' + contHeight + 'px, 0px)');
+        $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, '+ (0+percentX) * contWidth + 'px)');
       } else {
         $('.fiatal, .oreg').css('transition', 'clip .4s ease-in');
         $('.oreg').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, 0px)');

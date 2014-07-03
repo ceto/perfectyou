@@ -4983,7 +4983,7 @@ ul li {
     font-size: 0.75em; }
 
 .anim-head {
-  background-color: #b8b8d6; }
+  background-color: #fdebf7; }
   .anim-head:before, .anim-head:after {
     content: " ";
     display: table; }
@@ -5007,10 +5007,10 @@ ul li {
     right: 0;
     z-index: 2;
     overflow: hidden;
-    background-position: center top;
+    background-position: center bottom;
     background-repeat: no-repeat;
-    -webkit-background-size: auto 100%;
-    background-size: auto 100%; }
+    -webkit-background-size: auto 95%;
+    background-size: auto 95%; }
     .anim-head .pancsi:before, .anim-head .pancsi:after {
       content: " ";
       display: table; }
@@ -5024,7 +5024,7 @@ ul li {
     width: 50%;
     opacity: 1;
     padding: 1em 0.5em 2em;
-    background-color: rgba(184, 184, 214, 0.75);
+    background-color: rgba(253, 235, 247, 0.75);
     -webkit-transition: opacity 0.4s linear;
     transition: opacity 0.4s linear; }
     .anim-head .tartar:before, .anim-head .tartar:after {
@@ -5045,19 +5045,56 @@ ul li {
     .anim-head .tartar .btn {
       font-size: 0.875em; }
   .anim-head .oreg {
-    background-image: url('../img/anim_oreg.jpg');
+    background-image: url('../img/anim_oreg_pink.jpg');
     clip: rect(0px, 640px, 768px, 0px); }
     .anim-head .oreg .tartar {
       left: 0; }
     .anim-head .oreg.hidden {
       clip: rect(0px, 0px, 768px, 0px); }
   .anim-head .fiatal {
-    background-image: url('../img/anim_fiatal.jpg');
+    background-image: url('../img/anim_fiatal_pink.jpg');
     clip: rect(0px, 1280px, 768px, 640px); }
     .anim-head .fiatal .tartar {
       right: 0; }
     .anim-head .fiatal.hidden {
       clip: rect(0px, 1280px, 768px, 1280px); }
+  .anim-head .hero {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center; }
+    .anim-head .hero:before, .anim-head .hero:after {
+      content: " ";
+      display: table; }
+    .anim-head .hero:after {
+      clear: both; }
+  .anim-head .hero-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 3em 0.5em; }
+  .anim-head h1 {
+    position: relative;
+    padding: 0.25em 0 0.25em;
+    margin-top: 0.25em;
+    color: #3a285d;
+    text-shadow: 0px 0px 3px rgba(253, 235, 247, 0.75); }
+    .anim-head h1 small {
+      font-size: 120%;
+      font-weight: 400;
+      display: block; }
+    .anim-head h1:before {
+      position: absolute;
+      top: 0;
+      left: 33.333%;
+      display: block;
+      content: '';
+      height: 1px;
+      width: 33.333%;
+      background-color: #50496b; }
+  .anim-head .btn {
+    margin-bottom: 0.5em; }
 
 .home-header {
   position: relative;
