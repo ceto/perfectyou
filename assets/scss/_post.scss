@@ -78,7 +78,7 @@
   .post, .page{
     @include clearfix();
     max-width: $s2;
-    margin:1em auto;
+    margin:4em auto;
 
     @include bp($s4){
       width:48%;

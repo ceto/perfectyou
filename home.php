@@ -20,7 +20,10 @@
 ?>
 <style>
   .page-header{
-    background-image:url('<?php echo $imoci[0]; ?>');
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0)), to(#ffffff)), url('<?php echo $imoci[0]; ?>');
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 50%, #ffffff 100%), url('<?php echo $imoci[0]; ?>');
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 50%, #ffffff 100%), url('<?php echo $imoci[0]; ?>');
+
   }
 </style>
 <?php get_template_part('templates/call','me' ); ?>

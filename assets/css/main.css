@@ -4397,11 +4397,13 @@ ul li {
         height: 66px; } }
 
 .page-header {
-  background-position: left bottom;
-  background-size: 50% auto;
-  background-repeat: no-repeat; }
+  background-color: #fff;
+  background-position: left center, left bottom;
+  background-size: 50% 100%, 50% auto;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 50%, #ffffff 100%), url('../img/arc_mos.jpg'); }
   .page-header .ph-inner {
-    padding: 2em 0.5em;
+    padding: 78px 0.5em 1em 0.5em;
     max-width: 1024px;
     margin: 0 auto;
     text-align: center; }
@@ -4410,9 +4412,11 @@ ul li {
       display: table; }
     .page-header .ph-inner:after {
       clear: both; }
-    @media only screen and (min-width: 320px) {
+    @media only screen and (min-width: 320px) { }
+    @media only screen and (min-width: 768px) {
       .blog .page-header .ph-inner, .archive .page-header .ph-inner {
-        padding-top: 130px; } }
+        padding-top: 130px;
+        padding-bottom: 2em; } }
   .page-header h1 small {
     display: block;
     text-transform: none;
@@ -4909,7 +4913,7 @@ ul li {
 /******** Blog/Archive List Post Style *******/
 .archive .post, .archive .page, .blog .post, .blog .page {
   max-width: 768px;
-  margin: 1em auto; }
+  margin: 4em auto; }
   .archive .post:before, .archive .post:after, .archive .page:before, .archive .page:after, .blog .post:before, .blog .post:after, .blog .page:before, .blog .page:after {
     content: " ";
     display: table; }

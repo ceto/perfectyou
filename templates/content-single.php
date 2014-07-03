@@ -72,9 +72,11 @@
           </header>
           <div class="subsec-inner">
             <div class="subsec-cont">
-              <figure class="entry-figure">
-                <?php the_post_thumbnail(); ?>
-              </figure>
+              <?php if (has_post_thumbnail()) :?>
+                <figure class="entry-figure">
+                  <?php the_post_thumbnail(); ?>
+                </figure>
+              <?php endif; ?>              
               <?php the_content(); ?>
               <footer>
                 <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>

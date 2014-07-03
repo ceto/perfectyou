@@ -119,12 +119,14 @@
 
             
             <div class="subsec-cont">
-              <figure class="subsec-figure">
-                <a href="<?php echo $imciorig[0]; ?>" class="mfp-with-zoom mfp-img-mobile">
-                  <img src="<?php echo $imci[0]; ?>" width="<?php echo $imci[1]; ?>" height="<?php echo $imci[2]; ?>" alt="<?php echo esc_html( $entry['title'] );  ?>">
-                </a>
-                <figcaption class="caption"><?php echo esc_html( $entry['title'] );  ?></figcaption>
-              </figure>
+              <?php if ($imciorig!='') : ?>
+                <figure class="subsec-figure">
+                  <a href="<?php echo $imciorig[0]; ?>" class="mfp-with-zoom mfp-img-mobile">
+                    <img src="<?php echo $imci[0]; ?>" width="<?php echo $imci[1]; ?>" height="<?php echo $imci[2]; ?>" alt="<?php echo esc_html( $entry['title'] );  ?>">
+                  </a>
+                  <figcaption class="caption"><?php echo esc_html( $entry['title'] );  ?></figcaption>
+                </figure>
+              <?php endif; ?>
               <?php echo apply_filters('the_content', $entry['content'] );?>
               <div class="subsec-action">
                 <a data-toggle="collapse" href="#contact" class="btn">Jelentkezés<small>06.30.707.3056</small></a>
