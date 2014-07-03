@@ -90,24 +90,49 @@
   right:0;
   padding:2em 1em 1.5em;
   border-top: 1px solid $blue-light;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll, local;
   background-color: $blue-dark;
-  //color:$yellow;
+  background-image: 
+  linear-gradient(to right, rgba($blue-dark,1) 33% ,  rgba($blue-dark,0.5) 75%, rgba($blue-dark,0) 100%)
+  ,url('../img/arc_mos.jpg')
+  ;
+  color:$blue-superlight;
+  text-align: center;
   font-size: 14px;
   //text-align: left;
   h3 {
-    margin:0;
-    font-variant: small-caps;
-    font-size: 1.25em;
+    margin:0 0 0.5em;
+    text-transform:uppercase;
+    font-weight: 300;
+    font-size: 1.5em;
   }
   p{
-    &:last-child{
-      margin-bottom: 0;
+    font-size: 1.25em;
+    margin:0;
+    a{
+      text-decoration: none;
+      &:hover, &:focus {
+        color:$yellow;
+      }
     }
   }
+  .or{
+    display: block;
+    font-size: 0.75em;
+    margin:0 1em 0.666em 1em;
+  }
   .btn {
-    font-size: 1em;
-    color:$brown-superlight;
-    border-color: $brown-superlight;
+    font-size: 0.875em;
+    background-color: $blue-light;
+    border-color: $blue-light;
+    &:hover, &:focus {
+      border-color: $blue-superlight;
+      background-color: $blue-superlight;
+      color:$purple-pot;
+    }
   }
 }
 

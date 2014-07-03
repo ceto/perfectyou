@@ -5652,7 +5652,17 @@ ul li {
   right: 0;
   padding: 2em 1em 1.5em;
   border-top: 1px solid #50496b;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll, local;
   background-color: #3d394e;
+  background-image: -webkit-gradient(linear, left top, right top, from(#3d394e), color-stop(75%, rgba(61, 57, 78, 0.5)), to(rgba(61, 57, 78, 0))), url('../img/arc_mos.jpg');
+  background-image: -webkit-linear-gradient(left, #3d394e 33%, rgba(61, 57, 78, 0.5) 75%, rgba(61, 57, 78, 0) 100%), url('../img/arc_mos.jpg');
+  background-image: linear-gradient(to right, #3d394e 33%, rgba(61, 57, 78, 0.5) 75%, rgba(61, 57, 78, 0) 100%), url('../img/arc_mos.jpg');
+  color: #dce7e9;
+  text-align: center;
   font-size: 14px; }
   .subsec-featured:before, .subsec-featured:after {
     content: " ";
@@ -5660,15 +5670,29 @@ ul li {
   .subsec-featured:after {
     clear: both; }
   .subsec-featured h3 {
-    margin: 0;
-    font-variant: small-caps;
-    font-size: 1.25em; }
-  .subsec-featured p:last-child {
-    margin-bottom: 0; }
+    margin: 0 0 0.5em;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.5em; }
+  .subsec-featured p {
+    font-size: 1.25em;
+    margin: 0; }
+    .subsec-featured p a {
+      text-decoration: none; }
+      .subsec-featured p a:hover, .subsec-featured p a:focus {
+        color: #ffcf7b; }
+  .subsec-featured .or {
+    display: block;
+    font-size: 0.75em;
+    margin: 0 1em 0.666em 1em; }
   .subsec-featured .btn {
-    font-size: 1em;
-    color: #fff7ed;
-    border-color: #fff7ed; }
+    font-size: 0.875em;
+    background-color: #50496b;
+    border-color: #50496b; }
+    .subsec-featured .btn:hover, .subsec-featured .btn:focus {
+      border-color: #dce7e9;
+      background-color: #dce7e9;
+      color: #3a285d; }
 
 .subsec-sidebar {
   color: #fff7ed;
