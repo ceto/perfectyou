@@ -29,12 +29,16 @@
         <div class="trh-inner" style="margin-top:1000px;">
 
           <div class="treat-headcats">
-            <?php $bcat=get_category(33); $base_cat_name=$bcat->name; ?>
-            <a href="<?php echo esc_url( get_category_link(33) ); ?>" title="<?php echo $base_cat_name; ?>"><?php echo $base_cat_name; ?></a>
+            <?php
+              $taxes=wp_get_post_terms($post->ID, 'kezeles-csoport');
+              $current_term = $taxes[0];
+            ?>
+            <a href="<?php echo get_permalink(2); ?>" title="<?php _e('Kezelések','roots'); ?>"><?php _e('Kezelések','roots'); ?></a>
             /
-            <a href="<?php echo esc_url( get_category_link( $main_cat_id ) ); ?>" title="<?php echo $main_cat_name; ?>">
-              <?php echo $main_cat_name; ?>
-            </a> 
+            <a href="<?php echo esc_url( get_term_link($current_term->term_id,'kezeles-csoport') ); ?>" title="<?php echo $current_term->name; ?>">
+              <?php echo $current_term->name; ?>
+            </a>
+
           </div>
           <h1 class="treat-title"><?php the_title(); ?></h1>
           <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
@@ -77,7 +81,12 @@
       <nav class="subsec-nav">
         <header class="subsec-navhead">
           <div class="subsec-navbread">
-            <?php the_category( ' · '); ?> 
+            <?php // the_category( ' · '); ?>
+            <a href="<?php echo get_permalink(2); ?>" title="<?php _e('Kezelések','roots'); ?>"><?php _e('Kezelések','roots'); ?></a>
+            /
+            <a href="<?php echo esc_url( get_term_link($current_term->term_id,'kezeles-csoport') ); ?>" title="<?php echo $current_term->name; ?>">
+              <?php echo $current_term->name; ?>
+            </a> 
           </div>
           <h3><?php the_title(); ?></h3>
         </header>

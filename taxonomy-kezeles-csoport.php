@@ -24,7 +24,8 @@
     
   }
 </style>
-<?php get_template_part('templates/call','me' ); ?>
+
+<?php get_template_part('templates/ill','nav' ); ?>
 
 <section class="kezeleslist">
   <div class="kezeleslist-inner">
@@ -42,7 +43,8 @@
 
   </div>
 </section>
-<?php get_template_part('templates/ill','nav' ); ?>
+<?php get_template_part('templates/call','me' ); ?>
+
 <?php // get_template_part('templates/call','me' ); ?>
 
 

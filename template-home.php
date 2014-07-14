@@ -24,7 +24,7 @@ Template Name: Homepage Template
     
     <div class="hero">
       <div class="hero-inner">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/signo.png" alt="dr. Bulyovszky">
+        <img class="signo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/drbulyovszky.png" alt="dr. Bulyovszky">
         <h1>Plasztikai sebész<small>A tökéletes megjelenésért</small></h1>
         <div class="action-block">
           <a href="#" class="btn" id="fiatal-ctrl">Szépülni szeretne?</a>
@@ -103,7 +103,7 @@ Template Name: Homepage Template
         ?>
         <style>
           .feat-treats .tab-fiatal{
-            background-image:url('<?php echo $imoci[0]; ?>');
+            background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/pattern-x.png'), url('<?php echo $imoci[0]; ?>');
           }
         </style>
         <?php
@@ -138,7 +138,7 @@ Template Name: Homepage Template
         ?>
         <style>
           .feat-treats .tab-szep{
-            background-image:url('<?php echo $imoci[0]; ?>');
+            background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/pattern-x.png'), url('<?php echo $imoci[0]; ?>');
           }
         </style>
         <?php
@@ -173,7 +173,7 @@ Template Name: Homepage Template
         ?>
         <style>
           .feat-treats .tab-fan{
-            background-image:url('<?php echo $imoci[0]; ?>');
+            background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/pattern-x.png'), url('<?php echo $imoci[0]; ?>');
           }
         </style>
         <?php
