@@ -7,14 +7,21 @@
 .subsec{
   @include clearfix();
   position: relative;
-  //margin-bottom: 69px;
+  
+  //background-color: #fff;
+  
+  background-image:url('../img/pattern-x.png');
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: auto auto;
 
 
 
   
   .subsec-inner {
     @include clearfix();
-    background-color:$brown-superlight;
+    //background-color:$brown-superlight;
     //background-color:#fff;
 
     // background-image: url('../img/doki_korbevagva.png');
@@ -79,7 +86,18 @@
 .subsec-header{
   @include clearfix();
   position: relative;
-  background-color: $brown-superlight;
+  //background-color: $brown-superlight;
+  
+  // background-color: #fff;
+  // background-image:url('../img/pattern-x.png');
+  // background-attachment: fixed;
+  // background-repeat: repeat;
+  // background-position: center center;
+  // background-size: auto auto;
+
+
+
+
   .single-post & {
     //background-color: $blue-light;
     //color:$brown-superlight;
@@ -171,12 +189,6 @@
   }
   
   .subsec-action{
-    text-align: center;
-    margin:2em 0 2em 0;
-    font-size: 1.25em;
-    .btn{
-      //min-width: 50%;
-    }
-    //text-align: center;
+    margin:2em 0 0 0;
   }
 }

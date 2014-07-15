@@ -148,8 +148,10 @@
               <?php endif; ?>
               <?php echo apply_filters('the_content', $entry['content'] );?>
               <div class="subsec-action">
-                <a data-toggle="collapse" href="#contact" class="btn">Jelentkezés<small>06.30.707.3056</small></a>
+                <?php get_template_part('templates/call','me' ); ?>
               </div>
+
+
             
             </div>
 

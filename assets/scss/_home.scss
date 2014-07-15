@@ -311,7 +311,10 @@
   color:$blue-superlight;
   .callme-inner{
     padding:1.25em 0.5em;
-    //max-width: $s4;
+    .subsec-action &{
+      padding:1em 1.25em;
+      //text-align: center;
+    }
   }
   h3{
     display: inline-block;
@@ -321,10 +324,17 @@
     line-height: 1;
     margin:0.25em 0 0 0;
     vertical-align:bottom;
-    //max-width: 320px;
     @include bp($s2){
       float:left;
       margin-right: 1.5em;
+    }
+    .subsec-action &{
+      display:block;
+      margin:0.25em 0;
+      @include bp($s2){
+        float:none;
+        margin-right: 0;
+      }
     }
   }
   .vege {
@@ -334,9 +344,10 @@
     vertical-align:middle;
     margin:0 0;
     float:right;
-    // @include bp($s2){
-    //   float:left;
-    // }
+    .subsec-action &{
+      display:block;
+      float:none;
+    }
   }
   
   .telicon{

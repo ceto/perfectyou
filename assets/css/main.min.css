@@ -4179,7 +4179,7 @@ h1, .h1 {
   text-transform: uppercase; }
 
 h2, .h2 {
-  font-size: 2rem;
+  font-size: 1.666rem;
   margin-top: 2rem;
   text-transform: uppercase; }
 
@@ -4733,7 +4733,7 @@ ul li {
 .content-info {
   position: relative;
   font-size: 0.75em;
-  padding: 0.5em 0.5em;
+  padding: 1.5em 0.5em;
   background-color: #222222;
   color: #fff7ed; }
   .content-info:before, .content-info:after {
@@ -4753,19 +4753,23 @@ ul li {
     clear: both; }
 
 .subsec {
-  position: relative; }
+  position: relative;
+  background-image: url('../img/pattern-x.png');
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: center center;
+  -webkit-background-size: auto auto;
+  background-size: auto auto; }
   .subsec:before, .subsec:after {
     content: " ";
     display: table; }
   .subsec:after {
     clear: both; }
-  .subsec .subsec-inner {
-    background-color: #fff7ed; }
-    .subsec .subsec-inner:before, .subsec .subsec-inner:after {
-      content: " ";
-      display: table; }
-    .subsec .subsec-inner:after {
-      clear: both; }
+  .subsec .subsec-inner:before, .subsec .subsec-inner:after {
+    content: " ";
+    display: table; }
+  .subsec .subsec-inner:after {
+    clear: both; }
   @media only screen and (min-width: 480px) {
     .subsec {
       border-left: 7px solid #3d394e; } }
@@ -4801,8 +4805,7 @@ ul li {
       padding: 2em 2em 6em; } }
 
 .subsec-header {
-  position: relative;
-  background-color: #fff7ed; }
+  position: relative; }
   .subsec-header:before, .subsec-header:after {
     content: " ";
     display: table; }
@@ -4868,9 +4871,7 @@ ul li {
     .subsec-cont .subsec-figure .caption {
       display: none; }
   .subsec-cont .subsec-action {
-    text-align: center;
-    margin: 2em 0 2em 0;
-    font-size: 1.25em; }
+    margin: 2em 0 0 0; }
 
 
 .itemlist {
@@ -4908,11 +4909,13 @@ ul li {
 
 .posztok {
   background-color: #fff;
+  background-image: url('../img/pattern-x.png');
+  background-attachment: fixed;
+  background-repeat: repeat;
   background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed; }
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  padding: 2em 0.5em; }
 
 /******** Single Post Style *******/
 .single .post .entry-figure {
@@ -5244,6 +5247,8 @@ ul li {
     clear: both; }
   .callme .callme-inner {
     padding: 1.25em 0.5em; }
+    .subsec-action .callme .callme-inner {
+      padding: 1em 1.25em; }
   .callme h3 {
     display: inline-block;
     text-transform: uppercase;
@@ -5256,6 +5261,13 @@ ul li {
       .callme h3 {
         float: left;
         margin-right: 1.5em; } }
+    .subsec-action .callme h3 {
+      display: block;
+      margin: 0.25em 0; }
+      @media only screen and (min-width: 768px) {
+        .subsec-action .callme h3 {
+          float: none;
+          margin-right: 0; } }
   .callme .vege {
     display: inline-block;
     font-size: 1.25em;
@@ -5263,6 +5275,9 @@ ul li {
     vertical-align: middle;
     margin: 0 0;
     float: right; }
+    .subsec-action .callme .vege {
+      display: block;
+      float: none; }
   .callme .telicon {
     font-size: 1.25em;
     color: #9a91ba; }
