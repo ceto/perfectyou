@@ -147,14 +147,10 @@
                 </figure>
               <?php endif; ?>
               <?php echo apply_filters('the_content', $entry['content'] );?>
-              <div class="subsec-action">
-                <?php get_template_part('templates/call','me' ); ?>
-              </div>
-
-
-            
             </div>
-
+          </div>
+          <div class="subsec-action">
+            <?php get_template_part('templates/call','me' ); ?>
           </div>
         </section>
       <?php  } ?>

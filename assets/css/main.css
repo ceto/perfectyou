@@ -4783,13 +4783,13 @@ ul li {
       padding: 0 1em; } }
   @media only screen and (min-width: 480px) {
     .subsec-inner {
-      padding: 2em 1em 4em; } }
+      padding: 2em 1em; } }
   @media only screen and (min-width: 768px) {
     .subsec-inner {
-      padding: 2em 2em 6em; } }
+      padding: 2em 2em; } }
   @media only screen and (min-width: 1024px) {
     .subsec-inner {
-      padding: 2em 2em 6em; } }
+      padding: 2em 2em; } }
 
 .subsec-header {
   position: relative; }
@@ -4857,8 +4857,26 @@ ul li {
         margin-left: 1em; } }
     .subsec-cont .subsec-figure .caption {
       display: none; }
-  .subsec-cont .subsec-action {
-    margin: 2em 0 0 0; }
+
+.subsec-action {
+  font-size: 1.5em;
+  padding: 0 0.5em;
+  background-color: #fff; }
+  @media only screen and (min-width: 320px) {
+    .subsec-action {
+      padding: 0 1em; } }
+  @media only screen and (min-width: 480px) {
+    .subsec-action {
+      padding: 2em 1em; } }
+  @media only screen and (min-width: 768px) {
+    .subsec-action {
+      padding: 2em 2em; } }
+  @media only screen and (min-width: 1024px) {
+    .subsec-action {
+      padding: 2em 2em; } }
+  .subsec-action .callme {
+    margin: 0 auto;
+    max-width: 28em; }
 
 
 .itemlist {
@@ -5218,10 +5236,14 @@ ul li {
     display: table; }
   .callme:after {
     clear: both; }
+  .subsec-action .callme {
+    background-image: none;
+    background-color: transparent;
+    color: #3d394e; }
   .callme .callme-inner {
     padding: 1.25em 0.5em; }
     .subsec-action .callme .callme-inner {
-      padding: 1em 1.25em; }
+      padding: 0; }
   .callme h3 {
     display: inline-block;
     text-transform: uppercase;
@@ -5250,7 +5272,8 @@ ul li {
     float: right; }
     .subsec-action .callme .vege {
       display: block;
-      float: none; }
+      float: none;
+      font-size: 0.875em; }
   .callme .telicon {
     font-size: 1.25em;
     color: #9a91ba; }

@@ -71,15 +71,15 @@
     //max-width: 42em;
   }
   @include bp($s1){
-    padding:2em 1em 4em;
+    padding:2em 1em;
     //max-width: 42em;
   }
   @include bp($s2){
-    padding:2em 2em 6em;
+    padding:2em 2em;
     //max-width:42em;
   }
   @include bp($s3){
-    padding:2em 2em 6em;
+    padding:2em 2em;
   }
 }
 
@@ -187,8 +187,33 @@
       display: none;
     }
   }
+}
+
+.subsec-action{
+  font-size: 1.5em;
+  padding:0 0.5em;
+  background-color: #fff;
+
   
-  .subsec-action{
-    margin:2em 0 0 0;
+  @include bp($s0){
+    padding:0 1em;
+    //max-width: 42em;
   }
+  @include bp($s1){
+    padding:2em 1em;
+    //max-width: 42em;
+  }
+  @include bp($s2){
+    padding:2em 2em;
+    //max-width:42em;
+  }
+  @include bp($s3){
+    padding:2em 2em;
+  }
+
+  .callme{
+    margin:0 auto;
+    max-width: 28em;
+  }
+
 }

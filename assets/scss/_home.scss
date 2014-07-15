@@ -309,10 +309,16 @@
   ,url('../img/arc_mos.jpg')
   ;
   color:$blue-superlight;
+  .subsec-action &{
+    background-image: none;
+    background-color: transparent;
+    color:$blue-dark;
+
+  }
   .callme-inner{
     padding:1.25em 0.5em;
     .subsec-action &{
-      padding:1em 1.25em;
+      padding:0;
       //text-align: center;
     }
   }
@@ -347,6 +353,7 @@
     .subsec-action &{
       display:block;
       float:none;
+      font-size: 0.875em;
     }
   }
   
