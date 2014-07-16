@@ -43,7 +43,7 @@
 
 		<?php	if (has_nav_menu('footer_navigation')) : ?>
 		<section class="widget widget-menu">
-			<h3 class="widget-title"><?php _e('Jó tudni','roots'); ?></h3>
+			<h3 class="widget-title"><?php _e('Jó tudni, ha hozzánk fordul','roots'); ?></h3>
 		  <nav class="nav-footer" role="navigation">
         <?php wp_nav_menu(array('theme_location' => 'footer_navigation', 'menu_class' => 'nav nav-pills')); ?>
 	    </nav>
@@ -57,9 +57,9 @@
 <aside class="sidebar-search" role="complementary">
   <div class="sidebar-inner">
   <div class="social-icons">
-  	<a href="#">in</a>
-  	<a href="#">fb</a>
-  	<a href="#">g+</a>  	
+  	<a href="#" title="LinkedIn"><i class="typcn typcn-social-linkedin-circular"></i></a>
+  	<a href="#" title="Facebook"><i class="typcn typcn-social-facebook-circular"></i></a>
+  	<a href="#" title="Google+"><i class="typcn typcn-social-google-plus-circular"></i></a>  	
   </div>
     <?php get_search_form(); ?>
   </div>

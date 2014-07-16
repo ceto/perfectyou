@@ -56,19 +56,25 @@
     margin:0 auto;
   }
 .sidebar{
-  background-position: center 97%, center center;
+  background-position: center 95%, center center;
   background-repeat: no-repeat;
-  background-size: auto, cover;
+  background-size: 75% auto, cover;
   background-color: $gray-superdark;
   background-image: url('../img/drbulyovszky_footer.png'), url('../img/footer_bg.jpg');
   color:$brown-superlight;
+  @include bp($s1){
+    background-size: auto, auto 100%;
+  }
   @include bp($s2){
-    background-position: 95% 95%, right top;
+    background-position: 95% 93%, right top;
     background-size: auto, auto 100%;
   }
 
   .sidebar-inner{
-    padding: 2em 0 6em;
+    padding: 2em 0 8em;
+    @include bp($s2){
+      padding-bottom: 2em;
+    }
   }
   
   a {
@@ -133,31 +139,34 @@
 .sidebar-search{
   background-color: $gray-superdark;
   .social-icons{
-    padding:1em 1em;
+    margin:1em 0 0;
+    padding:0 1em;
+    height:70px;
+    overflow: hidden;
     text-align: center;
     @include bp($s2){
-      padding:0 1em;
+      margin:0 0;
       float:left;
       width:33.333%;
       text-align: left;
     }
     a {
       display: inline-block;
-      margin-right:12px;
-      width:50px;
-      height: 50px;
+      //margin-right:5px;
+      width:70px;
+      height: 70px;
       text-align: center;
       font-weight: 900;
-      font-size: 25px;
-      line-height: 50px;
-      border-radius: 50%;
-      border: 3px solid $purple-light;
+      font-size: 70px;
+      line-height: 60px;
       color: $purple-light;
       text-decoration: none;
+      overflow: hidden;
       &:hover, &:focus{
-        border: 3px solid $yellow;
+        //border: 3px solid $yellow;
         color: $yellow;
       }
+
 
     }
   }
@@ -169,7 +178,7 @@
       float:left;
       width:66.666%;
       text-align: right;
-      padding:0 1em;
+      padding:0.5em 1em 0;
     }
     input[type="search"] {
       width:50%;

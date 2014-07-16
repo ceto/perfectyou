@@ -409,11 +409,13 @@
   }
   li{
     font-size: 0.875em;
+    font-weight: 400;
     //list-style-type: none;
   
     > a {
-
+      
       color:$purple-light;
+      color:$gray;
       &:hover, &:focus{
         color:$yellow;
       }
