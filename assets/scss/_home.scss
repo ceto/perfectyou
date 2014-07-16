@@ -150,13 +150,8 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll, fixed;
-  background-image:
-  linear-gradient(to bottom
-    ,rgba(#fff,1)  0%, rgba(#fff,0.25)  100px, rgba(#fff,0)  150px
-    //, rgba(#fff,0) 75% ,  rgba(#fff,0.50) 90%, rgba(#fff,1)  100%
-    )
-    , url('../img/paciens.jpg');
+  background-attachment: scroll;
+  background-image: url('../img/paciens.jpg');
   color:$brown-superlight;
 
 

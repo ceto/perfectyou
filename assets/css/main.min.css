@@ -4734,7 +4734,7 @@ ul li {
   position: relative;
   font-size: 0.75em;
   padding: 1.5em 0.5em;
-  background-color: #222222;
+  background-color: #212121;
   color: #fff7ed; }
   .content-info:before, .content-info:after {
     content: " ";
@@ -5126,10 +5126,8 @@ ul li {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  background-attachment: scroll, fixed;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(100px, rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0))), url('../img/paciens.jpg');
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0.25) 100px, rgba(255, 255, 255, 0) 150px), url('../img/paciens.jpg');
-  background-image: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.25) 100px, rgba(255, 255, 255, 0) 150px), url('../img/paciens.jpg');
+  background-attachment: scroll;
+  background-image: url('../img/paciens.jpg');
   color: #fff7ed; }
   .home-header:before, .home-header:after {
     content: " ";
@@ -5687,27 +5685,61 @@ ul li {
   @media only screen and (min-width: 768px) { }
 
 
+.sidebar-contact {
+  background-color: #212121; }
+  .sidebar-contact .sidebar-inner {
+    padding: 2em 1em;
+    text-align: center; }
+    @media only screen and (min-width: 768px) {
+      .sidebar-contact .sidebar-inner {
+        padding: 1em 1em; } }
+  @media only screen and (min-width: 768px) {
+    .sidebar-contact .clogo {
+      width: 33.333%;
+      float: left;
+      text-align: left; } }
+  .sidebar-contact .clogo img {
+    max-width: 16em; }
+  .sidebar-contact .kozepe {
+    padding: 1em 1em; }
+    @media only screen and (min-width: 768px) {
+      .sidebar-contact .kozepe {
+        width: 33.333%;
+        float: left;
+        padding: 0.5em 2em; } }
+    .sidebar-contact .kozepe a {
+      font-size: 1.25em;
+      display: block;
+      color: #fff7ed;
+      text-decoration: none; }
+  .sidebar-contact .btn {
+    margin-top: 0.75em; }
+    @media only screen and (min-width: 768px) {
+      .sidebar-contact .btn {
+        float: right; } }
+
+.sidebar-inner {
+  position: relative;
+  padding: 1em 0;
+  max-width: 1280px;
+  margin: 0 auto; }
+  .sidebar-inner:before, .sidebar-inner:after {
+    content: " ";
+    display: table; }
+  .sidebar-inner:after {
+    clear: both; }
+
 .sidebar {
   background-position: right center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: scroll, local;
-  background-color: #222222;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(34, 34, 34, 0.95)), to(rgba(34, 34, 34, 0.75))), url('../img/paciens.jpg');
-  background-image: -webkit-linear-gradient(left, rgba(34, 34, 34, 0.95) 33%, rgba(34, 34, 34, 0.75) 90%), url('../img/paciens.jpg');
-  background-image: linear-gradient(to right, rgba(34, 34, 34, 0.95) 33%, rgba(34, 34, 34, 0.75) 90%), url('../img/paciens.jpg');
-  color: #dce7e9; }
-  .sidebar .sidebar-inner {
-    position: relative;
-    padding: 2em 0;
-    max-width: 1280px;
-    margin: 0 auto; }
-    .sidebar .sidebar-inner:before, .sidebar .sidebar-inner:after {
-      content: " ";
-      display: table; }
-    .sidebar .sidebar-inner:after {
-      clear: both; }
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(33, 33, 33, 0.95)), to(rgba(33, 33, 33, 0.75))), url('../img/paciens.jpg');
+  background-image: -webkit-linear-gradient(left, rgba(33, 33, 33, 0.95) 33%, rgba(33, 33, 33, 0.75) 90%), url('../img/paciens.jpg');
+  background-image: linear-gradient(to right, rgba(33, 33, 33, 0.95) 33%, rgba(33, 33, 33, 0.75) 90%), url('../img/paciens.jpg');
+  color: #fff7ed; }
   .sidebar a {
     color: #ffcf7b;
     text-decoration: none; }
@@ -5715,25 +5747,37 @@ ul li {
       color: #fff; }
     .sidebar a:active {
       color: #fff7ed; }
-  .sidebar .widget {
-    padding: 0.5em; }
-    @media only screen and (min-width: 768px) {
-      .sidebar .widget {
-        float: left;
-        width: 33.333%; } }
-    .sidebar .widget h3 {
-      text-transform: uppercase;
-      font-size: 1.25em;
-      font-weight: 300;
-      color: #fadabd; }
-    .sidebar .widget h4 {
-      font-size: 0.875em;
-      font-weight: 700;
-      margin: 2.5em 0 0.5em 0;
-      text-transform: uppercase;
-      color: #fadabd; }
-      .sidebar .widget h4 + p {
-        margin-top: 0; }
+  .sidebar .widget:before, .sidebar .widget:after {
+    content: " ";
+    display: table; }
+  .sidebar .widget:after {
+    clear: both; }
+  @media only screen and (min-width: 768px) {
+    .sidebar .widget {
+      width: 66.666%; } }
+  @media only screen and (min-width: 1280px) {
+    .sidebar .widget {
+      width: 60%; } }
+  @media only screen and (min-width: 480px) {
+    .sidebar .widget .felezve {
+      float: left;
+      width: 50%;
+      padding: 0 1em; } }
+  .sidebar .widget h3 {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 300;
+    color: #fadabd; }
+  .sidebar .widget h4 {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 2.5em 0 0.5em 0;
+    text-transform: uppercase;
+    color: #888888; }
+
+.sidebar-search {
+  background-color: #212121;
+  min-height: 6em; }
 
 .subsec-featured {
   position: absolute;
