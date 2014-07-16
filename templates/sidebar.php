@@ -39,12 +39,28 @@
 
 			</div>
 		</section>
+		
+
+		<?php	if (has_nav_menu('footer_navigation')) : ?>
+		<section class="widget widget-menu">
+			<h3 class="widget-title"><?php _e('Jó tudni','roots'); ?></h3>
+		  <nav class="nav-footer" role="navigation">
+        <?php wp_nav_menu(array('theme_location' => 'footer_navigation', 'menu_class' => 'nav nav-pills')); ?>
+	    </nav>
+		</section>
+		<?php endif; ?>
+
     <?php // dynamic_sidebar('sidebar-primary'); ?>
   </div>
 </aside><!-- /.sidebar -->
 
 <aside class="sidebar-search" role="complementary">
   <div class="sidebar-inner">
-    
+  <div class="social-icons">
+  	<a href="#">in</a>
+  	<a href="#">fb</a>
+  	<a href="#">g+</a>  	
+  </div>
+    <?php get_search_form(); ?>
   </div>
 </aside><!-- /.sidebar-contact -->

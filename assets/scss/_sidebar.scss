@@ -56,16 +56,16 @@
     margin:0 auto;
   }
 .sidebar{
-  background-position: right center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll, local;
   background-color: $gray-superdark;
-  background-image: 
-  linear-gradient(to right, rgba($gray-superdark,0.95) 33% ,  rgba($gray-superdark,0.75) 90% )
-  ,url('../img/paciens.jpg')
-  ;
+  background-image: url('../img/footer_bg.jpg');
   color:$brown-superlight;
+  @include bp($s2){
+    background-position: right top;
+    background-size: auto 100%;
+  }
 
   
   a {
@@ -80,6 +80,7 @@
   }
   .widget {
     @include clearfix();
+    padding:0 1em;
     @include bp($s2){
       width:66.666%;
     }
@@ -92,16 +93,20 @@
       @include bp($s1){
         float:left;
         width:50%;
-        padding:0 1em;
+        padding-right:1em;
+        &:last-child{
+          padding-right:0;
+          padding-left: 1em;
+        }
       }
     }
 
     h3{
+      font-size: 1em;
+      font-weight: 700;
+      margin:2.5em 0 0.5em 0;
       text-transform: uppercase;
-      //font-variant: small-caps;
-      font-size: 1.25em;
-      font-weight: 300;
-      color: $brown-light;
+      color: $gray;
     }
 
     h4{
@@ -124,7 +129,62 @@
 }
 .sidebar-search{
   background-color: $gray-superdark;
-  min-height: 6em;
+  .social-icons{
+    padding:1em 1em;
+    text-align: center;
+    @include bp($s2){
+      padding:0 1em;
+      float:left;
+      width:33.333%;
+      text-align: left;
+    }
+    a {
+      display: inline-block;
+      margin-right:12px;
+      width:50px;
+      height: 50px;
+      text-align: center;
+      font-weight: 900;
+      font-size: 25px;
+      line-height: 50px;
+      border-radius: 50%;
+      border: 3px solid $purple-light;
+      color: $purple-light;
+      text-decoration: none;
+      &:hover, &:focus{
+        border: 3px solid $yellow;
+        color: $yellow;
+      }
+
+    }
+  }
+
+  .search-form{
+    padding:1em 1em;
+    text-align: center;
+    @include bp($s2){
+      float:left;
+      width:66.666%;
+      text-align: right;
+      padding:0 1em;
+    }
+    input[type="search"] {
+      width:50%;
+      max-width: 15em;
+      background-color: $gray-dark;
+      border: 1px solid $gray-dark;
+      padding:0.5em;
+      color:$yellow;
+      outline-width: 0;
+      outline-color: transparent;
+      &:hover, &:focus{
+        border: 1px solid #000;
+      }
+    }
+    label{
+      display:none;
+    }
+  }
 }
 
 .subsec-featured {
