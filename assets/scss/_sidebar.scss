@@ -56,17 +56,20 @@
     margin:0 auto;
   }
 .sidebar{
-  background-position: center center;
+  background-position: center 97%, center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto, cover;
   background-color: $gray-superdark;
-  background-image: url('../img/footer_bg.jpg');
+  background-image: url('../img/drbulyovszky_footer.png'), url('../img/footer_bg.jpg');
   color:$brown-superlight;
   @include bp($s2){
-    background-position: right top;
-    background-size: auto 100%;
+    background-position: 95% 95%, right top;
+    background-size: auto, auto 100%;
   }
 
+  .sidebar-inner{
+    padding: 2em 0 6em;
+  }
   
   a {
     color: $yellow;

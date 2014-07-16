@@ -5737,18 +5737,20 @@ ul li {
     clear: both; }
 
 .sidebar {
-  background-position: center center;
+  background-position: center 97%, center center;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: auto, cover;
+  background-size: auto, cover;
   background-color: #212121;
-  background-image: url('../img/footer_bg.jpg');
+  background-image: url('../img/drbulyovszky_footer.png'), url('../img/footer_bg.jpg');
   color: #fff7ed; }
   @media only screen and (min-width: 768px) {
     .sidebar {
-      background-position: right top;
-      -webkit-background-size: auto 100%;
-      background-size: auto 100%; } }
+      background-position: 95% 95%, right top;
+      -webkit-background-size: auto, auto 100%;
+      background-size: auto, auto 100%; } }
+  .sidebar .sidebar-inner {
+    padding: 2em 0 6em; }
   .sidebar a {
     color: #ffcf7b;
     text-decoration: none; }
