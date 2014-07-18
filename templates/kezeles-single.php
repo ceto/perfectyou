@@ -26,7 +26,7 @@
       }
     </style>
     <header id="trh" class="treat-header fullscreen">
-        <div class="trh-inner" style="margin-top:1000px;">
+        <div class="trh-inner">
 
           <div class="treat-headcats">
             <?php
