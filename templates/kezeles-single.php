@@ -1,25 +1,18 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
-      <?php
-        $categories = get_the_category();
-        $cat_img_id = 0;
-        $main_cat_id = 0;
-        $main_cat_name = '';
-        foreach($categories as $category) {
-          if ($category->parent == 33){ 
-            $saved_data = get_tax_meta($category->term_id,'ba_image_field_id');
-            $cat_img_id=$saved_data['id'];
-            $main_cat_id=$category->term_id;
-            $main_cat_name=$category->name;
-          }
-        }
+    <?php
+      $taxes=wp_get_post_terms($post->ID, 'kezeles-csoport');
+      $current_term = $taxes[0];
+      $cat_img_id = 0;
+      $saved_data = get_tax_meta($current_term->term_id,'tc_image_field_id');
+      $cat_img_id=$saved_data['id'];
 
-        if (has_post_thumbnail()) {
-          $imoci = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full43' ); 
-        } else {
-          $imoci=wp_get_attachment_image_src( $cat_img_id, 'full43');
-        }
-      ?>
+      if (has_post_thumbnail()) {
+        $imoci = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full43' ); 
+      } else {
+        $imoci=wp_get_attachment_image_src( $cat_img_id, 'full43');
+      }
+    ?>
     <style>
       .treat-header{
         background-image:url('<?php echo $imoci[0]; ?>');
@@ -29,10 +22,7 @@
         <div class="trh-inner">
 
           <div class="treat-headcats">
-            <?php
-              $taxes=wp_get_post_terms($post->ID, 'kezeles-csoport');
-              $current_term = $taxes[0];
-            ?>
+
             <a href="<?php echo get_permalink(2); ?>" title="<?php _e('Kezelések','roots'); ?>"><?php _e('Kezelések','roots'); ?></a>
             /
             <a href="<?php echo esc_url( get_term_link($current_term->term_id,'kezeles-csoport') ); ?>" title="<?php echo $current_term->name; ?>">
