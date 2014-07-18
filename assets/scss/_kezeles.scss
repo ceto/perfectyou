@@ -305,12 +305,10 @@
 
 .treat-lead{
   @include clearfix();
-  max-width: $s3;
-  //background-color: rgba($purple,1);
+  max-width: $s2;
   color:$blue-light;
   font-size: 1.25em;
   font-weight: 300;
-  //margin-bottom:1em;
   @include bp($s2){
     //margin-right: 25%;
   }
