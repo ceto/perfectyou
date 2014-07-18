@@ -55,11 +55,12 @@
 
 /******** Single Post Style *******/
 
-.single {
-  .post{
+.single, .page {
+  .post, .type-page{
     .entry-figure{
-      //display: none;
       margin:1em -0.5em;
+      padding: 0.5em;
+      border: 1px solid $purple-light;
       @include bp($s1){
         float:right;
         max-width:33.333%;

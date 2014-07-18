@@ -5484,10 +5484,10 @@ body {
     display: table; }
   .main:after {
     clear: both; }
-  .single-post .main {
+  .single-post .main, .page .main {
     background-color: #fff7ed; }
     @media only screen and (min-width: 320px) {
-      .single-post .main {
+      .single-post .main, .page .main {
         padding-top: 100px; } }
   @media only screen and (min-width: 320px) { }
 
@@ -5666,7 +5666,7 @@ ul li {
     display: table; }
   .banner:after {
     clear: both; }
-  .single-post .banner {
+  .single-post .banner, .page .banner {
     background-color: #fff; }
   @media only screen and (min-width: 320px) {
     .banner {
@@ -6314,10 +6314,12 @@ ul li {
   padding: 2em 0.5em; }
 
 /******** Single Post Style *******/
-.single .post .entry-figure {
-  margin: 1em -0.5em; }
+.single .post .entry-figure, .single .type-page .entry-figure, .page .post .entry-figure, .page .type-page .entry-figure {
+  margin: 1em -0.5em;
+  padding: 0.5em;
+  border: 1px solid #9a91ba; }
   @media only screen and (min-width: 480px) {
-    .single .post .entry-figure {
+    .single .post .entry-figure, .single .type-page .entry-figure, .page .post .entry-figure, .page .type-page .entry-figure {
       float: right;
       max-width: 33.333%;
       margin: 0.5em 0 0.5em 0.5em; } }
@@ -7079,7 +7081,8 @@ ul li {
   .sidebar-contact .clogo img {
     max-width: 16em; }
   .sidebar-contact .kozepe {
-    padding: 1em 1em; }
+    padding: 1em 1em;
+    font-size: 0.875em; }
     @media only screen and (min-width: 768px) {
       .sidebar-contact .kozepe {
         width: 33.333%;
@@ -7090,8 +7093,12 @@ ul li {
       display: block;
       color: #fff7ed;
       text-decoration: none; }
+      .sidebar-contact .kozepe a:hover, .sidebar-contact .kozepe a:focus {
+        color: #9a91ba; }
   .sidebar-contact .btn {
-    margin-top: 0.75em; }
+    font-size: 0.875em;
+    margin-top: 0.666em;
+    padding: 1.333em 1.5em; }
     @media only screen and (min-width: 768px) {
       .sidebar-contact .btn {
         float: right; } }
@@ -7315,6 +7322,8 @@ ul li {
       left: 0;
       bottom: 0;
       top: auto; }
+  .subsec-sidebar .yarpp-related-none {
+    padding: 0.75em 1em 0.75em 1em; }
 
 .sss-inner {
   position: absolute;

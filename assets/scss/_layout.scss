@@ -32,7 +32,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
 
-  .single-post & {
+  .single-post &, .page & {
     background-color: $brown-superlight;
     @include bp($s0){
       padding-top:100px;

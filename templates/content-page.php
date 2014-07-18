@@ -8,7 +8,7 @@
           <div class="subsec-navbread">
             <?php the_category( ' · '); ?> 
           </div>
-          <h3>Perfect You - Plasztikai Sebészet</h3>
+          <h3>Plasztikai Sebészet</h3>
         </header>
      		<?php	if (has_nav_menu('footer_navigation')) : ?>
 	        <?php wp_nav_menu(array('theme_location' => 'footer_navigation', 'menu_class' => 'nav nav-pills')); ?>
@@ -44,7 +44,6 @@
           <header class="subsec-header">
             <div class="ss-hinner">
               <h1 class="subsec-title"><?php the_title(); ?></h1>
-              <div class="subsec-meta"><?php get_template_part('templates/entry-meta'); ?></div>
             </div>
           </header>
           <div class="subsec-inner">

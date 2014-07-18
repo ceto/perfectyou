@@ -9,7 +9,7 @@
   height:69px;
   transition:all .25s ease;
   border-top:3px solid $yellow;
-  .single-post & {
+  .single-post &, .page &{
     background-color: #fff;
   }
   

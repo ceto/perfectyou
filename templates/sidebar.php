@@ -1,4 +1,4 @@
-<?php if ( !is_single() && !is_archive()  && !is_front_page() && !is_home() ): ?>
+<?php if ( !is_page() && !is_single() && !is_archive()  && !is_front_page() && !is_home() ): ?>
   <?php get_template_part('templates/ill','nav' ); ?>
 <?php endif ?>
 
@@ -11,7 +11,7 @@
   		<a href="mailto:info@perfectyou.hu" class="cemail">info@perfectyou.hu</a>
   		<a href="tel:0036707705653" class="ctel">00 36 70 770 5653</a>
   	</div>
-  	<a href="#contact" data-toggle="collapse" class="btn btn-filled">Bejelentkezés</a>
+  	<a href="#contact" data-toggle="collapse" class="btn btn-filled">Online jelentkezés</a>
     
   </div>
 </aside><!-- /.sidebar-contact -->

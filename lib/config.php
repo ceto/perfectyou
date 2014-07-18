@@ -57,7 +57,7 @@ function roots_display_sidebar() {
       'is_404',
       //'is_front_page',
       //'is_home',
-      array('is_singular', array('kezeles'))
+     // array('is_singular', array('kezeles'))
 
     ),
     /**
