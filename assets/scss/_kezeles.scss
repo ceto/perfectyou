@@ -185,11 +185,11 @@
 .treat-header {
   @include clearfix();
   position: relative;
-  background-position: center center;
+  background-position: right top;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: #fff;
+  background-size: auto 100%;
+  background-attachment:scroll;
+  background-color: $brown-head;
   color:$brown;
 
   // &:before{

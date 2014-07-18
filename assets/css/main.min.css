@@ -6915,12 +6915,12 @@ ul li {
 /************ Single Kezeles Style *******/
 .treat-header {
   position: relative;
-  background-position: center center;
+  background-position: right top;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: #fff;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+  background-attachment: scroll;
+  background-color: #baafa3;
   color: #312017; }
   .treat-header:before, .treat-header:after {
     content: " ";
