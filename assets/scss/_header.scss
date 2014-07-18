@@ -145,15 +145,11 @@
 }
 
 .page-header{
-  //background-color: $blue-light;
-  //color:$brown-superlight;
-  background-color: #fff;
-  background-position: left center, left bottom;
-  background-size: 50% 100%, 50% auto;
+  background-color: $brown-head;
+  background-position: right top;
+  background-size:  auto 100%;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to right, rgba(#fff,0) 0, rgba(#fff,0) 50%,  rgba(#fff,1) 100%)
-  , url('../img/arc_mos.jpg')
-  ;
+  background-image:  url('../img/arc_mos.jpg') ;
   .blog &, .archive &{
     //background-color: transparent;
     //background-color: rgba(#fff,0);
