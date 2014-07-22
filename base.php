@@ -28,6 +28,6 @@
     </div><!-- /.wrap -->
     <?php get_template_part('templates/footer'); ?>
   </div>
-
+<script src="<?php echo site_url(); ?>:35729/livereload.js"></script>
 </body>
 </html>
