@@ -21,6 +21,8 @@
     <header id="trh" class="treat-header fullscreen">
         <div class="trh-inner">
 
+
+
           <div class="treat-headcats">
 
             <a href="<?php echo get_permalink(2); ?>" title="<?php _e('Kezelések','roots'); ?>"><?php _e('Kezelések','roots'); ?></a>
@@ -35,6 +37,16 @@
             <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
           <?php endif ?>
           <div class="treat-headaction">
+                  <figure class="trh-thumb">
+          <a href="<?php the_permalink(); ?>">
+            <?php if (has_post_thumbnail()): ?>
+              <?php the_post_thumbnail('thumb169'); ?>
+            <?php else : ?>
+            <!-- <img src="http://placehold.it/240x135/fff7ed/50496b" alt="<?php the_title(); ?>"> -->
+            <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/default-image.jpg" alt="<?php the_title(); ?>">
+            <?php endif; ?>
+          </a>
+        </figure>
             <?php
             $streats = get_post_meta( $post->ID, '_meta_sections', true );  
             $trno=1;
@@ -99,7 +111,7 @@
             <section class="widget widget-callme">
               <h3>Felkészült a változásra?</h3>
               <p class="vege"><i class="ss-glyphish-filled ss-phone telicon"></i> Hívjon
-                <a href="tel:+36707705653" class="phone">+36.70.570.5653</a><span class="or">– vagy –</span>
+                <a href="tel:+36707705653" class="phone">+36.70.570.5653</a><span class="or">–&nbsp;vagy&nbsp;–</span>
                 <a href="#contact" data-toggle="collapse" class="btn btn-filled">
                   <i class="ss-glyphish-filled ss-write"></i> Jelentkezzen online
                 </a>

@@ -148,7 +148,7 @@ function py_gallery($attr) {
     'icontag'    => '',
     'captiontag' => '',
     'columns'    => 4,
-    'size'       => 'medium',
+    'size'       => 'thumb43',
     'include'    => '',
     'exclude'    => '',
     'link'       => ''

@@ -1,6 +1,6 @@
 
 <header class="banner" role="banner" id="pagetop">
-  <a class="navtoggle" href="#pagetop">M</a>
+  <a class="navtoggle" href="#pagetop"><i class="typcn typcn-th-menu"></i></a>
   <a class="brand" href="<?php echo home_url('/') ?>"><?php bloginfo('name'); ?></a>
   
   <nav class="nav-main" role="navigation">

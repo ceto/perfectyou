@@ -5767,7 +5767,7 @@ ul li {
 
 .page-header {
   background-color: #baafa3;
-  background-position: right top;
+  background-position: center top;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-image: url('../img/arc_mos.jpg'); }
@@ -5821,12 +5821,14 @@ ul li {
   float: left;
   width: 66px;
   height: 66px;
-  background-color: #50496b;
-  color: #fff;
+  color: #3d394e;
   text-align: center;
   margin-left: -20px;
   margin-right: 20px;
-  display: block; }
+  display: block;
+  text-shadow: 1px 1px 1px #fdebf7; }
+  .navtoggle:hover, .navtoggle:focus {
+    color: #50496b; }
   @media only screen and (min-width: 768px) {
     .navtoggle {
       display: none; } }
@@ -5951,6 +5953,13 @@ ul li {
         height: 66px;
         line-height: 66px; }
 
+.nav-main.nav-mobile li a {
+  color: #fff;
+  font-size: 1.125em;
+  line-height: 4em;
+  height: 4em;
+  display: block; }
+
 .subsec-nav:before, .subsec-nav:after {
   content: " ";
   display: table; }
@@ -5958,12 +5967,13 @@ ul li {
   clear: both; }
 .subsec-nav .subsec-navhead {
   text-align: left;
-  padding: 1em 0.5em 2em 0.5em; }
+  padding: 1.5em 0.5em 0 0.5em; }
   .subsec-nav .subsec-navhead:before, .subsec-nav .subsec-navhead:after {
     content: " ";
     display: table; }
   .subsec-nav .subsec-navhead:after {
     clear: both; }
+  @media only screen and (min-width: 768px) { }
   @media only screen and (min-width: 1024px) {
     .subsec-nav .subsec-navhead {
       padding: 80px 1em 3em 1em; } }
@@ -6646,7 +6656,7 @@ ul li {
   .callme .vege {
     display: inline-block;
     font-size: 1.25em;
-    line-height: 1;
+    line-height: 1.5;
     vertical-align: middle;
     margin: 0 0;
     float: right; }
@@ -6712,7 +6722,7 @@ ul li {
   .feat-treats .tab-pane {
     background-position: center top;
     background-repeat: repeat, no-repeat;
-    background-size: auto auto, cover;
+    background-size: auto auto, auto auto;
     background-attachment: fixed, local;
     background-image: url('../img/pattern-x.png'), none;
     padding-top: 12em; }
@@ -6766,7 +6776,7 @@ ul li {
     clear: both; }
   .page-template-template-home-php .kezeleslist {
     background-attachment: scroll;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.75) 75%, #ffffff 100%); }
+    background-image: none; }
 
 .kezeleslist-inner {
   max-width: 480px;
@@ -6884,7 +6894,7 @@ ul li {
 /************ Single Kezeles Style *******/
 .treat-header {
   position: relative;
-  background-position: right top;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-attachment: scroll;
@@ -6904,7 +6914,6 @@ ul li {
 .trh-inner {
   padding: 0.5em 1em;
   max-width: 1280px;
-  margin: 0 auto;
   margin: 140px auto 2em;
   transition: all 0.4s ease-in; }
   .trh-inner:before, .trh-inner:after {
@@ -6936,25 +6945,25 @@ ul li {
 
 .treat-title {
   color: #50496b;
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 100;
   margin: 0 0 0 0;
   padding: 0 0 0 0; }
   @media only screen and (min-width: 320px) {
     .treat-title {
-      font-size: 2.5em; } }
+      font-size: 2em; } }
   @media only screen and (min-width: 480px) {
     .treat-title {
-      font-size: 3em; } }
+      font-size: 2.5em; } }
   @media only screen and (min-width: 768px) {
     .treat-title {
       font-size: 3em; } }
   @media only screen and (min-width: 1024px) {
     .treat-title {
-      font-size: 4em; } }
+      font-size: 3em; } }
   @media only screen and (min-width: 1280px) {
     .treat-title {
-      font-size: 5em; } }
+      font-size: 4em; } }
 
 .treat-headaction {
   margin: 1em 0;
@@ -6967,7 +6976,7 @@ ul li {
 .treat-lead {
   max-width: 768px;
   color: #50496b;
-  font-size: 1.25em;
+  font-size: 1.125em;
   font-weight: 300; }
   .treat-lead:before, .treat-lead:after {
     content: " ";
@@ -7195,26 +7204,32 @@ ul li {
       display: none; }
 
 .subsec-featured {
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 2em 1em 1.5em;
-  border-top: 1px solid #50496b;
+  text-align: left;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll, local;
-  background-color: #3d394e;
-  background-image: linear-gradient(to right, #3d394e 33%, rgba(61, 57, 78, 0.5) 75%, rgba(61, 57, 78, 0) 100%), url('../img/arc_mos.jpg');
+  /*
+  background-color: $blue-dark;
+  background-image: 
+  linear-gradient(to right, rgba($blue-dark,1) 33% ,  rgba($blue-dark,0.5) 75%, rgba($blue-dark,0) 100%)
+  ,url('../img/arc_mos.jpg')
+  ;
+  */
   color: #dce7e9;
-  text-align: center;
   font-size: 14px; }
   .subsec-featured:before, .subsec-featured:after {
     content: " ";
     display: table; }
   .subsec-featured:after {
     clear: both; }
+  @media only screen and (min-width: 1024px) {
+    .subsec-featured {
+      position: absolute; } }
   .subsec-featured h3 {
     margin: 0 0 0.5em;
     text-transform: uppercase;
@@ -7222,13 +7237,13 @@ ul li {
     font-size: 1.5em; }
   .subsec-featured p {
     font-size: 1.25em;
-    margin: 0; }
+    margin: 0;
+    line-height: 1.75; }
     .subsec-featured p a {
       text-decoration: none; }
       .subsec-featured p a:hover, .subsec-featured p a:focus {
         color: #ffcf7b; }
   .subsec-featured .or {
-    display: block;
     font-size: 0.75em;
     margin: 0 1em 0.666em 1em; }
   .subsec-featured .btn {
@@ -7288,12 +7303,14 @@ ul li {
     padding: 0.75em 1em 0.75em 1em; }
 
 .sss-inner {
-  position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   background-color: rgba(61, 57, 78, 0.85); }
+  @media only screen and (min-width: 1024px) {
+    .sss-inner {
+      position: absolute; } }
 
 .nyomjad {
   display: inline-block;
@@ -7877,7 +7894,7 @@ img.mfp-img {
   margin-right: -100%; }
 
 .active-nav {
-  background-color: #fff; }
+  background-color: #3d394e; }
 
 .nav-tabs {
   text-align: center;

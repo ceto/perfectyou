@@ -117,18 +117,14 @@ $(function() {
 
 var resizeHero = function() {
 
-  if ($(window).width() >= 768) {
+  if ($(window).width() >= 1024) {
     $('.subsec-sidebar').height( $(window).height()  );
-    //$('.subsec-sidebar').addClass('fixed');
   } else {
     $('.subsec-sidebar').removeClass('fixed');
-    //$('.subsec-sidebar').height('auto');
+    $('.subsec-sidebar').height( 'auto');
   }
+  
   if ( ($(window).height() > 600) ) {
-    //$('.treat-header').addClass('fullscreen');
-    //$('.fullscreen').height( $(window).height() );
-    //$('.fullscreen .trh-inner').css('margin-top', ( ( $(window).height() - $('.callme').height() - 12) - $('.trh-inner').height())/2  );
-    //$('.fullscreen .trh-inner').css('margin-bottom', ( ( $(window).height() - $('.callme').height() - 12) - $('.trh-inner').height())/2  );
 
     $('.fullscreen .homeh-inner').css('margin-top', ( $(window).height() - $('.homeh-inner').height())/2 );
     $('.fullscreen .homeh-inner').css('margin-bottom', ($(window).height() - $('.homeh-inner').height())/2 - $('.illnavrow').height() - 18 );
@@ -137,7 +133,7 @@ var resizeHero = function() {
 
     $('.contact-body').height( $(window).height());
   } else {
-    //$('.trh-inner').css('margin-top','140px');
+
     $('.homeh-inner').css('margin-top','140px');
   }
 
@@ -207,14 +203,11 @@ jQuery(document).ready(function($){
 
   /************* Subsec sidebar Fixing ***********/
   if ( ($('.subsec-sidebar').length > 0)  && ($(window).width() >= 1024) ){
-    //var topi = $('.subsections').offset().top;
-    //var bottomi =  $('.subsections').offset().top + $('.subsections').height() - $(window).height();
     $(window).scroll(function (event) {
 
       var topi = $('.subsections').offset().top;
       var bottomi =  $('.subsections').offset().top + $('.subsections').height() - $(window).height();
       
-      //var trick = ($('.trh-inner').length > 0)?parseFloat( $('.trh-inner').css('marginTop').replace(/auto/, 0)):0;
       var ypsz = $(this).scrollTop();
       if (ypsz >= topi ) {
         $('.subsec-sidebar').addClass('fixed');
@@ -229,7 +222,7 @@ jQuery(document).ready(function($){
     });
 
   }
-  /************* End of fixing ***********/
+  /************* End of Subsec Sidebar Fixing ***********/
   
   /************* End of fixing ***********/
 
@@ -274,13 +267,9 @@ jQuery(document).ready(function($){
     var contHeight=$('.ah-inner').height();
     
     var percentX = posX/contWidth;
-    //percentX = percentX.toFixed(1);
 
-    //msg = posX + ", " + posY + ", " + percentX;
-    //console.log(msg);
     if (percentX > 0.5) {
       if (percentX <= 1) {
-        //$('.fiatal, .oreg').css('transition', 'clip .4s none');
         $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, '+ (0+percentX) * contWidth + 'px)');
         $('.oreg').css('clip', 'rect(0px, ' + (0+percentX) * contWidth + 'px , ' + contHeight + 'px, 0px)');
         
@@ -295,7 +284,6 @@ jQuery(document).ready(function($){
       }
     } else {
       if (percentX >= 0) {
-        //$('.fiatal, .oreg').css('transition', 'clip .4s none');
         $('.oreg').css('clip', 'rect(0px, ' + (0+percentX) * contWidth + 'px , ' + contHeight + 'px, 0px)');
         $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, '+ (0+percentX) * contWidth + 'px)');
       } else {

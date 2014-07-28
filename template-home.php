@@ -101,11 +101,11 @@ Template Name: Homepage Template
           $cat_img_id=$saved_data['id'];
           $imoci=wp_get_attachment_image_src( $cat_img_id, 'full43');
         ?>
-        <style>
+        <!--style>
           .feat-treats .tab-fiatal{
             background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/pattern-x.png'), url('<?php echo $imoci[0]; ?>');
           }
-        </style>
+        </style-->
         <?php
           $the_kezeles = new WP_Query(array(
             'post_type' => array('kezeles'),
@@ -136,11 +136,11 @@ Template Name: Homepage Template
           $cat_img_id=$saved_data['id'];
           $imoci=wp_get_attachment_image_src( $cat_img_id, 'full43');
         ?>
-        <style>
+        <!--style>
           .feat-treats .tab-szep{
             background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/pattern-x.png'), url('<?php echo $imoci[0]; ?>');
           }
-        </style>
+        </style-->
         <?php
           $the_kezeles = new WP_Query(array(
             'post_type' => array('kezeles'),
@@ -171,11 +171,11 @@ Template Name: Homepage Template
           $cat_img_id=$saved_data['id'];
           $imoci=wp_get_attachment_image_src( $cat_img_id, 'full43');
         ?>
-        <style>
+        <!--style>
           .feat-treats .tab-fan{
             background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/pattern-x.png'), url('<?php echo $imoci[0]; ?>');
           }
-        </style>
+        </style-->
         <?php
           $the_kezeles = new WP_Query(array(
             'post_type' => array('kezeles'),

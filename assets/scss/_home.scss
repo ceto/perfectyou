@@ -341,7 +341,7 @@
   .vege {
     display: inline-block;
     font-size: 1.25em;
-    line-height: 1;
+    line-height: 1.5;
     vertical-align:middle;
     margin:0 0;
     float:right;
@@ -427,13 +427,24 @@
   }
 
   .tab-pane{
+    //background-color: $pinky;
     background-position: center top;
     background-repeat: repeat, no-repeat;
-    background-size: auto auto, cover;
+    background-size: auto auto, auto auto;
     background-attachment: fixed, local;
     background-image:url('../img/pattern-x.png'), none;
           
     padding-top: 12em;
+  }
+  
+  .tab-fiatal{
+    //background-position: center top, -800px bottom;
+    //background-image:url('../img/pattern-x.png'), url('../img/anim_oreg_pink.jpg');
+  }
+
+  .tab-szep{
+    //background-position: center top, -800px bottom;
+    //background-image:url('../img/pattern-x.png'), url('../img/anim_fiatal_pink.jpg');
   }
 
   .kezeleslist {

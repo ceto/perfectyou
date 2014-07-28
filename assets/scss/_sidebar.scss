@@ -206,25 +206,29 @@
 
 .subsec-featured {
   @include clearfix();
-  position: absolute;
   bottom:0;
   left:0;
   right:0;
   padding:2em 1em 1.5em;
-  border-top: 1px solid $blue-light;
+  text-align: left;
+  //border-top: 1px solid $blue-light;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll, local;
+  /*
   background-color: $blue-dark;
   background-image: 
   linear-gradient(to right, rgba($blue-dark,1) 33% ,  rgba($blue-dark,0.5) 75%, rgba($blue-dark,0) 100%)
   ,url('../img/arc_mos.jpg')
   ;
+  */
   color:$blue-superlight;
-  text-align: center;
   font-size: 14px;
   //text-align: left;
+  @include bp($s3){
+    position: absolute;
+  }
   h3 {
     margin:0 0 0.5em;
     text-transform:uppercase;
@@ -234,6 +238,7 @@
   p{
     font-size: 1.25em;
     margin:0;
+    line-height: 1.75;
     a{
       text-decoration: none;
       &:hover, &:focus {
@@ -242,7 +247,7 @@
     }
   }
   .or{
-    display: block;
+    //display: block;
     font-size: 0.75em;
     margin:0 1em 0.666em 1em;
   }
@@ -255,6 +260,9 @@
       background-color: $blue-superlight;
       color:$purple-pot;
     }
+  }
+  i{
+    //display: none;
   }
 }
 
@@ -317,11 +325,14 @@
 }
 
 .sss-inner{
-  position: absolute;
+  
   left:0; right:0;
   top:0;bottom:0;
   background-color: rgba($blue-dark,0.85);
   //filter:blur(2px);
+  @include bp($s3){
+      position: absolute;
+    }
 }
 
 .nyomjad {
