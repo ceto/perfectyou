@@ -5490,7 +5490,9 @@ body {
     @media only screen and (min-width: 320px) {
       .single-post .main, .page .main {
         padding-top: 100px; } }
-  @media only screen and (min-width: 320px) { }
+  @media only screen and (min-width: 320px) {
+    .blog .main, .archive .main, .page-template-template-home-php .main {
+      padding-top: 0; } }
 
 html {
   font-size: 14px;
@@ -5668,6 +5670,8 @@ ul li {
     clear: both; }
   .single-post .banner, .page .banner {
     background-color: #fff; }
+  .page-template-template-home-php .banner {
+    background-color: transparent; }
   @media only screen and (min-width: 320px) {
     .banner {
       position: absolute;
@@ -6378,119 +6382,54 @@ ul li {
   .archive .post .entry-summary .btn, .archive .page .entry-summary .btn, .blog .post .entry-summary .btn, .blog .page .entry-summary .btn {
     font-size: 0.75em; }
 
-.anim-head {
-  background-color: #fdebf7; }
-  .anim-head:before, .anim-head:after {
+.home-hero {
+  position: relative;
+  min-height: 600px;
+  background-image: url('../img/hero_home.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; }
+  .home-hero:before, .home-hero:after {
     content: " ";
     display: table; }
-  .anim-head:after {
+  .home-hero:after {
     clear: both; }
-  .anim-head .ah-inner {
+  .home-hero .homehero-inner {
     position: relative;
-    max-width: 1280px;
-    margin: 0 auto 0 auto;
-    min-height: 768px; }
-    .anim-head .ah-inner:before, .anim-head .ah-inner:after {
-      content: " ";
-      display: table; }
-    .anim-head .ah-inner:after {
-      clear: both; }
-  .anim-head .pancsi {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    overflow: hidden;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: auto 95%; }
-    .anim-head .pancsi:before, .anim-head .pancsi:after {
-      content: " ";
-      display: table; }
-    .anim-head .pancsi:after {
-      clear: both; }
-    .anim-head .pancsi.show {
-      clip: rect(0px, 1280px, 768px, 0px); }
-  .anim-head .tartar {
-    position: absolute;
-    bottom: 0;
-    width: 50%;
-    opacity: 1;
-    padding: 1em 0.5em 2em;
-    background-color: rgba(253, 235, 247, 0.75);
-    transition: opacity 0.4s linear; }
-    .anim-head .tartar:before, .anim-head .tartar:after {
-      content: " ";
-      display: table; }
-    .anim-head .tartar:after {
-      clear: both; }
-    @media only screen and (min-width: 768px) {
-      .anim-head .tartar {
-        background-color: transparent;
-        width: 33.333%;
-        padding: 1em 0.5em 8em; } }
-    .anim-head .tartar h3 {
-      font-weight: 300;
-      text-transform: uppercase; }
-    .anim-head .tartar p {
-      font-size: 0.875em; }
-    .anim-head .tartar .btn {
-      font-size: 0.875em; }
-  .anim-head .oreg {
-    background-image: url('../img/anim_oreg_pink.jpg');
-    clip: rect(0px, 640px, 768px, 0px); }
-    .anim-head .oreg .tartar {
-      left: 0; }
-    .anim-head .oreg.hidden {
-      clip: rect(0px, 0px, 768px, 0px); }
-  .anim-head .fiatal {
-    background-image: url('../img/anim_fiatal_pink.jpg');
-    clip: rect(0px, 1280px, 768px, 640px); }
-    .anim-head .fiatal .tartar {
-      right: 0; }
-    .anim-head .fiatal.hidden {
-      clip: rect(0px, 1280px, 768px, 1280px); }
-  .anim-head .hero {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
+    max-width: 30em;
+    margin: 120px 1em 4em 1em;
+    padding: 2em 1em 1em;
+    background-color: rgba(255, 255, 255, 0.75);
     text-align: center; }
-    .anim-head .hero:before, .anim-head .hero:after {
-      content: " ";
-      display: table; }
-    .anim-head .hero:after {
-      clear: both; }
-  .anim-head .hero-inner {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 3em 0.5em; }
-  .anim-head .signo {
-    width: 320px;
+    @media only screen and (min-width: 480px) {
+      .home-hero .homehero-inner {
+        margin: 300px auto 0 auto; } }
+  .home-hero .signo {
+    width: 14em;
     max-width: 75%; }
-  .anim-head h1 {
+  .home-hero h1 {
     position: relative;
-    padding: 0.25em 0 0.25em;
+    font-size: 1.333em;
+    padding: 0.25em 0 0.75em;
     margin-top: 0.25em;
     color: #3a285d;
     text-shadow: 0px 0px 3px rgba(253, 235, 247, 0.75); }
-    .anim-head h1 small {
+    .home-hero h1 small {
       font-size: 120%;
       font-weight: 400;
       display: block; }
-    .anim-head h1:before {
+    .home-hero h1:before {
       position: absolute;
       top: 0;
-      left: 33.333%;
+      left: 25%;
       display: block;
       content: '';
       height: 1px;
-      width: 33.333%;
+      width: 50%;
       background-color: #50496b; }
-  .anim-head .btn {
+  .home-hero .action-block {
+    font-size: 0.666em; }
+  .home-hero .btn {
     margin-bottom: 0.5em; }
 
 .home-header {

@@ -38,11 +38,11 @@ body {
       padding-top:100px;
     }
   }
-  .blog &, .archive & {
+  .blog &, .archive &, .page-template-template-home-php &{
     //background-color: $blue-dark;
     //background-size: 50% auto;
     @include bp($s0){
-      //padding-top:100px;
+      padding-top:0;
     }
   }
 

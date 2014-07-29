@@ -5,37 +5,22 @@ Template Name: Homepage Template
 ?>
 
 
-<section class="anim-head">
-  <div class="ah-inner">
-    <div class="oreg pancsi">
-<!--       <div class="tartar">
-        <h3>Fiatalodni szeretne?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat in pariatur est maiores non magnam molestias autem iusto, quas odio molestiae nulla, quam obcaecati labore quisquam recusandae facere consectetur omnis.</p>
-        <a href="#" class="btn" id="oreg-ctrl">Fiatalító kezelések</a>
-      </div> -->
-    </div>
-    <div class="fiatal pancsi">
-<!--       <div class="tartar">
-        <h3>Szépülni szeretne?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat in pariatur est maiores non magnam molestias autem iusto, quas odio molestiae nulla, quam obcaecati labore quisquam recusandae facere consectetur omnis.</p>
-        <a href="#" class="btn" id="fiatal-ctrl">Szépítő beavatkozások</a>
-      </div> -->
-    </div>
-    
-    <div class="hero">
-      <div class="hero-inner">
-        <img class="signo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/drbulyovszky.png" alt="dr. Bulyovszky">
-        <h1>Plasztikai sebész<small>A tökéletes megjelenésért</small></h1>
-        <div class="action-block">
-          <a href="#" class="btn" id="fiatal-ctrl">Szépülni szeretne?</a>
-          <a href="#" class="btn btn-filled" id="oreg-ctrl">Fiatalítodni szeretne?</a>
-          
-        </div>
-      </div>
-    </div>
 
+
+   
+<header class="home-hero">
+  <div class="homehero-inner">
+    <img class="signo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/drbulyovszky.png" alt="dr. Bulyovszky">
+    <h1>Plasztikai sebész<small>A tökéletes megjelenésért</small></h1>
+    <div class="action-block">
+      <a href="#" class="btn" id="fiatal-ctrl">Szépülni szeretne?</a>
+      <a href="#" class="btn btn-filled" id="oreg-ctrl">Fiatalítodni szeretne?</a>
+    </div>
   </div>
-</section>
+</header>
+
+
+
 
 <?php get_template_part('templates/call','me' ); ?>
 <header id="homeh" class="home-header fullscreen">

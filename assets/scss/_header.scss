@@ -12,6 +12,9 @@
   .single-post &, .page &{
     background-color: #fff;
   }
+  .page-template-template-home-php &{
+    background-color: transparent;
+  }
   
   @include bp($s0){
     position:absolute;
