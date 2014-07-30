@@ -23,22 +23,23 @@
     <header id="trh" class="treat-header fullscreen">
         <div class="trh-inner">
           <div class="trh-one">
-
-          <div class="treat-headcats">
-
+            <div class="treat-headcats">
             <a href="<?php echo get_permalink(2); ?>" title="<?php _e('Kezelések','roots'); ?>"><?php _e('Kezelések','roots'); ?></a>
             /
             <a href="<?php echo esc_url( get_term_link($current_term->term_id,'kezeles-csoport') ); ?>" title="<?php echo $current_term->name; ?>">
               <?php echo $current_term->name; ?>
             </a>
-
           </div>
+
           <h1 class="treat-title"><?php the_title(); ?></h1>
+
           <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
             <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
           <?php endif ?>
+          <a class="morebtn btn btn-filled" href="#lenyeg">Tovább a részletekre <i class="typcn typcn-arrow-sorted-down"></i></a>
           </div><!-- /.trh-one -->
           <div class="trh-two">
+
             <figure class="trh-thumb">
               <a href="<?php the_permalink(); ?>">
                 <?php if (has_post_thumbnail()): ?>
@@ -60,6 +61,9 @@
                   <li><a href="#subsec-<?php echo $trno++;  ?>"><?php _e('Tippek és tanácsok a döntéshez','root') ?></a></li>
               </ul>
             </div>
+            
+
+
           </div><!-- /.trh-two-->
         </div>
     </header>

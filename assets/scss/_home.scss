@@ -2,7 +2,7 @@
 .home-hero{
   @include clearfix();
   position: relative;
-  min-height: 600px;
+  height: 600px;
   background-image: url('../img/hero_home.jpg');
   background-position: center center;
   background-attachment: fixed;
@@ -20,8 +20,15 @@
     padding:2em 1em 1em;
     background-color: rgba(#fff,0.75);
     text-align: center;
+    @include bp($s0){
+      margin:1em 1em 1em 1em;
+      top:50%;
+      transform:translateY(-50%);
+    }
     @include bp($s1){
-      margin:300px auto 0 auto;
+      margin:0 auto 0 auto;
+      top:50%;
+      transform:translateY(-50%);
     }
   }
   .signo{

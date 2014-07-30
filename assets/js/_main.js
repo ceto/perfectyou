@@ -124,7 +124,7 @@ var resizeHero = function() {
     $('.subsec-sidebar').height( 'auto');
   }
   
-  if ( ($(window).height() > 600) ) {
+  if ( ($(window).height() > 700) ) {
 
     $('.fullscreen .homeh-inner').css('margin-top', ( $(window).height() - $('.homeh-inner').height())/2 );
     $('.fullscreen .homeh-inner').css('margin-bottom', ($(window).height() - $('.homeh-inner').height())/2 - $('.illnavrow').height() - 18 );
@@ -134,7 +134,8 @@ var resizeHero = function() {
 
     $('.contact-body').height( $(window).height());
   } else {
-
+    $('.home-hero').height(600);
+    $('.treat-header').height(700);
     $('.homeh-inner').css('margin-top','140px');
   }
 

@@ -186,21 +186,15 @@
 .treat-header {
   @include clearfix();
   position: relative;
-  background-position: center top;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-attachment:scroll;
+  background-size: cover;
+  background-attachment:fixed;
   background-color: $brown-head;
-  color:$brown;
+  color:$purple-pot;
 
-  // &:before{
-  //   position: absolute;
-  //   content: '';
-  //   display: block;
-  //   top:0;right:0;bottom:0;left:0;
-  //   background-image: linear-gradient(to bottom, rgba(#fff,0) 0 ,  rgba(#fff,0.75)  75%, rgba(#fff,1)  100%);
-  //   z-index: 0;
-  // }
+  height: 700px;
+
 
   @include bp($s0){
   }
@@ -239,10 +233,15 @@
 
 
   @include bp($s2){
-    margin: 120px 1em 1em;
+    margin: 0 1em 0 1em;
+    top:50%;
+    transform:translateY(-50%);
   }
   @include bp($s3){
-    margin: 140px auto 3em;
+    margin: 0 auto 0 auto;
+    top:50%;
+    transform:translateY(-50%);
+     
   }
 
 
@@ -250,33 +249,36 @@
 
 .trh-one{
   @include clearfix();
-  padding:2em 1em 1em;
+  padding:3em 1em 0em;
   @include bp($s2){
-    padding:1.5em 0.75em 1.5em 1.5em;
+    padding:2.5em 0.75em 2.5em 1.5em;
     width:60%;
     float:left;
    // margin-bottom: 5em;
+       padding-bottom: 5em;
 
   }
   @include bp($s3){
-    padding:2em 1em 2em 2em;
+    padding:3em 1em 3em 2em;
     width:65%;
     float:left;
+    padding-bottom: 6em;
 
   }
 
 }
 .trh-two{
   @include clearfix();
-  padding:1em 1em 1em;
+  padding:1em 1em 2em;
   @include bp($s2){
-    padding:1.5em 1.5em 1.5em 0.75em;
+    padding:2.5em 1.5em 2.5em 0.75em;
     width:40%;
     float:left;
 
+
   }
   @include bp($s3){
-    padding:2em 2em 2em 1em;
+    padding:3em 2em 3em 1em;
     width:35%;
     float:left;
   }
@@ -285,6 +287,10 @@
 
 
 .treat-headcats{
+  position: absolute;
+  top:0;
+  left:0;
+
   display: inline-block;
   //display: none;
   background-color: $purple-light;
@@ -293,8 +299,8 @@
   text-transform: uppercase;
   //font-variant: small-caps;
   font-weight: 900;
-  font-size: 0.875em;
-  margin-bottom: 0.25em;
+  font-size: 0.75em;
+
   a{
     text-decoration: none;
     color:$brown-superlight;
@@ -303,14 +309,34 @@
     }
   }
 }
+
+.morebtn {
+
+  margin-top:1em;
+  font-size: 0.875em;
+  background-color: $blue-light;
+  border-color: $blue-light;
+  
+  &:hover, &:focus {
+    border-color: $blue-dark;
+    background-color: $blue-dark;
+    color:$blue-superlight;
+  }
+  @include bp($s2){
+    position: absolute;
+    bottom:2em;
+  }
+  
+}
+
 .treat-title {
   //padding:3em 2em 0 0.75em;
-  color:$blue-light;
+  //color:$blue-light;
   //text-shadow:0px 0px 5px $purple;
   font-size: 2em;
   font-weight: 100;
   //background-color: rgba($purple,0.75);
-  margin:0 0 0 0;
+  margin:0 0 0.25em 0;
   padding:0 0 0 0;
   //text-align: right;
   @include bp($s0){
@@ -336,7 +362,7 @@
   a{
     display: inline-block;
     background-color: $blue-light;
-    padding:3px;
+    padding:2px;
     &:hover, &:focus{
       background-color:$blue-dark;
     }
@@ -345,6 +371,7 @@
 }
 
 .treat-headaction {
+
   margin: 1em 0;
   //font-size: 0.875em;
   color:$link;
@@ -357,8 +384,9 @@
 
     a {
       text-decoration: none;
-      font-weight: 400;
+      font-weight: 500;
       color:$blue-light;
+
       &:hover, &:focus{
         color:$link;
       }
@@ -370,7 +398,7 @@
 .treat-lead{
   @include clearfix();
   max-width: $s2;
-  color:$blue-light;
+  //color:$blue-light;
   font-size: 1.125em;
   font-weight: 300;
   @include bp($s2){
