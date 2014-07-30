@@ -20,8 +20,7 @@
     </style>
     <header id="trh" class="treat-header fullscreen">
         <div class="trh-inner">
-
-
+          <div class="trh-one">
 
           <div class="treat-headcats">
 
@@ -36,26 +35,31 @@
           <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
             <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
           <?php endif ?>
-          <div class="treat-headaction">
-                  <figure class="trh-thumb">
-          <a href="<?php the_permalink(); ?>">
-            <?php if (has_post_thumbnail()): ?>
-              <?php the_post_thumbnail('thumb169'); ?>
-            <?php else : ?>
-            <!-- <img src="http://placehold.it/240x135/fff7ed/50496b" alt="<?php the_title(); ?>"> -->
-            <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/default-image.jpg" alt="<?php the_title(); ?>">
-            <?php endif; ?>
-          </a>
-        </figure>
-            <?php
-            $streats = get_post_meta( $post->ID, '_meta_sections', true );  
-            $trno=1;
-            foreach ( (array) $streats as $key => $entry ) {
-            ?>
-              <a class="btn btn-filled" href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a>
-            <?php  } ?>
-            <a class="btn" href="#subsec-<?php echo $trno++;  ?>"><?php _e('Tippek és tanácsok a döntéshez','root') ?></a>
-          </div>
+          </div><!-- /.trh-one -->
+          <div class="trh-two">
+            <figure class="trh-thumb">
+              <a href="<?php the_permalink(); ?>">
+                <?php if (has_post_thumbnail()): ?>
+                  <?php the_post_thumbnail('medium169'); ?>
+                <?php else : ?>
+                <!-- <img src="http://placehold.it/240x135/fff7ed/50496b" alt="<?php the_title(); ?>"> -->
+                <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/default-image.jpg" alt="<?php the_title(); ?>">
+                <?php endif; ?>
+              </a>
+            </figure>
+            <div class="treat-headaction">
+              <ul class="nav">
+                <?php
+                  $streats = get_post_meta( $post->ID, '_meta_sections', true );  
+                  $trno=1;
+                  foreach ( (array) $streats as $key => $entry ) {
+                ?>
+                  <li><a class="" href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
+                <?php  } ?>
+                  <li><a href="#subsec-<?php echo $trno++;  ?>"><?php _e('Tippek és tanácsok a döntéshez','root') ?></a></li>
+              </ul>
+            </div>
+          </div><!-- /.trh-two-->
         </div>
     </header>
 

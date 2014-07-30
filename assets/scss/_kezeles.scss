@@ -228,9 +228,10 @@
 }
 .trh-inner {
   @include clearfix();
-  padding:0.5em 1em;
-  max-width: $s4;
-  margin: 140px auto 2em;
+  position: relative;
+  background-color: rgba(#fff,0.75);
+  max-width: $s3;
+  margin: 90px 1em 1em;
   transition: all .4s ease-in;
   ////margin-top: 1000px;
   //padding-top:140px;
@@ -238,19 +239,55 @@
 
 
   @include bp($s2){
-    padding:0.5em 1.25em;
-    .fullscreen & {
-    }
+    margin: 120px 1em 1em;
   }
   @include bp($s3){
-     padding:0.5em 1.5em;
+    margin: 140px auto 3em;
   }
 
 
 }
+
+.trh-one{
+  @include clearfix();
+  padding:2em 1em 1em;
+  @include bp($s2){
+    padding:1.5em 0.75em 1.5em 1.5em;
+    width:60%;
+    float:left;
+    margin-bottom: 5em;
+
+  }
+  @include bp($s3){
+    padding:2em 1em 2em 2em;
+    width:65%;
+    float:left;
+
+  }
+
+}
+.trh-two{
+  @include clearfix();
+  padding:1em 1em 1em;
+  @include bp($s2){
+    padding:1.5em 1.5em 1.5em 0.75em;
+    width:40%;
+    float:left;
+
+  }
+  @include bp($s3){
+    padding:2em 2em 2em 1em;
+    width:35%;
+    float:left;
+  }
+}
+
+
+
 .treat-headcats{
   display: inline-block;
-  background-color: $gray;
+  //display: none;
+  background-color: $blue-light;
   color:$brown-superlight;
   padding:0.25em 0.5em;
   text-transform: uppercase;
@@ -262,7 +299,7 @@
     text-decoration: none;
     color:$brown-superlight;
     &:hover, &:focus{
-      color:$blue-light;
+      color:$blue-superlight;
     }
   }
 }
@@ -283,24 +320,49 @@
     font-size: 2.5em;
   }
   @include bp($s2){
-    font-size: 3em;
+    font-size: 2.5em;
 
   }
   @include bp($s3){
-    font-size: 3em;
+    font-size: 2.5em;
 
   }
   @include bp($s4){
-    font-size: 4em;
+    font-size: 3em;
   }
 }
+
+.trh-thumb{
+  a{
+    display: inline-block;
+    background-color: $blue-light;
+    padding:3px;
+    &:hover, &:focus{
+      background-color:$blue-dark;
+    }
+
+  }
+}
+
 .treat-headaction {
   margin: 1em 0;
-  font-size: 0.875em;
-  .btn {
-    margin-bottom: 0.5em;
-    margin-right: 0.333em;
-    min-width: 0;
+  //font-size: 0.875em;
+  color:$link;
+  ul{
+  }
+  li{
+    &:last-child {
+      margin-bottom:0;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 400;
+      color:$blue-light;
+      &:hover, &:focus{
+        color:$link;
+      }
+    }
   }
 }
 
