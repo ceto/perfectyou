@@ -70,7 +70,7 @@
     margin-top: 15px;
     height:70px;
     width: 280px;
-    background-image: url('../img/logo_szurke.png');
+    background-image: url('../img/logo_arany.png');
   }
   
   @include bp(0px){
@@ -105,27 +105,23 @@
   width:110px;
   height:66px;
   vertical-align: center;
+  text-align: center;
+
   display: inline-block;
-  //margin:0.75em 0 0;
-  padding:1.875em 1em 0;
+  padding: 0 1em;
+  font-weight: 400;
+
+
 
   background-color: $yellow;
-  //border:1px solid $purple;
-  //border-radius: 4px;
   font-size: 0.75em;
-  line-height: 1em;
-  font-weight: 500;
+  height: 66px;
+  line-height: 66px;
   text-decoration: none;
   text-transform: uppercase;
-  text-align: center;
+
   color:$gray-dark;
-  small{
-    font-size: 83%;
-    letter-spacing: 1px;
-    //font-weight: 700;
-    display: block;
-    //text-transform: none;
-  }
+
   &:hover, &:focus{
     background-color: $blue-light;
     border-color: #fff;
@@ -135,13 +131,15 @@
 
   @include bp($s2) {
     
-    width:130px;
-    height:97px;
-    padding:2.5em 1em 0;
+      height: 97px;
+      font-size: 0.875em;
+      line-height: 97px;
+      padding: 0 1em;
+      width:auto;
     .fixedhead &{
       bottom:0;
-      padding-top: 1.333em;
       height: 66px;
+      line-height: 66px;
       
     }
   }

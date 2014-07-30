@@ -130,6 +130,7 @@ var resizeHero = function() {
     $('.fullscreen .homeh-inner').css('margin-bottom', ($(window).height() - $('.homeh-inner').height())/2 - $('.illnavrow').height() - 18 );
     
     $('.home-hero').height($(window).height() - $('.callme').height());
+    $('.treat-header').height($(window).height() - $('.callme').height());
 
     $('.contact-body').height( $(window).height());
   } else {
@@ -242,63 +243,6 @@ jQuery(document).ready(function($){
 
 
 
-  /********* Oreg/Fiatal Animation **********/
-  // $('#fiatal-ctrl').on('click', function() {
-  //   $('.oreg').removeClass('show');
-
-  //   $('.oreg').addClass('hidden');
-  //   $('.fiatal').addClass('show');
-  // });
-
-  // $('#oreg-ctrl').on('click', function() {
-  //   $('.fiatal').removeClass('show');
-
-  //   $('.fiatal').addClass('hidden');
-  //   $('.oreg').addClass('show');
-  // });
-  /*********** Oreg/Fiatal Mousemove **********/
-
-  
-
-  // $( '.ah-inner' ).mousemove(function( event ) {
-  //   var posX = event.pageX;
-  //   var posY = event.pageY;
-  //   var contWidth=$('.ah-inner').width();
-  //   var contHeight=$('.ah-inner').height();
-    
-  //   var percentX = posX/contWidth;
-
-  //   if (percentX > 0.5) {
-  //     if (percentX <= 1) {
-  //       $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, '+ (0+percentX) * contWidth + 'px)');
-  //       $('.oreg').css('clip', 'rect(0px, ' + (0+percentX) * contWidth + 'px , ' + contHeight + 'px, 0px)');
-        
-  //     } else {
-  //       $('.fiatal, .oreg').css('transition', 'clip .4s ease-in');
-  //       $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, 0px)');
-  //       $('.oreg').css('clip', 'rect(0px, 0px , ' + contHeight + 'px, 0px)');
-
-  //       $('.fiatal').addClass('show');
-  //       $('.oreg').addClass('hidden');
-        
-  //     }
-  //   } else {
-  //     if (percentX >= 0) {
-  //       $('.oreg').css('clip', 'rect(0px, ' + (0+percentX) * contWidth + 'px , ' + contHeight + 'px, 0px)');
-  //       $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, '+ (0+percentX) * contWidth + 'px)');
-  //     } else {
-  //       $('.fiatal, .oreg').css('transition', 'clip .4s ease-in');
-  //       $('.oreg').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, 0px)');
-  //       $('.fiatal').css('clip', 'rect(0px, ' + contWidth + 'px , ' + contHeight + 'px, ' + contWidth +  'px)');
-        
-  //       $('.oreg').addClass('show');
-  //       $('.fiatal').addClass('hidden');
-  //     }
-      
-  //   }
-  // });
-
-  /******** End of Mousmove ********/
   resizeHero();
 
 });

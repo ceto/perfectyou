@@ -13,8 +13,8 @@ Template Name: Homepage Template
     <img class="signo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/drbulyovszky.png" alt="dr. Bulyovszky">
     <h1>Plasztikai sebész<small>A tökéletes megjelenésért</small></h1>
     <div class="action-block">
-      <a href="#" class="btn" id="fiatal-ctrl">Szépülni szeretne?</a>
-      <a href="#" class="btn btn-filled" id="oreg-ctrl">Fiatalítodni szeretne?</a>
+      <a href="#feat-treats" class="btn" id="fiatal-ctrl">Szépülni szeretne?</a>
+      <a href="#feat-treats" class="btn btn-filled" id="oreg-ctrl">Fiatalítodni szeretne?</a>
     </div>
   </div>
 </header>
@@ -23,7 +23,7 @@ Template Name: Homepage Template
 
 
 <?php get_template_part('templates/call','me' ); ?>
-<header id="homeh" class="home-header fullscreen">
+<header id="homeh" class="home-header fullscreen" style="display:none">
     <div class="homeh-inner" style="margin-top:1000px;">
       <h1 class="home-title">
         Plasztikai műtétek, esztétikai- és szépészeti beavatkozások Budapesten
@@ -39,7 +39,7 @@ Template Name: Homepage Template
     </div>
 </header>
 
-<?php get_template_part('templates/ill','nav' ); ?>
+
 
 
 
@@ -56,10 +56,10 @@ Template Name: Homepage Template
    </div>
 </section>
 
+<?php get_template_part('templates/ill','nav' ); ?>
 
 
-
-<?php get_template_part('templates/call','me' ); ?>
+<?php // get_template_part('templates/call','me' ); ?>
 
 
 

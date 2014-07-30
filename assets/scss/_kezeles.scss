@@ -255,7 +255,7 @@
     padding:1.5em 0.75em 1.5em 1.5em;
     width:60%;
     float:left;
-    margin-bottom: 5em;
+   // margin-bottom: 5em;
 
   }
   @include bp($s3){
@@ -287,7 +287,7 @@
 .treat-headcats{
   display: inline-block;
   //display: none;
-  background-color: $blue-light;
+  background-color: $purple-light;
   color:$brown-superlight;
   padding:0.25em 0.5em;
   text-transform: uppercase;
@@ -299,7 +299,7 @@
     text-decoration: none;
     color:$brown-superlight;
     &:hover, &:focus{
-      color:$blue-superlight;
+      color:$purple-pot;
     }
   }
 }

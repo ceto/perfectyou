@@ -16,6 +16,8 @@
     <style>
       .treat-header{
         background-image:url('<?php echo $imoci[0]; ?>');
+        /*background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/hero_home.jpg');*/
+         
       }
     </style>
     <header id="trh" class="treat-header fullscreen">
@@ -42,7 +44,6 @@
                 <?php if (has_post_thumbnail()): ?>
                   <?php the_post_thumbnail('medium169'); ?>
                 <?php else : ?>
-                <!-- <img src="http://placehold.it/240x135/fff7ed/50496b" alt="<?php the_title(); ?>"> -->
                 <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/default-image.jpg" alt="<?php the_title(); ?>">
                 <?php endif; ?>
               </a>

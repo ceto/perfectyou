@@ -5723,7 +5723,7 @@ ul li {
       margin-top: 15px;
       height: 70px;
       width: 280px;
-      background-image: url('../img/logo_szurke.png'); } }
+      background-image: url('../img/logo_arany.png'); } }
   @media only screen and (min-width: 0px) {
     .fixedhead .brand {
       margin-top: 21px; }
@@ -5744,33 +5744,32 @@ ul li {
   width: 110px;
   height: 66px;
   vertical-align: center;
+  text-align: center;
   display: inline-block;
-  padding: 1.875em 1em 0;
+  padding: 0 1em;
+  font-weight: 400;
   background-color: #ffcf7b;
   font-size: 0.75em;
-  line-height: 1em;
-  font-weight: 500;
+  height: 66px;
+  line-height: 66px;
   text-decoration: none;
   text-transform: uppercase;
-  text-align: center;
   color: #4e4e4e; }
-  .btn-main small {
-    font-size: 83%;
-    letter-spacing: 1px;
-    display: block; }
   .btn-main:hover, .btn-main:focus {
     background-color: #50496b;
     border-color: #fff;
     color: #fff7ed; }
   @media only screen and (min-width: 768px) {
     .btn-main {
-      width: 130px;
       height: 97px;
-      padding: 2.5em 1em 0; }
+      font-size: 0.875em;
+      line-height: 97px;
+      padding: 0 1em;
+      width: auto; }
       .fixedhead .btn-main {
         bottom: 0;
-        padding-top: 1.333em;
-        height: 66px; } }
+        height: 66px;
+        line-height: 66px; } }
 
 .page-header {
   background-color: #baafa3;
@@ -5846,7 +5845,7 @@ ul li {
   @media only screen and (min-width: 0px) {
     .nav-main {
       float: right;
-      padding-right: 110px; } }
+      padding-right: 140px; } }
   @media only screen and (min-width: 768px) {
     .nav-main {
       display: block; } }
@@ -5937,9 +5936,6 @@ ul li {
       .nav-main li {
         display: inline-block;
         margin-left: 0.5em; } }
-    .nav-main li.active.dropdown > a {
-      background-color: #50496b;
-      color: #fff; }
     .nav-main li a {
       display: block;
       color: #312017;
@@ -6601,7 +6597,7 @@ ul li {
     font-size: 1.25em;
     font-weight: 300;
     line-height: 1;
-    margin: 0.25em 0 0 0;
+    margin: 0.333em 0 0 0;
     vertical-align: bottom; }
     @media only screen and (min-width: 768px) {
       .callme h3 {
@@ -6907,8 +6903,7 @@ ul li {
     .trh-one {
       padding: 1.5em 0.75em 1.5em 1.5em;
       width: 60%;
-      float: left;
-      margin-bottom: 5em; } }
+      float: left; } }
   @media only screen and (min-width: 1024px) {
     .trh-one {
       padding: 2em 1em 2em 2em;
@@ -6935,7 +6930,7 @@ ul li {
 
 .treat-headcats {
   display: inline-block;
-  background-color: #50496b;
+  background-color: #9a91ba;
   color: #fff7ed;
   padding: 0.25em 0.5em;
   text-transform: uppercase;
@@ -6946,7 +6941,7 @@ ul li {
     text-decoration: none;
     color: #fff7ed; }
     .treat-headcats a:hover, .treat-headcats a:focus {
-      color: #dce7e9; }
+      color: #3a285d; }
 
 .treat-title {
   color: #50496b;

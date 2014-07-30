@@ -10,6 +10,6 @@
       endif;
     ?>
   </nav>
-  <a data-toggle="collapse" href="#contact" class="btn-main"><?php _e('<small>Bejelentkezés</small>06.70.770.5653','root') ?></a>
+  <a data-toggle="collapse" href="#contact" class="btn-main"><?php _e('Bejelentkezés','root') ?></a>
 </header>
 <?php get_template_part('templates/contact','form' ); ?>
