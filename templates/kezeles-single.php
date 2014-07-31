@@ -36,16 +36,16 @@
           <a class="morebtn btn btn-filled" href="#lenyeg">Tovább a részletekre <i class="typcn typcn-arrow-sorted-down"></i></a>
           </div><!-- /.trh-one -->
           <div class="trh-two">
-
-            <figure class="trh-thumb">
-              <a href="<?php the_permalink(); ?>">
-                <?php if (has_post_thumbnail()): ?>
+            <?php if (has_post_thumbnail()): ?>
+              <?php $featimg = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
+              <figure class="trh-thumb">
+                <a href="<?php echo $featimg[0]; ?>" class="mfp-with-zoom mfp-img-mobile">
                   <?php the_post_thumbnail('medium169'); ?>
-                <?php else : ?>
-                <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/default-image.jpg" alt="<?php the_title(); ?>">
-                <?php endif; ?>
-              </a>
-            </figure>
+                </a>
+                <figcaption class="caption"><?php the_title(); ?></figcaption>
+              </figure>
+            <?php endif; ?>
+  
             <div class="treat-headaction">
               <ul class="nav">
                 <?php

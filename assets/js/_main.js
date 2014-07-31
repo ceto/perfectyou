@@ -183,7 +183,7 @@ jQuery(document).ready(function($){
   });
   /******* Image zoom ******/
 
-  $('figure a').magnificPopup({
+  $('.trh-thumb a, .subsec-figure a').magnificPopup({
     type: 'image',
     closeOnContentClick: true,
     mainClass: 'mfp-with-zoom mfp-img-mobile',

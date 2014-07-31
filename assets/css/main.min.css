@@ -5773,10 +5773,11 @@ ul li {
 
 .page-header {
   background-color: #baafa3;
-  background-position: center top;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: scroll;
   background-image: url('../img/arc_mos.jpg'); }
   .page-header .ph-inner {
     padding: 78px 0.5em 1em 0.5em;
@@ -7008,6 +7009,8 @@ ul li {
   padding: 2px; }
   .trh-thumb a:hover, .trh-thumb a:focus {
     background-color: #3d394e; }
+.trh-thumb .caption {
+  display: none; }
 
 .treat-headaction {
   margin: 1em 0;

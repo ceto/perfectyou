@@ -147,9 +147,10 @@
 
 .page-header{
   background-color: $brown-head;
-  background-position: center top;
-  background-size:  auto 100%;
+  background-position: center center;
+  background-size:  cover;
   background-repeat: no-repeat;
+  background-attachment:scroll;
   background-image:  url('../img/arc_mos.jpg') ;
   .blog &, .archive &{
     //background-color: transparent;
