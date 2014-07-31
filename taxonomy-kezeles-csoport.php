@@ -12,7 +12,7 @@
 
   $saved_data = get_tax_meta($term_id,'tc_image_field_id');
   $cat_img_id=$saved_data['id'];
-  $imoci=wp_get_attachment_image_src( $cat_img_id, 'full43');
+  $imoci=wp_get_attachment_image_src( $cat_img_id, 'bazi');
 ?>
 <style>
   .page-header{
