@@ -28,7 +28,9 @@ function roots_setup() {
 
   
   add_image_size('full43', 1600, 1200, true); 
-  add_image_size('full916', 900, 1600, true); 
+  add_image_size('full916', 900, 1600, true);
+
+  add_image_size('bazi', 1600, 9999); 
   
   // Add post formats (http://codex.wordpress.org/Post_Formats)
   // add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
