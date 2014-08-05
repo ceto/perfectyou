@@ -17,7 +17,7 @@
 <style>
   .page-header{
 
-  background-image: url('<?php echo $imoci[0]; ?>');
+  /*background-image: url('<?php echo $imoci[0]; ?>');*/
 
     
   }

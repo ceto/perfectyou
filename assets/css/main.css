@@ -5769,12 +5769,10 @@ ul li {
         line-height: 66px; } }
 
 .page-header {
-  background-color: #baafa3;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-image: url('../img/arc_mos.jpg'); }
+  background-attachment: scroll; }
   .page-header .ph-inner {
     padding: 78px 0.5em 1em 0.5em;
     max-width: 1024px;
