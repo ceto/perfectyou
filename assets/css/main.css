@@ -6756,6 +6756,8 @@ ul li {
     clear: both; }
   .kezeleslist .kezeles:hover .entry-subtitle, .kezeleslist .kezeles:focus .entry-subtitle {
     top: 0; }
+    .kezeleslist .kezeles:hover .entry-subtitle a:after, .kezeleslist .kezeles:focus .entry-subtitle a:after {
+      color: #dce7e9; }
   @media only screen and (min-width: 480px) {
     .kezeleslist .kezeles {
       float: left;
@@ -6813,13 +6815,27 @@ ul li {
     right: 0;
     bottom: 0;
     z-index: 1;
-    background-color: #50496b;
+    background-color: #3d394e;
     font-size: 14px;
-    font-weight: 300;
-    padding: 0.75em 7px;
+    font-weight: 400;
     margin: 0 0;
-    color: #fff;
-    font-weight: 300; }
+    padding: 0;
+    color: #fff; }
+    .kezeleslist .kezeles .entry-subtitle a {
+      padding: 10px;
+      display: block;
+      height: 100%;
+      color: #dce7e9; }
+      .kezeleslist .kezeles .entry-subtitle a:after {
+        content: "+";
+        position: absolute;
+        right: 10px;
+        bottom: 3px;
+        font-weight: 100;
+        font-size: 2em;
+        line-height: 1;
+        text-align: right;
+        color: #3d394e; }
   .kezeleslist .kezeles .entry-summary {
     padding: 0.5em 7px;
     font-weight: 500;

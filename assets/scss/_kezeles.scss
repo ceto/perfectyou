@@ -54,6 +54,11 @@
   &:hover, &:focus{
     .entry-subtitle{
       top:0;
+      a{
+        &:after{
+          color:$blue-superlight;  
+        }
+      }
     }    
   }
 
@@ -147,14 +152,42 @@
     right: 0;
     bottom:0;
     z-index: 1;
-    background-color: $blue-light;
+    background-color: $blue-dark;
     font-size:14px;
-    font-weight: 300;
-    padding:0.75em 7px;
+    font-weight: 400;
+    //padding:0.75em 7px;
     margin:0 0;
+    padding:0;
     color:#fff;
-    font-weight: 300;
+    //text-transform: uppercase;
+    //text-align: center;
     //display: none;
+    a{
+//      position: absolute;
+//      top:5px;
+//      right:5px;
+//      bottom:5px;
+//      left:5px;
+      padding:10px;
+      display: block;
+      height:100%;
+      color:$blue-superlight;
+      &:after{
+        content:"+";
+        position: absolute;
+        right:10px;
+        bottom:3px;
+        font-weight: 100;
+        font-size: 2em;
+        line-height: 1;
+        text-align: right;
+        color:$blue-dark;
+        &:hover{
+          //color:$blue-light;
+        }
+
+      }
+    }
 
 
   }

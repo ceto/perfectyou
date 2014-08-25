@@ -17,7 +17,7 @@
           Alak</a></li>
       <li class="kombinalt">
         <a href="<?php echo get_term_link('kulonleges','kezeles-csoport'); ?>">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_arc.png" alt="Arc">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ill_specialis.png" alt="Arc">
           Különleges</a></li>
     </ul>
   </nav><!-- /.nav-greaticon -->

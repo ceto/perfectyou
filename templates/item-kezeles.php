@@ -1,15 +1,14 @@
 <article <?php post_class(); ?>>
   <header>
     <figure class="entry-thumb">
-    <a href="<?php the_permalink(); ?>">
-      <?php if (has_post_thumbnail()): ?>
-        <?php the_post_thumbnail('thumb169'); ?>
-      <?php else : ?>
-      <!-- <img src="http://placehold.it/240x135/fff7ed/50496b" alt="<?php the_title(); ?>"> -->
-      <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/default-image.jpg" alt="<?php the_title(); ?>">
-      <?php endif; ?>
-    </a>
-    <h3 class="entry-subtitle"><a href="<?php the_permalink(); ?>"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></a></h3>
+      <a href="<?php the_permalink(); ?>">
+        <?php if (has_post_thumbnail()): ?>
+          <?php the_post_thumbnail('thumb169'); ?>
+        <?php else : ?>
+          <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/default-image.jpg" alt="<?php the_title(); ?>">
+        <?php endif; ?>
+      </a>
+      <h3 class="entry-subtitle"><a href="<?php the_permalink(); ?>"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></a></h3>
     </figure>
     <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     </header>
@@ -22,7 +21,7 @@
       ?>
           <li><a href="<?php the_permalink(); ?>#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
       <?php  } ?>
-          <li><a href="<?php the_permalink(); ?>#subsec-<?php echo $trno++;  ?>"><?php _e('Tippek és tanácsok a döntéshez','root') ?></a></li>
+          <!--li><a href="<?php the_permalink(); ?>#subsec-<?php echo $trno++;  ?>"><?php _e('Tippek és tanácsok a döntéshez','root') ?></a></li-->
     </ul>
   </div>
 </article>

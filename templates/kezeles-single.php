@@ -31,7 +31,7 @@
           <h1 class="treat-title"><?php the_title(); ?></h1>
 
           <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
-            <div class="treat-lead"><?php echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?></div>
+            <div class="treat-lead"><?php echo wpautop( get_post_meta( $post->ID, '_meta_lead', TURE ) );  ?></div>
           <?php endif ?>
           <a class="morebtn btn btn-filled" href="#lenyeg">Tovább a részletekre <i class="typcn typcn-arrow-sorted-down"></i></a>
           </div><!-- /.trh-one -->
