@@ -1,4 +1,6 @@
 .gallery {
+	@include clearfix();
+ 	clear:both;
  //background-color: $brown-light;
  padding:0.5em;
  //color:$blue-light;
@@ -11,6 +13,14 @@
 }
 
 .col-sm-3, .col-lg-3{
+  padding:0 0.25em;
+  @include bp($s2){
+    width:25%;
+    float:left;
+  }
+}
+
+.col-sm-4, .col-lg-4{
   padding:0 0.25em;
   @include bp($s2){
     width:33.333%;
