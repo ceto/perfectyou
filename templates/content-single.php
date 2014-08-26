@@ -1,4 +1,4 @@
-    <?php while (have_posts()) : the_post(); ?>
+<?php while (have_posts()) : the_post(); ?>
 <?php
   $taxes=wp_get_post_terms($post->ID, 'kezeles-csoport');
   //$current_term = $taxes[0];

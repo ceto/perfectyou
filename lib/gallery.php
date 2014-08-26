@@ -147,16 +147,15 @@ function py_gallery($attr) {
     'itemtag'    => '',
     'icontag'    => '',
     'captiontag' => '',
-    'columns'    => 4,
+    'columns'    => 3,
     'size'       => 'thumb43',
     'include'    => '',
     'exclude'    => '',
-    'link'       => ''
+    'link'       => 'file'
   ), $attr));
 
   $id = intval($id);
-  $columns = (12 % $columns == 0) ? $columns: 4;
-  $grid = sprintf('col-sm-%1$s col-lg-%1$s', 12/$columns);
+
 
   if ($order === 'RAND') {
     $orderby = 'none';
@@ -189,22 +188,13 @@ function py_gallery($attr) {
 
   $unique = (get_query_var('page')) ? $instance . '-p' . get_query_var('page'): $instance;
   $output = '<div class="gallery gallery-' . $id . '-' . $unique . '">';
+  
 
   $i = 0;
   foreach ($attachments as $id => $attachment) {
-    switch($link) {
-      case 'file':
-        $image = wp_get_attachment_link($id, $size, false, false);
-        break;
-      case 'none':
-        $image = wp_get_attachment_image($id, $size, false, array('class' => 'thumbnail img-thumbnail'));
-        break;
-      default:
-        $image = wp_get_attachment_link($id, $size, true, false);
-        break;
-    }
-    $output .= ($i % $columns == 0) ? '<div class="row gallery-row">': '';
-    $output .= '<div class="' . $grid .'">' . $image;
+    $image = wp_get_attachment_link($id, $size, false, false);
+    
+    $output .= '<div class="gallery-item">' . $image;
 
     if (trim($attachment->post_excerpt)) {
       $output .= '<div class="caption hidden">' . wptexturize($attachment->post_excerpt) . '</div>';
@@ -212,14 +202,14 @@ function py_gallery($attr) {
 
     $output .= '</div>';
     $i++;
-    $output .= ($i % $columns == 0) ? '</div>' : '';
+
   }
 
-  $output .= ($i % $columns != 0 ) ? '</div>' : '';
   $output .= '</div>';
 
   return $output;
 }
+
   remove_shortcode('gallery');
   add_shortcode('gallery', 'py_gallery');
   add_filter('use_default_gallery_style', '__return_null');

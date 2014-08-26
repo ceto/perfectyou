@@ -5588,7 +5588,7 @@ figure.thumbnail {
   font-size: 0.75em;
   font-weight: 300;
   font-style: italic;
-  margin-top: 0.5em; }
+  text-align: center; }
 
 img {
   vertical-align: middle;
@@ -7586,7 +7586,7 @@ select {
 
 .gallery {
   clear: both;
-  padding: 0.5em;
+  margin: 1em 0;
   border: 1px solid #9a91ba; }
   .gallery:before, .gallery:after {
     content: " ";
@@ -7594,27 +7594,51 @@ select {
   .gallery:after {
     clear: both; }
 
-.gallery-row {
-  margin: 0 -0.25em; }
-  .gallery-row:before, .gallery-row:after {
-    content: " ";
-    display: table; }
-  .gallery-row:after {
-    clear: both; }
-
-.col-sm-3, .col-lg-3 {
-  padding: 0 0.25em; }
+.gallery-item {
+  padding: 0.5em 0.5em;
+  width: 50%;
+  float: left; }
+  .gallery-item:nth-child(2n+1) {
+    clear: left; }
   @media only screen and (min-width: 768px) {
-    .col-sm-3, .col-lg-3 {
-      width: 25%;
-      float: left; } }
-
-.col-sm-4, .col-lg-4 {
-  padding: 0 0.25em; }
-  @media only screen and (min-width: 768px) {
-    .col-sm-4, .col-lg-4 {
-      width: 33.333%;
-      float: left; } }
+    .gallery-item {
+      width: 33.333%; }
+      .gallery-item:nth-child(2n+1) {
+        clear: none; }
+      .gallery-item:nth-child(3n+1) {
+        clear: left; } }
+  .gallery-item .thumbnail {
+    background-color: #3d394e;
+    display: inline-block;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+    .gallery-item .thumbnail:hover:after, .gallery-item .thumbnail:focus:after {
+      opacity: 1; }
+    .gallery-item .thumbnail:hover img, .gallery-item .thumbnail:focus img {
+      -webkit-filter: Grayscale(1);
+      filter: Grayscale(1); }
+    .gallery-item .thumbnail:after {
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      display: block;
+      position: absolute;
+      content: "+";
+      font-size: 2em;
+      line-height: 0;
+      font-weight: 100;
+      color: #cecece;
+      text-align: center;
+      padding-top: 36%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(44, 43, 61, 0.75);
+      opacity: 0; }
+    .gallery-item .thumbnail img {
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease; }
 
 /* Magnific Popup CSS */
 .mfp-bg {
