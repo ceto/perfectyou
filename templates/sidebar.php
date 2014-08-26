@@ -1,7 +1,6 @@
 <?php if ( !is_page() && !is_single() && !is_archive()  && !is_front_page() && !is_home() ): ?>
   <?php get_template_part('templates/ill','nav' ); ?>
 <?php endif ?>
-
 <aside class="sidebar-contact" role="complementary">
   <div class="sidebar-inner">
   	<a href="<?php echo get_bloginfo('home'); ?>" class="clogo">
