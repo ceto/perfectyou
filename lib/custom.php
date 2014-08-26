@@ -153,7 +153,7 @@ function create_treat_cat() {
     'rewrite'           => array( 'slug' => 'kezelesek' ),
   );
 
-  register_taxonomy( 'kezeles-csoport', array( 'kezeles' ), $args );
+  register_taxonomy( 'kezeles-csoport', array( 'kezeles','post' ), $args );
 }
 
 
@@ -266,6 +266,7 @@ function alter_treat_cat_query($query) {
     global $wp_query;
     if ( $wp_query->get('kezeles-csoport')  &&  $wp_query->is_main_query() ){
       $wp_query->set('posts_per_page', -1);
+      $wp_query->set('post_type', 'kezeles');
       remove_all_actions ( '__after_loop');
     } 
 }

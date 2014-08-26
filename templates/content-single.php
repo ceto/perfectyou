@@ -1,3 +1,9 @@
+    <?php while (have_posts()) : the_post(); ?>
+<?php
+  $taxes=wp_get_post_terms($post->ID, 'kezeles-csoport');
+  //$current_term = $taxes[0];
+?>
+
 <div class="subsections">
 
   <aside class="subsec-sidebar">
@@ -6,9 +12,16 @@
       <nav class="subsec-nav">
         <header class="subsec-navhead">
           <div class="subsec-navbread">
-            <?php the_category( ' · '); ?> 
+              <?php $iterka=0; ?>            
+              <?php foreach ($taxes as $current_term): ?>
+                <?php if ($iterka++!=0) echo '·'; ?>
+                <a href="<?php echo esc_url( get_term_link($current_term->term_id,'kezeles-csoport') ); ?>" title="<?php echo $current_term->name; ?>">
+                  <?php echo $current_term->name; ?>
+                </a>
+                
+              <?php endforeach ?>
           </div>
-          <h3>Jelentkezzen bevatkozásra</h3>
+          <h3>Válasszon bevatkozást</h3>
         </header>
         <?php
           $reference_ID=get_the_id();
@@ -53,7 +66,7 @@
     </div>
   </aside>
   <section id="subsec-article" class="subsec">
-    <?php while (have_posts()) : the_post(); ?>
+
         <?php 
           $bg = wp_get_attachment_image_src( get_post_thumbnail_id(),'large' );
         ?>
@@ -86,17 +99,17 @@
           </div>
         </article>
 
-    <?php endwhile; ?>
+
   </section>
   <section id="subsec-related" class="side-related subsec">
     <header class="subsec-header">
       <div class="ss-hinner">
-        <h2 class="subsec-title"><?php _e('Kapcsolódó tartalmak','roots') ?></h2>
+        <h2 class="subsec-title"><?php _e('Kapcsolódó írások a tudástárból','roots') ?></h2>
       </div>
     </header>
     <div class="subsec-inner">
       <div class="subsec-cont">
-        <p>Tudástárunk kapcsolódó írásai segítségedre lesznek, a téma köröljárásában. Ha döntés előtt állsz feltétlenül tájékozódj.</p>
+        <!--p>Tudástárunk kapcsolódó írásai segítségedre lesznek, a téma köröljárásában. Ha döntés előtt állsz feltétlenül tájékozódj.</p-->
           <?php
             $reference_ID=get_the_id();
             yarpp_related(
@@ -137,3 +150,4 @@
     </div>
   </section>
 </div>
+    <?php endwhile; ?>

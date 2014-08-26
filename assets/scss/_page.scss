@@ -7,6 +7,7 @@
 .subsec{
   @include clearfix();
   position: relative;
+  //font-size: 0.875em;
   
   //background-color: #fff;
   
@@ -59,6 +60,12 @@
   @include bp($s5){
     width: calc(100% - 550px);
   }
+}
+
+.side-related{
+  background-color: $blue-speci;
+  color:$blue-superlight;
+  background-image:none;
 }
 
 .subsec-inner{

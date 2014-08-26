@@ -6174,6 +6174,11 @@ ul li {
       width: -webkit-calc(100% - 550px);
       width: calc(100% - 550px); } }
 
+.side-related {
+  background-color: #2c2b3d;
+  color: #dce7e9;
+  background-image: none; }
+
 .subsec-inner {
   padding: 0 0.5em; }
   @media only screen and (min-width: 320px) {
@@ -6712,24 +6717,45 @@ ul li {
     clear: both; }
 
 /**** Kezelésekhez kapcsolódó cikkek ******/
+.related-entries:before, .related-entries:after {
+  content: " ";
+  display: table; }
+.related-entries:after {
+  clear: both; }
 .related-entries .post, .related-entries .page {
-  margin: 3em 0; }
+  margin: 3em 0;
+  font-size: 0.875em; }
+  @media only screen and (min-width: 768px) {
+    .related-entries .post, .related-entries .page {
+      width: 50%;
+      float: left;
+      padding-left: 1.5em; }
+      .related-entries .post:nth-child(2n+1), .related-entries .page:nth-child(2n+1) {
+        clear: left;
+        padding-right: 1.5em;
+        padding-left: 0; } }
+  .related-entries .post .entry-title, .related-entries .page .entry-title {
+    font-size: 1.25em;
+    text-transform: none;
+    font-weight: 500; }
+    .related-entries .post .entry-title a, .related-entries .page .entry-title a {
+      color: #cecece; }
+      .related-entries .post .entry-title a:hover, .related-entries .post .entry-title a:focus, .related-entries .page .entry-title a:hover, .related-entries .page .entry-title a:focus {
+        color: #ffcf7b; }
   .related-entries .post .entry-cat, .related-entries .page .entry-cat {
     display: none; }
   .related-entries .post .entry-time, .related-entries .page .entry-time {
     display: none; }
   .related-entries .post .entry-summary > p a, .related-entries .page .entry-summary > p a {
     display: none; }
-  .related-entries .post .entry-summary > p:first-letter, .related-entries .page .entry-summary > p:first-letter {
-    float: left;
-    color: #50496b;
-    font-size: 3em;
-    line-height: 1;
-    padding-right: 0.125em;
-    font-weight: 300;
-    text-transform: uppercase; }
   .related-entries .post .entry-summary .btn, .related-entries .page .entry-summary .btn {
-    font-size: 0.875em; }
+    font-size: 0.875em;
+    color: #cecece;
+    border-color: #cecece; }
+    .related-entries .post .entry-summary .btn:hover, .related-entries .post .entry-summary .btn:focus, .related-entries .page .entry-summary .btn:hover, .related-entries .page .entry-summary .btn:focus {
+      background-color: transparent;
+      border-color: #ffcf7b;
+      color: #ffcf7b; }
 
 .kezeleslist {
   background-image: url('../img/pattern-x.png');
@@ -7066,7 +7092,7 @@ ul li {
   text-shadow: 1px 1px #3d394e;
   padding: 0 0.5em;
   color: #fff7ed;
-  background-color: #3d394e;
+  background-color: #2c2b3d;
   background-image: url('../img/doktor_ablaknal_jobb.jpg');
   background-position: right center;
   -webkit-background-size: auto 100%;

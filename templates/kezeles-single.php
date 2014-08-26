@@ -55,7 +55,7 @@
                 ?>
                   <li><a class="" href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
                 <?php  } ?>
-                  <li><a href="#subsec-<?php echo $trno++;  ?>"><?php _e('Tippek és tanácsok a döntéshez','root') ?></a></li>
+                  <li><a href="#subsec-<?php echo $trno++;  ?>"><?php _e('Tudástár','root') ?></a></li>
               </ul>
             </div>
             
@@ -107,7 +107,7 @@
           ?>
               <li><a href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
           <?php  } ?>
-              <li><a href="#subsec-<?php echo $trno++;  ?>"><?php _e('Tippek és tanácsok a döntéshez','root') ?></a></li>
+              <li><a href="#subsec-<?php echo $trno++;  ?>"><?php _e('Tudástár','root') ?></a></li>
         </ul>
         
       </nav>
@@ -166,12 +166,12 @@
       <section id="subsec-<?php echo $trno++;  ?>" class="side-related subsec">
         <header class="subsec-header">
           <div class="ss-hinner">
-            <h2 class="subsec-title"><?php _e('Tippek, tanácsok a döntéshez','roots') ?></h2>
+            <h2 class="subsec-title"><?php _e('Kapcsolódó írások a tudástárból','roots') ?></h2>
           </div>
         </header>
         <div class="subsec-inner">
           <div class="subsec-cont">
-            <p>Tudástárunk kapcsolódó írásai segítségedre lesznek, a téma köröljárásában. Ha döntés előtt állsz feltétlenül tájékozódj.</p>
+            <!--p>Tudástárunk kapcsolódó írásai segítségedre lesznek, a téma köröljárásában. Ha döntés előtt állsz feltétlenül tájékozódj.</p-->
               <?php
                 $reference_ID=get_the_id();
                 yarpp_related(
