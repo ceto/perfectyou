@@ -82,7 +82,7 @@
           <header class="subsec-header">
             <div class="ss-hinner">
               <h1 class="subsec-title"><?php the_title(); ?></h1>
-              <div class="subsec-meta"><?php get_template_part('templates/entry-meta'); ?></div>
+              <!--div class="subsec-meta"><?php get_template_part('templates/entry-meta'); ?></div-->
             </div>
           </header>
           <div class="subsec-inner">
@@ -141,7 +141,7 @@
 
                 // Display options:
                 'template' => 'yarpp-template-rp.php', // either the name of a file in your active theme or the boolean false to use the builtin template
-                'limit' => 4, // maximum number of results
+                'limit' => 6, // maximum number of results
                 'order' => 'score DESC'
               ),
               $reference_ID, // second argument: (optional) the post ID. If not included, it will use the current post.

@@ -31,7 +31,7 @@
           <h1 class="treat-title"><?php the_title(); ?></h1>
 
           <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
-            <div class="treat-lead"><?php echo wpautop( get_post_meta( $post->ID, '_meta_lead', TURE ) );  ?></div>
+            <div class="treat-lead"><?php the_content(); ?></div>
           <?php endif ?>
           <a class="morebtn btn btn-filled" href="#lenyeg">Tovább a részletekre <i class="typcn typcn-arrow-sorted-down"></i></a>
           </div><!-- /.trh-one -->
@@ -74,8 +74,8 @@
         <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
          <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
         <?php endif ?>
-
-        <?php the_content(); ?>
+        <?php echo wpautop( get_post_meta( $post->ID, '_meta_lead', TURE ) );  ?>
+        
       </div>
 
 
@@ -157,9 +157,9 @@
               <?php echo apply_filters('the_content', $entry['content'] );?>
             </div>
           </div>
-          <div class="subsec-action">
+          <!--div class="subsec-action">
             <?php get_template_part('templates/call','me' ); ?>
-          </div>
+          </div-->
         </section>
       <?php  } ?>
       
@@ -201,7 +201,7 @@
 
                     // Display options:
                     'template' => 'yarpp-template-rp.php', // either the name of a file in your active theme or the boolean false to use the builtin template
-                    'limit' => 4, // maximum number of results
+                    'limit' => 6, // maximum number of results
                     'order' => 'score DESC'
                   ),
                   $reference_ID, // second argument: (optional) the post ID. If not included, it will use the current post.

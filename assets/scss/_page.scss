@@ -166,6 +166,7 @@
     font-weight: 100;
     margin:0;
     padding:0;
+    text-transform:uppercase;
 
     @include bp($s1){
       font-size: 2.5em;

@@ -396,11 +396,17 @@
 
 .trh-thumb{
   a{
-    display: inline-block;
-    background-color: $blue-light;
-    padding:2px;
+    display: block;
+    
+    img {
+      border:1px solid $purple-light;
+    }
     &:hover, &:focus{
-      background-color:$blue-dark;
+      
+      img {
+        display:block;
+        border-color:$blue-dark;
+      }
     }
   }
   .caption{

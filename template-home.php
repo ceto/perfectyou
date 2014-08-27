@@ -108,8 +108,6 @@ Template Name: Homepage Template
                   <?php get_template_part('templates/item', get_post_type()); ?>
               <?php endif ?>
             <?php endwhile; ?>
-            <hr>
-            <a href="?cat=35" class="btn">További beavatkozások</a>
           </div>
         </section>
         <?php endif; ?>
@@ -143,8 +141,6 @@ Template Name: Homepage Template
                   <?php get_template_part('templates/item', get_post_type()); ?>
               <?php endif ?>
             <?php endwhile; ?>
-            <hr>
-            <a href="?cat=36" class="btn">Még több szépítő beavatkozások</a>
           </div>
         </section>
         <?php endif; ?>
@@ -178,8 +174,6 @@ Template Name: Homepage Template
                   <?php get_template_part('templates/item', get_post_type()); ?>
               <?php endif ?>
             <?php endwhile; ?>
-            <hr>
-            <a href="?cat=33" class="btn">Mutasd mindet</a>
           </div>
         </section>
         <?php endif; ?>

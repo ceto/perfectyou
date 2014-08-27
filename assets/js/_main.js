@@ -132,7 +132,7 @@ var resizeHero = function() {
     $('.home-hero').height($(window).height() - $('.callme').height());
     $('.treat-header').height($(window).height() - $('.callme').height());
 
-    $('.contact-body').height( $(window).height());
+    $('.contact-body').height( $(window).height() - 140);
   } else {
     $('.home-hero').height(600);
     $('.treat-header').height(700);

@@ -2,16 +2,19 @@
   @include clearfix();
   position:fixed;
   left:0; top:0;
-  right:0; bottom:0;
+  right:0; 
+  bottom:0;
   z-index: 4;
   border-top:3px solid $yellow;
   background-color: $blue-dark;
   color:$brown-superlight;
+  overflow: auto;
   @include bp($s1){
   }
 
   .contact-body{
     @include clearfix();
+
     position: relative;
     padding:1em 0.5em;
     max-width: $s3;

@@ -1,8 +1,9 @@
 .gallery {
 	@include clearfix();
  	clear:both;
-  margin:1em 0;
-  border:1px solid $purple-light;
+  margin:1em -0.5em;
+  //border:1px solid $purple-light;
+  //background-color: $white;
 }
 
 .gallery-item{
@@ -28,6 +29,7 @@
     display: inline-block;
     position: relative;
     transition: all .4s ease;
+    border: 1px solid $purple-light;
     
     &:hover, &:focus{    
      &:after{
