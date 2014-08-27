@@ -12,14 +12,16 @@
       <nav class="subsec-nav">
         <header class="subsec-navhead">
           <div class="subsec-navbread">
-              <?php $iterka=0; ?>            
+              <?php /* $iterka=0; ?>            
               <?php foreach ($taxes as $current_term): ?>
                 <?php if ($iterka++!=0) echo '·'; ?>
                 <a href="<?php echo esc_url( get_term_link($current_term->term_id,'kezeles-csoport') ); ?>" title="<?php echo $current_term->name; ?>">
                   <?php echo $current_term->name; ?>
                 </a>
                 
-              <?php endforeach ?>
+              <?php endforeach; */ ?>
+              Kapcsolódó kezelések
+
           </div>
           <h3>Válasszon bevatkozást</h3>
         </header>
@@ -39,7 +41,7 @@
                   'body' => 2,
                   'title' => 1, // larger weights mean this criteria will be weighted more heavily
                   'tax' => array(
-                      'category' => 3,
+                      'kezeles-csoport' => 3,
                       'post_tag' => 3 // put any taxonomies you want to consider here with their weights
                   )
               ),

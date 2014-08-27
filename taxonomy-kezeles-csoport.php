@@ -44,7 +44,7 @@
 
 
 
-<section class="side-related">
+<section class="side-related kezeleslist-related">
   <header class="subsec-header">
     <div class="ss-hinner">
       <h2 class="subsec-title"><?php _e('Kapcsolódó írások a tudástárból','roots') ?></h2>

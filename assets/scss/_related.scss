@@ -51,6 +51,18 @@
       //     text-transform:uppercase;
       //     //font-family: Georgia;
       // }
+
+      > p:first-letter { 
+          float: none;
+          color: inherit;
+          font-size: inherit;
+          line-height: inherit;
+          padding-right:0;
+          font-weight: inherit;
+          text-transform:inherit;
+          //font-family: Georgia;
+      }
+
       .btn{
         font-size: 0.875em;
         color:$white;

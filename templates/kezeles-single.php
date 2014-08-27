@@ -188,7 +188,7 @@
                         'body' => 2,
                         'title' => 1, // larger weights mean this criteria will be weighted more heavily
                         'tax' => array(
-                            'category' => 3,
+                            'kezeles-csoport' => 3,
                             'post_tag' => 3 // put any taxonomies you want to consider here with their weights
                         )
                     ),

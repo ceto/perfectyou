@@ -6006,11 +6006,11 @@ ul li {
   .subsec-nav .subsec-navhead .subsec-navbread {
     font-weight: 700;
     font-size: 1.25em;
-    color: #ffcf7b; }
+    color: #ffcf7b;
+    text-transform: uppercase; }
     .subsec-nav .subsec-navhead .subsec-navbread a {
       color: #ffcf7b;
-      text-decoration: none;
-      text-transform: uppercase; }
+      text-decoration: none; }
       .subsec-nav .subsec-navhead .subsec-navbread a:hover, .subsec-nav .subsec-navhead .subsec-navbread a:focus {
         color: #fadabd; }
 .subsec-nav ul {
@@ -6177,7 +6177,11 @@ ul li {
 .side-related {
   background-color: #2c2b3d;
   color: #dce7e9;
-  background-image: none; }
+  background-image: none;
+  padding-top: 4em;
+  padding-bottom: 4em; }
+  .side-related .subsec-header:before {
+    display: none; }
 
 .subsec-inner {
   padding: 0 0.5em; }
@@ -6748,6 +6752,14 @@ ul li {
     display: none; }
   .related-entries .post .entry-summary > p a, .related-entries .page .entry-summary > p a {
     display: none; }
+  .related-entries .post .entry-summary > p:first-letter, .related-entries .page .entry-summary > p:first-letter {
+    float: none;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    padding-right: 0;
+    font-weight: inherit;
+    text-transform: inherit; }
   .related-entries .post .entry-summary .btn, .related-entries .page .entry-summary .btn {
     font-size: 0.875em;
     color: #cecece;
@@ -6903,6 +6915,7 @@ ul li {
       color: #50496b; }
       .kezeleslist .kezeles .entry-summary a:hover, .kezeleslist .kezeles .entry-summary a:focus {
         color: #f37077; }
+
 
 /************ Single Kezeles Style *******/
 .treat-header {

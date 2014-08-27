@@ -66,6 +66,14 @@
   background-color: $blue-speci;
   color:$blue-superlight;
   background-image:none;
+  padding-top:4em;
+  padding-bottom:4em;
+
+  .subsec-header{
+    &:before{
+      display:none;
+    }
+  }
 }
 
 .subsec-inner{

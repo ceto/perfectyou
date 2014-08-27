@@ -290,11 +290,12 @@
       font-weight: 700;
       font-size:1.25em;
       color:$yellow;
+      text-transform: uppercase;
       
       a {
         color:$yellow;
         text-decoration: none;
-        text-transform: uppercase;
+        
         &:hover, &:focus{
           color:$brown-light;
         }
