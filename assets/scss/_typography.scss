@@ -32,7 +32,10 @@ p{
     line-height: 1.5;
     font-weight: 300;
     //color:$purple;
-    margin-top:3em;
+    //margin-top:3em;
+    @include bp($s1){
+      margin-top:0;
+    }
     strong, b {
       font-weight: 300;
     }

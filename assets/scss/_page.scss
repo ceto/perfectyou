@@ -70,6 +70,7 @@
   padding-bottom:4em;
 
   .subsec-header{
+    background-color: transparent;
     &:before{
       display:none;
     }
@@ -90,18 +91,18 @@
     //max-width: 42em;
   }
   @include bp($s2){
-    padding:2em 2em;
+    padding:0 2em 4em 2em;
     //max-width:42em;
   }
   @include bp($s3){
-    padding:2em 2em;
+    padding:0 2em 4em 2em;
   }
 }
 
 .subsec-header{
   @include clearfix();
   position: relative;
-  //background-color: $brown-superlight;
+  //background-color: #fff;
   
   // background-color: #fff;
   // background-image:url('../img/pattern-x.png');

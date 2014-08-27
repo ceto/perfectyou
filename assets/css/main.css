@@ -5519,8 +5519,10 @@ strong, b {
 .subsec-cont > p:first-of-type {
   font-size: 1.25em;
   line-height: 1.5;
-  font-weight: 300;
-  margin-top: 3em; }
+  font-weight: 300; }
+  @media only screen and (min-width: 480px) {
+    .subsec-cont > p:first-of-type {
+      margin-top: 0; } }
   .subsec-cont > p:first-of-type strong, .subsec-cont > p:first-of-type b {
     font-weight: 300; }
   .subsec-cont > p:first-of-type:first-letter {
@@ -6169,8 +6171,10 @@ ul li {
   background-image: none;
   padding-top: 4em;
   padding-bottom: 4em; }
-  .side-related .subsec-header:before {
-    display: none; }
+  .side-related .subsec-header {
+    background-color: transparent; }
+    .side-related .subsec-header:before {
+      display: none; }
 
 .subsec-inner {
   padding: 0 0.5em; }
@@ -6182,10 +6186,10 @@ ul li {
       padding: 2em 1em; } }
   @media only screen and (min-width: 768px) {
     .subsec-inner {
-      padding: 2em 2em; } }
+      padding: 0 2em 4em 2em; } }
   @media only screen and (min-width: 1024px) {
     .subsec-inner {
-      padding: 2em 2em; } }
+      padding: 0 2em 4em 2em; } }
 
 .subsec-header {
   position: relative; }
