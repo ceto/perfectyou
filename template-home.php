@@ -52,7 +52,7 @@ Template Name: Homepage Template
     </blockquote>
   
     <p>A folyamatos szakmai képzés elengedhetetlen ahhoz, hogy a nívós szaktudásnak köszönhetően a lehető legjobb ellátást nyújtsuk, ezért vagyunk elkötelezettek amellett, hogy pácienseinknek mindezt kizárólag up-to-date technikákkal, kiváló eszközökkel, technológiákkal és a legjobb minőségű alapanyagokkal biztosítsuk.</p>
-    <a href="#" class="btn">Bővebben</a>
+    <a href="<?php echo get_permalink(790); ?>" class="btn">Bővebben</a>
    </div>
 </section>
 

@@ -32,7 +32,7 @@
   <section id="subsec-article" class="subsec">
     <?php while (have_posts()) : the_post(); ?>
         <?php 
-          $bg = wp_get_attachment_image_src( get_post_thumbnail_id(),'large' );
+          $bg = wp_get_attachment_image_src( get_post_thumbnail_id(),'full916' );
         ?>
         <style>
           .subsec-sidebar{
@@ -50,7 +50,7 @@
             <div class="subsec-cont">
               <?php if (has_post_thumbnail()) :?>
                 <figure class="entry-figure">
-                  <?php the_post_thumbnail(); ?>
+                  <?php the_post_thumbnail('medium916'); ?>
                 </figure>
               <?php endif; ?>              
               <?php the_content(); ?>

@@ -89,7 +89,7 @@
             <div class="subsec-cont">
               <?php if (has_post_thumbnail()) :?>
                 <figure class="entry-figure">
-                  <?php the_post_thumbnail(); ?>
+                  <?php the_post_thumbnail('medium916'); ?>
                 </figure>
               <?php endif; ?>              
               <?php the_content(); ?>
