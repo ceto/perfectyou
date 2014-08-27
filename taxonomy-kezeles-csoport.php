@@ -41,6 +41,46 @@
 
   </div>
 </section>
+
+
+
+<section class="side-related">
+  <header class="subsec-header">
+    <div class="ss-hinner">
+      <h2 class="subsec-title"><?php _e('Kapcsolódó írások a tudástárból','roots') ?></h2>
+    </div>
+  </header>
+  <div class="subsec-inner">
+    <div class="subsec-cont">
+
+      <?php 
+        $related_posts = new Wp_Query(
+          array(
+            'post_type' => 'post',
+            'post_per_page' => -1,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'kezeles-csoport',
+                'field'    => 'slug',
+                'terms'    => $current_term
+              )
+            ),
+          )
+        );
+      ?>
+      <?php if ($related_posts->have_posts()):?>
+        <aside class="related-entries">
+          <?php while ($related_posts->have_posts()) : $related_posts->the_post(); ?>
+            <?php get_template_part('templates/item', 'post'); ?>
+          <?php endwhile; ?>
+        </aside>
+        <?php else: ?>
+        <?php _e('Nincsenek kapcsolódó írások','roots') ?>
+      <?php endif; ?>
+
+    </div>
+  </div>
+</section>
 <?php // get_template_part('templates/call','me' ); ?>
 
 <?php // get_template_part('templates/call','me' ); ?>
