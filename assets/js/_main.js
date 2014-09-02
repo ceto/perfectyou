@@ -116,13 +116,16 @@ $(function() {
 
 
 var resizeHero = function() {
-
   if ($(window).width() >= 1024) {
     $('.subsec-sidebar').height( $(window).height()  );
+    $('.subsec-sidebar').addClass('fixed');
+    $('.subsec-sidebar').removeClass('bottom');
   } else {
     $('.subsec-sidebar').removeClass('fixed');
+    $('.subsec-sidebar').removeClass('bottom');
     $('.subsec-sidebar').height( 'auto');
   }
+
   
   if ( ($(window).height() > 700) ) {
 
@@ -137,6 +140,7 @@ var resizeHero = function() {
     $('.home-hero').height(600);
     $('.treat-header').height(700);
     $('.homeh-inner').css('margin-top','140px');
+
   }
 
 
@@ -151,6 +155,7 @@ var resizeHero = function() {
 
 jQuery(window).resize(function(){
   resizeHero();
+
 });
 
 
@@ -204,23 +209,30 @@ jQuery(document).ready(function($){
   });
 
   /************* Subsec sidebar Fixing ***********/
+
+
   if ( ($('.subsec-sidebar').length > 0)  && ($(window).width() >= 1024) ){
+    
+
     $(window).scroll(function (event) {
 
       var topi = $('.subsections').offset().top;
       var bottomi =  $('.subsections').offset().top + $('.subsections').height() - $(window).height();
       
-      var ypsz = $(this).scrollTop();
-      if (ypsz >= topi ) {
-        $('.subsec-sidebar').addClass('fixed');
-      } else {
-        $('.subsec-sidebar').removeClass('fixed');
+      if ($(window).width() >= 1024) {
+        var ypsz = $(this).scrollTop();
+        if (ypsz >= topi ) {
+          $('.subsec-sidebar').addClass('fixed');
+        } else {
+          $('.subsec-sidebar').removeClass('fixed');
+        }
+        if (ypsz >= bottomi ) {
+          $('.subsec-sidebar').addClass('bottom');
+        } else {
+          $('.subsec-sidebar').removeClass('bottom');
+        }
       }
-      if (ypsz >= bottomi ) {
-        $('.subsec-sidebar').addClass('bottom');
-      } else {
-        $('.subsec-sidebar').removeClass('bottom');
-      }
+
     });
 
   }

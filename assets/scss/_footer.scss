@@ -1,6 +1,7 @@
 .content-info{
   @include clearfix();
   position: relative;
+  z-index:1;
   font-size: 0.75em;
   padding:1.5em 0.5em;
   background-color: #000;

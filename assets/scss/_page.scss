@@ -1,7 +1,7 @@
 .subsections {
   @include clearfix();
   position: relative;
-  //background-color: $blue-dark;
+  background-color: $blue-dark;
 
 }
 .subsec{
@@ -16,6 +16,7 @@
   background-repeat: repeat;
   background-position: center center;
   background-size: auto auto;
+  background-color: $brown-superlight;
 
 
 
@@ -53,6 +54,7 @@
     float:right;
     width: calc(100% - 300px);
     border-left: none;
+   
   }
   @include bp($s4){
     width: calc(100% - 350px);

@@ -1,4 +1,6 @@
 .sidebar-contact{
+  position: relative;
+  z-index:1;
   background-color: $gray-superdark;
   .sidebar-inner {
     padding:2em 1em;
@@ -61,6 +63,8 @@
     margin:0 auto;
   }
 .sidebar{
+  position:relative;
+  z-index:1;
   background-position: center 95%, center center;
   background-repeat: no-repeat;
   background-size: 75% auto, cover;
@@ -142,6 +146,8 @@
   }
 }
 .sidebar-search{
+  position: relative;
+  z-index:1;
   background-color: $gray-superdark;
   .social-icons{
     margin:1em 0 0;
@@ -270,6 +276,8 @@
   @include clearfix();
   color:$brown-superlight;
   position: relative;
+
+
   padding:0 0;
   margin:0 0;
   //opacity: 0;
@@ -279,7 +287,7 @@
   background-color: $blue-dark;
   //background-image: url('../img/logo_fuggo_signos.png');
   background-image: url('../img/istvan_szilikonnal.jpg');
-  background-position: center bottom;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -291,6 +299,9 @@
     clear:left;
     float:left;
     width: 300px;
+    background-position: center bottom;
+
+
   }
   @include bp($s4){
     width: 350px;
@@ -309,6 +320,10 @@
     @include bp($s2){
       float:none;
     }
+    @include bp($s3){
+      float:none;
+      clear:none;
+    }
     &.bottom {
       position:absolute;
       left:0;
@@ -326,12 +341,13 @@
 
 .sss-inner{
   
-  left:0; right:0;
-  top:0;bottom:0;
+
   background-color: rgba($blue-dark,0.85);
   //filter:blur(2px);
   @include bp($s3){
       position: absolute;
+      left:0; right:0;
+      top:0;bottom:0;
     }
 }
 

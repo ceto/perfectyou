@@ -230,6 +230,7 @@
   color:$purple-pot;
 
   height: 700px;
+  z-index:1;
 
 
   @include bp($s0){
@@ -477,6 +478,8 @@
 
 .treat-content {
   @include clearfix();
+  position: relative;
+  z-index:1;
   //border-top: 200px solid #fff;
   //border-bottom: 200px solid #fff;
   text-shadow:1px 1px $blue-dark;

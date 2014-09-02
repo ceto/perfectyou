@@ -77,6 +77,8 @@
         <?php else: ?>
         <?php _e('Nincsenek kapcsolódó írások','roots') ?>
       <?php endif; ?>
+      <?php $kk = get_category_by_slug($current_term->slug ); ?>
+      <a href="<?php echo get_category_link( $kk->term_id ); ?> " class="">További írások a blogban</a>
 
     </div>
   </div>
