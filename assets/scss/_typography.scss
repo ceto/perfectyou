@@ -28,9 +28,9 @@ strong, b{
 
 p{
   .subsec-cont > &:first-of-type {
-    font-size:1.25em;
-    line-height: 1.5;
-    font-weight: 300;
+    //font-size:1.25em;
+    //line-height: 1.5;
+    //font-weight: 300;
     //color:$purple;
     //margin-top:3em;
     @include bp($s1){
@@ -93,7 +93,7 @@ h3, .h3 { // In blog post sub sections
 }
 h4, .h4 {
   font-size: 1.25rem;
-  margin: 0 0 0.8rem 0;
+  margin-top: 2rem;
   font-weight: 400;
   //text-transform: uppercase;
   //font-variant: small-caps;
@@ -165,12 +165,14 @@ blockquote {
 
 
   ul, ol{
-    //padding-left: 0;
-
+    margin:2em 0;
+    h2 + &, h3 + &, h4 + & {
+      margin-top: 1em;
+    }
   }
 
   li{
-    margin:0.666em 0;
+    margin:0.5em 0;
     
   }
   

@@ -5516,23 +5516,19 @@ a {
 strong, b {
   font-weight: 500; }
 
-.subsec-cont > p:first-of-type {
-  font-size: 1.25em;
-  line-height: 1.5;
+@media only screen and (min-width: 480px) {
+  .subsec-cont > p:first-of-type {
+    margin-top: 0; } }
+.subsec-cont > p:first-of-type strong, .subsec-cont > p:first-of-type b {
   font-weight: 300; }
-  @media only screen and (min-width: 480px) {
-    .subsec-cont > p:first-of-type {
-      margin-top: 0; } }
-  .subsec-cont > p:first-of-type strong, .subsec-cont > p:first-of-type b {
-    font-weight: 300; }
-  .subsec-cont > p:first-of-type:first-letter {
-    float: left;
-    color: #50496b;
-    font-size: 3em;
-    line-height: 1em;
-    padding-right: 0.125em;
-    font-weight: 300;
-    text-transform: uppercase; }
+.subsec-cont > p:first-of-type:first-letter {
+  float: left;
+  color: #50496b;
+  font-size: 3em;
+  line-height: 1em;
+  padding-right: 0.125em;
+  font-weight: 300;
+  text-transform: uppercase; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px 0;
@@ -5564,7 +5560,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: 1.25rem;
-  margin: 0 0 0.8rem 0;
+  margin-top: 2rem;
   font-weight: 400; }
 
 h5, .h5 {
@@ -5574,7 +5570,6 @@ h5, .h5 {
 
 h6 {
   font-size: 1rem; }
-
 
 figure {
   margin: 0 0; }
@@ -5612,13 +5607,16 @@ blockquote {
   blockquote p {
     margin: 0; }
 
+ul, ol {
+  margin: 2em 0; }
+  h2 + ul, h3 + ul, h4 + ul, h2 + ol, h3 + ol, h4 + ol {
+    margin-top: 1em; }
 
 li {
-  margin: 0.666em 0; }
+  margin: 0.5em 0; }
 
 ul li {
   list-style-type: square; }
-
 
 .related-entries li {
   margin: 2em 0; }
@@ -6282,7 +6280,6 @@ ul li {
     margin: 0 auto;
     max-width: 28em; }
 
-
 .itemlist {
   padding: 4em 0.5em; }
   .itemlist:before, .itemlist:after {
@@ -6315,7 +6312,6 @@ ul li {
   @media only screen and (min-width: 1600px) {
     .itemlist-inner {
       max-width: 1280px; } }
-
 
 /******** Single Post Style *******/
 .single .post .entry-figure, .single .type-page .entry-figure, .page .post .entry-figure, .page .type-page .entry-figure {
@@ -6766,7 +6762,7 @@ ul li {
   @media only screen and (min-width: 768px) {
     .kezeleslist .kezeles {
       width: 31%;
-      margin: 1em calc 1.16667%; }
+      margin: 1em calc 1.1666666667%; }
       .kezeleslist .kezeles:nth-of-type(2n+1) {
         clear: none; }
       .kezeleslist .kezeles:nth-of-type(3n+1) {
@@ -6845,7 +6841,6 @@ ul li {
       color: #50496b; }
       .kezeleslist .kezeles .entry-summary a:hover, .kezeleslist .kezeles .entry-summary a:focus {
         color: #f37077; }
-
 
 /************ Single Kezeles Style *******/
 .treat-header {
@@ -7033,7 +7028,7 @@ ul li {
   text-shadow: 1px 1px #3d394e;
   padding: 0 0.5em;
   color: #fff7ed;
-  background-color: #2c2b3d;
+  background-color: #45455B;
   background-image: url('../img/doktor_ablaknal_jobb.jpg');
   background-position: right center;
   background-size: auto 100%;
@@ -7051,7 +7046,7 @@ ul li {
     clear: both; }
 
 .trc-inner {
-  max-width: 1024px; }
+  max-width: 768px; }
   .trc-inner:before, .trc-inner:after {
     content: " ";
     display: table; }
@@ -7073,7 +7068,6 @@ ul li {
   font-weight: 100;
   text-transform: uppercase; }
   @media only screen and (min-width: 768px) { }
-
 
 .sidebar-contact {
   position: relative;
