@@ -26,6 +26,8 @@ function roots_setup() {
   add_image_size('medium916', 480, 853, true);
   add_image_size('medium169', 480, 270, true);
 
+  add_image_size('medium34', 480, 640, true);
+
   
   add_image_size('full43', 1600, 1200, true); 
   add_image_size('full916', 900, 1600, true);

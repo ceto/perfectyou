@@ -140,7 +140,7 @@
           <div class="subsec-inner">
             <?php
               $ima = $entry['ill_id'];
-              $imci = wp_get_attachment_image_src( $ima, 'medium916');
+              $imci = wp_get_attachment_image_src( $ima, 'medium34');
               $imciorig = wp_get_attachment_image_src( $ima, 'full916');
             ?>
 
