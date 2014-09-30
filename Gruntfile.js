@@ -39,8 +39,8 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          outputStyle: 'nested',
-          sourceMap: true,
+          //outputStyle: 'nested',
+          //sourceMap: true,
         },
         files: {
           'assets/css/main.css': 'assets/scss/styles.scss'

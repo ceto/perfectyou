@@ -104,7 +104,8 @@
 .subsec-header{
   @include clearfix();
   position: relative;
-  //background-color: #fff;
+  background-color: $yellow;
+  margin-bottom: 2em;
   
   // background-color: #fff;
   // background-image:url('../img/pattern-x.png');
@@ -165,20 +166,20 @@
     
   .subsec-title {
     position: relative;
-    font-size: 2.25em;
+    font-size: 1.5em;
     font-weight: 100;
     margin:0;
     padding:0;
     text-transform:uppercase;
 
     @include bp($s1){
-      font-size: 2.5em;
+      font-size: 2em;
     }
     @include bp($s2){
-      font-size: 3.5em;
+      font-size: 2em;
     }
     @include bp($s3){
-      font-size: 3.5em;
+      font-size: 2em;
     }
   }
   .subsec-meta {
