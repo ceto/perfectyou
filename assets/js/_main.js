@@ -133,7 +133,7 @@ var resizeHero = function() {
     $('.fullscreen .homeh-inner').css('margin-bottom', ($(window).height() - $('.homeh-inner').height())/2 - $('.illnavrow').height() - 18 );
     
     $('.home-hero').height($(window).height() - $('.callme').height());
-    $('.treat-header').height($(window).height() - $('.callme').height());
+    $('.treat-header').height($(window).height() );
 
     $('.contact-body').height( $(window).height() - 140);
   } else {

@@ -1,7 +1,10 @@
 <?php if ( !is_page() && !is_single() && !is_archive()  && !is_front_page() && !is_home() ): ?>
   <?php get_template_part('templates/ill','nav' ); ?>
 <?php endif ?>
-<aside class="sidebar-contact" role="complementary">
+
+
+
+<!-- <aside class="sidebar-contact" role="complementary">
   <div class="sidebar-inner">
   	<a href="<?php echo get_bloginfo('home'); ?>" class="clogo">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo_arany_footer.png" alt="Perfect You - Plasztikai Sebészet">
@@ -13,7 +16,7 @@
   	<a href="#contact" data-toggle="collapse" class="btn btn-filled">Online jelentkezés</a>
     
   </div>
-</aside><!-- /.sidebar-contact -->
+</aside> -->
 
 <aside class="sidebar" role="complementary">
   <div class="sidebar-inner">
@@ -53,6 +56,7 @@
   </div>
 </aside><!-- /.sidebar -->
 
+
 <aside class="sidebar-search" role="complementary">
   <div class="sidebar-inner">
   <div class="social-icons">
@@ -63,3 +67,6 @@
     <?php get_search_form(); ?>
   </div>
 </aside><!-- /.sidebar-contact -->
+
+
+    <?php get_template_part('templates/call','me' ); ?>

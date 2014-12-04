@@ -88,7 +88,6 @@
             color:$brown-superlight;
             font-size: 1.25em;
             line-height: 1.25em;
-
             padding:1.666em 0.666em 0.666em;
             height:auto;
             background-color: $blue-light;
@@ -190,7 +189,7 @@
       height:97px;
       font-size: 0.875em;
       line-height: 97px;
-      font-weight: 300;
+      font-weight: 500;
       padding:0 1em;
       transition: all .25s ease;
       @include bp($s2) {

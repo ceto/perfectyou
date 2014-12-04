@@ -1,7 +1,7 @@
 .subsections {
   @include clearfix();
   position: relative;
-  background-color: $blue-dark;
+  //background-color: $blue-dark;
 
 }
 .subsec{
@@ -11,12 +11,12 @@
   
   //background-color: #fff;
   
-  background-image:url('../img/pattern-x.png');
+  //background-image:url('../img/pattern-x.png');
   background-attachment: fixed;
   background-repeat: repeat;
   background-position: center center;
   background-size: auto auto;
-  background-color: $brown-superlight;
+  background-color: rgba($brown-superlight,0.95);
 
 
 
@@ -76,6 +76,9 @@
     &:before{
       display:none;
     }
+    .subsec-title {
+      border-bottom: none;
+    }
   }
 }
 
@@ -93,19 +96,22 @@
     //max-width: 42em;
   }
   @include bp($s2){
-    padding:0 2em 4em 2em;
+    padding:0 2em 1em 2em;
     //max-width:42em;
   }
   @include bp($s3){
-    padding:0 2em 4em 2em;
+    padding:0 2em 1em 2em;
+  }
+  #subsec-article & {
+    padding-bottom: 6em;
   }
 }
 
 .subsec-header{
   @include clearfix();
   position: relative;
-  background-color: $yellow;
-  margin-bottom: 2em;
+  //background-color: $yellow;
+  margin-bottom: 1em;
   
   // background-color: #fff;
   // background-image:url('../img/pattern-x.png');
@@ -121,18 +127,18 @@
     //background-color: $blue-light;
     //color:$brown-superlight;
   }
-  &:before{
-      display: block;
-      content:'';
-      position: absolute;
-      top:0;
-      right:100%;
-      bottom:0;
-      width:7px;
+  // &:before{
+  //     display: block;
+  //     content:'';
+  //     position: absolute;
+  //     top:0;
+  //     right:100%;
+  //     bottom:0;
+  //     width:7px;
 
-      //height:0.5em;
-      background-color: $yellow;
-  }
+  //     //height:0.5em;
+  //     background-color: $yellow;
+  // }
 
   .ss-hinner{
     padding:2em 0.5em;
@@ -166,20 +172,25 @@
     
   .subsec-title {
     position: relative;
-    font-size: 1.5em;
-    font-weight: 100;
+    font-size: 2em;
+    font-weight: 500;
     margin:0;
     padding:0;
     text-transform:uppercase;
+    border-bottom: 1px solid $purple-light;
+    padding-top: 1.5em;
+    padding-bottom: 0.125em;
+
+
 
     @include bp($s1){
       font-size: 2em;
     }
     @include bp($s2){
-      font-size: 2em;
+      font-size: 2.5em;
     }
     @include bp($s3){
-      font-size: 2em;
+      font-size: 2.5em;
     }
   }
   .subsec-meta {

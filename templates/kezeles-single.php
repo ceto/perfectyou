@@ -11,63 +11,65 @@
 
     ?>
     <style>
-      .treat-header{
+      body, .treat-header{
         background-image:url('<?php echo $imoci[0]; ?>');
         /*background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/hero_home.jpg');*/
          
       }
     </style>
     <header id="trh" class="treat-header fullscreen">
-        <div class="trh-inner">
-          <div class="trh-one">
-            <div class="treat-headcats">
-            <a href="<?php echo get_permalink(2); ?>" title="<?php _e('Kezelések','roots'); ?>"><?php _e('Kezelések','roots'); ?></a>
-            /
-            <a href="<?php echo esc_url( get_term_link($current_term->term_id,'kezeles-csoport') ); ?>" title="<?php echo $current_term->name; ?>">
-              <?php echo $current_term->name; ?>
-            </a>
-          </div>
-
-          <h1 class="treat-title"><?php the_title(); ?></h1>
-
-          <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
-            <div class="treat-lead"><?php the_content(); ?></div>
-          <?php endif ?>
-          <a class="morebtn btn btn-filled" href="#lenyeg">Tovább a részletekre <i class="typcn typcn-arrow-sorted-down"></i></a>
-          </div><!-- /.trh-one -->
-          <div class="trh-two">
-            <?php if (has_post_thumbnail()): ?>
-              <?php $featimg = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
-              <figure class="trh-thumb">
-                <a href="<?php echo $featimg[0]; ?>" class="mfp-with-zoom mfp-img-mobile">
-                  <?php the_post_thumbnail('medium169'); ?>
-                </a>
-                <figcaption class="caption"><?php the_title(); ?></figcaption>
-              </figure>
-            <?php endif; ?>
-  
-            <div class="treat-headaction">
-              <ul class="nav">
-                <?php
-                  $streats = get_post_meta( $post->ID, '_meta_sections', true );  
-                  $trno=1;
-                  foreach ( (array) $streats as $key => $entry ) {
-                ?>
-                  <li><a class="" href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
-                <?php  } ?>
-                  <li><a href="#subsec-<?php echo $trno++;  ?>"><?php _e('Tudástár','root') ?></a></li>
-              </ul>
+          <div class="trh-inner">
+            <div class="trh-one">
+              <div class="treat-headcats">
+              <a href="<?php echo get_permalink(2); ?>" title="<?php _e('Kezelések','roots'); ?>"><?php _e('Kezelések','roots'); ?></a>
+              /
+              <a href="<?php echo esc_url( get_term_link($current_term->term_id,'kezeles-csoport') ); ?>" title="<?php echo $current_term->name; ?>">
+                <?php echo $current_term->name; ?>
+              </a>
             </div>
+            <h2 class="treat-subtitle"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></h2>
+            <h1 class="treat-title"><?php the_title(); ?></h1>
+            <div class="treat-summary"><?php echo wpautop( get_post_meta( $post->ID, '_meta_lead', TURE ) );  ?></div>
             
+            <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
+              <div class="treat-lead"><?php the_content(); ?></div>
+            <?php endif ?>
+            <a class="morebtn btn btn-filled" href="#subsec-1">Tovább a részletekre <i class="typcn typcn-arrow-sorted-down"></i></a>
+            </div><!-- /.trh-one -->
+            <div class="trh-two">
+
+              <?php if (has_post_thumbnail()): ?>
+                <?php $featimg = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
+                <figure class="trh-thumb">
+                  <a href="<?php echo $featimg[0]; ?>" class="mfp-with-zoom mfp-img-mobile">
+                    <?php the_post_thumbnail('medium169'); ?>
+                  </a>
+                  <figcaption class="caption"><?php the_title(); ?></figcaption>
+                </figure>
+              <?php endif; ?>
+    
+              <div class="treat-headaction">
+
+                <ul class="nav">
+                  <?php
+                    $streats = get_post_meta( $post->ID, '_meta_sections', true );  
+                    $trno=1;
+                    foreach ( (array) $streats as $key => $entry ) {
+                  ?>
+                    <li><a class="" href="#subsec-<?php echo $trno++;  ?>"><?php echo esc_html( $entry['title'] ); ?></a></li>
+                  <?php  } ?>
+                    <li><a href="#subsec-<?php echo $trno++;  ?>"><?php _e('Tudástár','root') ?></a></li>
+                </ul>
+              </div>
+              
 
 
-          </div><!-- /.trh-two-->
-        </div>
+            </div><!-- /.trh-two-->
+          </div>
     </header>
 
-    <?php get_template_part('templates/call','me' ); ?>
     
-    <div id="lenyeg" class="treat-content">
+<!--     <div id="lenyeg" class="treat-content">
       
       <div class="trc-inner shape">
 
@@ -79,7 +81,7 @@
       </div>
 
 
-    </div>
+    </div> -->
 
 
 
@@ -116,10 +118,10 @@
         <div class="sidebar-inner">
             <section class="widget widget-callme">
               <h3>Felkészült a változásra?</h3>
-              <p class="vege"><i class="ss-glyphish-filled ss-phone telicon"></i> Hívjon
+              <p class="vege">Hívjon
                 <a href="tel:+36707705653" class="phone">+36.70.570.5653</a><span class="or">–&nbsp;vagy&nbsp;–</span>
                 <a href="#contact" data-toggle="collapse" class="btn btn-filled">
-                  <i class="ss-glyphish-filled ss-write"></i> Jelentkezzen online
+                  Jelentkezzen online
                 </a>
               </p>
             </section>

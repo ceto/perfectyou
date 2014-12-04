@@ -12,9 +12,11 @@ html {
 }
 
 a {
-  color: $link;
+  color: $blue-light;
+
   &:hover, &:focus {
-    color: #333;
+    color: $link;
+    //text-decoration: none;
   }
   &:active {
     color: black;
