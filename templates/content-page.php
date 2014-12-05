@@ -18,10 +18,10 @@
         <div class="sidebar-inner">
             <section class="widget widget-callme">
               <h3>Felkészült a változásra?</h3>
-              <p class="vege"><i class="ss-glyphish-filled ss-phone telicon"></i> Hívjon
-                <a href="tel:+36707705653" class="phone">+36.70.570.5653</a><span class="or">– vagy –</span>
-                <a href="#contact" data-toggle="collapse" class="btn btn-filled">
-                  <i class="ss-glyphish-filled ss-write"></i> Jelentkezzen online
+              <p class="vege">Hívjon
+                <a href="tel:+36302991122" class="phone">(+36) 30 299 1122</a><span class="or">–&nbsp;vagy&nbsp;–</span>
+                <a href="<?php echo get_permalink('2155'); ?>" class="btn btn-filled">
+                  Jelentkezzen online
                 </a>
               </p>
             </section>
