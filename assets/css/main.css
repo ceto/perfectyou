@@ -5456,7 +5456,7 @@ body {
   background-color: #fff7ed;
   color: #50496b;
   overflow-x: hidden;
-  background-position: center center;
+  background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -6840,13 +6840,12 @@ ul li {
 /************ Single Kezeles Style *******/
 .treat-header {
   position: relative;
-  background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 100%;
+  background-position: right center;
+  background-color: white;
   background-attachment: fixed;
-  background-color: #baafa3;
   color: #3a285d;
-  height: 700px;
   z-index: 1; }
   .treat-header:before, .treat-header:after {
     content: " ";
@@ -6855,9 +6854,10 @@ ul li {
     clear: both; }
   @media only screen and (min-width: 320px) { }
   @media only screen and (min-width: 480px) { }
-  @media only screen and (min-width: 768px) { }
-  @media only screen and (min-width: 1024px) { }
-  @media only screen and (min-width: 1280px) { }
+  @media only screen and (min-height: 800px) and (min-width: 768px) {
+    .treat-header {
+      min-height: calc(100vh - 70px);
+      height: calc(100vh - 70px); } }
   .treat-header:before {
     display: block;
     content: '';
@@ -6867,30 +6867,31 @@ ul li {
     top: 0;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.8); }
+    @media only screen and (min-width: 768px) {
+      .treat-header:before {
+        background-color: rgba(255, 255, 255, 0.5); } }
+    @media only screen and (min-width: 1024px) {
+      .treat-header:before {
+        background-color: rgba(255, 255, 255, 0.25); } }
 
 .trh-inner {
   position: relative;
   max-width: 1280px;
-  margin: 90px 1em 1em;
-  transition: all 0.4s ease-in; }
+  margin: 0 0;
+  transition: all 0.4s ease-in;
+  padding-top: 95px; }
   .trh-inner:before, .trh-inner:after {
     content: " ";
     display: table; }
   .trh-inner:after {
     clear: both; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-height: 800px) and (min-width: 768px) {
     .trh-inner {
-      margin: 0 1em 0 1em;
-      top: 50%;
-      transform: translateY(-50%); } }
-  @media only screen and (min-width: 1024px) {
-    .trh-inner {
-      margin: 0 auto 0 auto;
       top: 50%;
       transform: translateY(-50%); } }
 
 .trh-one {
-  padding: 3em 1em 0em; }
+  padding: 1em 1em 4em; }
   .trh-one:before, .trh-one:after {
     content: " ";
     display: table; }
@@ -6898,46 +6899,25 @@ ul li {
     clear: both; }
   @media only screen and (min-width: 768px) {
     .trh-one {
-      padding: 2.5em 0.75em 2.5em 1.5em;
-      width: 60%;
+      padding: 1em 1em 2em 1.5em;
+      width: 75%;
       float: left;
       padding-bottom: 5em; } }
   @media only screen and (min-width: 1024px) {
     .trh-one {
-      padding: 3em 1em 3em 2em;
+      padding: 1em 1em 3em 1.5em;
       width: 60%;
-      float: left;
-      padding-bottom: 6em; } }
-
-.trh-two {
-  padding: 1em 1em 2em; }
-  .trh-two:before, .trh-two:after {
-    content: " ";
-    display: table; }
-  .trh-two:after {
-    clear: both; }
-  @media only screen and (min-width: 768px) {
-    .trh-two {
-      padding: 2.5em 1.5em 2.5em 1.5em;
-      width: 40%;
-      float: left; } }
-  @media only screen and (min-width: 1024px) {
-    .trh-two {
-      padding: 3em 2em 3em 2em;
-      width: 40%;
       float: left; } }
 
 .treat-headcats {
-  position: absolute;
-  bottom: 2.25em;
-  right: 2.25em;
   display: inline-block;
   background-color: #9a91ba;
   color: #fff7ed;
   padding: 0.25em 0.5em;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 0.75em; }
+  font-size: 0.75em;
+  margin-bottom: 1em; }
   .treat-headcats a {
     text-decoration: none;
     color: #fff7ed; }
@@ -6959,9 +6939,11 @@ ul li {
       bottom: 2em; } }
 
 .treat-subtitle {
-  font-size: 1em;
+  text-transform: none;
+  font-size: 0.875em;
   font-weight: 500;
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 0.25em; }
 
 .treat-title {
   font-size: 2em;
@@ -7002,25 +6984,6 @@ ul li {
 .trh-thumb .caption {
   display: none; }
 
-.treat-headaction {
-  margin: 1em 0;
-  color: #f37077; }
-  .treat-headaction ul {
-    padding-left: 1em; }
-  .treat-headaction li {
-    margin-bottom: 1em; }
-    .treat-headaction li:last-child {
-      margin-bottom: 0; }
-    .treat-headaction li a {
-      text-decoration: none;
-      font-weight: 300;
-      color: #50496b;
-      font-size: 1em;
-      line-height: 1.125;
-      text-transform: uppercase; }
-      .treat-headaction li a:hover, .treat-headaction li a:focus {
-        color: #f37077; }
-
 .treat-lead {
   max-width: 768px;
   font-size: 1em;
@@ -7038,6 +7001,28 @@ ul li {
     margin: 0; }
   .treat-lead li {
     margin: 0.5em 0; }
+
+.treat-headaction {
+  margin: 0 0;
+  color: #f37077; }
+  .treat-headaction ul {
+    margin: 0;
+    padding-left: 1em; }
+  .treat-headaction li {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 0.333em; }
+    .treat-headaction li:last-child {
+      margin-bottom: 0; }
+    .treat-headaction li a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #50496b;
+      font-size: 1em;
+      line-height: 1.125;
+      text-transform: uppercase; }
+      .treat-headaction li a:hover, .treat-headaction li a:focus {
+        color: #f37077; }
 
 .shape {
   text-shadow: #3d394e 1px 1px, rgba(61, 57, 78, 0.5) 2px 2px, rgba(61, 57, 78, 0.5) 3px 3px, rgba(61, 57, 78, 0.25) 4px 4px; }

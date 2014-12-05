@@ -69,4 +69,4 @@
 </aside><!-- /.sidebar-contact -->
 
 
-    <?php get_template_part('templates/call','me' ); ?>
+    <?php // get_template_part('templates/call','me' ); ?>

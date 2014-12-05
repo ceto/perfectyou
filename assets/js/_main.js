@@ -133,12 +133,12 @@ var resizeHero = function() {
     $('.fullscreen .homeh-inner').css('margin-bottom', ($(window).height() - $('.homeh-inner').height())/2 - $('.illnavrow').height() - 18 );
     
     $('.home-hero').height($(window).height() - $('.callme').height());
-    $('.treat-header').height($(window).height() );
+    //$('.treat-header').height($(window).height() - $('.callme').height() );
 
     $('.contact-body').height( $(window).height() - 140);
   } else {
     $('.home-hero').height(600);
-    $('.treat-header').height(700);
+    //$('.treat-header').height(700);
     $('.homeh-inner').css('margin-top','140px');
 
   }

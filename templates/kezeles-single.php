@@ -10,11 +10,15 @@
       $imoci=wp_get_attachment_image_src( $cat_img_id, 'bazi');
 
     ?>
+    <?php
+      $ima = get_post_thumbnail_id();
+      $imci = wp_get_attachment_image_src( $ima, 'medium34');
+      $imciorig = wp_get_attachment_image_src( $ima, 'full916');
+    ?>
     <style>
-      body, .treat-header{
+     .body, .treat-header{
         background-image:url('<?php echo $imoci[0]; ?>');
         /*background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/hero_home.jpg');*/
-         
       }
     </style>
     <header id="trh" class="treat-header fullscreen">
@@ -28,27 +32,16 @@
               </a>
             </div>
             <h2 class="treat-subtitle"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></h2>
+
             <h1 class="treat-title"><?php the_title(); ?></h1>
+
             <div class="treat-summary"><?php echo wpautop( get_post_meta( $post->ID, '_meta_lead', TURE ) );  ?></div>
             
             <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
               <div class="treat-lead"><?php the_content(); ?></div>
             <?php endif ?>
-            <a class="morebtn btn btn-filled" href="#subsec-1">Tovább a részletekre <i class="typcn typcn-arrow-sorted-down"></i></a>
-            </div><!-- /.trh-one -->
-            <div class="trh-two">
 
-              <?php if (has_post_thumbnail()): ?>
-                <?php $featimg = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
-                <figure class="trh-thumb">
-                  <a href="<?php echo $featimg[0]; ?>" class="mfp-with-zoom mfp-img-mobile">
-                    <?php the_post_thumbnail('medium169'); ?>
-                  </a>
-                  <figcaption class="caption"><?php the_title(); ?></figcaption>
-                </figure>
-              <?php endif; ?>
-    
-              <div class="treat-headaction">
+            <div class="treat-headaction">
 
                 <ul class="nav">
                   <?php
@@ -60,14 +53,30 @@
                   <?php  } ?>
                     <li><a href="#subsec-<?php echo $trno++;  ?>"><?php _e('Tudástár','root') ?></a></li>
                 </ul>
-              </div>
+            </div>
+            
+            <!-- <a class="morebtn btn btn-filled" href="#subsec-1">Tovább a részletekre <i class="typcn typcn-arrow-sorted-down"></i></a> -->
+            </div><!-- /.trh-one -->
+            <div class="trh-two">
+
+              <?php if (has_post_thumbnail()): ?>
+                <?php $featimg = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
+<!--                 <figure class="trh-thumb">
+                  <a href="<?php echo $featimg[0]; ?>" class="mfp-with-zoom mfp-img-mobile">
+                    <?php the_post_thumbnail('medium169'); ?>
+                  </a>
+                  <figcaption class="caption"><?php the_title(); ?></figcaption>
+                </figure> -->
+              <?php endif; ?>
+    
+
               
 
 
             </div><!-- /.trh-two-->
           </div>
     </header>
-
+    <?php get_template_part('templates/call','me' ); ?>
     
 <!--     <div id="lenyeg" class="treat-content">
       
