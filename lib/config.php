@@ -57,7 +57,7 @@ function roots_display_sidebar() {
       'is_404',
       //'is_front_page',
       //'is_home',
-     // array('is_singular', array('kezeles'))
+      //array('is_page_template', array('template-contact.php'))
 
     ),
     /**
@@ -65,7 +65,8 @@ function roots_display_sidebar() {
      * Any of these page templates that return true won't show the sidebar
      */
     array(
-      'template-custom.php'
+      'template-custom.php',
+      'template-contact.php'
     )
   );
 

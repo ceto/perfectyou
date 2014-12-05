@@ -1,49 +1,24 @@
-.contact{
+.contact-body{
   @include clearfix();
-  position:fixed;
-  left:0; top:0;
-  right:0; 
-  bottom:0;
-  z-index: 4;
-  border-top:3px solid $yellow;
-  background-color: $blue-dark;
-  color:$brown-superlight;
-  overflow: auto;
-  @include bp($s1){
+
+  position: relative;
+  padding:1em 0.5em;
+  max-width: $s1;
+  margin:0 auto 0 auto;
+  h2{
+    text-align: left;
+    font-size: 1.5em;
   }
-
-  .contact-body{
-    @include clearfix();
-
-    position: relative;
-    padding:1em 0.5em;
-    max-width: $s3;
-    margin:100px auto 0 auto;
-    h2{
-      text-align: center;
-    }
-    h2 + p {
-      text-align:center;
-    }
-
-  }
-
-  .cbal{
-    @include bp($s2){
-      width:49%;
-      float:left;
-    }
-
-  }
-  .cjobb {
-    @include bp($s2){
-      width:49%;
-      float:right;
+  h2 + p {
+    text-align:left;
+    font-size: 1em;
+    a{
+      color:$link;
     }
   }
-
 
 }
+
 .btn-contactclose{
   position: absolute;
   top:0;
@@ -71,10 +46,14 @@
   clear:both;
 
   .btn {
-    margin-top: 2em;
+    display: block;
+    font-size: 1.25em;
+    max-width: none;
+    margin: 0 auto;
     text-transform: uppercase;
-    background-color: $blue-light;
+    background-color: transparent;
     border-color: $purple-light;
+    padding: 1em;
   }
 }
 label{
@@ -84,6 +63,7 @@ label{
   padding:0.333em 0; 
   font-size: 1em;
   line-height: 1.25em;
+  display: none;
 }
 input[type="text"],
 input[type="email"],
@@ -92,17 +72,19 @@ input[type="search"],
 input[type="url"],
 textarea,
 select{
-  background-color: $brown-superlight;
-  border:2px solid $purple-light;
+  background-color: rgba(white,0.9);
+  border:none;
+  -webkit-appearance:none;
   border-radius: 4px;
-
   color:$gray-text;
   padding:0.75em;
   width:100%;
-  outline-color: $blue-superlight;
+  outline-color: $yellow;
+  outline-width: 1px;
 }
 
 select {
   height:3em;
   border-radius: 0px;
 }
+

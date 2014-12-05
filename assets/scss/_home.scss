@@ -8,6 +8,11 @@
   background-attachment: fixed;
   background-size: cover;
 
+  @media only screen and (min-height: 600px) and (min-width: 768px) {
+      min-height: calc(100vh - 70px);
+      height: calc(100vh - 70px);   
+  }
+
 
   .homehero-inner{
     position: relative;
@@ -295,6 +300,7 @@
     margin-left: 0.25em;
     vertical-align: middle;
     text-decoration: none;
+    color:$link;
     &:hover, &:focus {
       color:$yellow;
     }

@@ -23,23 +23,6 @@ Template Name: Homepage Template
 
 
 <?php get_template_part('templates/call','me' ); ?>
-<header id="homeh" class="home-header fullscreen" style="display:none">
-    <div class="homeh-inner" style="margin-top:1000px;">
-      <h1 class="home-title">
-        Plasztikai műtétek, esztétikai- és szépészeti beavatkozások Budapesten
-      </h1>
-      <p class="home-lead shape">
-        <?php // echo get_post_meta( $post->ID, '_meta_lead', TURE );  ?>
-        Dr. Bulyovszky a valósághoz ad hozzá valami művészit, amitől az nem más, hanem több lesz
-      </p>
-
-      <div class="home-headaction">
-        <a class="btn btn-filled" href="#feat-treats"><?php _e('Ugrok a kezelésekre','root') ?></a>
-      </div>
-    </div>
-</header>
-
-
 
 
 

@@ -166,11 +166,17 @@
                 </figure>
               <?php endif; ?>
               <?php echo apply_filters('the_content', $entry['content'] );?>
+              <?php if ($trno==count($streats)+1) : ?>
+                <div class="innerfeatimage">
+                  <?php the_post_thumbnail(large); ?>
+                </div>
+              <?php endif; ?> 
             </div>
           </div>
           <!--div class="subsec-action">
             <?php get_template_part('templates/call','me' ); ?>
           </div-->
+
         </section>
       <?php  } ?>
       
