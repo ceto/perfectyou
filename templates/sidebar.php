@@ -28,6 +28,9 @@
 					<p><strong>Perfect You - Plasztikai Sebészet</strong><br>
 					1021 Budapest, Medve u. 34.<br>
 					<small>*időpontegyeztetés szükséges<br><a href="#">Térkép</a></small></p>
+					<p><strong>Bejelentkezés telefonon<br>
+					<a href="tel:+36302991122">(+36) 30 299 1122</a></strong><br>
+					<small><a href="<?php echo get_permalink('2155'); ?>">vagy online</a></small></p>
 				</div>
 				<div class="felezve">
 					<h4>Műtétek helyszíne</h4>

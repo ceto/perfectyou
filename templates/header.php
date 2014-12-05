@@ -10,6 +10,6 @@
       endif;
     ?>
   </nav>
-  <a href="<?php echo get_permalink('2155'); ?>" class="btn-main"><?php _e('Kapcsolat','root') ?></a>
+  <a href="<?php echo get_permalink('2155'); ?>" class="btn-main"><?php _e('Jelentkezés','root') ?></a>
 </header>
 <?php // get_template_part('templates/contact','form' ); ?>

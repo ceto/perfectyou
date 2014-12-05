@@ -34,3 +34,4 @@ Template Name: Contact Page Template
   </div>
    </div>
 </section>
+<?php get_template_part('templates/content', 'page'); ?>
