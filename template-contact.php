@@ -1,0 +1,36 @@
+<?php
+/*
+Template Name: Contact Page Template
+*/
+?>
+
+<section class="home-istvan fullscreen">
+  <div class="hist-inner">
+
+  <div class="contact-body">
+    <h2>Dr. Bulyovszky várja jelentkezését</h2>
+    <p>Hívjon minket telefonon <a ref="tel: +36 30 299 11 22">(+36) 30 299 11 22</a>, vagy érdeklődjön az alábbi űrlaunkon és kolléganőnk visszahívja Önt konzultációs időpont egyeztetésére.</p>
+    <form action="#">
+      <div class="cbal">
+        <div class="formitem">
+          <label for="name">Név*</label><input required placeholder="Adja meg nevét*" type="text" id="name" name="name">
+        </div>
+        <div class="formitem">
+          <label for="name">Email cím*</label><input required placeholder="E-mail cím" type="email" id="email" name="email">
+        </div>
+        <div class="formitem">
+          <label for="tel">Telefonszám*</label><input required placeholder="Telefonszám*" type="tel" id="tel" name="tel">
+        </div>
+      </div>
+      <div class="cjobb">
+        <div class="formitem">
+          <label for="message">Üzenet</label><textarea name="message" id="message" cols="30" rows="6"></textarea>
+        </div>
+      </div>
+      <div class="formactions">
+        <input type="submit" class="btn btn-filled" value="Jelentkezés elküldése">
+      </div>
+    </form>
+  </div>
+   </div>
+</section>
