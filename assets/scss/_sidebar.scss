@@ -231,7 +231,7 @@
   */
   color:$blue-superlight;
   font-size: 14px;
-  //text-align: left;
+  text-align: center;
   @include bp($s3){
     position: absolute;
   }
@@ -247,20 +247,23 @@
     line-height: 1.75;
     a{
       text-decoration: none;
+      color:$link;
       &:hover, &:focus {
         color:$yellow;
       }
     }
   }
   .or{
-    //display: block;
+    display: block;
     font-size: 0.75em;
     margin:0 1em 0.666em 1em;
   }
   .btn {
+    margin-top: 0.25em;
     font-size: 0.875em;
     background-color: $blue-light;
     border-color: $blue-light;
+    color:white;
     &:hover, &:focus {
       border-color: $blue-superlight;
       background-color: $blue-superlight;

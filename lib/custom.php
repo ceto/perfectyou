@@ -84,7 +84,7 @@ function cmb_treatment( array $meta_boxes ) {
 
       array(
         'name' => 'Teljesképernyős háttérkép',
-        'desc' => 'Upload an image or enter a URL. (min: 1920×1280px)',
+        'desc' => 'Ha nem ide illik a kategória kép, adj meg egyedit. Jobbra igazitott kép kifutó fehér háttérrel (min: 1920×1280px)',
         'id'   => $prefix . 'wallimg',
         'type' => 'file',
         'save_id' => true, // save ID using true

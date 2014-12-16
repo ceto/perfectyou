@@ -1,14 +1,19 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
+    
+
     <?php
       $taxes=wp_get_post_terms($post->ID, 'kezeles-csoport');
       $current_term = $taxes[0];
       $cat_img_id = 0;
-      $saved_data = get_tax_meta($current_term->term_id,'tc_image_field_id');
-      $cat_img_id=$saved_data['id'];
 
-      $imoci=wp_get_attachment_image_src( $cat_img_id, 'bazi');
-
+      if ( get_post_meta( $post->ID, '_meta_wallimg', TRUE ) ) {
+        $imoci=wp_get_attachment_image_src( get_post_meta( $post->ID, '_meta_wallimg_id', TRUE ), 'bazi');
+      } else {
+        $saved_data = get_tax_meta($current_term->term_id,'tc_image_field_id');
+        $cat_img_id=$saved_data['id'];
+        $imoci=wp_get_attachment_image_src( $cat_img_id, 'bazi');
+      }
     ?>
     <?php
       $ima = get_post_thumbnail_id();
@@ -18,7 +23,6 @@
     <style>
      .body, .treat-header{
         background-image:url('<?php echo $imoci[0]; ?>');
-        /*background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/hero_home.jpg');*/
       }
     </style>
     <header id="trh" class="treat-header fullscreen">
@@ -31,13 +35,13 @@
                 <?php echo $current_term->name; ?>
               </a>
             </div>
-            <h2 class="treat-subtitle"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></h2>
+            <h2 class="treat-subtitle"><?php echo get_post_meta( $post->ID, '_meta_slogan', TRUE );  ?></h2>
 
             <h1 class="treat-title"><?php the_title(); ?></h1>
 
-            <div class="treat-summary"><?php echo wpautop( get_post_meta( $post->ID, '_meta_lead', TURE ) );  ?></div>
+            <div class="treat-summary"><?php echo wpautop( get_post_meta( $post->ID, '_meta_lead', TRUE ) );  ?></div>
             
-            <?php if ( get_post_meta( $post->ID, '_meta_lead', TURE ) ): ?>
+            <?php if ( get_post_meta( $post->ID, '_meta_lead', TRUE ) ): ?>
               <div class="treat-lead"><?php the_content(); ?></div>
             <?php endif ?>
 
@@ -82,10 +86,10 @@
       
       <div class="trc-inner shape">
 
-        <?php if ( get_post_meta( $post->ID, '_meta_slogan', TURE ) ): ?>
-         <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TURE );  ?></div>
+        <?php if ( get_post_meta( $post->ID, '_meta_slogan', TRUE ) ): ?>
+         <div class="treat-slogan"><?php echo get_post_meta( $post->ID, '_meta_slogan', TRUE );  ?></div>
         <?php endif ?>
-        <?php echo wpautop( get_post_meta( $post->ID, '_meta_lead', TURE ) );  ?>
+        <?php echo wpautop( get_post_meta( $post->ID, '_meta_lead', TRUE ) );  ?>
         
       </div>
 
@@ -166,11 +170,11 @@
                 </figure>
               <?php endif; ?>
               <?php echo apply_filters('the_content', $entry['content'] );?>
-              <?php if ($trno==count($streats)+1) : ?>
+<!--               <?php if ($trno==count($streats)+1) : ?>
                 <div class="innerfeatimage">
                   <?php the_post_thumbnail(large); ?>
                 </div>
-              <?php endif; ?> 
+              <?php endif; ?>  -->
             </div>
           </div>
           <!--div class="subsec-action">

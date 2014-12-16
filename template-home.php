@@ -13,8 +13,8 @@ Template Name: Homepage Template
     <img class="signo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/drbulyovszky.png" alt="dr. Bulyovszky">
     <h1>Plasztikai sebész<small>A tökéletes megjelenésért</small></h1>
     <div class="action-block">
-      <a href="#feat-treats" class="btn" id="fiatal-ctrl">Szépülni szeretne?</a>
-      <a href="#feat-treats" class="btn btn-filled" id="oreg-ctrl">Fiatalítodni szeretne?</a>
+      <a href="#feat-treats" class="btn" id="szep-ctrl">Szépülni szeretne?</a>
+      <a href="#feat-treats" class="btn btn-filled" id="fiatal-ctrl">Fiatalítodni szeretne?</a>
     </div>
   </div>
 </header>
@@ -56,8 +56,8 @@ Template Name: Homepage Template
     <div class="ftreat-head">
       <h4><?php _e('Válasszon beavatkozásaink közül','roots'); ?></h4> 
       <ul id="myTab" class="nav nav-tabs">
-        <li class="active"><a href="#fiatal" data-toggle="tab">Fiatalodni szeretnék</a></li>
-        <li class=""><a href="#szep" data-toggle="tab">Szépülni szeretnék</a></li>
+        <li class="active"><a href="#fiatal" data-toggle="tab" class="fi">Fiatalodni szeretnék</a></li>
+        <li class=""><a href="#szep" data-toggle="tab" class="sze">Szépülni szeretnék</a></li>
         <li class=""><a href="#fan" data-toggle="tab">Páciensek kedvencei</a></li>
       </ul>
     </div>

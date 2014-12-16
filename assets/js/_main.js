@@ -161,6 +161,17 @@ jQuery(window).resize(function(){
 
 jQuery(document).ready(function($){
 
+
+
+  $('#szep-ctrl').click(function (e) {
+    $('.sze').tab('show');
+  });
+
+  $('#fiatal-ctrl').click(function (e) {
+    $('.fi').tab('show');
+  });
+
+
   /********* Gallery thumb zoom ***********/
   $('.gallery').magnificPopup({
     delegate: 'a',
