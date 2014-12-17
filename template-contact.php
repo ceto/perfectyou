@@ -8,8 +8,8 @@ Template Name: Contact Page Template
   <div class="hist-inner">
 
   <div class="contact-body">
-    <h2>Dr. Bulyovszky várja jelentkezését</h2>
-    <p>Hívjon minket telefonon <a ref="tel: +36 30 299 11 22">(+36) 30 299 11 22</a>, vagy érdeklődjön az alábbi űrlaunkon és kolléganőnk visszahívja Önt konzultációs időpont egyeztetésére.</p>
+    <h2>Kedves leendő páciensünk</h2>
+    <p>Jelentkezzen konzultációra vagy érdeklődjön a <a ref="tel: +36 30 299 11 22">(+36) 30 299 11 22</a> telefonszámon telefonszámon, ill. bármikor az alábbi űrlap kitöltésével.</p>
     <form action="#">
       <div class="cbal">
         <div class="formitem">

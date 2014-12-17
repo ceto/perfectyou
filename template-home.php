@@ -29,12 +29,13 @@ Template Name: Homepage Template
 <section class="home-istvan fullscreen">
   <div class="hist-inner">
     <h3 class="cv-title">Dr. Bulyovszki István <em>Plasztikai sebész</em></h3>
-    <p>A PERFECT YOU plasztikai sebésze dr. Bulyovszky István az esztétikai szakmában is az elméleti és gyakorlati tudás összhangját, együttes magas színvonalra emelését tartja vezérelvnek.</p>
+    <p>A PERFECT YOU plasztikai sebésze, dr. Bulyovszky István az elméleti és gyakorlati tudás összhangját, együttes magas színvonalra emelését tartja vezérelvnek.
+    </p>
     <blockquote>
-      <p>A manualitás, az elmélet "kézzel fogható" gyakorlati alkalmazása motivál, mint a szobrászt, amikor a valósághoz ad hozzá valami művészit, amitől az nem más, hanem több lesz</p>
+      <p>Engem a manualitás - az elmélet "kézzel fogható", gyakorlati alkalmazása - motivál. Valahogy úgy, mint a szobrászt, amikor a valósághoz hozzáad valami művészit, amivel a mű több lesz, de a lényege nem változik meg.</p>
     </blockquote>
   
-    <p>A folyamatos szakmai képzés elengedhetetlen ahhoz, hogy a nívós szaktudásnak köszönhetően a lehető legjobb ellátást nyújtsuk, ezért vagyunk elkötelezettek amellett, hogy pácienseinknek mindezt kizárólag up-to-date technikákkal, kiváló eszközökkel, technológiákkal és a legjobb minőségű alapanyagokkal biztosítsuk.</p>
+    <p>A folyamatos szakmai képzés elengedhetetlen ahhoz, hogy a színvonalas szaktudásnak köszönhetően a lehető legjobb ellátást nyújtsuk. Ezért vagyunk elkötelezettek amellett, hogy pácienseinknek mindezt a legújabb technikákkal, kiváló eszközökkel, technológiákkal és a legjobb minőségű alapanyagokkal biztosítsuk.</p>
     <a href="<?php echo get_permalink(790); ?>" class="btn">Bővebben</a>
    </div>
 </section>

@@ -24,21 +24,28 @@
   	<section class="widget text-2 widget_text">
 		  <div class="textwidget">
 				<div class="felezve">
-					<h4>Betegfelvétel, rendelő*</h4>
-					<p><strong>Perfect You - Plasztikai Sebészet</strong><br>
-					1021 Budapest, Medve u. 34.<br>
-					<small>*időpontegyeztetés szükséges<br><a href="#">Térkép</a></small></p>
+					<h4>Perfect You konzultáció*</h4>
+					<p><strong>Árkád Egészségközpont</strong><br>
+					1106 Budapest, Örs vezér tere 25.<br>Árkád I., 3. emelet<br>
+					<small>*bejelentkezést követően<br><a href="#">Térkép</a></small></p>
+					<p>1118 Budapest, Számadó u. 6.<br>
+					<small>*bejelentkezést követően<br><a href="#">Térkép</a></small></p>
 					<p><strong>Bejelentkezés telefonon<br>
 					<a href="tel:+36302991122">(+36) 30 299 1122</a></strong><br>
 					<small><a href="<?php echo get_permalink('2155'); ?>">vagy online</a></small></p>
 				</div>
 				<div class="felezve">
 					<h4>Műtétek helyszíne</h4>
+					<p><strong>Szt. Lukács Magánkórház</strong><br>
+					1139 Budapest, Kartács u. 1-5.<br>
+					<small><a href="#">Térkép</a></small></p>
+
 					<p><strong>Kútvölgyi Klinikai Tömb</strong><br>
 					1125 Budapest, Kútvölgyi út 4., 5. em.<br>
 					<small><a href="#">Térkép</a></small></p>
-					<p><strong>Szt. Lukács Magánkórház</strong><br>
-					1139 Budapest, Kartács u. 1-5.<br>
+
+					<p><strong>Királyerdei Szépségközpont</strong><br>
+					1213 Budapest, Szent István út 248-250.<br>
 					<small><a href="#">Térkép</a></small></p>
 				</div>
 
