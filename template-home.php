@@ -28,7 +28,7 @@ Template Name: Homepage Template
 
 <section class="home-istvan fullscreen">
   <div class="hist-inner">
-    <h3 class="cv-title">Dr. Bulyovszki István <em>Plasztikai sebész</em></h3>
+    <h3 class="cv-title">Dr. Bulyovszky István <em>Plasztikai sebész</em></h3>
     <p>A PERFECT YOU plasztikai sebésze, dr. Bulyovszky István az elméleti és gyakorlati tudás összhangját, együttes magas színvonalra emelését tartja vezérelvnek.
     </p>
     <blockquote>

@@ -86,6 +86,7 @@
           a{
             position: relative;
             color:$brown-superlight;
+            text-shadow:none;
             font-size: 1.25em;
             line-height: 1.25em;
             padding:1.666em 0.666em 0.666em;
@@ -182,7 +183,8 @@
     
     a{
       display: block;
-      color:$blue-light;
+      color:$menubeke;
+      text-shadow:0 0 1px rgba(white,0.666);
       text-transform: uppercase;
       text-decoration: none;
       //margin-top: 20px;
@@ -198,6 +200,7 @@
       &:hover, &:focus{
         color:#fff;
         background-color: rgba($purple,0.75);
+        text-shadow:none;
       }
 
       @include bp($s3) {

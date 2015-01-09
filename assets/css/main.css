@@ -5838,6 +5838,7 @@ ul li {
       .nav-main .dropdown > .dropdown-menu li a {
         position: relative;
         color: #fff7ed;
+        text-shadow: none;
         font-size: 1.25em;
         line-height: 1.25em;
         padding: 1.666em 0.666em 0.666em;
@@ -5892,7 +5893,8 @@ ul li {
         margin-left: 0.5em; } }
     .nav-main li a {
       display: block;
-      color: #50496b;
+      color: #4f3f36;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.666);
       text-transform: uppercase;
       text-decoration: none;
       height: 97px;
@@ -5906,7 +5908,8 @@ ul li {
           display: inline-block; } }
       .nav-main li a:hover, .nav-main li a:focus {
         color: #fff;
-        background-color: rgba(88, 77, 134, 0.75); }
+        background-color: rgba(88, 77, 134, 0.75);
+        text-shadow: none; }
       @media only screen and (min-width: 1024px) {
         .nav-main li a {
           font-size: 18px; } }

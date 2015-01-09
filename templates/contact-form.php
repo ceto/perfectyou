@@ -1,4 +1,4 @@
-<section id="contact" class="contact collapse" >
+  <section id="contact" class="contact collapse" >
   <div class="contact-body">
     <a data-toggle="collapse" href="#contact" class="btn-contactclose">×</a>
     <h2>Jelentkezés konzultációra</h2>

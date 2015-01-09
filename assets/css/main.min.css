@@ -148,8 +148,7 @@ td, th {
 
 .fade {
   opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-          transition: opacity 0.15s linear; }
+  transition: opacity 0.15s linear; }
   .fade.in {
     opacity: 1; }
 
@@ -168,8 +167,7 @@ tbody.collapse.in {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-          transition: height 0.35s ease; }
+  transition: height 0.35s ease; }
 
 /*!
   Ionicons, v1.4.1
@@ -5643,8 +5641,7 @@ ul li {
   background-color: transparent;
   padding: 0 20px;
   height: 69px;
-  -webkit-transition: all 0.25s ease;
-          transition: all 0.25s ease;
+  transition: all 0.25s ease;
   border-top: 3px solid #ffcf7b; }
   .banner:before, .banner:after {
     content: " ";
@@ -5668,8 +5665,7 @@ ul li {
         top: -69px;
         background-color: #fff;
         height: 69px;
-        -webkit-transition: top 0.6s ease;
-                transition: top 0.6s ease; }
+        transition: top 0.6s ease; }
         .banner.fixedhead.show {
           top: 0; } }
 
@@ -5685,8 +5681,7 @@ ul li {
   background-position: left center;
   background-repeat: no-repeat;
   background-size: auto 100%;
-  -webkit-transition: all 0.25s ease;
-          transition: all 0.25s ease; }
+  transition: all 0.25s ease; }
   @media only screen and (min-width: 480px) {
     .brand {
       display: inline-block;
@@ -5825,6 +5820,7 @@ ul li {
       .nav-main .dropdown > .dropdown-menu li a {
         position: relative;
         color: #fff7ed;
+        text-shadow: none;
         font-size: 1.25em;
         line-height: 1.25em;
         padding: 1.666em 0.666em 0.666em;
@@ -5879,7 +5875,8 @@ ul li {
         margin-left: 0.5em; } }
     .nav-main li a {
       display: block;
-      color: #50496b;
+      color: #4f3f36;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.666);
       text-transform: uppercase;
       text-decoration: none;
       height: 97px;
@@ -5887,14 +5884,14 @@ ul li {
       line-height: 97px;
       font-weight: 500;
       padding: 0 1em;
-      -webkit-transition: all 0.25s ease;
-              transition: all 0.25s ease; }
+      transition: all 0.25s ease; }
       @media only screen and (min-width: 768px) {
         .nav-main li a {
           display: inline-block; } }
       .nav-main li a:hover, .nav-main li a:focus {
         color: #fff;
-        background-color: rgba(88, 77, 134, 0.75); }
+        background-color: rgba(88, 77, 134, 0.75);
+        text-shadow: none; }
       @media only screen and (min-width: 1024px) {
         .nav-main li a {
           font-size: 18px; } }
@@ -6383,8 +6380,7 @@ ul li {
   max-width: 1280px;
   margin: 0 auto;
   margin: 140px auto;
-  -webkit-transition: all 0.4s ease-in;
-          transition: all 0.4s ease-in; }
+  transition: all 0.4s ease-in; }
   .homeh-inner:before, .homeh-inner:after {
     content: " ";
     display: table; }
@@ -6436,7 +6432,6 @@ ul li {
   background-size: cover;
   background-attachment: scroll, local;
   background-color: #3d394e;
-  background-image: -webkit-linear-gradient(left, rgba(61, 57, 78, 0) 25%, rgba(61, 57, 78, 0.75) 75%, #3d394e 100%), url('../img/doktor_ablaknal_kek.jpg');
   background-image: linear-gradient(to right, rgba(61, 57, 78, 0) 25%, rgba(61, 57, 78, 0.75) 75%, #3d394e 100%), url('../img/doktor_ablaknal_kek.jpg');
   color: #fff7ed; }
   .home-istvan:before, .home-istvan:after {
@@ -6489,7 +6484,6 @@ ul li {
   background-size: cover;
   background-attachment: scroll, local;
   background-color: #3d394e;
-  background-image: -webkit-linear-gradient(left, #3d394e 33%, rgba(61, 57, 78, 0.5) 75%, rgba(61, 57, 78, 0) 100%), url('../img/arc_mos.jpg');
   background-image: linear-gradient(to right, #3d394e 33%, rgba(61, 57, 78, 0.5) 75%, rgba(61, 57, 78, 0) 100%), url('../img/arc_mos.jpg');
   color: #dce7e9; }
   .callme:before, .callme:after {
@@ -6768,8 +6762,7 @@ ul li {
     padding: 0.75em 7px;
     margin: 0 0; }
   .kezeleslist .kezeles .entry-subtitle {
-    -webkit-transition: top 0.25s ease-in;
-            transition: top 0.25s ease-in;
+    transition: top 0.25s ease-in;
     position: absolute;
     top: 100%;
     left: 0;
@@ -6850,8 +6843,7 @@ ul li {
   position: relative;
   max-width: 1280px;
   margin: 0 auto;
-  -webkit-transition: all 0.4s ease-in;
-          transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
   padding-top: 95px; }
   .trh-inner:before, .trh-inner:after {
     content: " ";
@@ -7284,8 +7276,7 @@ ul li {
   position: relative;
   padding: 0 0;
   margin: 0 0;
-  -webkit-transition: all 0.5s ease-in;
-          transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
   background-color: #3d394e;
   background-image: url('../img/istvan_szilikonnal.jpg');
   background-position: center center;
@@ -7370,8 +7361,7 @@ ul li {
   background-position: left center;
   background-repeat: no-repeat;
   background-size: auto 100%;
-  -webkit-transition: all 0.25s ease;
-          transition: all 0.25s ease;
+  transition: all 0.25s ease;
   display: none; }
 
 .panel {
@@ -7529,8 +7519,7 @@ select {
     background-color: #3d394e;
     display: inline-block;
     position: relative;
-    -webkit-transition: all 0.4s ease;
-            transition: all 0.4s ease;
+    transition: all 0.4s ease;
     border: 1px solid #9a91ba; }
     .gallery-item .thumbnail:hover:after, .gallery-item .thumbnail:focus:after {
       opacity: 1; }
@@ -7538,8 +7527,7 @@ select {
       -webkit-filter: Grayscale(1);
               filter: Grayscale(1); }
     .gallery-item .thumbnail:after {
-      -webkit-transition: all 0.4s ease;
-              transition: all 0.4s ease;
+      transition: all 0.4s ease;
       display: block;
       position: absolute;
       content: "+";
@@ -7556,8 +7544,7 @@ select {
       background-color: rgba(44, 43, 61, 0.75);
       opacity: 0; }
     .gallery-item .thumbnail img {
-      -webkit-transition: all 0.4s ease;
-              transition: all 0.4s ease; }
+      transition: all 0.4s ease; }
 
 /* Magnific Popup CSS */
 .mfp-bg {
@@ -7925,8 +7912,7 @@ img.mfp-img {
 
 .balcsi, .jobbcsi {
   position: relative;
-  -webkit-transition: 0.2s all ease;
-          transition: 0.2s all ease;
+  transition: 0.2s all ease;
   width: 100%; }
 
 .js .balcsi {

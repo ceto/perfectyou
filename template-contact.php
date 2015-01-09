@@ -9,7 +9,7 @@ Template Name: Contact Page Template
 
   <div class="contact-body">
     <h2>Kedves leendő páciensünk</h2>
-    <p>Jelentkezzen konzultációra vagy érdeklődjön a <a ref="tel: +36 30 299 11 22">(+36) 30 299 11 22</a> telefonszámon telefonszámon, ill. bármikor az alábbi űrlap kitöltésével.</p>
+    <p>Jelentkezzen konzultációra vagy érdeklődjön a <a ref="tel: +36 30 299 11 22">(+36) 30 299 11 22</a> telefonszámon telefonszámon, ill. az alábbi űrlap kitöltésével.</p>
     <form action="#">
       <div class="cbal">
         <div class="formitem">
