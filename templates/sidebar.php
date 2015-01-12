@@ -25,8 +25,8 @@
 		  <div class="textwidget">
 				<div class="felezve">
 					<h4>Perfect You konzultáció*</h4>
-					<p><strong>Árkád Egészségközpont</strong><br>
-					1106 Budapest, Örs vezér tere 25.<br>Árkád I., 3. emelet<br>
+					<p><strong>Árkád I. Irodaház</strong><br>
+					1106 Budapest, Örs vezér tere 25.<br>3. emelet<br>
 					<small>*bejelentkezést követően<br><a href="#">Térkép</a></small></p>
 					<p>1118 Budapest, Számadó u. 6.<br>
 					<small>*bejelentkezést követően<br><a href="#">Térkép</a></small></p>

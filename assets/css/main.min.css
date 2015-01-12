@@ -5876,7 +5876,6 @@ ul li {
     .nav-main li a {
       display: block;
       color: #4f3f36;
-      text-shadow: 0 0 1px rgba(255, 255, 255, 0.666);
       text-transform: uppercase;
       text-decoration: none;
       height: 97px;
@@ -6819,6 +6818,12 @@ ul li {
     clear: both; }
   @media only screen and (min-width: 320px) { }
   @media only screen and (min-width: 480px) { }
+  @media only screen and (min-width: 768px) {
+    .treat-header {
+      background-position: 33.333% center; } }
+  @media only screen and (min-width: 1024px) {
+    .treat-header {
+      background-position: right center; } }
   @media only screen and (min-height: 800px) and (min-width: 768px) {
     .treat-header {
       min-height: calc(100vh - 70px);
@@ -6834,10 +6839,9 @@ ul li {
     background-color: rgba(255, 255, 255, 0.8); }
     @media only screen and (min-width: 768px) {
       .treat-header:before {
-        background-color: rgba(255, 255, 255, 0.5); } }
-    @media only screen and (min-width: 1024px) {
-      .treat-header:before {
-        background-color: rgba(255, 255, 255, 0.25); } }
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.666) 0, rgba(255, 255, 255, 0) 200px), linear-gradient(to right, #ffffff 0, rgba(255, 255, 255, 0) 75%); } }
+    @media only screen and (min-width: 1024px) { }
 
 .trh-inner {
   position: relative;
