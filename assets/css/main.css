@@ -6076,7 +6076,7 @@ ul li {
   position: relative;
   z-index: 1;
   font-size: 0.75em;
-  padding: 1.5em 0.5em;
+  padding: 1.5em 1.5em;
   background-color: #000;
   color: #fff7ed; }
   .content-info:before, .content-info:after {
@@ -6086,6 +6086,18 @@ ul li {
     clear: both; }
   .content-info p {
     margin: 0; }
+    @media only screen and (min-width: 768px) {
+      .content-info p {
+        float: left; } }
+  .content-info p.madeby a {
+    text-decoration: none;
+    color: #ffcf7b;
+    text-transform: uppercase; }
+    .content-info p.madeby a:hover, .content-info p.madeby a:focus {
+      text-decoration: underline; }
+  @media only screen and (min-width: 768px) {
+    .content-info p.madeby {
+      float: right; } }
 
 .subsections {
   position: relative; }

@@ -3,11 +3,29 @@
   position: relative;
   z-index:1;
   font-size: 0.75em;
-  padding:1.5em 0.5em;
+  padding:1.5em 1.5em;
   background-color: #000;
   color:$brown-superlight;
   //border-top:7px solid $yellow;
   p {
     margin:0;
+    @include bp($s2) {
+      float:left;
+    }
+  }
+  p.madeby {
+    a {
+      text-decoration: none;
+      color:$yellow;
+      //font-weight: 700;
+      text-transform: uppercase;
+      &:hover, &:focus {
+        text-decoration: underline;
+      }   
+    }
+    @include bp($s2) {
+      float:right;
+    }
+
   }
 }
