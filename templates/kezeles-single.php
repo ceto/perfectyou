@@ -133,7 +133,7 @@
               <h3>Felkészült a változásra?</h3>
               <p class="vege">Hívjon
                 <a href="tel:+36302991122" class="phone">(+36) 30 299 1122</a><span class="or">–&nbsp;vagy&nbsp;–</span>
-                <a href="<?php echo get_permalink('2155'); ?>" class="btn btn-filled">
+                <a href="<?php echo get_permalink('810').'/#contactblock'; ?>" class="btn btn-filled">
                   Jelentkezzen online
                 </a>
               </p>
@@ -222,7 +222,7 @@
 
                     // Display options:
                     'template' => 'yarpp-template-rp.php', // either the name of a file in your active theme or the boolean false to use the builtin template
-                    'limit' => 6, // maximum number of results
+                    'limit' => 4, // maximum number of results
                     'order' => 'score DESC'
                   ),
                   $reference_ID, // second argument: (optional) the post ID. If not included, it will use the current post.
@@ -239,6 +239,5 @@
     <footer>
       <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
     </footer>
-    <?php comments_template('/templates/comments.php'); ?>
   </article>
 <?php endwhile; ?>

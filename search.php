@@ -1,21 +1,12 @@
 <div class="page-header">
   <div class="ph-inner">
-    <h1><?php echo roots_title(); ?><small>A plasztikai sebész blogja</small></h1>
-      <ul class="ph-cat">
-        <?php
-          wp_list_categories( array(
-            "title_li"  =>  "",
-            "hierarchical"  =>  0,
-            "child_of"  => 33,
-            )
-          );
-          ?>
-      </ul>
+    <h1><?php echo roots_title(); ?><small>A plasztikai sebész írásaiból</small></h1>
   </div>
 </div>
 <?php //get_template_part('templates/ill','nav' ); ?>
-  <section class="posts-related posts-lista">
-    <div class="wrapper wrapper--normal">
+<section class="itemlist posztok side-related" >
+  <div class="subsec-inner">
+    <div class="subsec-cont">
       <div class="related-entries">
         <?php if (!have_posts()) : ?>
           <div class="alert alert-warning">
@@ -24,7 +15,7 @@
           <?php get_search_form(); ?>
         <?php else: ?>
           <?php while (have_posts()) : the_post(); ?>
-            <?php get_template_part('templates/item', get_post_type()); ?>
+            <?php get_template_part('templates/item', 'post'); ?>
           <?php endwhile; ?>
         <?php endif; ?>
 
@@ -37,6 +28,7 @@
           </nav>
         <?php endif; ?>
       </div>
+    </div>
   </div>
 </section>
 

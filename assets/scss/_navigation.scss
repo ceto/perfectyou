@@ -425,7 +425,14 @@
   }
   li {
     list-style-type: none;
-    display: inline;
+    display: inline-block;
+    margin:3em 0.5em 1em;
+
+    a {
+      text-decoration: none;
+      color:$yellow;
+      font-style: italic;
+    }
     
   }
 

@@ -3,8 +3,9 @@
 Template Name: Contact Page Template
 */
 ?>
+<?php get_template_part('templates/content', 'page'); ?>
 
-<section class="home-istvan fullscreen">
+<section id="contactblock" class="home-istvan fullscreen">
   <div class="hist-inner">
 
   <div class="contact-body">
@@ -34,4 +35,4 @@ Template Name: Contact Page Template
   </div>
    </div>
 </section>
-<?php get_template_part('templates/content', 'page'); ?>
+

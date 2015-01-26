@@ -5476,6 +5476,18 @@ body {
     .blog .main, .archive .main, .page-template-template-home-php .main {
       padding-top: 0; } }
 
+.wrapper {
+  margin: 0 auto;
+  padding: 0 1em; }
+  .wrapper:before, .wrapper:after {
+    content: " ";
+    display: table; }
+  .wrapper:after {
+    clear: both; }
+
+.wrapper--normal {
+  max-width: 1024px; }
+
 html {
   font-size: 14px;
   line-height: 1.5;
@@ -5501,14 +5513,6 @@ strong, b {
     margin-top: 0; } }
 .subsec-cont > p:first-of-type strong, .subsec-cont > p:first-of-type b {
   font-weight: 300; }
-.subsec-cont > p:first-of-type:first-letter {
-  float: left;
-  color: #50496b;
-  font-size: 3em;
-  line-height: 1em;
-  padding-right: 0.125em;
-  font-weight: 300;
-  text-transform: uppercase; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px 0;
@@ -5555,9 +5559,9 @@ figure {
   margin: 0 0; }
 
 figure.thumbnail {
-  margin: 1em 0;
+  max-width: 480px;
+  margin: 1em auto;
   vertical-align: middle;
-  max-width: 100%;
   height: auto;
   padding: 0.5em;
   border: 1px solid #9a91ba; }
@@ -5566,7 +5570,8 @@ figure.thumbnail {
   font-size: 0.75em;
   font-weight: 300;
   font-style: italic;
-  text-align: center; }
+  text-align: center;
+  margin-top: 0.5em; }
 
 img {
   vertical-align: middle;
@@ -6044,7 +6049,12 @@ ul li {
     padding: 0; }
   .post-nav li {
     list-style-type: none;
-    display: inline; }
+    display: inline-block;
+    margin: 3em 0.5em 1em; }
+    .post-nav li a {
+      text-decoration: none;
+      color: #ffcf7b;
+      font-style: italic; }
 
 .nav-footer li {
   font-size: 0.875em;
@@ -6301,6 +6311,15 @@ ul li {
     color: #fff7ed; }
     .archive .post .entry-cat a:hover, .archive .post .entry-cat a:focus, .archive .page .entry-cat a:hover, .archive .page .entry-cat a:focus, .blog .post .entry-cat a:hover, .blog .post .entry-cat a:focus, .blog .page .entry-cat a:hover, .blog .page .entry-cat a:focus {
       color: #ffcf7b; }
+
+.posts-related {
+  padding: 4em 0;
+  background-color: #2c2b3d;
+  color: #dce7e9; }
+  .posts-related .related-title {
+    font-size: 2.5em;
+    line-height: 1;
+    font-weight: 500; }
 
 .home-hero {
   position: relative;
@@ -6626,33 +6645,33 @@ ul li {
   display: table; }
 .related-entries:after {
   clear: both; }
-.related-entries .post, .related-entries .page {
+.related-entries .post, .related-entries .page, .related-entries .kezeles {
   margin: 3em 0;
   font-size: 0.875em; }
   @media only screen and (min-width: 768px) {
-    .related-entries .post, .related-entries .page {
+    .related-entries .post, .related-entries .page, .related-entries .kezeles {
       width: 50%;
       float: left;
       padding-left: 1.5em; }
-      .related-entries .post:nth-child(2n+1), .related-entries .page:nth-child(2n+1) {
+      .related-entries .post:nth-child(2n+1), .related-entries .page:nth-child(2n+1), .related-entries .kezeles:nth-child(2n+1) {
         clear: left;
         padding-right: 1.5em;
         padding-left: 0; } }
-  .related-entries .post .entry-title, .related-entries .page .entry-title {
+  .related-entries .post .entry-title, .related-entries .page .entry-title, .related-entries .kezeles .entry-title {
     font-size: 1.25em;
     text-transform: none;
     font-weight: 500; }
-    .related-entries .post .entry-title a, .related-entries .page .entry-title a {
+    .related-entries .post .entry-title a, .related-entries .page .entry-title a, .related-entries .kezeles .entry-title a {
       color: #cecece; }
-      .related-entries .post .entry-title a:hover, .related-entries .post .entry-title a:focus, .related-entries .page .entry-title a:hover, .related-entries .page .entry-title a:focus {
+      .related-entries .post .entry-title a:hover, .related-entries .post .entry-title a:focus, .related-entries .page .entry-title a:hover, .related-entries .page .entry-title a:focus, .related-entries .kezeles .entry-title a:hover, .related-entries .kezeles .entry-title a:focus {
         color: #ffcf7b; }
-  .related-entries .post .entry-cat, .related-entries .page .entry-cat {
+  .related-entries .post .entry-cat, .related-entries .page .entry-cat, .related-entries .kezeles .entry-cat {
     display: none; }
-  .related-entries .post .entry-time, .related-entries .page .entry-time {
+  .related-entries .post .entry-time, .related-entries .page .entry-time, .related-entries .kezeles .entry-time {
     display: none; }
-  .related-entries .post .entry-summary > p a, .related-entries .page .entry-summary > p a {
+  .related-entries .post .entry-summary > p a, .related-entries .page .entry-summary > p a, .related-entries .kezeles .entry-summary > p a {
     display: none; }
-  .related-entries .post .entry-summary > p:first-letter, .related-entries .page .entry-summary > p:first-letter {
+  .related-entries .post .entry-summary > p:first-letter, .related-entries .page .entry-summary > p:first-letter, .related-entries .kezeles .entry-summary > p:first-letter {
     float: none;
     color: inherit;
     font-size: inherit;
@@ -6660,11 +6679,11 @@ ul li {
     padding-right: 0;
     font-weight: inherit;
     text-transform: inherit; }
-  .related-entries .post .entry-summary .btn, .related-entries .page .entry-summary .btn {
+  .related-entries .post .entry-summary .btn, .related-entries .page .entry-summary .btn, .related-entries .kezeles .entry-summary .btn {
     font-size: 0.875em;
     color: #cecece;
     border-color: #cecece; }
-    .related-entries .post .entry-summary .btn:hover, .related-entries .post .entry-summary .btn:focus, .related-entries .page .entry-summary .btn:hover, .related-entries .page .entry-summary .btn:focus {
+    .related-entries .post .entry-summary .btn:hover, .related-entries .post .entry-summary .btn:focus, .related-entries .page .entry-summary .btn:hover, .related-entries .page .entry-summary .btn:focus, .related-entries .kezeles .entry-summary .btn:hover, .related-entries .kezeles .entry-summary .btn:focus {
       background-color: transparent;
       border-color: #ffcf7b;
       color: #ffcf7b; }

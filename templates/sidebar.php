@@ -1,4 +1,4 @@
-<?php if ( !is_page() && !is_single() && !is_archive()  && !is_front_page() && !is_home() ): ?>
+<?php if ( !is_page() && !is_single()  && !is_archive()  && !is_front_page() && !is_home() ): ?>
   <?php get_template_part('templates/ill','nav' ); ?>
 <?php endif ?>
 
@@ -24,9 +24,9 @@
   	<section class="widget text-2 widget_text">
 		  <div class="textwidget">
 				<div class="felezve">
-					<h4>Perfect You konzultáció*</h4>
-					<p><strong>Árkád I. Irodaház</strong><br>
-					1106 Budapest, Örs vezér tere 25.<br>3. emelet<br>
+					<h4>Konzultáció és rendelés*</h4>
+					<p><strong>dr. Bulyovszky István</strong><br>
+					1106 Budapest, Örs vezér tere 25.<br>Árkád I. Irodaház 3. emelet<br>
 					<small>*bejelentkezést követően<br><a href="#">Térkép</a></small></p>
 					<p>1118 Budapest, Számadó u. 6.<br>
 					<small>*bejelentkezést követően<br><a href="#">Térkép</a></small></p>

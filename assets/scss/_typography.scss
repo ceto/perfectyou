@@ -41,16 +41,15 @@ p{
     strong, b {
       font-weight: 300;
     }
-    &:first-letter { 
-      float: left;
-      color: $blue-light;
-      font-size: 3em;
-      line-height: 1em;
-      padding-right:0.125em;
-      font-weight: 300;
-      text-transform:uppercase;
-      //font-family: Georgia;
-    }
+    // &:first-letter { 
+    //   float: left;
+    //   color: $blue-light;
+    //   font-size: 3em;
+    //   line-height: 1em;
+    //   padding-right:0.125em;
+    //   font-weight: 300;
+    //   text-transform:uppercase;
+    // }
   }
 }
 
@@ -120,16 +119,19 @@ figure {
   margin:0 0;
 }
 figure.thumbnail {
-  margin: 1em 0;
+  max-width: $s1;
+  margin: 1em auto;
   vertical-align: middle;
-  max-width: 100%; // Part 1: Set a maximum relative to the parent
   height: auto;
   padding:0.5em;
-  //background-color: $brown-light;
   border:1px solid $purple-light;
   img {
 
   }
+}
+
+.wp-caption {
+
 }
 
 .caption{
@@ -137,6 +139,7 @@ figure.thumbnail {
   font-weight: 300;
   font-style: italic;
   text-align: center; 
+  margin-top: 0.5em;
 }
 
 

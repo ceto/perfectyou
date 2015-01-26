@@ -111,18 +111,18 @@
             </div>
           </div>
         </article>
-
-
   </section>
-  <section id="subsec-related" class="side-related subsec">
-    <header class="subsec-header">
-      <div class="ss-hinner">
-        <h2 class="subsec-title"><?php _e('Kapcsolódó írások a tudástárból','roots') ?></h2>
-      </div>
-    </header>
-    <div class="subsec-inner">
-      <div class="subsec-cont">
-        <!--p>Tudástárunk kapcsolódó írásai segítségedre lesznek, a téma köröljárásában. Ha döntés előtt állsz feltétlenül tájékozódj.</p-->
+
+</div>
+<?php endwhile; ?>
+<?php get_template_part('templates/related','treats'); ?>
+
+
+
+
+  <section class="posts-related posts-lista">
+    <div class="wrapper wrapper--normal">
+      <h2 class="related-title"><?php _e('Kapcsolódó írások a tudástárból','roots') ?></h2>
           <?php
             $reference_ID=get_the_id();
             yarpp_related(
@@ -152,15 +152,12 @@
 
                 // Display options:
                 'template' => 'yarpp-template-rp.php', // either the name of a file in your active theme or the boolean false to use the builtin template
-                'limit' => 6, // maximum number of results
+                'limit' => 4, // maximum number of results
                 'order' => 'score DESC'
               ),
               $reference_ID, // second argument: (optional) the post ID. If not included, it will use the current post.
               true
             ); // third argument: (optional) true to echo the HTML block; false to return it
           ?>
-      </div>
     </div>
   </section>
-</div>
-    <?php endwhile; ?>
