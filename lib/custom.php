@@ -302,7 +302,7 @@ function py_DequeueYarppStyle()
   wp_dequeue_style('yarppRelatedCss');
   wp_deregister_style('yarppRelatedCss');
 }
-add_action('wp_footer', py_DequeueYarppStyle);
+add_action('wp_footer', 'py_DequeueYarppStyle');
 
 function py_remove_scripts () {
   if(!is_admin()){ 
