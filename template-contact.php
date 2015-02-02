@@ -22,17 +22,17 @@ Template Name: Contact Page Template
   $message_sent    = '<strong>Köszönjük.</strong><br>Munkatársunk hamarosan jelentkezik.';
 
   $contact_name = isset($_POST['contact_name'])?$_POST['contact_name']:'';
-  $conact_email = isset($_POST['contact_email'])?$_POST['contact_email']:'';
+  $contact_email = isset($_POST['contact_email'])?$_POST['contact_email']:'';
   $contact_tel = isset($_POST['contact_tel'])?$_POST['contact_tel']:'';
   $contact_message = isset($_POST['contact_message'])?$_POST['contact_message']:'';
   $contact_human = isset($_POST['contact_human'])?$_POST['contact_human']:'';
 
 
-  $to = 'szabogabi@gmail.com';
+  $to = 'info@perfectyou.hu';
   $subject = "Message from ".get_bloginfo('name');
   
-  $headers = "From: " . strip_tags($conact_email) . "\r\n";
-  $headers .= "Reply-To: ". strip_tags($conact_email) . "\r\n";
+  $headers = "From: " . strip_tags($contact_email) . "\r\n";
+  $headers .= "Reply-To: ". strip_tags($contact_email) . "\r\n";
   $headers .= "CC: szabogabi@gmail.com\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
@@ -42,8 +42,8 @@ if(!$contact_human == 0){
     else {
       
       //validate email
-      if(!filter_var($conact_email, FILTER_VALIDATE_EMAIL))
-        $response = gen_response('error', $conact_email_invalid);
+      if(!filter_var($contact_email, FILTER_VALIDATE_EMAIL))
+        $response = gen_response('error', $email_invalid);
       else 
       {
         if(empty($contact_name) || empty($contact_message) || empty($contact_tel)){
@@ -51,10 +51,10 @@ if(!$contact_human == 0){
         }
         else //ready to go!
         {
-          $contact_message='Name: '.$contact_name.'<br/>'.'Tel: '.$contact_tel.'<br />'.'Message: <br />'.$contact_message;
+          $contact_message='Név: '.$contact_name.'<br/>'.'Tel: '.$contact_tel.'<br />'.'Üzenet: <br />'.$contact_message.'<br>---<br>'.$message_sent;
           $sent = wp_mail($to, $subject, $contact_message, $headers);
             if($sent) {
-              $sent = wp_mail($conact_email, $subject, $contact_message, $headers);
+              $sent = wp_mail($contact_email, $subject, $contact_message, $headers);
               $response = gen_response('success', $message_sent);
             } else {
                 $response = gen_response('error', $message_unsent);
