@@ -70,9 +70,9 @@
 <aside class="sidebar-search" role="complementary">
   <div class="sidebar-inner">
   <div class="social-icons">
-  	<a href="#" title="LinkedIn"><i class="typcn typcn-social-linkedin-circular"></i></a>
-  	<a href="#" title="Facebook"><i class="typcn typcn-social-facebook-circular"></i></a>
-  	<a href="#" title="Google+"><i class="typcn typcn-social-google-plus-circular"></i></a>  	
+  	<a href="https://hu.linkedin.com/pub/istvan-bulyovszky/38/264/a46" target="_blank" title="LinkedIn"><i class="typcn typcn-social-linkedin-circular"></i></a>
+  	<a href="https://www.facebook.com/DrBulyovszkyIstvanPlasztikaiSebesz" target="_blank" title="Facebook"><i class="typcn typcn-social-facebook-circular"></i></a>
+  	<a href="https://plus.google.com/+BulyovszkyIstván/" target="_blank" title="Google+"><i class="typcn typcn-social-google-plus-circular"></i></a>  	
   </div>
     <?php get_search_form(); ?>
   </div>

@@ -1,3 +1,4 @@
+
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     
@@ -40,6 +41,9 @@
             <h1 class="treat-title"><?php the_title(); ?></h1>
 
             <div class="treat-summary"><?php echo wpautop( get_post_meta( $post->ID, '_meta_lead', TRUE ) );  ?></div>
+
+
+
             
             <?php if ( get_post_meta( $post->ID, '_meta_lead', TRUE ) ): ?>
               <div class="treat-lead"><?php the_content(); ?></div>
@@ -170,19 +174,26 @@
                 </figure>
               <?php endif; ?>
               <?php echo apply_filters('the_content', $entry['content'] );?>
-<!--               <?php if ($trno==count($streats)+1) : ?>
-                <div class="innerfeatimage">
-                  <?php the_post_thumbnail(large); ?>
-                </div>
-              <?php endif; ?>  -->
+              
+              <?php if ($trno==count($streats)+1) : ?>
+                <?php get_template_part('templates/sharer'); ?>
+              <?php endif; ?>
+            
             </div>
           </div>
           <!--div class="subsec-action">
             <?php get_template_part('templates/call','me' ); ?>
           </div-->
 
+
+
+
+
         </section>
       <?php  } ?>
+
+
+
       
       <section id="subsec-<?php echo $trno++;  ?>" class="side-related subsec">
         <header class="subsec-header">

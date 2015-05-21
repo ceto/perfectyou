@@ -162,6 +162,13 @@ jQuery(window).resize(function(){
 jQuery(document).ready(function($){
 
 
+  /****Sharer poup****/
+  $('.socialshare ul li a').click(function(e) {
+    e.preventDefault();
+    window.open($(this).attr('href'),'share','width=600,height=400,left='+(screen.availWidth/2-225)+',top='+(screen.availHeight/2-150)+'');
+  });
+
+
 
   $('#szep-ctrl').click(function (e) {
     $('.sze').tab('show');
