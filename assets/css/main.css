@@ -5577,7 +5577,7 @@ figure {
   margin: 0 0; }
 
 figure.thumbnail {
-  max-width: 480px;
+  max-width: 100%;
   margin: 1em auto;
   vertical-align: middle;
   height: auto;
@@ -6073,12 +6073,14 @@ ul li {
       color: #ffcf7b;
       font-style: italic; }
 
+.nav-footer ul {
+  padding-left: 1.25em;
+  margin-top: 1em; }
 .nav-footer li {
   font-size: 0.875em;
   font-weight: 400; }
   .nav-footer li > a {
-    color: #9a91ba;
-    color: #888888; }
+    color: #cecece; }
     .nav-footer li > a:hover, .nav-footer li > a:focus {
       color: #ffcf7b; }
 
@@ -7192,7 +7194,7 @@ ul li {
     padding: 2em 0 8em; }
     @media only screen and (min-width: 768px) {
       .sidebar .sidebar-inner {
-        padding-bottom: 2em; } }
+        padding-bottom: 6em; } }
   .sidebar a {
     color: #ffcf7b;
     text-decoration: none; }
@@ -7209,10 +7211,9 @@ ul li {
       clear: both; }
     @media only screen and (min-width: 768px) {
       .sidebar .widget {
-        width: 66.666%; } }
-    @media only screen and (min-width: 1280px) {
-      .sidebar .widget {
-        width: 60%; } }
+        width: 66.666%;
+        float: left; } }
+    @media only screen and (min-width: 1280px) { }
     @media only screen and (min-width: 480px) {
       .sidebar .widget .felezve {
         float: left;
@@ -7233,6 +7234,9 @@ ul li {
       margin: 2.5em 0 0.5em 0;
       text-transform: uppercase;
       color: #888888; }
+  @media only screen and (min-width: 768px) {
+    .sidebar .widget-menu {
+      width: 33.333%; } }
 
 .sidebar-search {
   position: relative;
@@ -7241,24 +7245,24 @@ ul li {
   .sidebar-search .social-icons {
     margin: 1em 0 0;
     padding: 0 1em;
-    height: 70px;
+    height: 3empx;
     overflow: hidden;
     text-align: center; }
     @media only screen and (min-width: 768px) {
       .sidebar-search .social-icons {
-        margin: 0 0;
+        margin: 0.5em 0;
         float: left;
         width: 33.333%;
         text-align: left; } }
     .sidebar-search .social-icons a {
       display: inline-block;
-      width: 70px;
-      height: 70px;
+      width: 1em;
+      height: 1em;
       text-align: center;
       font-weight: 900;
-      font-size: 70px;
-      line-height: 60px;
-      color: #9a91ba;
+      font-size: 2em;
+      line-height: 1;
+      color: white;
       text-decoration: none;
       overflow: hidden; }
       .sidebar-search .social-icons a:hover, .sidebar-search .social-icons a:focus {

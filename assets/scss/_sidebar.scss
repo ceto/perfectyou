@@ -82,7 +82,7 @@
   .sidebar-inner{
     padding: 2em 0 8em;
     @include bp($s2){
-      padding-bottom: 2em;
+      padding-bottom: 6em;
     }
   }
   
@@ -101,9 +101,10 @@
     padding:0 1em;
     @include bp($s2){
       width:66.666%;
+      float:left;
     }
     @include bp($s4){
-      width:60%;
+      //width:60%;
     }
 
 
@@ -144,6 +145,12 @@
     }
 
   }
+
+  .widget-menu {
+    @include bp($s2){
+      width:33.333%;
+    }
+  }
 }
 .sidebar-search{
   position: relative;
@@ -152,11 +159,11 @@
   .social-icons{
     margin:1em 0 0;
     padding:0 1em;
-    height:70px;
+    height:3empx;
     overflow: hidden;
     text-align: center;
     @include bp($s2){
-      margin:0 0;
+      margin:.5em 0;
       float:left;
       width:33.333%;
       text-align: left;
@@ -164,17 +171,21 @@
     a {
       display: inline-block;
       //margin-right:5px;
-      width:70px;
-      height: 70px;
+      width:1em;
+      height: 1em;
+      //margin-right: .25em;
+      //border:2px solid $gray;
+      //background-color: $gray;
       text-align: center;
       font-weight: 900;
-      font-size: 70px;
-      line-height: 60px;
-      color: $purple-light;
+      font-size: 2em;
+      line-height: 1;
+      color: white;
       text-decoration: none;
       overflow: hidden;
       &:hover, &:focus{
         //border: 3px solid $yellow;
+        //background-color: white;
         color: $yellow;
       }
 

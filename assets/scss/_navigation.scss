@@ -441,7 +441,8 @@
 
 .nav-footer{
   ul{
-    //padding-left: 0;
+    padding-left: 1.25em;
+    margin-top: 1em;
   }
   li{
     font-size: 0.875em;
@@ -450,8 +451,8 @@
   
     > a {
       
-      color:$purple-light;
-      color:$gray;
+      color:$white;
+
       &:hover, &:focus{
         color:$yellow;
       }
